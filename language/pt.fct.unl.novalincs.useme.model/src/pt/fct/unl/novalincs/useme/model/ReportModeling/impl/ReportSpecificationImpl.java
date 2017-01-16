@@ -1,0 +1,226 @@
+/**
+ */
+package pt.fct.unl.novalincs.useme.model.ReportModeling.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModel;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Report Specification</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportSpecificationImpl#getReportModel <em>Report Model</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportSpecificationImpl#getRecommendedGM <em>Recommended GM</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportSpecificationImpl#getEvaluationResult <em>Evaluation Result</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ReportSpecificationImpl extends MinimalEObjectImpl.Container implements ReportSpecification {
+	/**
+	 * The cached value of the '{@link #getReportModel() <em>Report Model</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReportModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ReportModel> reportModel;
+
+	/**
+	 * The cached value of the '{@link #getRecommendedGM() <em>Recommended GM</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRecommendedGM()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RecommendGM> recommendedGM;
+
+	/**
+	 * The cached value of the '{@link #getEvaluationResult() <em>Evaluation Result</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvaluationResult()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EvaluationResult> evaluationResult;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReportSpecificationImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ReportModelingPackage.Literals.REPORT_SPECIFICATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ReportModel> getReportModel() {
+		if (reportModel == null) {
+			reportModel = new EObjectContainmentEList<ReportModel>(ReportModel.class, this, ReportModelingPackage.REPORT_SPECIFICATION__REPORT_MODEL);
+		}
+		return reportModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<RecommendGM> getRecommendedGM() {
+		if (recommendedGM == null) {
+			recommendedGM = new EObjectContainmentEList<RecommendGM>(RecommendGM.class, this, ReportModelingPackage.REPORT_SPECIFICATION__RECOMMENDED_GM);
+		}
+		return recommendedGM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EvaluationResult> getEvaluationResult() {
+		if (evaluationResult == null) {
+			evaluationResult = new EObjectContainmentEList<EvaluationResult>(EvaluationResult.class, this, ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT);
+		}
+		return evaluationResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ReportModelingPackage.REPORT_SPECIFICATION__REPORT_MODEL:
+				return ((InternalEList<?>)getReportModel()).basicRemove(otherEnd, msgs);
+			case ReportModelingPackage.REPORT_SPECIFICATION__RECOMMENDED_GM:
+				return ((InternalEList<?>)getRecommendedGM()).basicRemove(otherEnd, msgs);
+			case ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT:
+				return ((InternalEList<?>)getEvaluationResult()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ReportModelingPackage.REPORT_SPECIFICATION__REPORT_MODEL:
+				return getReportModel();
+			case ReportModelingPackage.REPORT_SPECIFICATION__RECOMMENDED_GM:
+				return getRecommendedGM();
+			case ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT:
+				return getEvaluationResult();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ReportModelingPackage.REPORT_SPECIFICATION__REPORT_MODEL:
+				getReportModel().clear();
+				getReportModel().addAll((Collection<? extends ReportModel>)newValue);
+				return;
+			case ReportModelingPackage.REPORT_SPECIFICATION__RECOMMENDED_GM:
+				getRecommendedGM().clear();
+				getRecommendedGM().addAll((Collection<? extends RecommendGM>)newValue);
+				return;
+			case ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT:
+				getEvaluationResult().clear();
+				getEvaluationResult().addAll((Collection<? extends EvaluationResult>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ReportModelingPackage.REPORT_SPECIFICATION__REPORT_MODEL:
+				getReportModel().clear();
+				return;
+			case ReportModelingPackage.REPORT_SPECIFICATION__RECOMMENDED_GM:
+				getRecommendedGM().clear();
+				return;
+			case ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT:
+				getEvaluationResult().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ReportModelingPackage.REPORT_SPECIFICATION__REPORT_MODEL:
+				return reportModel != null && !reportModel.isEmpty();
+			case ReportModelingPackage.REPORT_SPECIFICATION__RECOMMENDED_GM:
+				return recommendedGM != null && !recommendedGM.isEmpty();
+			case ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT:
+				return evaluationResult != null && !evaluationResult.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //ReportSpecificationImpl

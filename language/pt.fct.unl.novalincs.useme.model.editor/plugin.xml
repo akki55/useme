@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.UseMe.presentation.UseMeModelWizardID"
+            name="%_UI_UseMeModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.UseMe.presentation.UseMeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UseMeModelFile.gif">
+         <description>%_UI_UseMeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.UseMe.presentation.UseMeEditorID"
+            name="%_UI_UseMeEditor_label"
+            icon="icons/full/obj16/UseMeModelFile.gif"
+            extensions="useme"
+            class="pt.fct.unl.novalincs.useme.model.UseMe.presentation.UseMeEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.UseMe.presentation.UseMeActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.ReportModeling.presentation.ReportModelingModelWizardID"
+            name="%_UI_ReportModelingModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.ReportModeling.presentation.ReportModelingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ReportModelingModelFile.gif">
+         <description>%_UI_ReportModelingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.ReportModeling.presentation.ReportModelingEditorID"
+            name="%_UI_ReportModelingEditor_label"
+            icon="icons/full/obj16/ReportModelingModelFile.gif"
+            extensions="reportmodeling"
+            class="pt.fct.unl.novalincs.useme.model.ReportModeling.presentation.ReportModelingEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.ReportModeling.presentation.ReportModelingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.InteractionModeling.presentation.InteractionModelingModelWizardID"
+            name="%_UI_InteractionModelingModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.InteractionModeling.presentation.InteractionModelingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/InteractionModelingModelFile.gif">
+         <description>%_UI_InteractionModelingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.InteractionModeling.presentation.InteractionModelingEditorID"
+            name="%_UI_InteractionModelingEditor_label"
+            icon="icons/full/obj16/InteractionModelingModelFile.gif"
+            extensions="interactionmodeling"
+            class="pt.fct.unl.novalincs.useme.model.InteractionModeling.presentation.InteractionModelingEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.InteractionModeling.presentation.InteractionModelingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.SurveyModeling.presentation.SurveyModelingModelWizardID"
+            name="%_UI_SurveyModelingModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.SurveyModeling.presentation.SurveyModelingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SurveyModelingModelFile.gif">
+         <description>%_UI_SurveyModelingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.SurveyModeling.presentation.SurveyModelingEditorID"
+            name="%_UI_SurveyModelingEditor_label"
+            icon="icons/full/obj16/SurveyModelingModelFile.gif"
+            extensions="surveymodeling"
+            class="pt.fct.unl.novalincs.useme.model.SurveyModeling.presentation.SurveyModelingEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.SurveyModeling.presentation.SurveyModelingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.EvaluationModeling.presentation.EvaluationModelingModelWizardID"
+            name="%_UI_EvaluationModelingModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.EvaluationModeling.presentation.EvaluationModelingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EvaluationModelingModelFile.gif">
+         <description>%_UI_EvaluationModelingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.EvaluationModeling.presentation.EvaluationModelingEditorID"
+            name="%_UI_EvaluationModelingEditor_label"
+            icon="icons/full/obj16/EvaluationModelingModelFile.gif"
+            extensions="evaluationmodeling"
+            class="pt.fct.unl.novalincs.useme.model.EvaluationModeling.presentation.EvaluationModelingEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.EvaluationModeling.presentation.EvaluationModelingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.GoalModeling.presentation.GoalModelingModelWizardID"
+            name="%_UI_GoalModelingModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.GoalModeling.presentation.GoalModelingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GoalModelingModelFile.gif">
+         <description>%_UI_GoalModelingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.GoalModeling.presentation.GoalModelingEditorID"
+            name="%_UI_GoalModelingEditor_label"
+            icon="icons/full/obj16/GoalModelingModelFile.gif"
+            extensions="goalmodeling"
+            class="pt.fct.unl.novalincs.useme.model.GoalModeling.presentation.GoalModelingEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.GoalModeling.presentation.GoalModelingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.ContextModeling.presentation.ContextModelingModelWizardID"
+            name="%_UI_ContextModelingModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.ContextModeling.presentation.ContextModelingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContextModelingModelFile.gif">
+         <description>%_UI_ContextModelingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.ContextModeling.presentation.ContextModelingEditorID"
+            name="%_UI_ContextModelingEditor_label"
+            icon="icons/full/obj16/ContextModelingModelFile.gif"
+            extensions="contextmodeling"
+            class="pt.fct.unl.novalincs.useme.model.ContextModeling.presentation.ContextModelingEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.ContextModeling.presentation.ContextModelingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated UseMe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pt.fct.unl.novalincs.useme.model.Utility.presentation.UtilityModelWizardID"
+            name="%_UI_UtilityModelWizard_label"
+            class="pt.fct.unl.novalincs.useme.model.Utility.presentation.UtilityModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UtilityModelFile.gif">
+         <description>%_UI_UtilityModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated UseMe -->
+      <editor
+            id="pt.fct.unl.novalincs.useme.model.Utility.presentation.UtilityEditorID"
+            name="%_UI_UtilityEditor_label"
+            icon="icons/full/obj16/UtilityModelFile.gif"
+            extensions="utility"
+            class="pt.fct.unl.novalincs.useme.model.Utility.presentation.UtilityEditor"
+            contributorClass="pt.fct.unl.novalincs.useme.model.Utility.presentation.UtilityActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

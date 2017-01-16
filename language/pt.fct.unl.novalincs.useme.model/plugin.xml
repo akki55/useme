@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme"
+            class="pt.fct.unl.novalincs.useme.model.UseMe.UseMePackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme.reportmodeling"
+            class="pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme.interactionmodeling"
+            class="pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme.surveymodeling"
+            class="pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme.evaluationmodeling"
+            class="pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingPackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme.goalmodeling"
+            class="pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme.contextmodeling"
+            class="pt.fct.unl.novalincs.useme.model.ContextModeling.ContextModelingPackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated UseMe -->
+      <package
+            uri="http://nova-lincs.di.fct.unl.pt/useme.utility"
+            class="pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage"
+            genModel="model/UseMe.genmodel"/>
+   </extension>
+</plugin>
