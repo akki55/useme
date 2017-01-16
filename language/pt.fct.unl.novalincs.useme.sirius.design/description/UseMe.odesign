@@ -19,7 +19,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -52,7 +52,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -66,7 +66,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="2" labelSize="12" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="2" labelSize="12" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -80,7 +80,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelAlignment="RIGHT" hideLabelByDefault="true" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelAlignment="RIGHT" hideLabelByDefault="true" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -147,19 +147,19 @@
       <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//Utility"/>
       <defaultLayer name="Default">
         <nodeMappings name="TechnicalEnvironmentNode" semanticCandidatesExpression="aql:self.enviromentSpecification.technicalEnvironment" domainClass="ContextModeling.TechnicalEnvironment">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Technical Environment: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/technicalEnvironment.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Technical Environment: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/technicalEnvironment.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="PhysicalEnvironmentNode" semanticCandidatesExpression="aql:self.enviromentSpecification.physicalEnvironment" domainClass="ContextModeling.PhysicalEnvironment">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Physical Environment: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/physicalEnvironment.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Physical Environment: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/physicalEnvironment.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="SocialEnvironmentNode" semanticCandidatesExpression="aql:self.enviromentSpecification.socialEnvironment" domainClass="ContextModeling.SocialEnvironment">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Social Environment: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/socialEnvironment.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Social Environment: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/socialEnvironment.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -271,7 +271,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="3" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/workflow.png">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="3" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/workflow.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -319,14 +319,14 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="3" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/workflow.png">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="3" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/workflow.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="ScenarioNode" semanticCandidatesExpression="feature:scenario" domainClass="ContextModeling.Scenario">
-          <style xsi:type="style:WorkspaceImageDescription" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/scenario.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -372,7 +372,7 @@
         </edgeMappings>
         <containerMappings name="UsabilityGoalContainer" semanticCandidatesExpression="feature:usabilityGoal" domainClass="GoalModeling.UsabilityGoal" childrenPresentation="List">
           <borderedNodeMappings name="ActorBNode" semanticCandidatesExpression="aql: self.responsibleActor" domainClass="GoalModeling.Actor">
-            <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:self.name" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/UCActor.png">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:self.name" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/UCActor.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
@@ -454,7 +454,7 @@
         </edgeMappings>
         <containerMappings name="UsabilityGoalContainer" semanticCandidatesExpression="var:self" domainClass="GoalModeling.UsabilityGoal" childrenPresentation="List">
           <borderedNodeMappings name="ActorBNode" semanticCandidatesExpression="aql: self.responsibleActor" domainClass="GoalModeling.Actor">
-            <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:self.name" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/UCActor.png">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:self.name" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/UCActor.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
@@ -544,7 +544,7 @@
       <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//Utility"/>
       <defaultLayer name="Default">
         <nodeMappings name="EvaluationModelNode" semanticCandidatesExpression="var:self" domainClass="EvaluationModeling.EvaluationModel">
-          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:'Evaluation model: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/evaluationModel.png">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:'Evaluation model: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/evaluationModel.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -552,7 +552,7 @@
         </nodeMappings>
         <nodeMappings name="ParticipantNode" semanticCandidatesExpression="aql:self.participant" domainClass="EvaluationModeling.Participant">
           <borderedNodeMappings name="UserProfileBNode" semanticCandidatesExpression="aql: self.userProfile" domainClass="ContextModeling.UserProfile">
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
@@ -564,7 +564,7 @@
           </style>
         </nodeMappings>
         <nodeMappings name="LanguageNode" semanticCandidatesExpression="aql:self.language" domainClass="EvaluationModeling.Language">
-          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:'Language: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/language.png">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:'Language: ' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/language.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -603,7 +603,7 @@
             </style>
           </borderedNodeMappings>
           <borderedNodeMappings name="ResponsibleBNode" semanticCandidatesExpression="aql: self.responsible" domainClass="GoalModeling.Actor">
-            <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:self. name" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/UCActor.png">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:self. name" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/UCActor.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
@@ -669,65 +669,65 @@
       <defaultLayer name="Default">
         <nodeMappings name="EvaluationContextNode" semanticCandidatesExpression="aql:self.evaluationContext" domainClass="EvaluationModeling.EvaluationContext">
           <borderedNodeMappings name="TechnicalEBNode" semanticCandidatesExpression="feature:contextEnvironment" domainClass="ContextModeling.TechnicalEnvironment">
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:  self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/technicalEnvironment.png">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:  self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/technicalEnvironment.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
           <borderedNodeMappings name="SocialEBNode" semanticCandidatesExpression="feature:contextEnvironment" domainClass="ContextModeling.SocialEnvironment">
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:  self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/socialEnvironment.png">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql:  self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/socialEnvironment.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
           <borderedNodeMappings name="PhysicalEBNode" semanticCandidatesExpression="feature:contextEnvironment" domainClass="ContextModeling.PhysicalEnvironment">
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql: self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/physicalEnvironment.png">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelExpression="aql: self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/physicalEnvironment.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Evaluation context: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/evaluationContext.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Evaluation context: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/evaluationContext.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="EvaluationDocumentationNode" semanticCandidatesExpression="aql:self.doc" domainClass="EvaluationModeling.Documentation">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Documentation: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/documentation.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Documentation: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/documentation.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="WorkflowNode" semanticCandidatesExpression="aql:self.evaluationContext.workflow" domainClass="ContextModeling.Workflow">
-          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="3" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/workflow.png">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="3" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/workflow.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="UserProfileNode" semanticCandidatesExpression="aql: self.evaluationContext.userProfileSelection" domainClass="ContextModeling.UserProfile">
-          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+          <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="EvaluationModelNode" semanticCandidatesExpression="var:self" domainClass="EvaluationModeling.EvaluationModel">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Evaluation model: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/evaluationModel.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Evaluation model: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/evaluationModel.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="EvProcessNode" semanticCandidatesExpression="feature:process" domainClass="EvaluationModeling.Process">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Evaluation process: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/process.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql: 'Evaluation process: \n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/process.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="ScenarioNode" semanticCandidatesExpression="aql:self.evaluationContext.scenario" domainClass="ContextModeling.Scenario">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/scenario.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -809,14 +809,14 @@
       <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//Utility"/>
       <defaultLayer name="Default">
         <nodeMappings name="InteractionModelNode" semanticCandidatesExpression="var:self" domainClass="InteractionModeling.InteractionModel">
-          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/interactionModel.png">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/interactionModel.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="ParticipantNode" semanticCandidatesExpression="aql:self.participant" domainClass="EvaluationModeling.Participant">
           <borderedNodeMappings name="UserProfileBNode" semanticCandidatesExpression="aql: self.userProfile" domainClass="ContextModeling.UserProfile">
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
@@ -828,19 +828,19 @@
           </style>
         </nodeMappings>
         <nodeMappings name="InteractionSyntaxNode" semanticCandidatesExpression="aql:self.interactionSyntax" domainClass="InteractionModeling.InteractionSyntax">
-          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/syntax.png">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/syntax.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="TaskNode" semanticCandidatesExpression="aql:self.task" domainClass="InteractionModeling.Task">
           <borderedNodeMappings name="ScenarioBNode" semanticCandidatesExpression="feature:scenario" domainClass="ContextModeling.Scenario">
-            <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/scenario.png">
+            <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/task.png">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/task.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -934,7 +934,7 @@
       <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//Utility"/>
       <defaultLayer name="Default">
         <nodeMappings name="SurveyModelNode" semanticCandidatesExpression="var:self" domainClass="SurveyModeling.SurveyModel">
-          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:'Survey Model:\n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/surveyModel.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:'Survey Model:\n' + self.name" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/surveyModel.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -942,7 +942,7 @@
         </nodeMappings>
         <nodeMappings name="ParticipantNode" semanticCandidatesExpression="aql:self.participant" domainClass="EvaluationModeling.Participant">
           <borderedNodeMappings name="UserProfileBNode" semanticCandidatesExpression="aql: self.userProfile" domainClass="ContextModeling.UserProfile">
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/sirius.UseMe.design/icons/userProfile.png">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="[self.name.concat( '\nPriority: ' ).concat(self.priority.toString())/]" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/userProfile.png">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
