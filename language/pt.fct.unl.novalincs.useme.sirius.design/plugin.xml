@@ -2,8 +2,8 @@
 <?eclipse version="3.0"?>
 <plugin>
   <extension point="org.eclipse.sirius.componentization">
-    <component class="sirius.UseMe.design.Activator"
-               id="sirius.UseMe.design"
+    <component class="pt.fct.unl.novalincs.useme.sirius.design.Activator"
+               id="pt.fct.unl.novalincs.useme.sirius.design"
 	       name="UseMe">
     </component>
   </extension>

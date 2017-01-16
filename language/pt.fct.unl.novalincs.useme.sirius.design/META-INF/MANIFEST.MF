@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: sirius.UseMe.design
+Bundle-Name: UseMe Diagrams Design
 Bundle-SymbolicName: pt.fct.unl.novalincs.useme.sirius.design;singleton:=true
 Bundle-Version: 1.0.0
-Bundle-Activator: sirius.UseMe.design.Activator
+Bundle-Activator: pt.fct.unl.novalincs.useme.sirius.design.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
