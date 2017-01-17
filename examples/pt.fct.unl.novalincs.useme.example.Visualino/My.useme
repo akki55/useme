@@ -17,6 +17,7 @@
       <userProfile name="Teen" backgroundQs="//@surveySpecification.0/@question.1 //@surveySpecification.0/@question.2 //@surveySpecification.0/@question.3 //@surveySpecification.0/@question.4 //@surveySpecification.0/@question.5" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5" participant="//@evaluationSpecification.0/@participant.0" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.7"/>
       <userProfile name="Adult" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.3" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.8"/>
       <userProfile name="Kid" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
+      <userProfile name="Not in Hierarchy"/>
       <profileTemplate name="bdStakeholder" category="Background Demographics" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.0 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.2 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.3"/>
       <profileTemplate name="bdEndUser" category="Background Demographics" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.1 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.2 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.3"/>
       <profileTemplate name="bkEndUser" category="Background Knowledge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.4 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5"/>
@@ -60,12 +61,8 @@
         <expression>1-12</expression>
       </logicalExpression>
       <logicalExpression name="mathematics" classifierName="mathematics" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4" question="//@surveySpecification.0/@question.5">
-        <expression>ordinal</expression>
-        <expression>scale</expression>
-        <expression>(experience),</expression>
-        <expression>number</expression>
-        <expression>(school</expression>
-        <expression>note)</expression>
+        <expression>ordinal scale (experience)</expression>
+        <expression>number (school note)</expression>
       </logicalExpression>
       <logicalExpression name="physics" classifierName="physics" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4">
         <expression>ordinal</expression>
