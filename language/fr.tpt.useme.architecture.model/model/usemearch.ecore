@@ -39,6 +39,19 @@
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportingTools" upperBound="-1"
         eType="#//SoftwareTool" eOpposite="#//SoftwareTool/supportedLanguages"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semantics" upperBound="-1"
+        eType="#//Semantic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainConcepts" upperBound="-1"
+        eType="#//DomainConcept"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureDiagrams" upperBound="-1"
+        eType="#//FeatureDiagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelCheckers" upperBound="-1"
+        eType="#//ModelChecker"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelSimulators" upperBound="-1"
+        eType="#//ModelSimulator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentations" upperBound="-1"
+        eType="#//Documentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maintenanceService" eType="#//MaintenanceService"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Syntax" abstract="true" eSuperTypes="#//IdentifiedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractSyntax" abstract="true" eSuperTypes="#//Syntax"/>
@@ -68,4 +81,11 @@
         upperBound="-1" eType="#//Dsl" eOpposite="#//Dsl/supportingTools"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem" eSuperTypes="#//SoftwareTool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Semantic" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainConcept" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureDiagram" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelChecker" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelSimulator" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Documentation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MaintenanceService" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
 </ecore:EPackage>
