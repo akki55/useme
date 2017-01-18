@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.tpt.useme.architecture.model/src" modelPluginID="fr.tpt.useme.architecture.model"
+    modelName="Usemearch" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/fr.tpt.useme.architecture.model.tests/src" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" testsPluginID="fr.tpt.useme.architecture.model.tests"
+    usedGenPackages="../../fr.labsticc.framework.constraints.model/model/constraints.genmodel#//constraints ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.sirius/model/viewpoint.genmodel#//viewpoint"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>usemearch.ecore</foreignModel>
+  <genPackages prefix="Usemearch" basePackage="fr.tpt.useme.architecture.model" disposableProviderFactory="true"
+      ecorePackage="usemearch.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="usemearch.ecore#//EnvironmentType">
+      <genEnumLiterals ecoreEnumLiteral="usemearch.ecore#//EnvironmentType/Technical"/>
+      <genEnumLiterals ecoreEnumLiteral="usemearch.ecore#//EnvironmentType/Physical"/>
+      <genEnumLiterals ecoreEnumLiteral="usemearch.ecore#//EnvironmentType/Social"/>
+    </genEnums>
+    <genClasses ecoreClass="usemearch.ecore#//IdentifiedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//IdentifiedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//IdentifiedElement/id"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//EnvironmentSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//EnvironmentSpecification/ownedDsls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//EnvironmentSpecification/ownedTools"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//EnvironmentalElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//EnvironmentalElement/envitonmentType"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//ContextSpecification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/developedDsl"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/environmentalElements"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//Dsl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/ownedSyntaxes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/concreteSyntaxes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/abstractsyntax"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/supportingTools"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//Syntax"/>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//AbstractSyntax"/>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//ConcreteSyntax">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ConcreteSyntax/language"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//ECoreAbstractSyntax">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ECoreAbstractSyntax/packages"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//SiriusConcreteSyntax">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//SiriusConcreteSyntax/siriusSpecification"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//Tool">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Tool/usedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//User">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//User/uses"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//WorkPlace"/>
+    <genClasses ecoreClass="usemearch.ecore#//Computer"/>
+    <genClasses ecoreClass="usemearch.ecore#//SoftwareTool">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//SoftwareTool/supportedLanguages"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//OperatingSystem"/>
+  </genPackages>
+</genmodel:GenModel>
