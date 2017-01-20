@@ -4,36 +4,41 @@
     modelName="Usemearch" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/fr.tpt.useme.architecture.model.tests/src" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="8.0" copyrightFields="false" testsPluginID="fr.tpt.useme.architecture.model.tests"
-    usedGenPackages="../../fr.labsticc.framework.constraints.model/model/constraints.genmodel#//constraints ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.sirius/model/viewpoint.genmodel#//viewpoint"
-    operationReflection="true" importOrganizing="true">
+    runtimeVersion="2.5" usedGenPackages="../../fr.labsticc.framework.constraints.model/model/constraints.genmodel#//constraints ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../fr.labsticc.framework.settings.model/model/settings.genmodel#//settings ../../org.eclipse.sirius/model/viewpoint.genmodel#//viewpoint"
+    importOrganizing="true">
   <foreignModel>usemearch.ecore</foreignModel>
   <genPackages prefix="Usemearch" basePackage="fr.tpt.useme.architecture.model" disposableProviderFactory="true"
       ecorePackage="usemearch.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="usemearch.ecore#//EnvironmentType">
-      <genEnumLiterals ecoreEnumLiteral="usemearch.ecore#//EnvironmentType/Technical"/>
-      <genEnumLiterals ecoreEnumLiteral="usemearch.ecore#//EnvironmentType/Physical"/>
-      <genEnumLiterals ecoreEnumLiteral="usemearch.ecore#//EnvironmentType/Social"/>
-    </genEnums>
-    <genClasses ecoreClass="usemearch.ecore#//IdentifiedElement">
+    <genClasses image="false" ecoreClass="usemearch.ecore#//IdentifiedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//IdentifiedElement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//IdentifiedElement/id"/>
     </genClasses>
-    <genClasses ecoreClass="usemearch.ecore#//EnvironmentSpecification">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//EnvironmentSpecification/ownedDsls"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//EnvironmentSpecification/ownedTools"/>
+    <genClasses ecoreClass="usemearch.ecore#//DslDevelopmentSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslDevelopmentSpecification/ownedDsls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslDevelopmentSpecification/ownedTools"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslDevelopmentSpecification/developedDsl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslDevelopmentSpecification/ownedContexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslDevelopmentSpecification/ownedUsers"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="usemearch.ecore#//EnvironmentalElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//EnvironmentalElement/envitonmentType"/>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//CategorizedElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//CategorizedElement/category"/>
     </genClasses>
     <genClasses ecoreClass="usemearch.ecore#//ContextSpecification">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/developedDsl"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/environmentalElements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/developedDsl"/>
     </genClasses>
     <genClasses ecoreClass="usemearch.ecore#//Dsl">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/ownedSyntaxes"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/concreteSyntaxes"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/abstractsyntax"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/supportingTools"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/semantics"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/domainConcepts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/featureDiagrams"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/modelCheckers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/modelSimulators"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/documentations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//Dsl/maintenanceService"/>
     </genClasses>
     <genClasses image="false" ecoreClass="usemearch.ecore#//Syntax"/>
     <genClasses image="false" ecoreClass="usemearch.ecore#//AbstractSyntax"/>
@@ -58,5 +63,15 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//SoftwareTool/supportedLanguages"/>
     </genClasses>
     <genClasses ecoreClass="usemearch.ecore#//OperatingSystem"/>
+    <genClasses ecoreClass="usemearch.ecore#//Semantic"/>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//DomainConcept"/>
+    <genClasses ecoreClass="usemearch.ecore#//ECoreDomainConcept">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ECoreDomainConcept/domainClass"/>
+    </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//FeatureDiagram"/>
+    <genClasses ecoreClass="usemearch.ecore#//ModelChecker"/>
+    <genClasses ecoreClass="usemearch.ecore#//ModelSimulator"/>
+    <genClasses ecoreClass="usemearch.ecore#//Documentation"/>
+    <genClasses ecoreClass="usemearch.ecore#//MaintenanceService"/>
   </genPackages>
 </genmodel:GenModel>

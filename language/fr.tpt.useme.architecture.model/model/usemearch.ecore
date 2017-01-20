@@ -7,28 +7,32 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EnvironmentSpecification" eSuperTypes="#//IdentifiedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="DslDevelopmentSpecification" eSuperTypes="#//IdentifiedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedDsls" lowerBound="1"
         upperBound="-1" eType="#//Dsl" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedTools" lowerBound="1"
-        upperBound="-1" eType="#//Dsl" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EnvironmentalElement" abstract="true"
-      eSuperTypes="#//IdentifiedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="envitonmentType" eType="#//EnvironmentType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EnvironmentType">
-    <eLiterals name="Technical"/>
-    <eLiterals name="Physical" value="1"/>
-    <eLiterals name="Social" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContextSpecification" eSuperTypes="#//IdentifiedElement">
+        upperBound="-1" eType="#//Tool" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="developedDsl" lowerBound="1"
         eType="#//Dsl"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentalElements"
-        lowerBound="1" upperBound="-1" eType="#//EnvironmentalElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedContexts" lowerBound="1"
+        upperBound="-1" eType="#//ContextSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedUsers" lowerBound="1"
+        upperBound="-1" eType="#//User" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Dsl" eSuperTypes="#//EnvironmentalElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ContextElementType" abstract="true"
+      eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="category" upperBound="-1"
+        eType="ecore:EClass ../../fr.labsticc.framework.settings.model/model/settings.ecore#//Category"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextSpecification" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedInstanceElements"
+        lowerBound="1" upperBound="-1" eType="#//ContextElementInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="developedDsl" lowerBound="1"
+        eType="#//Dsl" changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedConnections" upperBound="-1"
+        eType="#//ElementInstanceConnection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dsl" eSuperTypes="#//ContextElementType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedSyntaxes" lowerBound="2"
         upperBound="-1" eType="#//Syntax" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="concreteSyntaxes" lowerBound="1"
@@ -66,26 +70,49 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="siriusSpecification" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.eclipse.sirius/model/viewpoint.ecore#//description/Group"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tool" abstract="true" eSuperTypes="#//EnvironmentalElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Tool" abstract="true" eSuperTypes="#//ContextElementType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" lowerBound="1"
         upperBound="-1" eType="#//User"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//EnvironmentalElement">
+  <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//ContextElementType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="uses" lowerBound="1" upperBound="-1"
         eType="#//Tool"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WorkPlace" eSuperTypes="#//EnvironmentalElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Computer" eSuperTypes="#//Tool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkPlace" eSuperTypes="#//ContextElementType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Computer" eSuperTypes="#//Tool">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executes" lowerBound="1"
+        upperBound="-1" eType="#//SoftwareTool" eOpposite="#//SoftwareTool/executedBy"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SoftwareTool" eSuperTypes="#//Tool">
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedLanguages" lowerBound="1"
         upperBound="-1" eType="#//Dsl" eOpposite="#//Dsl/supportingTools"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executedBy" lowerBound="1"
+        upperBound="-1" eType="#//Computer" eOpposite="#//Computer/executes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem" eSuperTypes="#//SoftwareTool"/>
   <eClassifiers xsi:type="ecore:EClass" name="Semantic" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainConcept" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainConcept" abstract="true" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ECoreDomainConcept" eSuperTypes="#//DomainConcept">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainClass" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FeatureDiagram" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelChecker" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelSimulator" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Documentation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelChecker" eSuperTypes="#//SoftwareTool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelSimulator" eSuperTypes="#//SoftwareTool"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Documentation" eSuperTypes="#//IdentifiedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="MaintenanceService" eSuperTypes="../../org.eclipse.sirius/model/viewpoint.ecore#//description/IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContextElementInstance" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementType" lowerBound="1"
+        eType="#//ContextElementType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementInstanceConnection" eSuperTypes="#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceFeature" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destinationFeature" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceElementInstance"
+        lowerBound="1" eType="#//ContextElementInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destinationElementInstance"
+        lowerBound="1" eType="#//ContextElementInstance"/>
+  </eClassifiers>
 </ecore:EPackage>

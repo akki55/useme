@@ -4,6 +4,7 @@ package fr.tpt.useme.architecture.model.usemearch.provider;
 
 import fr.labsticc.framework.constraints.model.constraints.provider.ConstraintsEditPlugin;
 
+import fr.labsticc.framework.settings.model.settings.provider.SettingsEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -46,6 +47,7 @@ public final class UsemearchEditPlugin extends EMFPlugin {
 		  (new ResourceLocator [] {
 		     ConstraintsEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
+		     SettingsEditPlugin.INSTANCE,
 		     SiriusEditPlugin.INSTANCE,
 		   });
 	}

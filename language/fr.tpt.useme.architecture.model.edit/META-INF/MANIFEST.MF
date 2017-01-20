@@ -16,6 +16,8 @@ Require-Bundle: org.eclipse.core.runtime,
  fr.labsticc.framework.constraints.model.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
+ fr.labsticc.framework.settings.model;visibility:=reexport,
+ fr.labsticc.framework.settings.model.edit;visibility:=reexport,
  org.eclipse.sirius;visibility:=reexport,
  org.eclipse.sirius.ui;visibility:=reexport
 Bundle-ActivationPolicy: lazy

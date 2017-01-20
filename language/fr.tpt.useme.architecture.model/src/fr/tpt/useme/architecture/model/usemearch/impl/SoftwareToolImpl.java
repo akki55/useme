@@ -2,6 +2,7 @@
  */
 package fr.tpt.useme.architecture.model.usemearch.impl;
 
+import fr.tpt.useme.architecture.model.usemearch.Computer;
 import fr.tpt.useme.architecture.model.usemearch.Dsl;
 import fr.tpt.useme.architecture.model.usemearch.SoftwareTool;
 import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.SoftwareToolImpl#getSupportedLanguages <em>Supported Languages</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.SoftwareToolImpl#getExecutedBy <em>Executed By</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +43,16 @@ public class SoftwareToolImpl extends ToolImpl implements SoftwareTool {
 	 * @ordered
 	 */
 	protected EList<Dsl> supportedLanguages;
+
+	/**
+	 * The cached value of the '{@link #getExecutedBy() <em>Executed By</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExecutedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Computer> executedBy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,12 +90,26 @@ public class SoftwareToolImpl extends ToolImpl implements SoftwareTool {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Computer> getExecutedBy() {
+		if (executedBy == null) {
+			executedBy = new EObjectWithInverseResolvingEList.ManyInverse<Computer>(Computer.class, this, UsemearchPackage.SOFTWARE_TOOL__EXECUTED_BY, UsemearchPackage.COMPUTER__EXECUTES);
+		}
+		return executedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UsemearchPackage.SOFTWARE_TOOL__SUPPORTED_LANGUAGES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSupportedLanguages()).basicAdd(otherEnd, msgs);
+			case UsemearchPackage.SOFTWARE_TOOL__EXECUTED_BY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExecutedBy()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -98,6 +124,8 @@ public class SoftwareToolImpl extends ToolImpl implements SoftwareTool {
 		switch (featureID) {
 			case UsemearchPackage.SOFTWARE_TOOL__SUPPORTED_LANGUAGES:
 				return ((InternalEList<?>)getSupportedLanguages()).basicRemove(otherEnd, msgs);
+			case UsemearchPackage.SOFTWARE_TOOL__EXECUTED_BY:
+				return ((InternalEList<?>)getExecutedBy()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -112,6 +140,8 @@ public class SoftwareToolImpl extends ToolImpl implements SoftwareTool {
 		switch (featureID) {
 			case UsemearchPackage.SOFTWARE_TOOL__SUPPORTED_LANGUAGES:
 				return getSupportedLanguages();
+			case UsemearchPackage.SOFTWARE_TOOL__EXECUTED_BY:
+				return getExecutedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -129,6 +159,10 @@ public class SoftwareToolImpl extends ToolImpl implements SoftwareTool {
 				getSupportedLanguages().clear();
 				getSupportedLanguages().addAll((Collection<? extends Dsl>)newValue);
 				return;
+			case UsemearchPackage.SOFTWARE_TOOL__EXECUTED_BY:
+				getExecutedBy().clear();
+				getExecutedBy().addAll((Collection<? extends Computer>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -144,6 +178,9 @@ public class SoftwareToolImpl extends ToolImpl implements SoftwareTool {
 			case UsemearchPackage.SOFTWARE_TOOL__SUPPORTED_LANGUAGES:
 				getSupportedLanguages().clear();
 				return;
+			case UsemearchPackage.SOFTWARE_TOOL__EXECUTED_BY:
+				getExecutedBy().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -158,6 +195,8 @@ public class SoftwareToolImpl extends ToolImpl implements SoftwareTool {
 		switch (featureID) {
 			case UsemearchPackage.SOFTWARE_TOOL__SUPPORTED_LANGUAGES:
 				return supportedLanguages != null && !supportedLanguages.isEmpty();
+			case UsemearchPackage.SOFTWARE_TOOL__EXECUTED_BY:
+				return executedBy != null && !executedBy.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

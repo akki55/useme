@@ -5,12 +5,14 @@ package fr.tpt.useme.architecture.model.usemearch.provider;
 
 import fr.tpt.useme.architecture.model.usemearch.Computer;
 
+import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -41,8 +43,31 @@ public class ComputerItemProvider extends ToolItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addExecutesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Executes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExecutesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Computer_executes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_executes_feature", "_UI_Computer_type"),
+				 UsemearchPackage.Literals.COMPUTER__EXECUTES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

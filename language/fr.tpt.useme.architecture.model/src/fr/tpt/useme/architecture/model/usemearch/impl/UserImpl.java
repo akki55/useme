@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class UserImpl extends EnvironmentalElementImpl implements User {
+public class UserImpl extends ContextElementTypeImpl implements User {
 	/**
 	 * The cached value of the '{@link #getUses() <em>Uses</em>}' reference list.
 	 * <!-- begin-user-doc -->

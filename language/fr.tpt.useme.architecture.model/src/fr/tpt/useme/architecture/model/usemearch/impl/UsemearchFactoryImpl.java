@@ -5,7 +5,6 @@ package fr.tpt.useme.architecture.model.usemearch.impl;
 import fr.tpt.useme.architecture.model.usemearch.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -57,7 +56,7 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case UsemearchPackage.ENVIRONMENT_SPECIFICATION: return createEnvironmentSpecification();
+			case UsemearchPackage.DSL_DEVELOPMENT_SPECIFICATION: return createDslDevelopmentSpecification();
 			case UsemearchPackage.CONTEXT_SPECIFICATION: return createContextSpecification();
 			case UsemearchPackage.DSL: return createDsl();
 			case UsemearchPackage.ECORE_ABSTRACT_SYNTAX: return createECoreAbstractSyntax();
@@ -67,6 +66,15 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 			case UsemearchPackage.COMPUTER: return createComputer();
 			case UsemearchPackage.SOFTWARE_TOOL: return createSoftwareTool();
 			case UsemearchPackage.OPERATING_SYSTEM: return createOperatingSystem();
+			case UsemearchPackage.SEMANTIC: return createSemantic();
+			case UsemearchPackage.ECORE_DOMAIN_CONCEPT: return createECoreDomainConcept();
+			case UsemearchPackage.FEATURE_DIAGRAM: return createFeatureDiagram();
+			case UsemearchPackage.MODEL_CHECKER: return createModelChecker();
+			case UsemearchPackage.MODEL_SIMULATOR: return createModelSimulator();
+			case UsemearchPackage.DOCUMENTATION: return createDocumentation();
+			case UsemearchPackage.MAINTENANCE_SERVICE: return createMaintenanceService();
+			case UsemearchPackage.CONTEXT_ELEMENT_INSTANCE: return createContextElementInstance();
+			case UsemearchPackage.ELEMENT_INSTANCE_CONNECTION: return createElementInstanceConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -77,39 +85,9 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case UsemearchPackage.ENVIRONMENT_TYPE:
-				return createEnvironmentTypeFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case UsemearchPackage.ENVIRONMENT_TYPE:
-				return convertEnvironmentTypeToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EnvironmentSpecification createEnvironmentSpecification() {
-		EnvironmentSpecificationImpl environmentSpecification = new EnvironmentSpecificationImpl();
-		return environmentSpecification;
+	public DslDevelopmentSpecification createDslDevelopmentSpecification() {
+		DslDevelopmentSpecificationImpl dslDevelopmentSpecification = new DslDevelopmentSpecificationImpl();
+		return dslDevelopmentSpecification;
 	}
 
 	/**
@@ -207,10 +185,9 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentType createEnvironmentTypeFromString(EDataType eDataType, String initialValue) {
-		EnvironmentType result = EnvironmentType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+	public Semantic createSemantic() {
+		SemanticImpl semantic = new SemanticImpl();
+		return semantic;
 	}
 
 	/**
@@ -218,8 +195,79 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEnvironmentTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public ECoreDomainConcept createECoreDomainConcept() {
+		ECoreDomainConceptImpl eCoreDomainConcept = new ECoreDomainConceptImpl();
+		return eCoreDomainConcept;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeatureDiagram createFeatureDiagram() {
+		FeatureDiagramImpl featureDiagram = new FeatureDiagramImpl();
+		return featureDiagram;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelChecker createModelChecker() {
+		ModelCheckerImpl modelChecker = new ModelCheckerImpl();
+		return modelChecker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelSimulator createModelSimulator() {
+		ModelSimulatorImpl modelSimulator = new ModelSimulatorImpl();
+		return modelSimulator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Documentation createDocumentation() {
+		DocumentationImpl documentation = new DocumentationImpl();
+		return documentation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MaintenanceService createMaintenanceService() {
+		MaintenanceServiceImpl maintenanceService = new MaintenanceServiceImpl();
+		return maintenanceService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ContextElementInstance createContextElementInstance() {
+		ContextElementInstanceImpl contextElementInstance = new ContextElementInstanceImpl();
+		return contextElementInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElementInstanceConnection createElementInstanceConnection() {
+		ElementInstanceConnectionImpl elementInstanceConnection = new ElementInstanceConnectionImpl();
+		return elementInstanceConnection;
 	}
 
 	/**

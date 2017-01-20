@@ -72,26 +72,26 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.EnvironmentSpecification} instances.
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnvironmentSpecificationItemProvider environmentSpecificationItemProvider;
+	protected DslDevelopmentSpecificationItemProvider dslDevelopmentSpecificationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.EnvironmentSpecification}.
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEnvironmentSpecificationAdapter() {
-		if (environmentSpecificationItemProvider == null) {
-			environmentSpecificationItemProvider = new EnvironmentSpecificationItemProvider(this);
+	public Adapter createDslDevelopmentSpecificationAdapter() {
+		if (dslDevelopmentSpecificationItemProvider == null) {
+			dslDevelopmentSpecificationItemProvider = new DslDevelopmentSpecificationItemProvider(this);
 		}
 
-		return environmentSpecificationItemProvider;
+		return dslDevelopmentSpecificationItemProvider;
 	}
 
 	/**
@@ -302,6 +302,213 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.Semantic} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SemanticItemProvider semanticItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.Semantic}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSemanticAdapter() {
+		if (semanticItemProvider == null) {
+			semanticItemProvider = new SemanticItemProvider(this);
+		}
+
+		return semanticItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ECoreDomainConceptItemProvider eCoreDomainConceptItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createECoreDomainConceptAdapter() {
+		if (eCoreDomainConceptItemProvider == null) {
+			eCoreDomainConceptItemProvider = new ECoreDomainConceptItemProvider(this);
+		}
+
+		return eCoreDomainConceptItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.FeatureDiagram} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FeatureDiagramItemProvider featureDiagramItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.FeatureDiagram}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFeatureDiagramAdapter() {
+		if (featureDiagramItemProvider == null) {
+			featureDiagramItemProvider = new FeatureDiagramItemProvider(this);
+		}
+
+		return featureDiagramItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ModelChecker} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModelCheckerItemProvider modelCheckerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ModelChecker}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModelCheckerAdapter() {
+		if (modelCheckerItemProvider == null) {
+			modelCheckerItemProvider = new ModelCheckerItemProvider(this);
+		}
+
+		return modelCheckerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ModelSimulator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModelSimulatorItemProvider modelSimulatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ModelSimulator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModelSimulatorAdapter() {
+		if (modelSimulatorItemProvider == null) {
+			modelSimulatorItemProvider = new ModelSimulatorItemProvider(this);
+		}
+
+		return modelSimulatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.Documentation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DocumentationItemProvider documentationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.Documentation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDocumentationAdapter() {
+		if (documentationItemProvider == null) {
+			documentationItemProvider = new DocumentationItemProvider(this);
+		}
+
+		return documentationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.MaintenanceService} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MaintenanceServiceItemProvider maintenanceServiceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.MaintenanceService}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMaintenanceServiceAdapter() {
+		if (maintenanceServiceItemProvider == null) {
+			maintenanceServiceItemProvider = new MaintenanceServiceItemProvider(this);
+		}
+
+		return maintenanceServiceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ContextElementInstance} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContextElementInstanceItemProvider contextElementInstanceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ContextElementInstance}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createContextElementInstanceAdapter() {
+		if (contextElementInstanceItemProvider == null) {
+			contextElementInstanceItemProvider = new ContextElementInstanceItemProvider(this);
+		}
+
+		return contextElementInstanceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ElementInstanceConnectionItemProvider elementInstanceConnectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createElementInstanceConnectionAdapter() {
+		if (elementInstanceConnectionItemProvider == null) {
+			elementInstanceConnectionItemProvider = new ElementInstanceConnectionItemProvider(this);
+		}
+
+		return elementInstanceConnectionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -400,7 +607,7 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (environmentSpecificationItemProvider != null) environmentSpecificationItemProvider.dispose();
+		if (dslDevelopmentSpecificationItemProvider != null) dslDevelopmentSpecificationItemProvider.dispose();
 		if (contextSpecificationItemProvider != null) contextSpecificationItemProvider.dispose();
 		if (dslItemProvider != null) dslItemProvider.dispose();
 		if (eCoreAbstractSyntaxItemProvider != null) eCoreAbstractSyntaxItemProvider.dispose();
@@ -410,6 +617,15 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 		if (computerItemProvider != null) computerItemProvider.dispose();
 		if (softwareToolItemProvider != null) softwareToolItemProvider.dispose();
 		if (operatingSystemItemProvider != null) operatingSystemItemProvider.dispose();
+		if (semanticItemProvider != null) semanticItemProvider.dispose();
+		if (eCoreDomainConceptItemProvider != null) eCoreDomainConceptItemProvider.dispose();
+		if (featureDiagramItemProvider != null) featureDiagramItemProvider.dispose();
+		if (modelCheckerItemProvider != null) modelCheckerItemProvider.dispose();
+		if (modelSimulatorItemProvider != null) modelSimulatorItemProvider.dispose();
+		if (documentationItemProvider != null) documentationItemProvider.dispose();
+		if (maintenanceServiceItemProvider != null) maintenanceServiceItemProvider.dispose();
+		if (contextElementInstanceItemProvider != null) contextElementInstanceItemProvider.dispose();
+		if (elementInstanceConnectionItemProvider != null) elementInstanceConnectionItemProvider.dispose();
 	}
 
 }

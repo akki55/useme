@@ -4,10 +4,10 @@ package fr.tpt.useme.architecture.model.usemearch.util;
 
 import fr.tpt.useme.architecture.model.usemearch.*;
 
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
+import java.util.List;
 
-import org.eclipse.emf.ecore.util.Switch;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage
  * @generated
  */
-public class UsemearchSwitch<T> extends Switch<T> {
+public class UsemearchSwitch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -44,16 +44,14 @@ public class UsemearchSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Checks whether this is a switch for the given package.
+	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param ePackage the package in question.
-	 * @return whether this is a switch for the given package.
+	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
-		return ePackage == modelPackage;
+	public T doSwitch(EObject theEObject) {
+		return doSwitch(theEObject.eClass(), theEObject);
 	}
 
 	/**
@@ -63,7 +61,26 @@ public class UsemearchSwitch<T> extends Switch<T> {
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	@Override
+	protected T doSwitch(EClass theEClass, EObject theEObject) {
+		if (theEClass.eContainer() == modelPackage) {
+			return doSwitch(theEClass.getClassifierID(), theEObject);
+		}
+		else {
+			List<EClass> eSuperTypes = theEClass.getESuperTypes();
+			return
+				eSuperTypes.isEmpty() ?
+					defaultCase(theEObject) :
+					doSwitch(eSuperTypes.get(0), theEObject);
+		}
+	}
+
+	/**
+	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the first non-null result returned by a <code>caseXXX</code> call.
+	 * @generated
+	 */
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case UsemearchPackage.IDENTIFIED_ELEMENT: {
@@ -72,17 +89,17 @@ public class UsemearchSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.ENVIRONMENT_SPECIFICATION: {
-				EnvironmentSpecification environmentSpecification = (EnvironmentSpecification)theEObject;
-				T result = caseEnvironmentSpecification(environmentSpecification);
-				if (result == null) result = caseIdentifiedElement(environmentSpecification);
+			case UsemearchPackage.DSL_DEVELOPMENT_SPECIFICATION: {
+				DslDevelopmentSpecification dslDevelopmentSpecification = (DslDevelopmentSpecification)theEObject;
+				T result = caseDslDevelopmentSpecification(dslDevelopmentSpecification);
+				if (result == null) result = caseIdentifiedElement(dslDevelopmentSpecification);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.ENVIRONMENTAL_ELEMENT: {
-				EnvironmentalElement environmentalElement = (EnvironmentalElement)theEObject;
-				T result = caseEnvironmentalElement(environmentalElement);
-				if (result == null) result = caseIdentifiedElement(environmentalElement);
+			case UsemearchPackage.CONTEXT_ELEMENT_TYPE: {
+				ContextElementType contextElementType = (ContextElementType)theEObject;
+				T result = caseContextElementType(contextElementType);
+				if (result == null) result = caseIdentifiedElement(contextElementType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -96,7 +113,7 @@ public class UsemearchSwitch<T> extends Switch<T> {
 			case UsemearchPackage.DSL: {
 				Dsl dsl = (Dsl)theEObject;
 				T result = caseDsl(dsl);
-				if (result == null) result = caseEnvironmentalElement(dsl);
+				if (result == null) result = caseContextElementType(dsl);
 				if (result == null) result = caseIdentifiedElement(dsl);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -145,7 +162,7 @@ public class UsemearchSwitch<T> extends Switch<T> {
 			case UsemearchPackage.TOOL: {
 				Tool tool = (Tool)theEObject;
 				T result = caseTool(tool);
-				if (result == null) result = caseEnvironmentalElement(tool);
+				if (result == null) result = caseContextElementType(tool);
 				if (result == null) result = caseIdentifiedElement(tool);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -153,7 +170,7 @@ public class UsemearchSwitch<T> extends Switch<T> {
 			case UsemearchPackage.USER: {
 				User user = (User)theEObject;
 				T result = caseUser(user);
-				if (result == null) result = caseEnvironmentalElement(user);
+				if (result == null) result = caseContextElementType(user);
 				if (result == null) result = caseIdentifiedElement(user);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -161,7 +178,7 @@ public class UsemearchSwitch<T> extends Switch<T> {
 			case UsemearchPackage.WORK_PLACE: {
 				WorkPlace workPlace = (WorkPlace)theEObject;
 				T result = caseWorkPlace(workPlace);
-				if (result == null) result = caseEnvironmentalElement(workPlace);
+				if (result == null) result = caseContextElementType(workPlace);
 				if (result == null) result = caseIdentifiedElement(workPlace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -170,7 +187,7 @@ public class UsemearchSwitch<T> extends Switch<T> {
 				Computer computer = (Computer)theEObject;
 				T result = caseComputer(computer);
 				if (result == null) result = caseTool(computer);
-				if (result == null) result = caseEnvironmentalElement(computer);
+				if (result == null) result = caseContextElementType(computer);
 				if (result == null) result = caseIdentifiedElement(computer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -179,7 +196,7 @@ public class UsemearchSwitch<T> extends Switch<T> {
 				SoftwareTool softwareTool = (SoftwareTool)theEObject;
 				T result = caseSoftwareTool(softwareTool);
 				if (result == null) result = caseTool(softwareTool);
-				if (result == null) result = caseEnvironmentalElement(softwareTool);
+				if (result == null) result = caseContextElementType(softwareTool);
 				if (result == null) result = caseIdentifiedElement(softwareTool);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -189,8 +206,85 @@ public class UsemearchSwitch<T> extends Switch<T> {
 				T result = caseOperatingSystem(operatingSystem);
 				if (result == null) result = caseSoftwareTool(operatingSystem);
 				if (result == null) result = caseTool(operatingSystem);
-				if (result == null) result = caseEnvironmentalElement(operatingSystem);
+				if (result == null) result = caseContextElementType(operatingSystem);
 				if (result == null) result = caseIdentifiedElement(operatingSystem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.SEMANTIC: {
+				Semantic semantic = (Semantic)theEObject;
+				T result = caseSemantic(semantic);
+				if (result == null) result = caseDescription_IdentifiedElement(semantic);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.DOMAIN_CONCEPT: {
+				DomainConcept domainConcept = (DomainConcept)theEObject;
+				T result = caseDomainConcept(domainConcept);
+				if (result == null) result = caseDescription_IdentifiedElement(domainConcept);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.ECORE_DOMAIN_CONCEPT: {
+				ECoreDomainConcept eCoreDomainConcept = (ECoreDomainConcept)theEObject;
+				T result = caseECoreDomainConcept(eCoreDomainConcept);
+				if (result == null) result = caseDomainConcept(eCoreDomainConcept);
+				if (result == null) result = caseDescription_IdentifiedElement(eCoreDomainConcept);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.FEATURE_DIAGRAM: {
+				FeatureDiagram featureDiagram = (FeatureDiagram)theEObject;
+				T result = caseFeatureDiagram(featureDiagram);
+				if (result == null) result = caseDescription_IdentifiedElement(featureDiagram);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.MODEL_CHECKER: {
+				ModelChecker modelChecker = (ModelChecker)theEObject;
+				T result = caseModelChecker(modelChecker);
+				if (result == null) result = caseSoftwareTool(modelChecker);
+				if (result == null) result = caseTool(modelChecker);
+				if (result == null) result = caseContextElementType(modelChecker);
+				if (result == null) result = caseIdentifiedElement(modelChecker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.MODEL_SIMULATOR: {
+				ModelSimulator modelSimulator = (ModelSimulator)theEObject;
+				T result = caseModelSimulator(modelSimulator);
+				if (result == null) result = caseSoftwareTool(modelSimulator);
+				if (result == null) result = caseTool(modelSimulator);
+				if (result == null) result = caseContextElementType(modelSimulator);
+				if (result == null) result = caseIdentifiedElement(modelSimulator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.DOCUMENTATION: {
+				Documentation documentation = (Documentation)theEObject;
+				T result = caseDocumentation(documentation);
+				if (result == null) result = caseIdentifiedElement(documentation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.MAINTENANCE_SERVICE: {
+				MaintenanceService maintenanceService = (MaintenanceService)theEObject;
+				T result = caseMaintenanceService(maintenanceService);
+				if (result == null) result = caseDescription_IdentifiedElement(maintenanceService);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.CONTEXT_ELEMENT_INSTANCE: {
+				ContextElementInstance contextElementInstance = (ContextElementInstance)theEObject;
+				T result = caseContextElementInstance(contextElementInstance);
+				if (result == null) result = caseIdentifiedElement(contextElementInstance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.ELEMENT_INSTANCE_CONNECTION: {
+				ElementInstanceConnection elementInstanceConnection = (ElementInstanceConnection)theEObject;
+				T result = caseElementInstanceConnection(elementInstanceConnection);
+				if (result == null) result = caseIdentifiedElement(elementInstanceConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -214,32 +308,32 @@ public class UsemearchSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment Specification</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dsl Development Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment Specification</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dsl Development Specification</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEnvironmentSpecification(EnvironmentSpecification object) {
+	public T caseDslDevelopmentSpecification(DslDevelopmentSpecification object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Environmental Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Context Element Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environmental Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Context Element Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEnvironmentalElement(EnvironmentalElement object) {
+	public T caseContextElementType(ContextElementType object) {
 		return null;
 	}
 
@@ -439,6 +533,171 @@ public class UsemearchSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Semantic</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Semantic</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSemantic(Semantic object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Domain Concept</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Domain Concept</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDomainConcept(DomainConcept object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ECore Domain Concept</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ECore Domain Concept</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseECoreDomainConcept(ECoreDomainConcept object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Diagram</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Diagram</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeatureDiagram(FeatureDiagram object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Model Checker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Model Checker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModelChecker(ModelChecker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Model Simulator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Model Simulator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModelSimulator(ModelSimulator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Documentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Documentation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDocumentation(Documentation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Maintenance Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Maintenance Service</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMaintenanceService(MaintenanceService object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Context Element Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Context Element Instance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseContextElementInstance(ContextElementInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Element Instance Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Element Instance Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElementInstanceConnection(ElementInstanceConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identified Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identified Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDescription_IdentifiedElement(org.eclipse.sirius.viewpoint.description.IdentifiedElement object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -449,7 +708,6 @@ public class UsemearchSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	@Override
 	public T defaultCase(EObject object) {
 		return null;
 	}

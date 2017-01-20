@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DslItemProvider extends EnvironmentalElementItemProvider {
+public class DslItemProvider extends ContextElementTypeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -50,6 +50,13 @@ public class DslItemProvider extends EnvironmentalElementItemProvider {
 			addConcreteSyntaxesPropertyDescriptor(object);
 			addAbstractsyntaxPropertyDescriptor(object);
 			addSupportingToolsPropertyDescriptor(object);
+			addSemanticsPropertyDescriptor(object);
+			addDomainConceptsPropertyDescriptor(object);
+			addFeatureDiagramsPropertyDescriptor(object);
+			addModelCheckersPropertyDescriptor(object);
+			addModelSimulatorsPropertyDescriptor(object);
+			addDocumentationsPropertyDescriptor(object);
+			addMaintenanceServicePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -112,6 +119,160 @@ public class DslItemProvider extends EnvironmentalElementItemProvider {
 				 getString("_UI_Dsl_supportingTools_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_supportingTools_feature", "_UI_Dsl_type"),
 				 UsemearchPackage.Literals.DSL__SUPPORTING_TOOLS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Semantics feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSemanticsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dsl_semantics_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_semantics_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__SEMANTICS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Domain Concepts feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDomainConceptsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dsl_domainConcepts_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_domainConcepts_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__DOMAIN_CONCEPTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Feature Diagrams feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFeatureDiagramsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dsl_featureDiagrams_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_featureDiagrams_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__FEATURE_DIAGRAMS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Model Checkers feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addModelCheckersPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dsl_modelCheckers_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_modelCheckers_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__MODEL_CHECKERS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Model Simulators feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addModelSimulatorsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dsl_modelSimulators_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_modelSimulators_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__MODEL_SIMULATORS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Documentations feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDocumentationsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dsl_documentations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_documentations_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__DOCUMENTATIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Maintenance Service feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMaintenanceServicePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Dsl_maintenanceService_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_maintenanceService_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__MAINTENANCE_SERVICE,
 				 true,
 				 false,
 				 true,

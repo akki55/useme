@@ -39,9 +39,6 @@ import org.eclipse.jface.action.Separator;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
-
-import org.eclipse.jface.util.LocalSelectionTransfer;
-
 import org.eclipse.jface.viewers.ColumnWeightData;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -61,7 +58,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CTabFolder;
 
 import org.eclipse.swt.dnd.DND;
-import org.eclipse.swt.dnd.FileTransfer;
 import org.eclipse.swt.dnd.Transfer;
 
 import org.eclipse.swt.events.ControlAdapter;
@@ -157,7 +153,8 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import fr.tpt.useme.architecture.model.usemearch.provider.UsemearchItemProviderAdapterFactory;
 
 import fr.labsticc.framework.constraints.model.constraints.provider.ConstraintsItemProviderAdapterFactory;
-
+import fr.labsticc.framework.settings.ide.SettingsPlugin;
+import fr.labsticc.framework.settings.model.settings.provider.SettingsItemProviderAdapterFactory;
 import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 
 import org.eclipse.sirius.viewpoint.description.audit.provider.AuditItemProviderAdapterFactory;
@@ -720,6 +717,7 @@ public class UsemearchEditor
 		adapterFactory.addAdapterFactory(new UsemearchItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ConstraintsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SettingsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ViewpointItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new DescriptionItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new StyleItemProviderAdapterFactory());
@@ -961,7 +959,7 @@ public class UsemearchEditor
 		getSite().registerContextMenu(contextMenu, new UnwrappingSelectionProvider(viewer));
 
 		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
-		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
+		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance() };
 		viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
 		viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(editingDomain, viewer));
 	}
@@ -970,10 +968,10 @@ public class UsemearchEditor
 	 * This is the method called to load a resource into the editing domain's resource set based on the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void createModel() {
-		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
+		URI resourceURI = EditUIUtil.getURI(getEditorInput());
 		Exception exception = null;
 		Resource resource = null;
 		try {
@@ -991,6 +989,9 @@ public class UsemearchEditor
 			resourceToDiagnosticMap.put(resource,  analyzeResourceProblems(resource, exception));
 		}
 		editingDomain.getResourceSet().eAdapters().add(problemIndicationAdapter);
+
+		// DB Pre-load the settings model for categories.
+		editingDomain.getResourceSet().getResource( SettingsPlugin.getDefault().getSpecification().eResource().getURI(), true );
 	}
 
 	/**
@@ -1502,7 +1503,6 @@ public class UsemearchEditor
 		//
 		final Map<Object, Object> saveOptions = new HashMap<Object, Object>();
 		saveOptions.put(Resource.OPTION_SAVE_ONLY_IF_CHANGED, Resource.OPTION_SAVE_ONLY_IF_CHANGED_MEMORY_BUFFER);
-		saveOptions.put(Resource.OPTION_LINE_DELIMITER, Resource.OPTION_LINE_DELIMITER_UNSPECIFIED);
 
 		// Do the work within an operation because this is a long running activity that modifies the workbench.
 		//

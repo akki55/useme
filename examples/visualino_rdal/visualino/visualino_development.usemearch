@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usemearch:DslDevelopmentSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usemearch="http://mem4cds.telecom-paristech.fr/languages/usemearch/">
+  <ownedDsls name="Visualino" id="">
+    <ownedSyntaxes xsi:type="usemearch:ECoreAbstractSyntax" name="VIsualino Abstract Syntax">
+      <packages href="../org.farrusco/model/farrusco.ecore#/"/>
+    </ownedSyntaxes>
+    <ownedSyntaxes xsi:type="usemearch:SiriusConcreteSyntax" name="Visualine Graphical Syntax">
+      <siriusSpecification href="../org.farrusco.design/description/farrusco.odesign#/"/>
+    </ownedSyntaxes>
+  </ownedDsls>
+  <ownedTools xsi:type="usemearch:Computer" name="PC">
+    <category href="../../config/fr.tpt.useme.settings/default.settings#cat_assumption_Technical"/>
+  </ownedTools>
+  <ownedTools xsi:type="usemearch:SoftwareTool" name="Web Browser"/>
+  <ownedContexts name="Normal Use">
+    <ownedInstanceElements name="computer" elementType="//@ownedTools.0"/>
+    <ownedInstanceElements name="end user" elementType="//@ownedUsers.0"/>
+    <ownedInstanceElements name="browser" elementType="//@ownedTools.1"/>
+    <ownedInstanceElements name="Visualino DSL"/>
+    <ownedConnections name="user-browser" sourceElementInstance="//@ownedContexts.0/@ownedInstanceElements.1" destinationElementInstance="//@ownedContexts.0/@ownedInstanceElements.2">
+      <sourceFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//User/uses"/>
+      <destinationFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//Tool/usedBy"/>
+    </ownedConnections>
+    <ownedConnections name="browser-computer" sourceElementInstance="//@ownedContexts.0/@ownedInstanceElements.2" destinationElementInstance="//@ownedContexts.0/@ownedInstanceElements.0">
+      <sourceFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//SoftwareTool/executedBy"/>
+      <destinationFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//Computer/executes"/>
+    </ownedConnections>
+  </ownedContexts>
+  <ownedUsers name="End User"/>
+</usemearch:DslDevelopmentSpecification>

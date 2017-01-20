@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public abstract class ToolImpl extends EnvironmentalElementImpl implements Tool {
+public abstract class ToolImpl extends ContextElementTypeImpl implements Tool {
 	/**
 	 * The cached value of the '{@link #getUsedBy() <em>Used By</em>}' reference list.
 	 * <!-- begin-user-doc -->

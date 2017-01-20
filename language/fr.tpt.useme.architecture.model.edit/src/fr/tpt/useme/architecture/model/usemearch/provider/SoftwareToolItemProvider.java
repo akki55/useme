@@ -44,6 +44,7 @@ public class SoftwareToolItemProvider extends ToolItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addSupportedLanguagesPropertyDescriptor(object);
+			addExecutedByPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +63,28 @@ public class SoftwareToolItemProvider extends ToolItemProvider {
 				 getString("_UI_SoftwareTool_supportedLanguages_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SoftwareTool_supportedLanguages_feature", "_UI_SoftwareTool_type"),
 				 UsemearchPackage.Literals.SOFTWARE_TOOL__SUPPORTED_LANGUAGES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Executed By feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExecutedByPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SoftwareTool_executedBy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SoftwareTool_executedBy_feature", "_UI_SoftwareTool_type"),
+				 UsemearchPackage.Literals.SOFTWARE_TOOL__EXECUTED_BY,
 				 true,
 				 false,
 				 true,

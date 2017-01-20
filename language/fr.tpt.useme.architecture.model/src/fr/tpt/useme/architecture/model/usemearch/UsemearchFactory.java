@@ -22,13 +22,13 @@ public interface UsemearchFactory extends EFactory {
 	UsemearchFactory eINSTANCE = fr.tpt.useme.architecture.model.usemearch.impl.UsemearchFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Environment Specification</em>'.
+	 * Returns a new object of class '<em>Dsl Development Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Environment Specification</em>'.
+	 * @return a new object of class '<em>Dsl Development Specification</em>'.
 	 * @generated
 	 */
-	EnvironmentSpecification createEnvironmentSpecification();
+	DslDevelopmentSpecification createDslDevelopmentSpecification();
 
 	/**
 	 * Returns a new object of class '<em>Context Specification</em>'.
@@ -110,6 +110,87 @@ public interface UsemearchFactory extends EFactory {
 	 * @generated
 	 */
 	OperatingSystem createOperatingSystem();
+
+	/**
+	 * Returns a new object of class '<em>Semantic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Semantic</em>'.
+	 * @generated
+	 */
+	Semantic createSemantic();
+
+	/**
+	 * Returns a new object of class '<em>ECore Domain Concept</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ECore Domain Concept</em>'.
+	 * @generated
+	 */
+	ECoreDomainConcept createECoreDomainConcept();
+
+	/**
+	 * Returns a new object of class '<em>Feature Diagram</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Feature Diagram</em>'.
+	 * @generated
+	 */
+	FeatureDiagram createFeatureDiagram();
+
+	/**
+	 * Returns a new object of class '<em>Model Checker</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Checker</em>'.
+	 * @generated
+	 */
+	ModelChecker createModelChecker();
+
+	/**
+	 * Returns a new object of class '<em>Model Simulator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Simulator</em>'.
+	 * @generated
+	 */
+	ModelSimulator createModelSimulator();
+
+	/**
+	 * Returns a new object of class '<em>Documentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Documentation</em>'.
+	 * @generated
+	 */
+	Documentation createDocumentation();
+
+	/**
+	 * Returns a new object of class '<em>Maintenance Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Maintenance Service</em>'.
+	 * @generated
+	 */
+	MaintenanceService createMaintenanceService();
+
+	/**
+	 * Returns a new object of class '<em>Context Element Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Context Element Instance</em>'.
+	 * @generated
+	 */
+	ContextElementInstance createContextElementInstance();
+
+	/**
+	 * Returns a new object of class '<em>Element Instance Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element Instance Connection</em>'.
+	 * @generated
+	 */
+	ElementInstanceConnection createElementInstanceConnection();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class UserItemProvider extends EnvironmentalElementItemProvider {
+public class UserItemProvider extends ContextElementTypeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

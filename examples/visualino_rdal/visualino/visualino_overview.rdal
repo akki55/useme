@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdal:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdal="http://www.open-people.fr/rdal2" name="Visualino System Overview" id="_FMREoN5sEeaU5bsIjJAn4w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+  <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_MuevQd8kEea2BJXh0b62wQ">
+    <ownedDesignElementRefs id="_MuevQN8kEea2BJXh0b62wQ">
+      <designElement href="visualino_development.usemearch#/"/>
+    </ownedDesignElementRefs>
+  </ownedReferencedDesignElements>
+  <ownedContactInformation name="Ankica Barrisic" id="_WlQAGN8kEea2BJXh0b62wQ" email="a.barisic@campus.fct.unl.pt"/>
+  <ownedSystOverview id="_IlId6t5sEeaU5bsIjJAn4w" description="The system being specified is a DSL for programming rover-like robots built with Arduino hardware. The DSL is made of an abstract syntax providing the domain concepts and their relations and an graphical concrete syntax to be used by users via a web-based application.." purpose="The purpose of the language is to ease programming of the robot and make it accessible to children.">
+    <globalSystem href="visualino_development.usemearch#/"/>
+    <systemToBe href="visualino_development.usemearch#"/>
+    <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w"/>
+  </ownedSystOverview>
+</rdal:Specification>

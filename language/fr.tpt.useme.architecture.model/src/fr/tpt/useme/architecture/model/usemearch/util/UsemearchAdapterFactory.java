@@ -72,12 +72,12 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createIdentifiedElementAdapter();
 			}
 			@Override
-			public Adapter caseEnvironmentSpecification(EnvironmentSpecification object) {
-				return createEnvironmentSpecificationAdapter();
+			public Adapter caseDslDevelopmentSpecification(DslDevelopmentSpecification object) {
+				return createDslDevelopmentSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseEnvironmentalElement(EnvironmentalElement object) {
-				return createEnvironmentalElementAdapter();
+			public Adapter caseContextElementType(ContextElementType object) {
+				return createContextElementTypeAdapter();
 			}
 			@Override
 			public Adapter caseContextSpecification(ContextSpecification object) {
@@ -132,6 +132,50 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createOperatingSystemAdapter();
 			}
 			@Override
+			public Adapter caseSemantic(Semantic object) {
+				return createSemanticAdapter();
+			}
+			@Override
+			public Adapter caseDomainConcept(DomainConcept object) {
+				return createDomainConceptAdapter();
+			}
+			@Override
+			public Adapter caseECoreDomainConcept(ECoreDomainConcept object) {
+				return createECoreDomainConceptAdapter();
+			}
+			@Override
+			public Adapter caseFeatureDiagram(FeatureDiagram object) {
+				return createFeatureDiagramAdapter();
+			}
+			@Override
+			public Adapter caseModelChecker(ModelChecker object) {
+				return createModelCheckerAdapter();
+			}
+			@Override
+			public Adapter caseModelSimulator(ModelSimulator object) {
+				return createModelSimulatorAdapter();
+			}
+			@Override
+			public Adapter caseDocumentation(Documentation object) {
+				return createDocumentationAdapter();
+			}
+			@Override
+			public Adapter caseMaintenanceService(MaintenanceService object) {
+				return createMaintenanceServiceAdapter();
+			}
+			@Override
+			public Adapter caseContextElementInstance(ContextElementInstance object) {
+				return createContextElementInstanceAdapter();
+			}
+			@Override
+			public Adapter caseElementInstanceConnection(ElementInstanceConnection object) {
+				return createElementInstanceConnectionAdapter();
+			}
+			@Override
+			public Adapter caseDescription_IdentifiedElement(org.eclipse.sirius.viewpoint.description.IdentifiedElement object) {
+				return createDescription_IdentifiedElementAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -166,30 +210,30 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.EnvironmentSpecification <em>Environment Specification</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification <em>Dsl Development Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.EnvironmentSpecification
+	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification
 	 * @generated
 	 */
-	public Adapter createEnvironmentSpecificationAdapter() {
+	public Adapter createDslDevelopmentSpecificationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.EnvironmentalElement <em>Environmental Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextElementType <em>Context Element Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.EnvironmentalElement
+	 * @see fr.tpt.useme.architecture.model.usemearch.ContextElementType
 	 * @generated
 	 */
-	public Adapter createEnvironmentalElementAdapter() {
+	public Adapter createContextElementTypeAdapter() {
 		return null;
 	}
 
@@ -372,6 +416,160 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOperatingSystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.Semantic <em>Semantic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Semantic
+	 * @generated
+	 */
+	public Adapter createSemanticAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.DomainConcept <em>Domain Concept</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.DomainConcept
+	 * @generated
+	 */
+	public Adapter createDomainConceptAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept <em>ECore Domain Concept</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept
+	 * @generated
+	 */
+	public Adapter createECoreDomainConceptAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.FeatureDiagram <em>Feature Diagram</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.FeatureDiagram
+	 * @generated
+	 */
+	public Adapter createFeatureDiagramAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ModelChecker <em>Model Checker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.ModelChecker
+	 * @generated
+	 */
+	public Adapter createModelCheckerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ModelSimulator <em>Model Simulator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.ModelSimulator
+	 * @generated
+	 */
+	public Adapter createModelSimulatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.Documentation <em>Documentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Documentation
+	 * @generated
+	 */
+	public Adapter createDocumentationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.MaintenanceService <em>Maintenance Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.MaintenanceService
+	 * @generated
+	 */
+	public Adapter createMaintenanceServiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextElementInstance <em>Context Element Instance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.ContextElementInstance
+	 * @generated
+	 */
+	public Adapter createContextElementInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection <em>Element Instance Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection
+	 * @generated
+	 */
+	public Adapter createElementInstanceConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.viewpoint.description.IdentifiedElement <em>Identified Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.viewpoint.description.IdentifiedElement
+	 * @generated
+	 */
+	public Adapter createDescription_IdentifiedElementAdapter() {
 		return null;
 	}
 

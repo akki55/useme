@@ -13,8 +13,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getOwnedInstanceElements <em>Owned Instance Elements</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getDevelopedDsl <em>Developed Dsl</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getEnvironmentalElements <em>Environmental Elements</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getOwnedConnections <em>Owned Connections</em>}</li>
  * </ul>
  *
  * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getContextSpecification()
@@ -22,6 +23,22 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface ContextSpecification extends IdentifiedElement {
+	/**
+	 * Returns the value of the '<em><b>Owned Instance Elements</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ContextElementInstance}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned Instance Elements</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned Instance Elements</em>' containment reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getContextSpecification_OwnedInstanceElements()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<ContextElementInstance> getOwnedInstanceElements();
+
 	/**
 	 * Returns the value of the '<em><b>Developed Dsl</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -31,37 +48,26 @@ public interface ContextSpecification extends IdentifiedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Developed Dsl</em>' reference.
-	 * @see #setDevelopedDsl(Dsl)
 	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getContextSpecification_DevelopedDsl()
-	 * @model required="true"
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	Dsl getDevelopedDsl();
 
 	/**
-	 * Sets the value of the '{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getDevelopedDsl <em>Developed Dsl</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Developed Dsl</em>' reference.
-	 * @see #getDevelopedDsl()
-	 * @generated
-	 */
-	void setDevelopedDsl(Dsl value);
-
-	/**
-	 * Returns the value of the '<em><b>Environmental Elements</b></em>' reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.EnvironmentalElement}.
+	 * Returns the value of the '<em><b>Owned Connections</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Environmental Elements</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Owned Connections</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Environmental Elements</em>' reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getContextSpecification_EnvironmentalElements()
-	 * @model required="true"
+	 * @return the value of the '<em>Owned Connections</em>' containment reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getContextSpecification_OwnedConnections()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<EnvironmentalElement> getEnvironmentalElements();
+	EList<ElementInstanceConnection> getOwnedConnections();
 
 } // ContextSpecification
