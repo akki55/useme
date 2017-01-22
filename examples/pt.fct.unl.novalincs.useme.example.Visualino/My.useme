@@ -342,5 +342,9 @@
     <outsideRef name="visualinoEvaluationProcess">
       <tool>BPMN</tool>
     </outsideRef>
+    <outsideRef name="visualinoResultAnalysis">
+      <link>https://docs.google.com/spreadsheets/d/1hZ41uBcsndQop13E-1P3RmuMe9J4scE7fwZLbm-uVq4/edit#gid=1317617875</link>
+      <tool>Excel</tool>
+    </outsideRef>
   </utilitySpecification>
 </useme:UseMeSpecification>

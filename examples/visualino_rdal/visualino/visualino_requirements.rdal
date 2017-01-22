@@ -5,10 +5,43 @@
       <designElement href="visualino_design.usemearch#/"/>
     </ownedDesignElementRefs>
   </ownedReferencedDesignElements>
+  <ownedPackages xsi:type="rdal:GoalsPackage" name="Preliminary system goals" id="_6VgHV-CYEeaXyq_r49uG5g">
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="Program Robot" id="_AAhwcuCZEeaXyq_r49uG5g" description="User should be able to program behavior of robot">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_ChfmceCbEeaXyq_r49uG5g">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_ChfmcOCbEeaXyq_r49uG5g">
+          <designElement href="visualino_design.usemearch#"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+    </ownedGoals>
+    <ownedGoals xsi:type="rdal:NonFunctionalGoal" name="Usability to program a robot" id="_ilHJY-CaEeaXyq_r49uG5g" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_3DjjgeCaEeaXyq_r49uG5g">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_3DjjgOCaEeaXyq_r49uG5g">
+          <designElement href="visualino_design.usemearch#"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#//@ownedLanguages.1/@ownedCategoryAssociations.1/@ownedCategories.6"/>
+    </ownedGoals>
+  </ownedPackages>
+  <ownedPackages xsi:type="rdal:RequirementsPackage" id="_t6OLBuCbEeaXyq_r49uG5g">
+    <ownedRequirements xsi:type="rdal:Assumption" id="_uuncYeCbEeaXyq_r49uG5g" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_9-5vkeCbEeaXyq_r49uG5g">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_9-5vkOCbEeaXyq_r49uG5g">
+          <designElement href="visualino_design.usemearch#//@ownedContexts.0/@ownedInstanceElements.2"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+    </ownedRequirements>
+  </ownedPackages>
   <ownedContactInformation name="Ankica Barrisic" id="_WlQAGN8kEea2BJXh0b62wQ" email="a.barisic@campus.fct.unl.pt"/>
   <ownedSystOverview id="_IlId6t5sEeaU5bsIjJAn4w" description="The system being specified is a DSL for programming rover-like robots built with Arduino hardware. The DSL is made of an abstract syntax providing the domain concepts and their relations and an graphical concrete syntax to be used by users via a web-based application.." purpose="The purpose of the language is to ease programming of the robot and make it accessible to children.">
     <globalSystem href="visualino_design.usemearch#/"/>
     <systemToBe href="visualino_design.usemearch#"/>
-    <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w"/>
+    <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_yQK-8eCYEeaXyq_r49uG5g">
+        <ownedDesignElementRefs xsi:type="rdal:SystContextDesignElemRef" id="_yQK-8OCYEeaXyq_r49uG5g">
+          <designElement href="visualino_design.usemearch#//@ownedContexts.0"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <globalSystemContext href="visualino_design.usemearch#/"/>
+    </ownedContexts>
   </ownedSystOverview>
 </rdal:Specification>
