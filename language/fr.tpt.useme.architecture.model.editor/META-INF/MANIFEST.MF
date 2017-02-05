@@ -21,3 +21,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.sirius.ui;visibility:=reexport,
  fr.labsticc.framework.settings.ide;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
+Import-Package: fr.labsticc.framework.constraints.ide
