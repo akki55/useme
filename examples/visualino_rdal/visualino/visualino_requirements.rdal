@@ -1,34 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdal:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdal="http://www.open-people.fr/rdal2" name="Visualino System Overview" id="_FMREoN5sEeaU5bsIjJAn4w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+<rdal:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:rdal="http://www.open-people.fr/rdal2" name="Visualino System Overview" id="_FMREoN5sEeaU5bsIjJAn4w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
   <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_MuevQd8kEea2BJXh0b62wQ">
-    <ownedDesignElementRefs id="_MuevQN8kEea2BJXh0b62wQ">
+    <ownedDesignElementRefs id="_htGtEODLEearDeIEXm32LA">
       <designElement href="visualino_design.usemearch#/"/>
     </ownedDesignElementRefs>
+    <ownedDesignElementRefs id="_htGtEeDLEearDeIEXm32LA">
+      <designElement href="Workflow1.jucm#/"/>
+    </ownedDesignElementRefs>
   </ownedReferencedDesignElements>
-  <ownedPackages xsi:type="rdal:GoalsPackage" name="Preliminary system goals" id="_6VgHV-CYEeaXyq_r49uG5g">
-    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="Program Robot" id="_AAhwcuCZEeaXyq_r49uG5g" description="User should be able to program behavior of robot">
-      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_ChfmceCbEeaXyq_r49uG5g">
-        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_ChfmcOCbEeaXyq_r49uG5g">
+  <ownedPackages xsi:type="rdal:GoalsPackage" name="High Level Goals" id="_U9_S8ODHEearDeIEXm32LA">
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="Program Robot" id="_bj2MouDHEearDeIEXm32LA" description="The DSL should allow to program the behavior of a robot">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_YhZWAODMEearDeIEXm32LA">
           <designElement href="visualino_design.usemearch#"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
+      <useCases href="Workflow1.jucm#2"/>
     </ownedGoals>
-    <ownedGoals xsi:type="rdal:NonFunctionalGoal" name="Usability to program a robot" id="_ilHJY-CaEeaXyq_r49uG5g" description="">
-      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_3DjjgeCaEeaXyq_r49uG5g">
-        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_3DjjgOCaEeaXyq_r49uG5g">
+    <ownedGoals xsi:type="rdal:NonFunctionalGoal" name="Usable DSL" id="_yqW4Y-DLEearDeIEXm32LA" description="The DSL should e esay to use" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_WKl2seDMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_WKl2sODMEearDeIEXm32LA">
           <designElement href="visualino_design.usemearch#"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#//@ownedLanguages.1/@ownedCategoryAssociations.1/@ownedCategories.6"/>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_non_functional_goal_Usability"/>
     </ownedGoals>
   </ownedPackages>
-  <ownedPackages xsi:type="rdal:RequirementsPackage" id="_t6OLBuCbEeaXyq_r49uG5g">
-    <ownedRequirements xsi:type="rdal:Assumption" id="_uuncYeCbEeaXyq_r49uG5g" description="">
-      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_9-5vkeCbEeaXyq_r49uG5g">
-        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_9-5vkOCbEeaXyq_r49uG5g">
-          <designElement href="visualino_design.usemearch#//@ownedContexts.0/@ownedInstanceElements.2"/>
+  <ownedPackages xsi:type="rdal:RequirementsPackage" name="Test" id="_rKlhZuvSEeabG6EdqbdIDg">
+    <ownedRequirements xsi:type="rdal:Requirement" name="Test" id="_uWbLQuvSEeabG6EdqbdIDg" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_03WhoOvSEeabG6EdqbdIDg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_wl4scOvSEeabG6EdqbdIDg">
+          <designElement href="visualino_design.usemearch#//@ownedContexts.0/@ownedInstanceElements.3"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_mCPVQOvXEeaAYYxNlIy_8w" text="self">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+      <functionUsedIn href="Workflow1.jucm#6084"/>
+      <functionUsedIn href="Workflow1.jucm#10380"/>
     </ownedRequirements>
   </ownedPackages>
   <ownedContactInformation name="Ankica Barrisic" id="_WlQAGN8kEea2BJXh0b62wQ" email="a.barisic@campus.fct.unl.pt"/>
@@ -36,12 +46,8 @@
     <globalSystem href="visualino_design.usemearch#/"/>
     <systemToBe href="visualino_design.usemearch#"/>
     <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w">
-      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_yQK-8eCYEeaXyq_r49uG5g">
-        <ownedDesignElementRefs xsi:type="rdal:SystContextDesignElemRef" id="_yQK-8OCYEeaXyq_r49uG5g">
-          <designElement href="visualino_design.usemearch#//@ownedContexts.0"/>
-        </ownedDesignElementRefs>
-      </ownedReferencedDesignElements>
-      <globalSystemContext href="visualino_design.usemearch#/"/>
+      <globalSystemContext href="visualino_design.usemearch#//@ownedContexts.0"/>
     </ownedContexts>
   </ownedSystOverview>
+  <constraintLanguagesSpec href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#5663deb5-f5c5-4a39-a324-8da2b395dd7c"/>
 </rdal:Specification>
