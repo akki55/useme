@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Ankica" created="January 17, 2017 3:14:26 PM GMT" modified="January 20, 2017 3:22:27 PM GMT" specVersion="34" urnVersion="1.27" nextGlobalID="11066">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Ankica" created="January 17, 2017 3:14:26 PM GMT" modified="February 6, 2017 1:23:22 PM GMT" specVersion="35" urnVersion="1.27" nextGlobalID="11070">
   <ucmspec>
     <scenarioGroups name="NormalScenario" id="5">
       <scenarios name="Normal" id="6" parentScenarios="482 726 5212 5213 5214">
-        <initializations value="false" variable="386"/>
         <initializations value="false" variable="724"/>
         <initializations value="false" variable="4001"/>
         <initializations value="false" variable="4427"/>
@@ -11,10 +10,11 @@
         <initializations value="false" variable="6653"/>
         <initializations value="false" variable="6652"/>
         <initializations value="false" variable="5525"/>
+        <initializations value="true" variable="386"/>
         <startPoints enabled="true" startPoint="21"/>
       </scenarios>
-      <scenarios name="WithRobot" id="482" parentScenarios="726 5212 5213 5214" includedScenarios="6">
-        <initializations value="true" variable="386"/>
+      <scenarios name="WithoutRobot" id="482" parentScenarios="726 5212 5213 5214" includedScenarios="6">
+        <initializations value="false" variable="386"/>
         <initializations value="false" variable="724"/>
         <initializations value="false" variable="4001"/>
         <initializations value="false" variable="4427"/>
@@ -28,19 +28,18 @@
       <scenarios name="Program robot to move infront and move back" id="726" includedScenarios="6 482">
         <initializations value="false" variable="4001"/>
         <initializations value="false" variable="4427"/>
-        <initializations value="false" variable="386"/>
+        <initializations value="true" variable="386"/>
         <initializations value="false" variable="724"/>
         <initializations value="false" variable="5759"/>
         <initializations value="false" variable="6653"/>
         <initializations value="true" variable="3724"/>
-        <initializations value="false" variable="481"/>
         <initializations value="false" variable="5525"/>
         <initializations value="false" variable="6652"/>
       </scenarios>
       <scenarios name="Program robot to make an 5 shape" id="5212" includedScenarios="6 482">
         <initializations value="true" variable="4427"/>
         <initializations value="false" variable="4001"/>
-        <initializations value="false" variable="386"/>
+        <initializations value="true" variable="386"/>
         <initializations value="false" variable="724"/>
         <initializations value="true" variable="5759"/>
         <initializations value="false" variable="6653"/>
@@ -52,24 +51,22 @@
       <scenarios name="Program robot to move infront till it hits obstacle and then go back" id="5213" includedScenarios="6 482">
         <initializations value="false" variable="4427"/>
         <initializations value="true" variable="4001"/>
-        <initializations value="false" variable="386"/>
+        <initializations value="true" variable="386"/>
         <initializations value="false" variable="724"/>
         <initializations value="true" variable="5759"/>
         <initializations value="false" variable="6653"/>
         <initializations value="false" variable="3724"/>
-        <initializations value="false" variable="481"/>
         <initializations value="false" variable="5525"/>
         <initializations value="false" variable="6652"/>
       </scenarios>
       <scenarios name="Program robot to make turns when it hits obstacle in shape of 5" id="5214" includedScenarios="6 482">
         <initializations value="true" variable="4427"/>
         <initializations value="true" variable="4001"/>
-        <initializations value="false" variable="386"/>
+        <initializations value="true" variable="386"/>
         <initializations value="false" variable="724"/>
         <initializations value="true" variable="5759"/>
         <initializations value="false" variable="6653"/>
         <initializations value="false" variable="3724"/>
-        <initializations value="false" variable="481"/>
         <initializations value="false" variable="5525"/>
         <initializations value="false" variable="6652"/>
       </scenarios>
