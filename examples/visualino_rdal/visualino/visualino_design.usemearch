@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<usemearch:DslDevelopmentSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usemearch="http://mem4cds.telecom-paristech.fr/languages/usemearch/">
-  <ownedDsls name="Visualino" id="">
-    <ownedSyntaxes xsi:type="usemearch:ECoreAbstractSyntax" name="VIsualino Abstract Syntax">
-      <packages href="../org.farrusco/model/farrusco.ecore#/"/>
-    </ownedSyntaxes>
-    <ownedSyntaxes xsi:type="usemearch:SiriusConcreteSyntax" name="Visualine Graphical Syntax">
-      <siriusSpecification href="../org.farrusco.design/description/farrusco.odesign#/"/>
-    </ownedSyntaxes>
-  </ownedDsls>
-  <ownedTools xsi:type="usemearch:Computer" name="PC">
-    <category href="../../config/fr.tpt.useme.settings/default.settings#cat_assumption_Technical"/>
-  </ownedTools>
-  <ownedTools xsi:type="usemearch:SoftwareTool" name="Web Browser"/>
-  <ownedContexts name="Normal Use">
-    <ownedInstanceElements name="computer" elementType="//@ownedTools.0"/>
-    <ownedInstanceElements name="end user" elementType="//@ownedUsers.0"/>
-    <ownedInstanceElements name="browser" elementType="//@ownedTools.1"/>
-    <ownedInstanceElements name="Visualino DSL"/>
-    <ownedConnections name="user-browser" sourceElementInstance="//@ownedContexts.0/@ownedInstanceElements.1" destinationElementInstance="//@ownedContexts.0/@ownedInstanceElements.2">
+<usemearch:DslBasedSystemSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usemearch="http://mem4cds.telecom-paristech.fr/languages/usemearch/" name="Visualino Robot Programming System" id="_165NYPEkEeaFcM395dpt6Q" description="This system is used to program Arduino robot with the help of a domain specific language called Visualino. It encompasses the Visualino DSL, the computer and web browser for editing visualino programs and the controlled robot." developedDsl="_16_UAPEkEeaFcM395dpt6e">
+  <ownedContexts name="Normal Use" id="_17AiIPEkEeaFcM395dpt6Q">
+    <ownedInstanceElements name="computer" id="_17BJMPEkEeaFcM395dpt6Q" elementType="_16_UAPEkEeaFcM395dpt6Q"/>
+    <ownedInstanceElements name="end user" id="_17BJMfEkEeaFcM395dpt6Q" elementType="_17CXUPEkEeaFcM395dpt6Q"/>
+    <ownedInstanceElements name="browser" id="_17BJMvEkEeaFcM395dpt6Q" elementType="_16_7EPEkEeaFcM395dpt6Q"/>
+    <ownedInstanceElements name="Visualino DSL" id="_17BJM_EkEeaFcM395dpt6Q" elementType="_16_UAPEkEeaFcM395dpt6e"/>
+    <ownedInstanceElements name="robot" id="_17BJNfEkEeaFcM395dpt6Q" elementType="_17CXUfEkEeaFcM395dpt6Q"/>
+    <ownedConnections name="user-browser" id="_17BwQPEkEeaFcM395dpt6Q" sourceInstanceElement="_17BJMfEkEeaFcM395dpt6Q" destinationInstanceElement="_17BJMvEkEeaFcM395dpt6Q">
       <sourceFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//User/uses"/>
       <destinationFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//Tool/usedBy"/>
     </ownedConnections>
-    <ownedConnections name="browser-computer" sourceElementInstance="//@ownedContexts.0/@ownedInstanceElements.2" destinationElementInstance="//@ownedContexts.0/@ownedInstanceElements.0">
+    <ownedConnections name="browser-computer" id="_17BwQfEkEeaFcM395dpt6Q" sourceInstanceElement="_17BJMvEkEeaFcM395dpt6Q" destinationInstanceElement="_17BJMPEkEeaFcM395dpt6Q">
       <sourceFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//SoftwareTool/executedBy"/>
       <destinationFeature href="http://mem4cds.telecom-paristech.fr/languages/usemearch/#//Computer/executes"/>
     </ownedConnections>
   </ownedContexts>
-  <ownedUsers name="End User"/>
-</usemearch:DslDevelopmentSpecification>
+  <ownedContextElementTypes xsi:type="usemearch:Dsl" name="Visualino" id="_16_UAPEkEeaFcM395dpt6e">
+    <ownedSyntaxes xsi:type="usemearch:ECoreAbstractSyntax" name="VIsualino Abstract Syntax" id="_167CkPEkEeaFcM395dpt6Q">
+      <packages href="../org.farrusco/model/farrusco.ecore#/"/>
+    </ownedSyntaxes>
+    <ownedSyntaxes xsi:type="usemearch:SiriusConcreteSyntax" name="Visualine Graphical Syntax" id="_167poPEkEeaFcM395dpt6Q">
+      <siriusSpecification href="../org.farrusco.design/description/farrusco.odesign#/"/>
+    </ownedSyntaxes>
+  </ownedContextElementTypes>
+  <ownedContextElementTypes xsi:type="usemearch:Computer" name="PC" id="_16_UAPEkEeaFcM395dpt6Q">
+    <category href="../../config/fr.tpt.useme.settings/default.settings#cat_assumption_Technical"/>
+  </ownedContextElementTypes>
+  <ownedContextElementTypes xsi:type="usemearch:SoftwareTool" name="Web Browser" id="_16_7EPEkEeaFcM395dpt6Q"/>
+  <ownedContextElementTypes xsi:type="usemearch:User" name="End User" id="_17CXUPEkEeaFcM395dpt6Q"/>
+  <ownedContextElementTypes xsi:type="usemearch:PhysicalSystem" name="Robot" id="_17CXUfEkEeaFcM395dpt6Q"/>
+</usemearch:DslBasedSystemSpecification>
