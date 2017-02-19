@@ -22,13 +22,13 @@ public interface UsemearchFactory extends EFactory {
 	UsemearchFactory eINSTANCE = fr.tpt.useme.architecture.model.usemearch.impl.UsemearchFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Dsl Development Specification</em>'.
+	 * Returns a new object of class '<em>Dsl Based System Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dsl Development Specification</em>'.
+	 * @return a new object of class '<em>Dsl Based System Specification</em>'.
 	 * @generated
 	 */
-	DslDevelopmentSpecification createDslDevelopmentSpecification();
+	DslBasedSystemSpecification createDslBasedSystemSpecification();
 
 	/**
 	 * Returns a new object of class '<em>Context Specification</em>'.
@@ -112,15 +112,6 @@ public interface UsemearchFactory extends EFactory {
 	OperatingSystem createOperatingSystem();
 
 	/**
-	 * Returns a new object of class '<em>Semantic</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Semantic</em>'.
-	 * @generated
-	 */
-	Semantic createSemantic();
-
-	/**
 	 * Returns a new object of class '<em>ECore Domain Concept</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,15 +148,6 @@ public interface UsemearchFactory extends EFactory {
 	ModelSimulator createModelSimulator();
 
 	/**
-	 * Returns a new object of class '<em>Documentation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Documentation</em>'.
-	 * @generated
-	 */
-	Documentation createDocumentation();
-
-	/**
 	 * Returns a new object of class '<em>Maintenance Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,22 +157,31 @@ public interface UsemearchFactory extends EFactory {
 	MaintenanceService createMaintenanceService();
 
 	/**
-	 * Returns a new object of class '<em>Context Element Instance</em>'.
+	 * Returns a new object of class '<em>Context Instance Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Context Element Instance</em>'.
+	 * @return a new object of class '<em>Context Instance Element</em>'.
 	 * @generated
 	 */
-	ContextElementInstance createContextElementInstance();
+	ContextInstanceElement createContextInstanceElement();
 
 	/**
-	 * Returns a new object of class '<em>Element Instance Connection</em>'.
+	 * Returns a new object of class '<em>Instance Elements Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element Instance Connection</em>'.
+	 * @return a new object of class '<em>Instance Elements Connection</em>'.
 	 * @generated
 	 */
-	ElementInstanceConnection createElementInstanceConnection();
+	InstanceElementsConnection createInstanceElementsConnection();
+
+	/**
+	 * Returns a new object of class '<em>Physical System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Physical System</em>'.
+	 * @generated
+	 */
+	PhysicalSystem createPhysicalSystem();
 
 	/**
 	 * Returns the package supported by this factory.

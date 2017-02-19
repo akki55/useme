@@ -8,11 +8,14 @@ import fr.tpt.useme.architecture.model.usemearch.User;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,9 +67,38 @@ public class UserImpl extends ContextElementTypeImpl implements User {
 	 */
 	public EList<Tool> getUses() {
 		if (uses == null) {
-			uses = new EObjectResolvingEList<Tool>(Tool.class, this, UsemearchPackage.USER__USES);
+			uses = new EObjectWithInverseResolvingEList.ManyInverse<Tool>(Tool.class, this, UsemearchPackage.USER__USES, UsemearchPackage.TOOL__USED_BY);
 		}
 		return uses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UsemearchPackage.USER__USES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUses()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UsemearchPackage.USER__USES:
+				return ((InternalEList<?>)getUses()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

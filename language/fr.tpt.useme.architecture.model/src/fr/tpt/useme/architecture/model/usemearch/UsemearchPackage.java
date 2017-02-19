@@ -87,23 +87,32 @@ public interface UsemearchPackage extends EPackage {
 	int IDENTIFIED_ELEMENT__ID = 1;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IDENTIFIED_ELEMENT__DESCRIPTION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Identified Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDENTIFIED_ELEMENT_FEATURE_COUNT = 2;
+	int IDENTIFIED_ELEMENT_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DslDevelopmentSpecificationImpl <em>Dsl Development Specification</em>}' class.
+	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DslBasedSystemSpecificationImpl <em>Dsl Based System Specification</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.DslDevelopmentSpecificationImpl
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getDslDevelopmentSpecification()
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.DslBasedSystemSpecificationImpl
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getDslBasedSystemSpecification()
 	 * @generated
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION = 1;
+	int DSL_BASED_SYSTEM_SPECIFICATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -112,7 +121,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION__NAME = IDENTIFIED_ELEMENT__NAME;
+	int DSL_BASED_SYSTEM_SPECIFICATION__NAME = IDENTIFIED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -121,25 +130,16 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION__ID = IDENTIFIED_ELEMENT__ID;
+	int DSL_BASED_SYSTEM_SPECIFICATION__ID = IDENTIFIED_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Owned Dsls</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION__OWNED_DSLS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Owned Tools</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DSL_DEVELOPMENT_SPECIFICATION__OWNED_TOOLS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int DSL_BASED_SYSTEM_SPECIFICATION__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Developed Dsl</b></em>' reference.
@@ -148,7 +148,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION__DEVELOPED_DSL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int DSL_BASED_SYSTEM_SPECIFICATION__DEVELOPED_DSL = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Owned Contexts</b></em>' containment reference list.
@@ -157,25 +157,25 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION__OWNED_CONTEXTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+	int DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXTS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Owned Users</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Owned Context Element Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION__OWNED_USERS = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+	int DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Dsl Development Specification</em>' class.
+	 * The number of structural features of the '<em>Dsl Based System Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_DEVELOPMENT_SPECIFICATION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 5;
+	int DSL_BASED_SYSTEM_SPECIFICATION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextElementTypeImpl <em>Context Element Type</em>}' class.
@@ -204,6 +204,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTEXT_ELEMENT_TYPE__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_ELEMENT_TYPE__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
@@ -250,6 +259,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTEXT_SPECIFICATION__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_SPECIFICATION__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Owned Instance Elements</b></em>' containment reference list.
@@ -316,6 +334,15 @@ public interface UsemearchPackage extends EPackage {
 	int DSL__ID = CONTEXT_ELEMENT_TYPE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DSL__DESCRIPTION = CONTEXT_ELEMENT_TYPE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -361,58 +388,31 @@ public interface UsemearchPackage extends EPackage {
 	int DSL__SUPPORTING_TOOLS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Semantics</b></em>' reference list.
+	 * The feature id for the '<em><b>Owned Semantics</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL__SEMANTICS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 4;
+	int DSL__OWNED_SEMANTICS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Domain Concepts</b></em>' reference list.
+	 * The feature id for the '<em><b>Owned Feature Diagrams</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL__DOMAIN_CONCEPTS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 5;
+	int DSL__OWNED_FEATURE_DIAGRAMS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Feature Diagrams</b></em>' reference list.
+	 * The feature id for the '<em><b>Owned Documentations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL__FEATURE_DIAGRAMS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Model Checkers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DSL__MODEL_CHECKERS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Model Simulators</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DSL__MODEL_SIMULATORS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Documentations</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DSL__DOCUMENTATIONS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 9;
+	int DSL__OWNED_DOCUMENTATIONS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Maintenance Service</b></em>' reference.
@@ -421,7 +421,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DSL__MAINTENANCE_SERVICE = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 10;
+	int DSL__MAINTENANCE_SERVICE = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Dsl</em>' class.
@@ -430,7 +430,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_FEATURE_COUNT = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 11;
+	int DSL_FEATURE_COUNT = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.SyntaxImpl <em>Syntax</em>}' class.
@@ -459,6 +459,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int SYNTAX__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNTAX__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>Syntax</em>' class.
@@ -498,13 +507,31 @@ public interface UsemearchPackage extends EPackage {
 	int ABSTRACT_SYNTAX__ID = SYNTAX__ID;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_SYNTAX__DESCRIPTION = SYNTAX__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Domain Concepts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_SYNTAX__OWNED_DOMAIN_CONCEPTS = SYNTAX_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Syntax</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SYNTAX_FEATURE_COUNT = SYNTAX_FEATURE_COUNT + 0;
+	int ABSTRACT_SYNTAX_FEATURE_COUNT = SYNTAX_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ConcreteSyntaxImpl <em>Concrete Syntax</em>}' class.
@@ -533,6 +560,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONCRETE_SYNTAX__ID = SYNTAX__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_SYNTAX__DESCRIPTION = SYNTAX__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Language</b></em>' reference.
@@ -581,6 +617,24 @@ public interface UsemearchPackage extends EPackage {
 	int ECORE_ABSTRACT_SYNTAX__ID = ABSTRACT_SYNTAX__ID;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECORE_ABSTRACT_SYNTAX__DESCRIPTION = ABSTRACT_SYNTAX__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Domain Concepts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECORE_ABSTRACT_SYNTAX__OWNED_DOMAIN_CONCEPTS = ABSTRACT_SYNTAX__OWNED_DOMAIN_CONCEPTS;
+
+	/**
 	 * The feature id for the '<em><b>Packages</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -625,6 +679,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIRIUS_CONCRETE_SYNTAX__ID = CONCRETE_SYNTAX__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIRIUS_CONCRETE_SYNTAX__DESCRIPTION = CONCRETE_SYNTAX__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Language</b></em>' reference.
@@ -682,6 +745,15 @@ public interface UsemearchPackage extends EPackage {
 	int TOOL__ID = CONTEXT_ELEMENT_TYPE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOOL__DESCRIPTION = CONTEXT_ELEMENT_TYPE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -735,6 +807,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int USER__ID = CONTEXT_ELEMENT_TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__DESCRIPTION = CONTEXT_ELEMENT_TYPE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
@@ -792,6 +873,15 @@ public interface UsemearchPackage extends EPackage {
 	int WORK_PLACE__ID = CONTEXT_ELEMENT_TYPE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PLACE__DESCRIPTION = CONTEXT_ELEMENT_TYPE__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -836,6 +926,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPUTER__ID = TOOL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__DESCRIPTION = TOOL__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
@@ -900,6 +999,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int SOFTWARE_TOOL__ID = TOOL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOFTWARE_TOOL__DESCRIPTION = TOOL__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
@@ -975,6 +1083,15 @@ public interface UsemearchPackage extends EPackage {
 	int OPERATING_SYSTEM__ID = SOFTWARE_TOOL__ID;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM__DESCRIPTION = SOFTWARE_TOOL__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1020,14 +1137,14 @@ public interface UsemearchPackage extends EPackage {
 	int OPERATING_SYSTEM_FEATURE_COUNT = SOFTWARE_TOOL_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.SemanticImpl <em>Semantic</em>}' class.
+	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.SemanticsImpl <em>Semantics</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.SemanticImpl
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getSemantic()
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.SemanticsImpl
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getSemantics()
 	 * @generated
 	 */
-	int SEMANTIC = 16;
+	int SEMANTICS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1036,7 +1153,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMANTIC__NAME = DescriptionPackage.IDENTIFIED_ELEMENT__NAME;
+	int SEMANTICS__NAME = DescriptionPackage.IDENTIFIED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -1045,16 +1162,16 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMANTIC__LABEL = DescriptionPackage.IDENTIFIED_ELEMENT__LABEL;
+	int SEMANTICS__LABEL = DescriptionPackage.IDENTIFIED_ELEMENT__LABEL;
 
 	/**
-	 * The number of structural features of the '<em>Semantic</em>' class.
+	 * The number of structural features of the '<em>Semantics</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMANTIC_FEATURE_COUNT = DescriptionPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int SEMANTICS_FEATURE_COUNT = DescriptionPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DomainConceptImpl <em>Domain Concept</em>}' class.
@@ -1156,16 +1273,25 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_DIAGRAM__NAME = DescriptionPackage.IDENTIFIED_ELEMENT__NAME;
+	int FEATURE_DIAGRAM__NAME = IDENTIFIED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_DIAGRAM__LABEL = DescriptionPackage.IDENTIFIED_ELEMENT__LABEL;
+	int FEATURE_DIAGRAM__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_DIAGRAM__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>Feature Diagram</em>' class.
@@ -1174,7 +1300,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_DIAGRAM_FEATURE_COUNT = DescriptionPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int FEATURE_DIAGRAM_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ModelCheckerImpl <em>Model Checker</em>}' class.
@@ -1203,6 +1329,15 @@ public interface UsemearchPackage extends EPackage {
 	 * @ordered
 	 */
 	int MODEL_CHECKER__ID = SOFTWARE_TOOL__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_CHECKER__DESCRIPTION = SOFTWARE_TOOL__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
@@ -1278,6 +1413,15 @@ public interface UsemearchPackage extends EPackage {
 	int MODEL_SIMULATOR__ID = SOFTWARE_TOOL__ID;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_SIMULATOR__DESCRIPTION = SOFTWARE_TOOL__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1323,10 +1467,10 @@ public interface UsemearchPackage extends EPackage {
 	int MODEL_SIMULATOR_FEATURE_COUNT = SOFTWARE_TOOL_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DocumentationImpl <em>Documentation</em>}' class.
+	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.Documentation <em>Documentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.DocumentationImpl
+	 * @see fr.tpt.useme.architecture.model.usemearch.Documentation
 	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getDocumentation()
 	 * @generated
 	 */
@@ -1339,7 +1483,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION__NAME = IDENTIFIED_ELEMENT__NAME;
+	int DOCUMENTATION__NAME = CONTEXT_ELEMENT_TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1348,7 +1492,25 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION__ID = IDENTIFIED_ELEMENT__ID;
+	int DOCUMENTATION__ID = CONTEXT_ELEMENT_TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION__DESCRIPTION = CONTEXT_ELEMENT_TYPE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION__CATEGORY = CONTEXT_ELEMENT_TYPE__CATEGORY;
 
 	/**
 	 * The number of structural features of the '<em>Documentation</em>' class.
@@ -1357,7 +1519,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int DOCUMENTATION_FEATURE_COUNT = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.MaintenanceServiceImpl <em>Maintenance Service</em>}' class.
@@ -1397,14 +1559,14 @@ public interface UsemearchPackage extends EPackage {
 	int MAINTENANCE_SERVICE_FEATURE_COUNT = DescriptionPackage.IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextElementInstanceImpl <em>Context Element Instance</em>}' class.
+	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextInstanceElementImpl <em>Context Instance Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.ContextElementInstanceImpl
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getContextElementInstance()
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.ContextInstanceElementImpl
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getContextInstanceElement()
 	 * @generated
 	 */
-	int CONTEXT_ELEMENT_INSTANCE = 24;
+	int CONTEXT_INSTANCE_ELEMENT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1413,7 +1575,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_ELEMENT_INSTANCE__NAME = IDENTIFIED_ELEMENT__NAME;
+	int CONTEXT_INSTANCE_ELEMENT__NAME = IDENTIFIED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1422,7 +1584,16 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_ELEMENT_INSTANCE__ID = IDENTIFIED_ELEMENT__ID;
+	int CONTEXT_INSTANCE_ELEMENT__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_INSTANCE_ELEMENT__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Element Type</b></em>' reference.
@@ -1431,26 +1602,26 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_ELEMENT_INSTANCE__ELEMENT_TYPE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int CONTEXT_INSTANCE_ELEMENT__ELEMENT_TYPE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Context Element Instance</em>' class.
+	 * The number of structural features of the '<em>Context Instance Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_ELEMENT_INSTANCE_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int CONTEXT_INSTANCE_ELEMENT_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ElementInstanceConnectionImpl <em>Element Instance Connection</em>}' class.
+	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.InstanceElementsConnectionImpl <em>Instance Elements Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.ElementInstanceConnectionImpl
-	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getElementInstanceConnection()
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.InstanceElementsConnectionImpl
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getInstanceElementsConnection()
 	 * @generated
 	 */
-	int ELEMENT_INSTANCE_CONNECTION = 25;
+	int INSTANCE_ELEMENTS_CONNECTION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1459,7 +1630,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_INSTANCE_CONNECTION__NAME = IDENTIFIED_ELEMENT__NAME;
+	int INSTANCE_ELEMENTS_CONNECTION__NAME = IDENTIFIED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1468,7 +1639,16 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_INSTANCE_CONNECTION__ID = IDENTIFIED_ELEMENT__ID;
+	int INSTANCE_ELEMENTS_CONNECTION__ID = IDENTIFIED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTANCE_ELEMENTS_CONNECTION__DESCRIPTION = IDENTIFIED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Source Feature</b></em>' reference.
@@ -1477,7 +1657,7 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_INSTANCE_CONNECTION__SOURCE_FEATURE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
+	int INSTANCE_ELEMENTS_CONNECTION__SOURCE_FEATURE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Destination Feature</b></em>' reference.
@@ -1486,34 +1666,107 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_INSTANCE_CONNECTION__DESTINATION_FEATURE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
+	int INSTANCE_ELEMENTS_CONNECTION__DESTINATION_FEATURE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Source Element Instance</b></em>' reference.
+	 * The feature id for the '<em><b>Source Instance Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_INSTANCE_CONNECTION__SOURCE_ELEMENT_INSTANCE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
+	int INSTANCE_ELEMENTS_CONNECTION__SOURCE_INSTANCE_ELEMENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Destination Element Instance</b></em>' reference.
+	 * The feature id for the '<em><b>Destination Instance Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_INSTANCE_CONNECTION__DESTINATION_ELEMENT_INSTANCE = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
+	int INSTANCE_ELEMENTS_CONNECTION__DESTINATION_INSTANCE_ELEMENT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Element Instance Connection</em>' class.
+	 * The number of structural features of the '<em>Instance Elements Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_INSTANCE_CONNECTION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+	int INSTANCE_ELEMENTS_CONNECTION_FEATURE_COUNT = IDENTIFIED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.PhysicalSystemImpl <em>Physical System</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.PhysicalSystemImpl
+	 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getPhysicalSystem()
+	 * @generated
+	 */
+	int PHYSICAL_SYSTEM = 26;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_SYSTEM__NAME = CONTEXT_ELEMENT_TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_SYSTEM__ID = CONTEXT_ELEMENT_TYPE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_SYSTEM__DESCRIPTION = CONTEXT_ELEMENT_TYPE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_SYSTEM__CATEGORY = CONTEXT_ELEMENT_TYPE__CATEGORY;
+
+	/**
+	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_SYSTEM__INPUTS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Outputs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_SYSTEM__OUTPUTS = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Physical System</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_SYSTEM_FEATURE_COUNT = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 2;
 
 	/**
 	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.IdentifiedElement <em>Identified Element</em>}'.
@@ -1548,69 +1801,58 @@ public interface UsemearchPackage extends EPackage {
 	EAttribute getIdentifiedElement_Id();
 
 	/**
-	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification <em>Dsl Development Specification</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.tpt.useme.architecture.model.usemearch.IdentifiedElement#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dsl Development Specification</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.IdentifiedElement#getDescription()
+	 * @see #getIdentifiedElement()
 	 * @generated
 	 */
-	EClass getDslDevelopmentSpecification();
+	EAttribute getIdentifiedElement_Description();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedDsls <em>Owned Dsls</em>}'.
+	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification <em>Dsl Based System Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Owned Dsls</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedDsls()
-	 * @see #getDslDevelopmentSpecification()
+	 * @return the meta object for class '<em>Dsl Based System Specification</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification
 	 * @generated
 	 */
-	EReference getDslDevelopmentSpecification_OwnedDsls();
+	EClass getDslBasedSystemSpecification();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedTools <em>Owned Tools</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Owned Tools</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedTools()
-	 * @see #getDslDevelopmentSpecification()
-	 * @generated
-	 */
-	EReference getDslDevelopmentSpecification_OwnedTools();
-
-	/**
-	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getDevelopedDsl <em>Developed Dsl</em>}'.
+	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getDevelopedDsl <em>Developed Dsl</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Developed Dsl</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getDevelopedDsl()
-	 * @see #getDslDevelopmentSpecification()
+	 * @see fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getDevelopedDsl()
+	 * @see #getDslBasedSystemSpecification()
 	 * @generated
 	 */
-	EReference getDslDevelopmentSpecification_DevelopedDsl();
+	EReference getDslBasedSystemSpecification_DevelopedDsl();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedContexts <em>Owned Contexts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getOwnedContexts <em>Owned Contexts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Owned Contexts</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedContexts()
-	 * @see #getDslDevelopmentSpecification()
+	 * @see fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getOwnedContexts()
+	 * @see #getDslBasedSystemSpecification()
 	 * @generated
 	 */
-	EReference getDslDevelopmentSpecification_OwnedContexts();
+	EReference getDslBasedSystemSpecification_OwnedContexts();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedUsers <em>Owned Users</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getOwnedContextElementTypes <em>Owned Context Element Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Owned Users</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification#getOwnedUsers()
-	 * @see #getDslDevelopmentSpecification()
+	 * @return the meta object for the containment reference list '<em>Owned Context Element Types</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getOwnedContextElementTypes()
+	 * @see #getDslBasedSystemSpecification()
 	 * @generated
 	 */
-	EReference getDslDevelopmentSpecification_OwnedUsers();
+	EReference getDslBasedSystemSpecification_OwnedContextElementTypes();
 
 	/**
 	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.ContextElementType <em>Context Element Type</em>}'.
@@ -1731,70 +1973,37 @@ public interface UsemearchPackage extends EPackage {
 	EReference getDsl_SupportingTools();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getSemantics <em>Semantics</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedSemantics <em>Owned Semantics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Semantics</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getSemantics()
+	 * @return the meta object for the containment reference list '<em>Owned Semantics</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedSemantics()
 	 * @see #getDsl()
 	 * @generated
 	 */
-	EReference getDsl_Semantics();
+	EReference getDsl_OwnedSemantics();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getDomainConcepts <em>Domain Concepts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedFeatureDiagrams <em>Owned Feature Diagrams</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Domain Concepts</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getDomainConcepts()
+	 * @return the meta object for the containment reference list '<em>Owned Feature Diagrams</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedFeatureDiagrams()
 	 * @see #getDsl()
 	 * @generated
 	 */
-	EReference getDsl_DomainConcepts();
+	EReference getDsl_OwnedFeatureDiagrams();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getFeatureDiagrams <em>Feature Diagrams</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedDocumentations <em>Owned Documentations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Feature Diagrams</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getFeatureDiagrams()
+	 * @return the meta object for the containment reference list '<em>Owned Documentations</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedDocumentations()
 	 * @see #getDsl()
 	 * @generated
 	 */
-	EReference getDsl_FeatureDiagrams();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getModelCheckers <em>Model Checkers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Model Checkers</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getModelCheckers()
-	 * @see #getDsl()
-	 * @generated
-	 */
-	EReference getDsl_ModelCheckers();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getModelSimulators <em>Model Simulators</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Model Simulators</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getModelSimulators()
-	 * @see #getDsl()
-	 * @generated
-	 */
-	EReference getDsl_ModelSimulators();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getDocumentations <em>Documentations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Documentations</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getDocumentations()
-	 * @see #getDsl()
-	 * @generated
-	 */
-	EReference getDsl_Documentations();
+	EReference getDsl_OwnedDocumentations();
 
 	/**
 	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getMaintenanceService <em>Maintenance Service</em>}'.
@@ -1826,6 +2035,17 @@ public interface UsemearchPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAbstractSyntax();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fr.tpt.useme.architecture.model.usemearch.AbstractSyntax#getOwnedDomainConcepts <em>Owned Domain Concepts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Domain Concepts</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.AbstractSyntax#getOwnedDomainConcepts()
+	 * @see #getAbstractSyntax()
+	 * @generated
+	 */
+	EReference getAbstractSyntax_OwnedDomainConcepts();
 
 	/**
 	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.ConcreteSyntax <em>Concrete Syntax</em>}'.
@@ -2006,14 +2226,14 @@ public interface UsemearchPackage extends EPackage {
 	EClass getOperatingSystem();
 
 	/**
-	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.Semantic <em>Semantic</em>}'.
+	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.Semantics <em>Semantics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Semantic</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Semantic
+	 * @return the meta object for class '<em>Semantics</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Semantics
 	 * @generated
 	 */
-	EClass getSemantic();
+	EClass getSemantics();
 
 	/**
 	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.DomainConcept <em>Domain Concept</em>}'.
@@ -2097,79 +2317,111 @@ public interface UsemearchPackage extends EPackage {
 	EClass getMaintenanceService();
 
 	/**
-	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.ContextElementInstance <em>Context Element Instance</em>}'.
+	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement <em>Context Instance Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Context Element Instance</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ContextElementInstance
+	 * @return the meta object for class '<em>Context Instance Element</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement
 	 * @generated
 	 */
-	EClass getContextElementInstance();
+	EClass getContextInstanceElement();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.ContextElementInstance#getElementType <em>Element Type</em>}'.
+	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement#getElementType <em>Element Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Element Type</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ContextElementInstance#getElementType()
-	 * @see #getContextElementInstance()
+	 * @see fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement#getElementType()
+	 * @see #getContextInstanceElement()
 	 * @generated
 	 */
-	EReference getContextElementInstance_ElementType();
+	EReference getContextInstanceElement_ElementType();
 
 	/**
-	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection <em>Element Instance Connection</em>}'.
+	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection <em>Instance Elements Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element Instance Connection</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection
+	 * @return the meta object for class '<em>Instance Elements Connection</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection
 	 * @generated
 	 */
-	EClass getElementInstanceConnection();
+	EClass getInstanceElementsConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getSourceFeature <em>Source Feature</em>}'.
+	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getSourceFeature <em>Source Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source Feature</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getSourceFeature()
-	 * @see #getElementInstanceConnection()
+	 * @see fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getSourceFeature()
+	 * @see #getInstanceElementsConnection()
 	 * @generated
 	 */
-	EReference getElementInstanceConnection_SourceFeature();
+	EReference getInstanceElementsConnection_SourceFeature();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getDestinationFeature <em>Destination Feature</em>}'.
+	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getDestinationFeature <em>Destination Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Destination Feature</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getDestinationFeature()
-	 * @see #getElementInstanceConnection()
+	 * @see fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getDestinationFeature()
+	 * @see #getInstanceElementsConnection()
 	 * @generated
 	 */
-	EReference getElementInstanceConnection_DestinationFeature();
+	EReference getInstanceElementsConnection_DestinationFeature();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getSourceElementInstance <em>Source Element Instance</em>}'.
+	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getSourceInstanceElement <em>Source Instance Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source Element Instance</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getSourceElementInstance()
-	 * @see #getElementInstanceConnection()
+	 * @return the meta object for the reference '<em>Source Instance Element</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getSourceInstanceElement()
+	 * @see #getInstanceElementsConnection()
 	 * @generated
 	 */
-	EReference getElementInstanceConnection_SourceElementInstance();
+	EReference getInstanceElementsConnection_SourceInstanceElement();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getDestinationElementInstance <em>Destination Element Instance</em>}'.
+	 * Returns the meta object for the reference '{@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getDestinationInstanceElement <em>Destination Instance Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Destination Element Instance</em>'.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection#getDestinationElementInstance()
-	 * @see #getElementInstanceConnection()
+	 * @return the meta object for the reference '<em>Destination Instance Element</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection#getDestinationInstanceElement()
+	 * @see #getInstanceElementsConnection()
 	 * @generated
 	 */
-	EReference getElementInstanceConnection_DestinationElementInstance();
+	EReference getInstanceElementsConnection_DestinationInstanceElement();
+
+	/**
+	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.PhysicalSystem <em>Physical System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Physical System</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.PhysicalSystem
+	 * @generated
+	 */
+	EClass getPhysicalSystem();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.PhysicalSystem#getInputs <em>Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Inputs</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.PhysicalSystem#getInputs()
+	 * @see #getPhysicalSystem()
+	 * @generated
+	 */
+	EReference getPhysicalSystem_Inputs();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.tpt.useme.architecture.model.usemearch.PhysicalSystem#getOutputs <em>Outputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Outputs</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.PhysicalSystem#getOutputs()
+	 * @see #getPhysicalSystem()
+	 * @generated
+	 */
+	EReference getPhysicalSystem_Outputs();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2221,30 +2473,22 @@ public interface UsemearchPackage extends EPackage {
 		EAttribute IDENTIFIED_ELEMENT__ID = eINSTANCE.getIdentifiedElement_Id();
 
 		/**
-		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DslDevelopmentSpecificationImpl <em>Dsl Development Specification</em>}' class.
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.DslDevelopmentSpecificationImpl
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getDslDevelopmentSpecification()
 		 * @generated
 		 */
-		EClass DSL_DEVELOPMENT_SPECIFICATION = eINSTANCE.getDslDevelopmentSpecification();
+		EAttribute IDENTIFIED_ELEMENT__DESCRIPTION = eINSTANCE.getIdentifiedElement_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Owned Dsls</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DslBasedSystemSpecificationImpl <em>Dsl Based System Specification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.DslBasedSystemSpecificationImpl
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getDslBasedSystemSpecification()
 		 * @generated
 		 */
-		EReference DSL_DEVELOPMENT_SPECIFICATION__OWNED_DSLS = eINSTANCE.getDslDevelopmentSpecification_OwnedDsls();
-
-		/**
-		 * The meta object literal for the '<em><b>Owned Tools</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DSL_DEVELOPMENT_SPECIFICATION__OWNED_TOOLS = eINSTANCE.getDslDevelopmentSpecification_OwnedTools();
+		EClass DSL_BASED_SYSTEM_SPECIFICATION = eINSTANCE.getDslBasedSystemSpecification();
 
 		/**
 		 * The meta object literal for the '<em><b>Developed Dsl</b></em>' reference feature.
@@ -2252,7 +2496,7 @@ public interface UsemearchPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DSL_DEVELOPMENT_SPECIFICATION__DEVELOPED_DSL = eINSTANCE.getDslDevelopmentSpecification_DevelopedDsl();
+		EReference DSL_BASED_SYSTEM_SPECIFICATION__DEVELOPED_DSL = eINSTANCE.getDslBasedSystemSpecification_DevelopedDsl();
 
 		/**
 		 * The meta object literal for the '<em><b>Owned Contexts</b></em>' containment reference list feature.
@@ -2260,15 +2504,15 @@ public interface UsemearchPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DSL_DEVELOPMENT_SPECIFICATION__OWNED_CONTEXTS = eINSTANCE.getDslDevelopmentSpecification_OwnedContexts();
+		EReference DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXTS = eINSTANCE.getDslBasedSystemSpecification_OwnedContexts();
 
 		/**
-		 * The meta object literal for the '<em><b>Owned Users</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Owned Context Element Types</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DSL_DEVELOPMENT_SPECIFICATION__OWNED_USERS = eINSTANCE.getDslDevelopmentSpecification_OwnedUsers();
+		EReference DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES = eINSTANCE.getDslBasedSystemSpecification_OwnedContextElementTypes();
 
 		/**
 		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextElementTypeImpl <em>Context Element Type</em>}' class.
@@ -2365,52 +2609,28 @@ public interface UsemearchPackage extends EPackage {
 		EReference DSL__SUPPORTING_TOOLS = eINSTANCE.getDsl_SupportingTools();
 
 		/**
-		 * The meta object literal for the '<em><b>Semantics</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Owned Semantics</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DSL__SEMANTICS = eINSTANCE.getDsl_Semantics();
+		EReference DSL__OWNED_SEMANTICS = eINSTANCE.getDsl_OwnedSemantics();
 
 		/**
-		 * The meta object literal for the '<em><b>Domain Concepts</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Owned Feature Diagrams</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DSL__DOMAIN_CONCEPTS = eINSTANCE.getDsl_DomainConcepts();
+		EReference DSL__OWNED_FEATURE_DIAGRAMS = eINSTANCE.getDsl_OwnedFeatureDiagrams();
 
 		/**
-		 * The meta object literal for the '<em><b>Feature Diagrams</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Owned Documentations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DSL__FEATURE_DIAGRAMS = eINSTANCE.getDsl_FeatureDiagrams();
-
-		/**
-		 * The meta object literal for the '<em><b>Model Checkers</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DSL__MODEL_CHECKERS = eINSTANCE.getDsl_ModelCheckers();
-
-		/**
-		 * The meta object literal for the '<em><b>Model Simulators</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DSL__MODEL_SIMULATORS = eINSTANCE.getDsl_ModelSimulators();
-
-		/**
-		 * The meta object literal for the '<em><b>Documentations</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DSL__DOCUMENTATIONS = eINSTANCE.getDsl_Documentations();
+		EReference DSL__OWNED_DOCUMENTATIONS = eINSTANCE.getDsl_OwnedDocumentations();
 
 		/**
 		 * The meta object literal for the '<em><b>Maintenance Service</b></em>' reference feature.
@@ -2439,6 +2659,14 @@ public interface UsemearchPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ABSTRACT_SYNTAX = eINSTANCE.getAbstractSyntax();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned Domain Concepts</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_SYNTAX__OWNED_DOMAIN_CONCEPTS = eINSTANCE.getAbstractSyntax_OwnedDomainConcepts();
 
 		/**
 		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ConcreteSyntaxImpl <em>Concrete Syntax</em>}' class.
@@ -2595,14 +2823,14 @@ public interface UsemearchPackage extends EPackage {
 		EClass OPERATING_SYSTEM = eINSTANCE.getOperatingSystem();
 
 		/**
-		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.SemanticImpl <em>Semantic</em>}' class.
+		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.SemanticsImpl <em>Semantics</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.SemanticImpl
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getSemantic()
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.SemanticsImpl
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getSemantics()
 		 * @generated
 		 */
-		EClass SEMANTIC = eINSTANCE.getSemantic();
+		EClass SEMANTICS = eINSTANCE.getSemantics();
 
 		/**
 		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DomainConceptImpl <em>Domain Concept</em>}' class.
@@ -2663,10 +2891,10 @@ public interface UsemearchPackage extends EPackage {
 		EClass MODEL_SIMULATOR = eINSTANCE.getModelSimulator();
 
 		/**
-		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.DocumentationImpl <em>Documentation</em>}' class.
+		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.Documentation <em>Documentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.DocumentationImpl
+		 * @see fr.tpt.useme.architecture.model.usemearch.Documentation
 		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getDocumentation()
 		 * @generated
 		 */
@@ -2683,14 +2911,14 @@ public interface UsemearchPackage extends EPackage {
 		EClass MAINTENANCE_SERVICE = eINSTANCE.getMaintenanceService();
 
 		/**
-		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextElementInstanceImpl <em>Context Element Instance</em>}' class.
+		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextInstanceElementImpl <em>Context Instance Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.ContextElementInstanceImpl
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getContextElementInstance()
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.ContextInstanceElementImpl
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getContextInstanceElement()
 		 * @generated
 		 */
-		EClass CONTEXT_ELEMENT_INSTANCE = eINSTANCE.getContextElementInstance();
+		EClass CONTEXT_INSTANCE_ELEMENT = eINSTANCE.getContextInstanceElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Element Type</b></em>' reference feature.
@@ -2698,17 +2926,17 @@ public interface UsemearchPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTEXT_ELEMENT_INSTANCE__ELEMENT_TYPE = eINSTANCE.getContextElementInstance_ElementType();
+		EReference CONTEXT_INSTANCE_ELEMENT__ELEMENT_TYPE = eINSTANCE.getContextInstanceElement_ElementType();
 
 		/**
-		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.ElementInstanceConnectionImpl <em>Element Instance Connection</em>}' class.
+		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.InstanceElementsConnectionImpl <em>Instance Elements Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.ElementInstanceConnectionImpl
-		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getElementInstanceConnection()
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.InstanceElementsConnectionImpl
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getInstanceElementsConnection()
 		 * @generated
 		 */
-		EClass ELEMENT_INSTANCE_CONNECTION = eINSTANCE.getElementInstanceConnection();
+		EClass INSTANCE_ELEMENTS_CONNECTION = eINSTANCE.getInstanceElementsConnection();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Feature</b></em>' reference feature.
@@ -2716,7 +2944,7 @@ public interface UsemearchPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT_INSTANCE_CONNECTION__SOURCE_FEATURE = eINSTANCE.getElementInstanceConnection_SourceFeature();
+		EReference INSTANCE_ELEMENTS_CONNECTION__SOURCE_FEATURE = eINSTANCE.getInstanceElementsConnection_SourceFeature();
 
 		/**
 		 * The meta object literal for the '<em><b>Destination Feature</b></em>' reference feature.
@@ -2724,23 +2952,49 @@ public interface UsemearchPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT_INSTANCE_CONNECTION__DESTINATION_FEATURE = eINSTANCE.getElementInstanceConnection_DestinationFeature();
+		EReference INSTANCE_ELEMENTS_CONNECTION__DESTINATION_FEATURE = eINSTANCE.getInstanceElementsConnection_DestinationFeature();
 
 		/**
-		 * The meta object literal for the '<em><b>Source Element Instance</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Source Instance Element</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT_INSTANCE_CONNECTION__SOURCE_ELEMENT_INSTANCE = eINSTANCE.getElementInstanceConnection_SourceElementInstance();
+		EReference INSTANCE_ELEMENTS_CONNECTION__SOURCE_INSTANCE_ELEMENT = eINSTANCE.getInstanceElementsConnection_SourceInstanceElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Destination Element Instance</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Destination Instance Element</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT_INSTANCE_CONNECTION__DESTINATION_ELEMENT_INSTANCE = eINSTANCE.getElementInstanceConnection_DestinationElementInstance();
+		EReference INSTANCE_ELEMENTS_CONNECTION__DESTINATION_INSTANCE_ELEMENT = eINSTANCE.getInstanceElementsConnection_DestinationInstanceElement();
+
+		/**
+		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.PhysicalSystemImpl <em>Physical System</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.PhysicalSystemImpl
+		 * @see fr.tpt.useme.architecture.model.usemearch.impl.UsemearchPackageImpl#getPhysicalSystem()
+		 * @generated
+		 */
+		EClass PHYSICAL_SYSTEM = eINSTANCE.getPhysicalSystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHYSICAL_SYSTEM__INPUTS = eINSTANCE.getPhysicalSystem_Inputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Outputs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHYSICAL_SYSTEM__OUTPUTS = eINSTANCE.getPhysicalSystem_Outputs();
 
 	}
 

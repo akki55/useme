@@ -5,18 +5,17 @@ package fr.tpt.useme.architecture.model.usemearch.impl;
 import fr.tpt.useme.architecture.model.usemearch.AbstractSyntax;
 import fr.tpt.useme.architecture.model.usemearch.ConcreteSyntax;
 import fr.tpt.useme.architecture.model.usemearch.Documentation;
-import fr.tpt.useme.architecture.model.usemearch.DomainConcept;
 import fr.tpt.useme.architecture.model.usemearch.Dsl;
 import fr.tpt.useme.architecture.model.usemearch.FeatureDiagram;
 import fr.tpt.useme.architecture.model.usemearch.MaintenanceService;
-import fr.tpt.useme.architecture.model.usemearch.ModelChecker;
-import fr.tpt.useme.architecture.model.usemearch.ModelSimulator;
-import fr.tpt.useme.architecture.model.usemearch.Semantic;
+import fr.tpt.useme.architecture.model.usemearch.Semantics;
 import fr.tpt.useme.architecture.model.usemearch.SoftwareTool;
 import fr.tpt.useme.architecture.model.usemearch.Syntax;
 import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -28,8 +27,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -44,12 +43,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getConcreteSyntaxes <em>Concrete Syntaxes</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getAbstractsyntax <em>Abstractsyntax</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getSupportingTools <em>Supporting Tools</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getSemantics <em>Semantics</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getDomainConcepts <em>Domain Concepts</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getFeatureDiagrams <em>Feature Diagrams</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getModelCheckers <em>Model Checkers</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getModelSimulators <em>Model Simulators</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getDocumentations <em>Documentations</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getOwnedSemantics <em>Owned Semantics</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getOwnedFeatureDiagrams <em>Owned Feature Diagrams</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getOwnedDocumentations <em>Owned Documentations</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.DslImpl#getMaintenanceService <em>Maintenance Service</em>}</li>
  * </ul>
  *
@@ -77,64 +73,34 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 	protected EList<SoftwareTool> supportingTools;
 
 	/**
-	 * The cached value of the '{@link #getSemantics() <em>Semantics</em>}' reference list.
+	 * The cached value of the '{@link #getOwnedSemantics() <em>Owned Semantics</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSemantics()
+	 * @see #getOwnedSemantics()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Semantic> semantics;
+	protected EList<Semantics> ownedSemantics;
 
 	/**
-	 * The cached value of the '{@link #getDomainConcepts() <em>Domain Concepts</em>}' reference list.
+	 * The cached value of the '{@link #getOwnedFeatureDiagrams() <em>Owned Feature Diagrams</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDomainConcepts()
+	 * @see #getOwnedFeatureDiagrams()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DomainConcept> domainConcepts;
+	protected EList<FeatureDiagram> ownedFeatureDiagrams;
 
 	/**
-	 * The cached value of the '{@link #getFeatureDiagrams() <em>Feature Diagrams</em>}' reference list.
+	 * The cached value of the '{@link #getOwnedDocumentations() <em>Owned Documentations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFeatureDiagrams()
+	 * @see #getOwnedDocumentations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FeatureDiagram> featureDiagrams;
-
-	/**
-	 * The cached value of the '{@link #getModelCheckers() <em>Model Checkers</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModelCheckers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ModelChecker> modelCheckers;
-
-	/**
-	 * The cached value of the '{@link #getModelSimulators() <em>Model Simulators</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModelSimulators()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ModelSimulator> modelSimulators;
-
-	/**
-	 * The cached value of the '{@link #getDocumentations() <em>Documentations</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDocumentations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Documentation> documentations;
+	protected EList<Documentation> ownedDocumentations;
 
 	/**
 	 * The cached value of the '{@link #getMaintenanceService() <em>Maintenance Service</em>}' reference.
@@ -180,14 +146,21 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<ConcreteSyntax> getConcreteSyntaxes() {
-		// TODO: implement this method to return the 'Concrete Syntaxes' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		final List<ConcreteSyntax> concreteSyntaxes = new ArrayList<>();
+		
+		for ( final Syntax syntax : getOwnedSyntaxes() ) {
+			if ( syntax instanceof ConcreteSyntax ) {
+				concreteSyntaxes.add( (ConcreteSyntax) syntax );
+			}
+		}
+		
+		return new EcoreEList.UnmodifiableEList<ConcreteSyntax>( 	this,
+																	UsemearchPackage.Literals.DSL__CONCRETE_SYNTAXES,
+																	concreteSyntaxes.size(),
+																	concreteSyntaxes.toArray() );
 	}
 
 	/**
@@ -203,13 +176,16 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public AbstractSyntax basicGetAbstractsyntax() {
-		// TODO: implement this method to return the 'Abstractsyntax' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for ( final Syntax syntax : getOwnedSyntaxes() ) {
+			if ( syntax instanceof AbstractSyntax ) {
+				return (AbstractSyntax) syntax;
+			}
+		}
+		
+		return null;
 	}
 
 	/**
@@ -229,11 +205,11 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Semantic> getSemantics() {
-		if (semantics == null) {
-			semantics = new EObjectResolvingEList<Semantic>(Semantic.class, this, UsemearchPackage.DSL__SEMANTICS);
+	public EList<Semantics> getOwnedSemantics() {
+		if (ownedSemantics == null) {
+			ownedSemantics = new EObjectContainmentEList<Semantics>(Semantics.class, this, UsemearchPackage.DSL__OWNED_SEMANTICS);
 		}
-		return semantics;
+		return ownedSemantics;
 	}
 
 	/**
@@ -241,11 +217,11 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DomainConcept> getDomainConcepts() {
-		if (domainConcepts == null) {
-			domainConcepts = new EObjectResolvingEList<DomainConcept>(DomainConcept.class, this, UsemearchPackage.DSL__DOMAIN_CONCEPTS);
+	public EList<FeatureDiagram> getOwnedFeatureDiagrams() {
+		if (ownedFeatureDiagrams == null) {
+			ownedFeatureDiagrams = new EObjectContainmentEList<FeatureDiagram>(FeatureDiagram.class, this, UsemearchPackage.DSL__OWNED_FEATURE_DIAGRAMS);
 		}
-		return domainConcepts;
+		return ownedFeatureDiagrams;
 	}
 
 	/**
@@ -253,47 +229,11 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FeatureDiagram> getFeatureDiagrams() {
-		if (featureDiagrams == null) {
-			featureDiagrams = new EObjectResolvingEList<FeatureDiagram>(FeatureDiagram.class, this, UsemearchPackage.DSL__FEATURE_DIAGRAMS);
+	public EList<Documentation> getOwnedDocumentations() {
+		if (ownedDocumentations == null) {
+			ownedDocumentations = new EObjectContainmentEList<Documentation>(Documentation.class, this, UsemearchPackage.DSL__OWNED_DOCUMENTATIONS);
 		}
-		return featureDiagrams;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ModelChecker> getModelCheckers() {
-		if (modelCheckers == null) {
-			modelCheckers = new EObjectResolvingEList<ModelChecker>(ModelChecker.class, this, UsemearchPackage.DSL__MODEL_CHECKERS);
-		}
-		return modelCheckers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ModelSimulator> getModelSimulators() {
-		if (modelSimulators == null) {
-			modelSimulators = new EObjectResolvingEList<ModelSimulator>(ModelSimulator.class, this, UsemearchPackage.DSL__MODEL_SIMULATORS);
-		}
-		return modelSimulators;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Documentation> getDocumentations() {
-		if (documentations == null) {
-			documentations = new EObjectResolvingEList<Documentation>(Documentation.class, this, UsemearchPackage.DSL__DOCUMENTATIONS);
-		}
-		return documentations;
+		return ownedDocumentations;
 	}
 
 	/**
@@ -361,6 +301,12 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 				return ((InternalEList<?>)getOwnedSyntaxes()).basicRemove(otherEnd, msgs);
 			case UsemearchPackage.DSL__SUPPORTING_TOOLS:
 				return ((InternalEList<?>)getSupportingTools()).basicRemove(otherEnd, msgs);
+			case UsemearchPackage.DSL__OWNED_SEMANTICS:
+				return ((InternalEList<?>)getOwnedSemantics()).basicRemove(otherEnd, msgs);
+			case UsemearchPackage.DSL__OWNED_FEATURE_DIAGRAMS:
+				return ((InternalEList<?>)getOwnedFeatureDiagrams()).basicRemove(otherEnd, msgs);
+			case UsemearchPackage.DSL__OWNED_DOCUMENTATIONS:
+				return ((InternalEList<?>)getOwnedDocumentations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -382,18 +328,12 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 				return basicGetAbstractsyntax();
 			case UsemearchPackage.DSL__SUPPORTING_TOOLS:
 				return getSupportingTools();
-			case UsemearchPackage.DSL__SEMANTICS:
-				return getSemantics();
-			case UsemearchPackage.DSL__DOMAIN_CONCEPTS:
-				return getDomainConcepts();
-			case UsemearchPackage.DSL__FEATURE_DIAGRAMS:
-				return getFeatureDiagrams();
-			case UsemearchPackage.DSL__MODEL_CHECKERS:
-				return getModelCheckers();
-			case UsemearchPackage.DSL__MODEL_SIMULATORS:
-				return getModelSimulators();
-			case UsemearchPackage.DSL__DOCUMENTATIONS:
-				return getDocumentations();
+			case UsemearchPackage.DSL__OWNED_SEMANTICS:
+				return getOwnedSemantics();
+			case UsemearchPackage.DSL__OWNED_FEATURE_DIAGRAMS:
+				return getOwnedFeatureDiagrams();
+			case UsemearchPackage.DSL__OWNED_DOCUMENTATIONS:
+				return getOwnedDocumentations();
 			case UsemearchPackage.DSL__MAINTENANCE_SERVICE:
 				if (resolve) return getMaintenanceService();
 				return basicGetMaintenanceService();
@@ -418,29 +358,17 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 				getSupportingTools().clear();
 				getSupportingTools().addAll((Collection<? extends SoftwareTool>)newValue);
 				return;
-			case UsemearchPackage.DSL__SEMANTICS:
-				getSemantics().clear();
-				getSemantics().addAll((Collection<? extends Semantic>)newValue);
+			case UsemearchPackage.DSL__OWNED_SEMANTICS:
+				getOwnedSemantics().clear();
+				getOwnedSemantics().addAll((Collection<? extends Semantics>)newValue);
 				return;
-			case UsemearchPackage.DSL__DOMAIN_CONCEPTS:
-				getDomainConcepts().clear();
-				getDomainConcepts().addAll((Collection<? extends DomainConcept>)newValue);
+			case UsemearchPackage.DSL__OWNED_FEATURE_DIAGRAMS:
+				getOwnedFeatureDiagrams().clear();
+				getOwnedFeatureDiagrams().addAll((Collection<? extends FeatureDiagram>)newValue);
 				return;
-			case UsemearchPackage.DSL__FEATURE_DIAGRAMS:
-				getFeatureDiagrams().clear();
-				getFeatureDiagrams().addAll((Collection<? extends FeatureDiagram>)newValue);
-				return;
-			case UsemearchPackage.DSL__MODEL_CHECKERS:
-				getModelCheckers().clear();
-				getModelCheckers().addAll((Collection<? extends ModelChecker>)newValue);
-				return;
-			case UsemearchPackage.DSL__MODEL_SIMULATORS:
-				getModelSimulators().clear();
-				getModelSimulators().addAll((Collection<? extends ModelSimulator>)newValue);
-				return;
-			case UsemearchPackage.DSL__DOCUMENTATIONS:
-				getDocumentations().clear();
-				getDocumentations().addAll((Collection<? extends Documentation>)newValue);
+			case UsemearchPackage.DSL__OWNED_DOCUMENTATIONS:
+				getOwnedDocumentations().clear();
+				getOwnedDocumentations().addAll((Collection<? extends Documentation>)newValue);
 				return;
 			case UsemearchPackage.DSL__MAINTENANCE_SERVICE:
 				setMaintenanceService((MaintenanceService)newValue);
@@ -463,23 +391,14 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 			case UsemearchPackage.DSL__SUPPORTING_TOOLS:
 				getSupportingTools().clear();
 				return;
-			case UsemearchPackage.DSL__SEMANTICS:
-				getSemantics().clear();
+			case UsemearchPackage.DSL__OWNED_SEMANTICS:
+				getOwnedSemantics().clear();
 				return;
-			case UsemearchPackage.DSL__DOMAIN_CONCEPTS:
-				getDomainConcepts().clear();
+			case UsemearchPackage.DSL__OWNED_FEATURE_DIAGRAMS:
+				getOwnedFeatureDiagrams().clear();
 				return;
-			case UsemearchPackage.DSL__FEATURE_DIAGRAMS:
-				getFeatureDiagrams().clear();
-				return;
-			case UsemearchPackage.DSL__MODEL_CHECKERS:
-				getModelCheckers().clear();
-				return;
-			case UsemearchPackage.DSL__MODEL_SIMULATORS:
-				getModelSimulators().clear();
-				return;
-			case UsemearchPackage.DSL__DOCUMENTATIONS:
-				getDocumentations().clear();
+			case UsemearchPackage.DSL__OWNED_DOCUMENTATIONS:
+				getOwnedDocumentations().clear();
 				return;
 			case UsemearchPackage.DSL__MAINTENANCE_SERVICE:
 				setMaintenanceService((MaintenanceService)null);
@@ -504,18 +423,12 @@ public class DslImpl extends ContextElementTypeImpl implements Dsl {
 				return basicGetAbstractsyntax() != null;
 			case UsemearchPackage.DSL__SUPPORTING_TOOLS:
 				return supportingTools != null && !supportingTools.isEmpty();
-			case UsemearchPackage.DSL__SEMANTICS:
-				return semantics != null && !semantics.isEmpty();
-			case UsemearchPackage.DSL__DOMAIN_CONCEPTS:
-				return domainConcepts != null && !domainConcepts.isEmpty();
-			case UsemearchPackage.DSL__FEATURE_DIAGRAMS:
-				return featureDiagrams != null && !featureDiagrams.isEmpty();
-			case UsemearchPackage.DSL__MODEL_CHECKERS:
-				return modelCheckers != null && !modelCheckers.isEmpty();
-			case UsemearchPackage.DSL__MODEL_SIMULATORS:
-				return modelSimulators != null && !modelSimulators.isEmpty();
-			case UsemearchPackage.DSL__DOCUMENTATIONS:
-				return documentations != null && !documentations.isEmpty();
+			case UsemearchPackage.DSL__OWNED_SEMANTICS:
+				return ownedSemantics != null && !ownedSemantics.isEmpty();
+			case UsemearchPackage.DSL__OWNED_FEATURE_DIAGRAMS:
+				return ownedFeatureDiagrams != null && !ownedFeatureDiagrams.isEmpty();
+			case UsemearchPackage.DSL__OWNED_DOCUMENTATIONS:
+				return ownedDocumentations != null && !ownedDocumentations.isEmpty();
 			case UsemearchPackage.DSL__MAINTENANCE_SERVICE:
 				return maintenanceService != null;
 		}

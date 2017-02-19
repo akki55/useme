@@ -10,8 +10,8 @@ package fr.tpt.useme.architecture.model.usemearch;
  *
  *
  * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDocumentation()
- * @model
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface Documentation extends IdentifiedElement {
+public interface Documentation extends ContextElementType {
 } // Documentation

@@ -164,12 +164,12 @@ public class ContextSpecificationItemProvider extends IdentifiedElementItemProvi
 		newChildDescriptors.add
 			(createChildParameter
 				(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS,
-				 UsemearchFactory.eINSTANCE.createContextElementInstance()));
+				 UsemearchFactory.eINSTANCE.createContextInstanceElement()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS,
-				 UsemearchFactory.eINSTANCE.createElementInstanceConnection()));
+				 UsemearchFactory.eINSTANCE.createInstanceElementsConnection()));
 	}
 
 }

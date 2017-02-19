@@ -7,8 +7,6 @@ import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.sirius.viewpoint.description.impl.IdentifiedElementImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Feature Diagram</b></em>'.

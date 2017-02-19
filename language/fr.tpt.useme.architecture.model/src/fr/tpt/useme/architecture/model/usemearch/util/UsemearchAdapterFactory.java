@@ -72,8 +72,8 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createIdentifiedElementAdapter();
 			}
 			@Override
-			public Adapter caseDslDevelopmentSpecification(DslDevelopmentSpecification object) {
-				return createDslDevelopmentSpecificationAdapter();
+			public Adapter caseDslBasedSystemSpecification(DslBasedSystemSpecification object) {
+				return createDslBasedSystemSpecificationAdapter();
 			}
 			@Override
 			public Adapter caseContextElementType(ContextElementType object) {
@@ -132,8 +132,8 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createOperatingSystemAdapter();
 			}
 			@Override
-			public Adapter caseSemantic(Semantic object) {
-				return createSemanticAdapter();
+			public Adapter caseSemantics(Semantics object) {
+				return createSemanticsAdapter();
 			}
 			@Override
 			public Adapter caseDomainConcept(DomainConcept object) {
@@ -164,12 +164,16 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createMaintenanceServiceAdapter();
 			}
 			@Override
-			public Adapter caseContextElementInstance(ContextElementInstance object) {
-				return createContextElementInstanceAdapter();
+			public Adapter caseContextInstanceElement(ContextInstanceElement object) {
+				return createContextInstanceElementAdapter();
 			}
 			@Override
-			public Adapter caseElementInstanceConnection(ElementInstanceConnection object) {
-				return createElementInstanceConnectionAdapter();
+			public Adapter caseInstanceElementsConnection(InstanceElementsConnection object) {
+				return createInstanceElementsConnectionAdapter();
+			}
+			@Override
+			public Adapter casePhysicalSystem(PhysicalSystem object) {
+				return createPhysicalSystemAdapter();
 			}
 			@Override
 			public Adapter caseDescription_IdentifiedElement(org.eclipse.sirius.viewpoint.description.IdentifiedElement object) {
@@ -210,16 +214,16 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification <em>Dsl Development Specification</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification <em>Dsl Based System Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslDevelopmentSpecification
+	 * @see fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification
 	 * @generated
 	 */
-	public Adapter createDslDevelopmentSpecificationAdapter() {
+	public Adapter createDslBasedSystemSpecificationAdapter() {
 		return null;
 	}
 
@@ -420,16 +424,16 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.Semantic <em>Semantic</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.Semantics <em>Semantics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.Semantic
+	 * @see fr.tpt.useme.architecture.model.usemearch.Semantics
 	 * @generated
 	 */
-	public Adapter createSemanticAdapter() {
+	public Adapter createSemanticsAdapter() {
 		return null;
 	}
 
@@ -532,30 +536,44 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextElementInstance <em>Context Element Instance</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement <em>Context Instance Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ContextElementInstance
+	 * @see fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement
 	 * @generated
 	 */
-	public Adapter createContextElementInstanceAdapter() {
+	public Adapter createContextInstanceElementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection <em>Element Instance Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection <em>Instance Elements Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection
+	 * @see fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection
 	 * @generated
 	 */
-	public Adapter createElementInstanceConnectionAdapter() {
+	public Adapter createInstanceElementsConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.PhysicalSystem <em>Physical System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.PhysicalSystem
+	 * @generated
+	 */
+	public Adapter createPhysicalSystemAdapter() {
 		return null;
 	}
 

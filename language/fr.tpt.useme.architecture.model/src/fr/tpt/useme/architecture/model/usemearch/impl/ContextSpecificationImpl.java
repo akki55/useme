@@ -2,10 +2,11 @@
  */
 package fr.tpt.useme.architecture.model.usemearch.impl;
 
-import fr.tpt.useme.architecture.model.usemearch.ContextElementInstance;
+import fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement;
 import fr.tpt.useme.architecture.model.usemearch.ContextSpecification;
 import fr.tpt.useme.architecture.model.usemearch.Dsl;
-import fr.tpt.useme.architecture.model.usemearch.ElementInstanceConnection;
+import fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification;
+import fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection;
 import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
 
 import java.util.Collection;
@@ -41,7 +42,7 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ContextElementInstance> ownedInstanceElements;
+	protected EList<ContextInstanceElement> ownedInstanceElements;
 	/**
 	 * The cached value of the '{@link #getOwnedConnections() <em>Owned Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,7 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ElementInstanceConnection> ownedConnections;
+	protected EList<InstanceElementsConnection> ownedConnections;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,9 +76,9 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ContextElementInstance> getOwnedInstanceElements() {
+	public EList<ContextInstanceElement> getOwnedInstanceElements() {
 		if (ownedInstanceElements == null) {
-			ownedInstanceElements = new EObjectContainmentEList<ContextElementInstance>(ContextElementInstance.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS);
+			ownedInstanceElements = new EObjectContainmentEList<ContextInstanceElement>(ContextInstanceElement.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS);
 		}
 		return ownedInstanceElements;
 	}
@@ -95,13 +96,10 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Dsl basicGetDevelopedDsl() {
-		// TODO: implement this method to return the 'Developed Dsl' reference
-		// -> do not perform proxy resolution
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return ( (DslBasedSystemSpecification) eContainer() ).getDevelopedDsl();
 	}
 
 	/**
@@ -109,9 +107,9 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ElementInstanceConnection> getOwnedConnections() {
+	public EList<InstanceElementsConnection> getOwnedConnections() {
 		if (ownedConnections == null) {
-			ownedConnections = new EObjectContainmentEList<ElementInstanceConnection>(ElementInstanceConnection.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS);
+			ownedConnections = new EObjectContainmentEList<InstanceElementsConnection>(InstanceElementsConnection.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS);
 		}
 		return ownedConnections;
 	}
@@ -162,11 +160,11 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 		switch (featureID) {
 			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS:
 				getOwnedInstanceElements().clear();
-				getOwnedInstanceElements().addAll((Collection<? extends ContextElementInstance>)newValue);
+				getOwnedInstanceElements().addAll((Collection<? extends ContextInstanceElement>)newValue);
 				return;
 			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS:
 				getOwnedConnections().clear();
-				getOwnedConnections().addAll((Collection<? extends ElementInstanceConnection>)newValue);
+				getOwnedConnections().addAll((Collection<? extends InstanceElementsConnection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

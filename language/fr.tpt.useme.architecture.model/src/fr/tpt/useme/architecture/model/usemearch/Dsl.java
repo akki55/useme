@@ -17,12 +17,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getConcreteSyntaxes <em>Concrete Syntaxes</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getAbstractsyntax <em>Abstractsyntax</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getSupportingTools <em>Supporting Tools</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getSemantics <em>Semantics</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getDomainConcepts <em>Domain Concepts</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getFeatureDiagrams <em>Feature Diagrams</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getModelCheckers <em>Model Checkers</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getModelSimulators <em>Model Simulators</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getDocumentations <em>Documentations</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedSemantics <em>Owned Semantics</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedFeatureDiagrams <em>Owned Feature Diagrams</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getOwnedDocumentations <em>Owned Documentations</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.Dsl#getMaintenanceService <em>Maintenance Service</em>}</li>
  * </ul>
  *
@@ -97,100 +94,52 @@ public interface Dsl extends ContextElementType {
 	EList<SoftwareTool> getSupportingTools();
 
 	/**
-	 * Returns the value of the '<em><b>Semantics</b></em>' reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.Semantic}.
+	 * Returns the value of the '<em><b>Owned Semantics</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.Semantics}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Semantics</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Owned Semantics</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Semantics</em>' reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_Semantics()
-	 * @model
+	 * @return the value of the '<em>Owned Semantics</em>' containment reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_OwnedSemantics()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Semantic> getSemantics();
+	EList<Semantics> getOwnedSemantics();
 
 	/**
-	 * Returns the value of the '<em><b>Domain Concepts</b></em>' reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.DomainConcept}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Domain Concepts</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Domain Concepts</em>' reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_DomainConcepts()
-	 * @model
-	 * @generated
-	 */
-	EList<DomainConcept> getDomainConcepts();
-
-	/**
-	 * Returns the value of the '<em><b>Feature Diagrams</b></em>' reference list.
+	 * Returns the value of the '<em><b>Owned Feature Diagrams</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.FeatureDiagram}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Feature Diagrams</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Owned Feature Diagrams</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Feature Diagrams</em>' reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_FeatureDiagrams()
-	 * @model
+	 * @return the value of the '<em>Owned Feature Diagrams</em>' containment reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_OwnedFeatureDiagrams()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<FeatureDiagram> getFeatureDiagrams();
+	EList<FeatureDiagram> getOwnedFeatureDiagrams();
 
 	/**
-	 * Returns the value of the '<em><b>Model Checkers</b></em>' reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ModelChecker}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Model Checkers</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Model Checkers</em>' reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_ModelCheckers()
-	 * @model
-	 * @generated
-	 */
-	EList<ModelChecker> getModelCheckers();
-
-	/**
-	 * Returns the value of the '<em><b>Model Simulators</b></em>' reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ModelSimulator}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Model Simulators</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Model Simulators</em>' reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_ModelSimulators()
-	 * @model
-	 * @generated
-	 */
-	EList<ModelSimulator> getModelSimulators();
-
-	/**
-	 * Returns the value of the '<em><b>Documentations</b></em>' reference list.
+	 * Returns the value of the '<em><b>Owned Documentations</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.Documentation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Documentations</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Owned Documentations</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Documentations</em>' reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_Documentations()
-	 * @model
+	 * @return the value of the '<em>Owned Documentations</em>' containment reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDsl_OwnedDocumentations()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Documentation> getDocumentations();
+	EList<Documentation> getOwnedDocumentations();
 
 	/**
 	 * Returns the value of the '<em><b>Maintenance Service</b></em>' reference.
