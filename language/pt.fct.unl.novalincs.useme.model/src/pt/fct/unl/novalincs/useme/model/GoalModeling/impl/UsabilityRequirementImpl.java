@@ -13,8 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
@@ -27,6 +25,7 @@ import pt.fct.unl.novalincs.useme.model.InteractionModeling.Event;
 
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.Questionnaire;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage;
+import pt.fct.unl.novalincs.useme.model.Utility.impl.RequirementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,8 +35,8 @@ import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.impl.UsabilityRequirementImpl#getName <em>Name</em>}</li>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.impl.UsabilityRequirementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.impl.UsabilityRequirementImpl#getOld_name <em>Old name</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.impl.UsabilityRequirementImpl#getDescription_old <em>Description old</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.impl.UsabilityRequirementImpl#getMetric <em>Metric</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.impl.UsabilityRequirementImpl#getQuestionnaire <em>Questionnaire</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.impl.UsabilityRequirementImpl#getEvent <em>Event</em>}</li>
@@ -45,46 +44,46 @@ import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage;
  *
  * @generated
  */
-public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container implements UsabilityRequirement {
+public class UsabilityRequirementImpl extends RequirementImpl implements UsabilityRequirement {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getOld_name() <em>Old name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getOld_name()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String OLD_NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getOld_name() <em>Old name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getOld_name()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String old_name = OLD_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The default value of the '{@link #getDescription_old() <em>Description old</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getDescription_old()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = "";
+	protected static final String DESCRIPTION_OLD_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The cached value of the '{@link #getDescription_old() <em>Description old</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getDescription_old()
 	 * @generated
 	 * @ordered
 	 */
-	protected String description = DESCRIPTION_EDEFAULT;
+	protected String description_old = DESCRIPTION_OLD_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getMetric() <em>Metric</em>}' attribute list.
@@ -140,8 +139,8 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getOld_name() {
+		return old_name;
 	}
 
 	/**
@@ -149,11 +148,11 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setOld_name(String newOld_name) {
+		String oldOld_name = old_name;
+		old_name = newOld_name;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GoalModelingPackage.USABILITY_REQUIREMENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, GoalModelingPackage.USABILITY_REQUIREMENT__OLD_NAME, oldOld_name, old_name));
 	}
 
 	/**
@@ -161,8 +160,8 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
-		return description;
+	public String getDescription_old() {
+		return description_old;
 	}
 
 	/**
@@ -170,11 +169,11 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
+	public void setDescription_old(String newDescription_old) {
+		String oldDescription_old = description_old;
+		description_old = newDescription_old;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION_OLD, oldDescription_old, description_old));
 	}
 
 	/**
@@ -250,10 +249,10 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GoalModelingPackage.USABILITY_REQUIREMENT__NAME:
-				return getName();
-			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION:
-				return getDescription();
+			case GoalModelingPackage.USABILITY_REQUIREMENT__OLD_NAME:
+				return getOld_name();
+			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION_OLD:
+				return getDescription_old();
 			case GoalModelingPackage.USABILITY_REQUIREMENT__METRIC:
 				return getMetric();
 			case GoalModelingPackage.USABILITY_REQUIREMENT__QUESTIONNAIRE:
@@ -273,11 +272,11 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GoalModelingPackage.USABILITY_REQUIREMENT__NAME:
-				setName((String)newValue);
+			case GoalModelingPackage.USABILITY_REQUIREMENT__OLD_NAME:
+				setOld_name((String)newValue);
 				return;
-			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION:
-				setDescription((String)newValue);
+			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION_OLD:
+				setDescription_old((String)newValue);
 				return;
 			case GoalModelingPackage.USABILITY_REQUIREMENT__METRIC:
 				getMetric().clear();
@@ -303,11 +302,11 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GoalModelingPackage.USABILITY_REQUIREMENT__NAME:
-				setName(NAME_EDEFAULT);
+			case GoalModelingPackage.USABILITY_REQUIREMENT__OLD_NAME:
+				setOld_name(OLD_NAME_EDEFAULT);
 				return;
-			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
+			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION_OLD:
+				setDescription_old(DESCRIPTION_OLD_EDEFAULT);
 				return;
 			case GoalModelingPackage.USABILITY_REQUIREMENT__METRIC:
 				getMetric().clear();
@@ -330,10 +329,10 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GoalModelingPackage.USABILITY_REQUIREMENT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case GoalModelingPackage.USABILITY_REQUIREMENT__OLD_NAME:
+				return OLD_NAME_EDEFAULT == null ? old_name != null : !OLD_NAME_EDEFAULT.equals(old_name);
+			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION_OLD:
+				return DESCRIPTION_OLD_EDEFAULT == null ? description_old != null : !DESCRIPTION_OLD_EDEFAULT.equals(description_old);
 			case GoalModelingPackage.USABILITY_REQUIREMENT__METRIC:
 				return metric != null && !metric.isEmpty();
 			case GoalModelingPackage.USABILITY_REQUIREMENT__QUESTIONNAIRE:
@@ -354,10 +353,10 @@ public class UsabilityRequirementImpl extends MinimalEObjectImpl.Container imple
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", description: ");
-		result.append(description);
+		result.append(" (old_name: ");
+		result.append(old_name);
+		result.append(", description_old: ");
+		result.append(description_old);
 		result.append(", metric: ");
 		result.append(metric);
 		result.append(')');

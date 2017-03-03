@@ -59,7 +59,7 @@ public interface ReportSpecification extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Evaluation Result</b></em>' containment reference list.
-	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult}.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Evaluation Result</em>' containment reference list isn't clear,
@@ -71,6 +71,6 @@ public interface ReportSpecification extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<EvaluationResult> getEvaluationResult();
+	EList<EvaluationResultAbstract> getEvaluationResult();
 
 } // ReportSpecification

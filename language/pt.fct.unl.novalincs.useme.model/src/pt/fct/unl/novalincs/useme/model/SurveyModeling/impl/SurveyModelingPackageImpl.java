@@ -354,6 +354,15 @@ public class SurveyModelingPackageImpl extends EPackageImpl implements SurveyMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSurveyResult_Questionnaire() {
+		return (EReference)surveyResultEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBackgroundQs() {
 		return backgroundQsEClass;
 	}
@@ -488,6 +497,7 @@ public class SurveyModelingPackageImpl extends EPackageImpl implements SurveyMod
 
 		surveyResultEClass = createEClass(SURVEY_RESULT);
 		createEReference(surveyResultEClass, SURVEY_RESULT__SURVEY_MODEL);
+		createEReference(surveyResultEClass, SURVEY_RESULT__QUESTIONNAIRE);
 
 		backgroundQsEClass = createEClass(BACKGROUND_QS);
 		createEReference(backgroundQsEClass, BACKGROUND_QS__USER_PROFILE);
@@ -539,7 +549,7 @@ public class SurveyModelingPackageImpl extends EPackageImpl implements SurveyMod
 
 		// Add supertypes to classes
 		surveyModelEClass.getESuperTypes().add(theEvaluationModelingPackage.getTestModel());
-		surveyResultEClass.getESuperTypes().add(theReportModelingPackage.getEvaluationResult());
+		surveyResultEClass.getESuperTypes().add(theReportModelingPackage.getEvaluationResultAbstract());
 		backgroundQsEClass.getESuperTypes().add(this.getQuestion());
 		feedbackQsEClass.getESuperTypes().add(this.getQuestion());
 
@@ -565,6 +575,7 @@ public class SurveyModelingPackageImpl extends EPackageImpl implements SurveyMod
 
 		initEClass(surveyResultEClass, SurveyResult.class, "SurveyResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSurveyResult_SurveyModel(), this.getSurveyModel(), this.getSurveyModel_SurveyResult(), "surveyModel", null, 1, 1, SurveyResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSurveyResult_Questionnaire(), this.getQuestionnaire(), null, "questionnaire", null, 1, -1, SurveyResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(backgroundQsEClass, BackgroundQs.class, "BackgroundQs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBackgroundQs_UserProfile(), theContextModelingPackage.getUserProfile(), theContextModelingPackage.getUserProfile_BackgroundQs(), "userProfile", null, 1, -1, BackgroundQs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -58,8 +58,10 @@ public class ReportModelingFactoryImpl extends EFactoryImpl implements ReportMod
 		switch (eClass.getClassifierID()) {
 			case ReportModelingPackage.REPORT_SPECIFICATION: return createReportSpecification();
 			case ReportModelingPackage.REPORT_MODEL: return createReportModel();
-			case ReportModelingPackage.EVALUATION_RESULT: return createEvaluationResult();
+			case ReportModelingPackage.EVALUATION_RESULT_ABSTRACT: return createEvaluationResultAbstract();
 			case ReportModelingPackage.RECOMMEND_GM: return createRecommendGM();
+			case ReportModelingPackage.RESULT_VALUE: return createResultValue();
+			case ReportModelingPackage.EVALUATION_RESULT: return createEvaluationResult();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -90,6 +92,16 @@ public class ReportModelingFactoryImpl extends EFactoryImpl implements ReportMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EvaluationResultAbstract createEvaluationResultAbstract() {
+		EvaluationResultAbstractImpl evaluationResultAbstract = new EvaluationResultAbstractImpl();
+		return evaluationResultAbstract;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EvaluationResult createEvaluationResult() {
 		EvaluationResultImpl evaluationResult = new EvaluationResultImpl();
 		return evaluationResult;
@@ -103,6 +115,16 @@ public class ReportModelingFactoryImpl extends EFactoryImpl implements ReportMod
 	public RecommendGM createRecommendGM() {
 		RecommendGMImpl recommendGM = new RecommendGMImpl();
 		return recommendGM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResultValue createResultValue() {
+		ResultValueImpl resultValue = new ResultValueImpl();
+		return resultValue;
 	}
 
 	/**

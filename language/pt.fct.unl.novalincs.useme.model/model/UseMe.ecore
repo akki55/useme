@@ -25,7 +25,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="recommendedGM" upperBound="-1"
           eType="#//ReportModeling/RecommendGM" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationResult" upperBound="-1"
-          eType="#//ReportModeling/EvaluationResult" containment="true"/>
+          eType="#//ReportModeling/EvaluationResultAbstract" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ReportModel">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -35,14 +35,12 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="recommendGM" ordered="false"
           upperBound="-1" eType="#//ReportModeling/RecommendGM" eOpposite="#//ReportModeling/RecommendGM/reportModel"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="EvaluationResult">
+    <eClassifiers xsi:type="ecore:EClass" name="EvaluationResultAbstract">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outsideReference" upperBound="-1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="reportModel" ordered="false"
-          upperBound="-1" eType="#//ReportModeling/ReportModel" eOpposite="#//ReportModeling/ReportModel/evaluationResult"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationContext" ordered="false"
-          lowerBound="1" eType="#//EvaluationModeling/EvaluationContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultValue" upperBound="-1"
+          eType="#//ReportModeling/ResultValue" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outsifeReference" upperBound="-1"
+          eType="#//Utility/OutsideRef"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RecommendGM">
       <eStructuralFeatures xsi:type="ecore:EReference" name="reportModel" ordered="false"
@@ -53,6 +51,31 @@
           eType="#//Utility/FunctionalGoal"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="usabilityGoal" upperBound="-1"
           eType="#//GoalModeling/UsabilityGoal"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="suggestedRequirements"
+          upperBound="-1" eType="#//Utility/Requirement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResultValue">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultValue" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="language" lowerBound="1"
+          eType="#//EvaluationModeling/Language"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="relatedQuestion" upperBound="-1"
+          eType="#//SurveyModeling/Question"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="relatedAction" upperBound="-1"
+          eType="#//InteractionModeling/CaptureAction"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="associatedRequirement"
+          upperBound="-1" eType="#//Utility/Requirement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EvaluationResult" eSuperTypes="#//ReportModeling/EvaluationResultAbstract">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="surveyResult" upperBound="-1"
+          eType="#//SurveyModeling/SurveyResult"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interactionResult" upperBound="-1"
+          eType="#//InteractionModeling/InteractionResult"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="reportModel" ordered="false"
+          upperBound="-1" eType="#//ReportModeling/ReportModel" eOpposite="#//ReportModeling/ReportModel/evaluationResult"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationContext" ordered="false"
+          lowerBound="1" eType="#//EvaluationModeling/EvaluationContext"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="InteractionModeling" nsURI="http://nova-lincs.di.fct.unl.pt/useme.interactionmodeling"
@@ -117,10 +140,17 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="interactionModel" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//InteractionModeling/InteractionModel"
           eOpposite="#//InteractionModeling/InteractionModel/event"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="captureAction" upperBound="-1"
+          eType="#//InteractionModeling/CaptureAction" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InteractionResult" eSuperTypes="#//ReportModeling/EvaluationResult">
+    <eClassifiers xsi:type="ecore:EClass" name="InteractionResult" eSuperTypes="#//ReportModeling/EvaluationResultAbstract">
       <eStructuralFeatures xsi:type="ecore:EReference" name="interactionModel" ordered="false"
           lowerBound="1" eType="#//InteractionModeling/InteractionModel" eOpposite="#//InteractionModeling/InteractionModel/interactionResult"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="event" lowerBound="1"
+          upperBound="-1" eType="#//InteractionModeling/Event"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CaptureAction">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="SurveyModeling" nsURI="http://nova-lincs.di.fct.unl.pt/useme.surveymodeling"
@@ -155,9 +185,11 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="questionnaire" eType="#//SurveyModeling/Questionnaire"
           eOpposite="#//SurveyModeling/Questionnaire/question"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SurveyResult" eSuperTypes="#//ReportModeling/EvaluationResult">
+    <eClassifiers xsi:type="ecore:EClass" name="SurveyResult" eSuperTypes="#//ReportModeling/EvaluationResultAbstract">
       <eStructuralFeatures xsi:type="ecore:EReference" name="surveyModel" ordered="false"
           lowerBound="1" eType="#//SurveyModeling/SurveyModel" eOpposite="#//SurveyModeling/SurveyModel/surveyResult"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="questionnaire" lowerBound="1"
+          upperBound="-1" eType="#//SurveyModeling/Questionnaire"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BackgroundQs" eSuperTypes="#//SurveyModeling/Question">
       <eStructuralFeatures xsi:type="ecore:EReference" name="userProfile" ordered="false"
@@ -386,11 +418,11 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="scope" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//GoalModeling/Scope"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="successFactor" ordered="false"
-          lowerBound="1" upperBound="-1" eType="#//ReportModeling/EvaluationResult"/>
+          lowerBound="1" upperBound="-1" eType="#//ReportModeling/EvaluationResultAbstract"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="UsabilityRequirement">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="UsabilityRequirement" eSuperTypes="#//Utility/Requirement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="old_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description_old" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
           defaultValueLiteral=""/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" upperBound="-1"
@@ -547,6 +579,8 @@
           eType="#//EvaluationModeling/Documentation" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="outsideRef" upperBound="-1"
           eType="#//Utility/OutsideRef" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" upperBound="-1"
+          eType="#//Utility/Requirement" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SurveyEngine">
       <eStructuralFeatures xsi:type="ecore:EReference" name="surveyModel" ordered="false"
@@ -580,10 +614,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FunctionalGoal">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="requirements" upperBound="-1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="existingGM" ordered="false"
           upperBound="-1" eType="#//Utility/ExistingGM" eOpposite="#//Utility/ExistingGM/functionalGoal"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1"
+          eType="#//Utility/Requirement"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ExistingGM">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -650,6 +684,10 @@
       <eLiterals name="screenRecord" value="1" literal="Screen  Record"/>
       <eLiterals name="liveObservation" value="2"/>
       <eLiterals name="thinkAloud" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Requirement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

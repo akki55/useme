@@ -10,6 +10,7 @@ import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModel;
 import pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityGoal;
 
 import pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal;
+import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +25,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getRefersTo <em>Refers To</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getFunctionalGoal <em>Functional Goal</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getUsabilityGoal <em>Usability Goal</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getSuggestedRequirements <em>Suggested Requirements</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getRecommendGM()
@@ -116,5 +118,21 @@ public interface RecommendGM extends EObject {
 	 * @generated
 	 */
 	EList<UsabilityGoal> getUsabilityGoal();
+
+	/**
+	 * Returns the value of the '<em><b>Suggested Requirements</b></em>' reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.Utility.Requirement}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Suggested Requirements</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Suggested Requirements</em>' reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getRecommendGM_SuggestedRequirements()
+	 * @model
+	 * @generated
+	 */
+	EList<Requirement> getSuggestedRequirements();
 
 } // RecommendGM

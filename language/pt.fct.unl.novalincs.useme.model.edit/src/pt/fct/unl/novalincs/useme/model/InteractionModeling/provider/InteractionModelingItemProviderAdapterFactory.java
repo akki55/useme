@@ -210,6 +210,29 @@ public class InteractionModelingItemProviderAdapterFactory extends InteractionMo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CaptureActionItemProvider captureActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCaptureActionAdapter() {
+		if (captureActionItemProvider == null) {
+			captureActionItemProvider = new CaptureActionItemProvider(this);
+		}
+
+		return captureActionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +337,7 @@ public class InteractionModelingItemProviderAdapterFactory extends InteractionMo
 		if (taskItemProvider != null) taskItemProvider.dispose();
 		if (eventItemProvider != null) eventItemProvider.dispose();
 		if (interactionResultItemProvider != null) interactionResultItemProvider.dispose();
+		if (captureActionItemProvider != null) captureActionItemProvider.dispose();
 	}
 
 }

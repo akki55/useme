@@ -10,8 +10,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
 
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.*;
-
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,7 +103,13 @@ public class InteractionModelingSwitch<T> extends Switch<T> {
 			case InteractionModelingPackage.INTERACTION_RESULT: {
 				InteractionResult interactionResult = (InteractionResult)theEObject;
 				T result = caseInteractionResult(interactionResult);
-				if (result == null) result = caseEvaluationResult(interactionResult);
+				if (result == null) result = caseEvaluationResultAbstract(interactionResult);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case InteractionModelingPackage.CAPTURE_ACTION: {
+				CaptureAction captureAction = (CaptureAction)theEObject;
+				T result = caseCaptureAction(captureAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -203,6 +208,21 @@ public class InteractionModelingSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Capture Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Capture Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCaptureAction(CaptureAction object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Test Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -218,17 +238,17 @@ public class InteractionModelingSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Evaluation Result</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Evaluation Result Abstract</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Evaluation Result</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Evaluation Result Abstract</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEvaluationResult(EvaluationResult object) {
+	public T caseEvaluationResultAbstract(EvaluationResultAbstract object) {
 		return null;
 	}
 

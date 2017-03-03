@@ -21,6 +21,7 @@ import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.impl.GoalModelingPackageImpl;
 
+import pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.Event;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModel;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingFactory;
@@ -94,6 +95,13 @@ public class InteractionModelingPackageImpl extends EPackageImpl implements Inte
 	 * @generated
 	 */
 	private EClass interactionResultEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass captureActionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -472,6 +480,15 @@ public class InteractionModelingPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getEvent_CaptureAction() {
+		return (EReference)eventEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInteractionResult() {
 		return interactionResultEClass;
 	}
@@ -483,6 +500,33 @@ public class InteractionModelingPackageImpl extends EPackageImpl implements Inte
 	 */
 	public EReference getInteractionResult_InteractionModel() {
 		return (EReference)interactionResultEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInteractionResult_Event() {
+		return (EReference)interactionResultEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCaptureAction() {
+		return captureActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCaptureAction_Name() {
+		return (EAttribute)captureActionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -549,9 +593,14 @@ public class InteractionModelingPackageImpl extends EPackageImpl implements Inte
 		createEAttribute(eventEClass, EVENT__MANUAL);
 		createEAttribute(eventEClass, EVENT__ANALYSIS_TYPE);
 		createEReference(eventEClass, EVENT__INTERACTION_MODEL);
+		createEReference(eventEClass, EVENT__CAPTURE_ACTION);
 
 		interactionResultEClass = createEClass(INTERACTION_RESULT);
 		createEReference(interactionResultEClass, INTERACTION_RESULT__INTERACTION_MODEL);
+		createEReference(interactionResultEClass, INTERACTION_RESULT__EVENT);
+
+		captureActionEClass = createEClass(CAPTURE_ACTION);
+		createEAttribute(captureActionEClass, CAPTURE_ACTION__NAME);
 	}
 
 	/**
@@ -590,7 +639,7 @@ public class InteractionModelingPackageImpl extends EPackageImpl implements Inte
 
 		// Add supertypes to classes
 		interactionModelEClass.getESuperTypes().add(theEvaluationModelingPackage.getTestModel());
-		interactionResultEClass.getESuperTypes().add(theReportModelingPackage.getEvaluationResult());
+		interactionResultEClass.getESuperTypes().add(theReportModelingPackage.getEvaluationResultAbstract());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(interactionSpecificationEClass, InteractionSpecification.class, "InteractionSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -629,9 +678,14 @@ public class InteractionModelingPackageImpl extends EPackageImpl implements Inte
 		initEAttribute(getEvent_Manual(), ecorePackage.getEBoolean(), "manual", null, 1, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEvent_AnalysisType(), ecorePackage.getEString(), "analysisType", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvent_InteractionModel(), this.getInteractionModel(), this.getInteractionModel_Event(), "interactionModel", null, 1, -1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEvent_CaptureAction(), this.getCaptureAction(), null, "captureAction", null, 0, -1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interactionResultEClass, InteractionResult.class, "InteractionResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInteractionResult_InteractionModel(), this.getInteractionModel(), this.getInteractionModel_InteractionResult(), "interactionModel", null, 1, 1, InteractionResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getInteractionResult_Event(), this.getEvent(), null, "event", null, 1, -1, InteractionResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(captureActionEClass, CaptureAction.class, "CaptureAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCaptureAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, CaptureAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //InteractionModelingPackageImpl

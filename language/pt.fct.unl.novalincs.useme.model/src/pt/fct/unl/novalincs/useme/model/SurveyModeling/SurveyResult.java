@@ -2,7 +2,8 @@
  */
 package pt.fct.unl.novalincs.useme.model.SurveyModeling;
 
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
+import org.eclipse.emf.common.util.EList;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,13 +15,14 @@ import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
  * </p>
  * <ul>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult#getSurveyModel <em>Survey Model</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult#getQuestionnaire <em>Questionnaire</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage#getSurveyResult()
  * @model
  * @generated
  */
-public interface SurveyResult extends EvaluationResult {
+public interface SurveyResult extends EvaluationResultAbstract {
 	/**
 	 * Returns the value of the '<em><b>Survey Model</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModel#getSurveyResult <em>Survey Result</em>}'.
@@ -48,5 +50,21 @@ public interface SurveyResult extends EvaluationResult {
 	 * @generated
 	 */
 	void setSurveyModel(SurveyModel value);
+
+	/**
+	 * Returns the value of the '<em><b>Questionnaire</b></em>' reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.SurveyModeling.Questionnaire}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Questionnaire</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Questionnaire</em>' reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage#getSurveyResult_Questionnaire()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<Questionnaire> getQuestionnaire();
 
 } // SurveyResult

@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getName <em>Name</em>}</li>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getExistingGM <em>Existing GM</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements <em>Requirements</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getFunctionalGoal()
@@ -52,20 +52,20 @@ public interface FunctionalGoal extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Requirements</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Requirements</b></em>' reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.Utility.Requirement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Requirements</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requirements</em>' attribute list.
+	 * @return the value of the '<em>Requirements</em>' reference list.
 	 * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getFunctionalGoal_Requirements()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getRequirements();
+	EList<Requirement> getRequirements();
 
 	/**
 	 * Returns the value of the '<em><b>Existing GM</b></em>' reference list.

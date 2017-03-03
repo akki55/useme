@@ -453,13 +453,22 @@ public interface InteractionModelingPackage extends EPackage {
 	int EVENT__INTERACTION_MODEL = 6;
 
 	/**
+	 * The feature id for the '<em><b>Capture Action</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__CAPTURE_ACTION = 7;
+
+	/**
 	 * The number of structural features of the '<em>Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT_FEATURE_COUNT = 7;
+	int EVENT_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Event</em>' class.
@@ -487,34 +496,25 @@ public interface InteractionModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_RESULT__NAME = ReportModelingPackage.EVALUATION_RESULT__NAME;
+	int INTERACTION_RESULT__NAME = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Outside Reference</b></em>' attribute list.
+	 * The feature id for the '<em><b>Result Value</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_RESULT__OUTSIDE_REFERENCE = ReportModelingPackage.EVALUATION_RESULT__OUTSIDE_REFERENCE;
+	int INTERACTION_RESULT__RESULT_VALUE = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT__RESULT_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Report Model</b></em>' reference list.
+	 * The feature id for the '<em><b>Outsife Reference</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_RESULT__REPORT_MODEL = ReportModelingPackage.EVALUATION_RESULT__REPORT_MODEL;
-
-	/**
-	 * The feature id for the '<em><b>Evaluation Context</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERACTION_RESULT__EVALUATION_CONTEXT = ReportModelingPackage.EVALUATION_RESULT__EVALUATION_CONTEXT;
+	int INTERACTION_RESULT__OUTSIFE_REFERENCE = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT__OUTSIFE_REFERENCE;
 
 	/**
 	 * The feature id for the '<em><b>Interaction Model</b></em>' reference.
@@ -523,7 +523,16 @@ public interface InteractionModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_RESULT__INTERACTION_MODEL = ReportModelingPackage.EVALUATION_RESULT_FEATURE_COUNT + 0;
+	int INTERACTION_RESULT__INTERACTION_MODEL = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Event</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION_RESULT__EVENT = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Interaction Result</em>' class.
@@ -532,7 +541,7 @@ public interface InteractionModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_RESULT_FEATURE_COUNT = ReportModelingPackage.EVALUATION_RESULT_FEATURE_COUNT + 1;
+	int INTERACTION_RESULT_FEATURE_COUNT = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Interaction Result</em>' class.
@@ -541,7 +550,45 @@ public interface InteractionModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERACTION_RESULT_OPERATION_COUNT = ReportModelingPackage.EVALUATION_RESULT_OPERATION_COUNT + 0;
+	int INTERACTION_RESULT_OPERATION_COUNT = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.CaptureActionImpl <em>Capture Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.CaptureActionImpl
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.InteractionModelingPackageImpl#getCaptureAction()
+	 * @generated
+	 */
+	int CAPTURE_ACTION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPTURE_ACTION__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Capture Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPTURE_ACTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Capture Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPTURE_ACTION_OPERATION_COUNT = 0;
 
 
 	/**
@@ -892,6 +939,17 @@ public interface InteractionModelingPackage extends EPackage {
 	EReference getEvent_InteractionModel();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.Event#getCaptureAction <em>Capture Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Capture Action</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.Event#getCaptureAction()
+	 * @see #getEvent()
+	 * @generated
+	 */
+	EReference getEvent_CaptureAction();
+
+	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult <em>Interaction Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -911,6 +969,38 @@ public interface InteractionModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInteractionResult_InteractionModel();
+
+	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult#getEvent <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Event</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult#getEvent()
+	 * @see #getInteractionResult()
+	 * @generated
+	 */
+	EReference getInteractionResult_Event();
+
+	/**
+	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction <em>Capture Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Capture Action</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction
+	 * @generated
+	 */
+	EClass getCaptureAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction#getName()
+	 * @see #getCaptureAction()
+	 * @generated
+	 */
+	EAttribute getCaptureAction_Name();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1202,6 +1292,14 @@ public interface InteractionModelingPackage extends EPackage {
 		EReference EVENT__INTERACTION_MODEL = eINSTANCE.getEvent_InteractionModel();
 
 		/**
+		 * The meta object literal for the '<em><b>Capture Action</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVENT__CAPTURE_ACTION = eINSTANCE.getEvent_CaptureAction();
+
+		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.InteractionResultImpl <em>Interaction Result</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1218,6 +1316,32 @@ public interface InteractionModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INTERACTION_RESULT__INTERACTION_MODEL = eINSTANCE.getInteractionResult_InteractionModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Event</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERACTION_RESULT__EVENT = eINSTANCE.getInteractionResult_Event();
+
+		/**
+		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.CaptureActionImpl <em>Capture Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.CaptureActionImpl
+		 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.InteractionModelingPackageImpl#getCaptureAction()
+		 * @generated
+		 */
+		EClass CAPTURE_ACTION = eINSTANCE.getCaptureAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CAPTURE_ACTION__NAME = eINSTANCE.getCaptureAction_Name();
 
 	}
 

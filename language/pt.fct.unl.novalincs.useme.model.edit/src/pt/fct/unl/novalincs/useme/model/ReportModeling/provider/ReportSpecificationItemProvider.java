@@ -171,6 +171,11 @@ public class ReportSpecificationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ReportModelingPackage.Literals.REPORT_SPECIFICATION__EVALUATION_RESULT,
+				 ReportModelingFactory.eINSTANCE.createEvaluationResultAbstract()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ReportModelingPackage.Literals.REPORT_SPECIFICATION__EVALUATION_RESULT,
 				 ReportModelingFactory.eINSTANCE.createEvaluationResult()));
 
 		newChildDescriptors.add

@@ -24,6 +24,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.DSL;
 import pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal;
 import pt.fct.unl.novalincs.useme.model.Utility.OutsideRef;
 import pt.fct.unl.novalincs.useme.model.Utility.ProcessModel;
+import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 import pt.fct.unl.novalincs.useme.model.Utility.SurveyEngine;
 import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
 import pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification;
@@ -43,6 +44,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.UtilitySpecificationImpl#getSurveyEngine <em>Survey Engine</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.UtilitySpecificationImpl#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.UtilitySpecificationImpl#getOutsideRef <em>Outside Ref</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.UtilitySpecificationImpl#getRequirement <em>Requirement</em>}</li>
  * </ul>
  *
  * @generated
@@ -127,6 +129,16 @@ public class UtilitySpecificationImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EList<OutsideRef> outsideRef;
+
+	/**
+	 * The cached value of the '{@link #getRequirement() <em>Requirement</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequirement()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Requirement> requirement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -245,6 +257,18 @@ public class UtilitySpecificationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Requirement> getRequirement() {
+		if (requirement == null) {
+			requirement = new EObjectContainmentEList<Requirement>(Requirement.class, this, UtilityPackage.UTILITY_SPECIFICATION__REQUIREMENT);
+		}
+		return requirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -260,6 +284,8 @@ public class UtilitySpecificationImpl extends MinimalEObjectImpl.Container imple
 				return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
 			case UtilityPackage.UTILITY_SPECIFICATION__OUTSIDE_REF:
 				return ((InternalEList<?>)getOutsideRef()).basicRemove(otherEnd, msgs);
+			case UtilityPackage.UTILITY_SPECIFICATION__REQUIREMENT:
+				return ((InternalEList<?>)getRequirement()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -286,6 +312,8 @@ public class UtilitySpecificationImpl extends MinimalEObjectImpl.Container imple
 				return getDocumentation();
 			case UtilityPackage.UTILITY_SPECIFICATION__OUTSIDE_REF:
 				return getOutsideRef();
+			case UtilityPackage.UTILITY_SPECIFICATION__REQUIREMENT:
+				return getRequirement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -326,6 +354,10 @@ public class UtilitySpecificationImpl extends MinimalEObjectImpl.Container imple
 				getOutsideRef().clear();
 				getOutsideRef().addAll((Collection<? extends OutsideRef>)newValue);
 				return;
+			case UtilityPackage.UTILITY_SPECIFICATION__REQUIREMENT:
+				getRequirement().clear();
+				getRequirement().addAll((Collection<? extends Requirement>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -359,6 +391,9 @@ public class UtilitySpecificationImpl extends MinimalEObjectImpl.Container imple
 			case UtilityPackage.UTILITY_SPECIFICATION__OUTSIDE_REF:
 				getOutsideRef().clear();
 				return;
+			case UtilityPackage.UTILITY_SPECIFICATION__REQUIREMENT:
+				getRequirement().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -385,6 +420,8 @@ public class UtilitySpecificationImpl extends MinimalEObjectImpl.Container imple
 				return documentation != null && !documentation.isEmpty();
 			case UtilityPackage.UTILITY_SPECIFICATION__OUTSIDE_REF:
 				return outsideRef != null && !outsideRef.isEmpty();
+			case UtilityPackage.UTILITY_SPECIFICATION__REQUIREMENT:
+				return requirement != null && !requirement.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

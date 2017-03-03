@@ -650,7 +650,7 @@ public class GoalModelingPackageImpl extends EPackageImpl implements GoalModelin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUsabilityRequirement_Name() {
+	public EAttribute getUsabilityRequirement_Old_name() {
 		return (EAttribute)usabilityRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -659,7 +659,7 @@ public class GoalModelingPackageImpl extends EPackageImpl implements GoalModelin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUsabilityRequirement_Description() {
+	public EAttribute getUsabilityRequirement_Description_old() {
 		return (EAttribute)usabilityRequirementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -775,8 +775,8 @@ public class GoalModelingPackageImpl extends EPackageImpl implements GoalModelin
 		createEReference(successCoverageEClass, SUCCESS_COVERAGE__SUCCESS_FACTOR);
 
 		usabilityRequirementEClass = createEClass(USABILITY_REQUIREMENT);
-		createEAttribute(usabilityRequirementEClass, USABILITY_REQUIREMENT__NAME);
-		createEAttribute(usabilityRequirementEClass, USABILITY_REQUIREMENT__DESCRIPTION);
+		createEAttribute(usabilityRequirementEClass, USABILITY_REQUIREMENT__OLD_NAME);
+		createEAttribute(usabilityRequirementEClass, USABILITY_REQUIREMENT__DESCRIPTION_OLD);
 		createEAttribute(usabilityRequirementEClass, USABILITY_REQUIREMENT__METRIC);
 		createEReference(usabilityRequirementEClass, USABILITY_REQUIREMENT__QUESTIONNAIRE);
 		createEReference(usabilityRequirementEClass, USABILITY_REQUIREMENT__EVENT);
@@ -818,6 +818,7 @@ public class GoalModelingPackageImpl extends EPackageImpl implements GoalModelin
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		usabilityRequirementEClass.getESuperTypes().add(theUtilityPackage.getRequirement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(goalSpecificationEClass, GoalSpecification.class, "GoalSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -874,11 +875,11 @@ public class GoalModelingPackageImpl extends EPackageImpl implements GoalModelin
 		initEAttribute(getSuccessCoverage_Name(), ecorePackage.getEString(), "name", null, 0, 1, SuccessCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSuccessCoverage_UsabilityGoal(), this.getUsabilityGoal(), this.getUsabilityGoal_SuccessCoverage(), "usabilityGoal", null, 1, 1, SuccessCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSuccessCoverage_Scope(), this.getScope(), null, "scope", null, 1, -1, SuccessCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSuccessCoverage_SuccessFactor(), theReportModelingPackage.getEvaluationResult(), null, "successFactor", null, 1, -1, SuccessCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSuccessCoverage_SuccessFactor(), theReportModelingPackage.getEvaluationResultAbstract(), null, "successFactor", null, 1, -1, SuccessCoverage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(usabilityRequirementEClass, UsabilityRequirement.class, "UsabilityRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUsabilityRequirement_Name(), ecorePackage.getEString(), "name", null, 0, 1, UsabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsabilityRequirement_Description(), ecorePackage.getEString(), "description", "", 1, 1, UsabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsabilityRequirement_Old_name(), ecorePackage.getEString(), "old_name", null, 0, 1, UsabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsabilityRequirement_Description_old(), ecorePackage.getEString(), "description_old", "", 1, 1, UsabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUsabilityRequirement_Metric(), ecorePackage.getEString(), "metric", null, 0, -1, UsabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUsabilityRequirement_Questionnaire(), theSurveyModelingPackage.getQuestionnaire(), theSurveyModelingPackage.getQuestionnaire_UsabilityRequirement(), "questionnaire", null, 0, -1, UsabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUsabilityRequirement_Event(), theInteractionModelingPackage.getEvent(), null, "event", null, 0, -1, UsabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

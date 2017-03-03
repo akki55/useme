@@ -12,8 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
 
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.*;
-
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,12 +95,16 @@ public class InteractionModelingAdapterFactory extends AdapterFactoryImpl {
 				return createInteractionResultAdapter();
 			}
 			@Override
+			public Adapter caseCaptureAction(CaptureAction object) {
+				return createCaptureActionAdapter();
+			}
+			@Override
 			public Adapter caseTestModel(TestModel object) {
 				return createTestModelAdapter();
 			}
 			@Override
-			public Adapter caseEvaluationResult(EvaluationResult object) {
-				return createEvaluationResultAdapter();
+			public Adapter caseEvaluationResultAbstract(EvaluationResultAbstract object) {
+				return createEvaluationResultAbstractAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -208,6 +211,20 @@ public class InteractionModelingAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction <em>Capture Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction
+	 * @generated
+	 */
+	public Adapter createCaptureActionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel <em>Test Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -222,16 +239,16 @@ public class InteractionModelingAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult <em>Evaluation Result</em>}'.
+	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract <em>Evaluation Result Abstract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract
 	 * @generated
 	 */
-	public Adapter createEvaluationResultAdapter() {
+	public Adapter createEvaluationResultAbstractAdapter() {
 		return null;
 	}
 

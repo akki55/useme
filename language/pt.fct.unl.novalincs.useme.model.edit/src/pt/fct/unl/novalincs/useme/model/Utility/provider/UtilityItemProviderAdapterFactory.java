@@ -348,6 +348,29 @@ public class UtilityItemProviderAdapterFactory extends UtilityAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.Utility.Requirement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RequirementItemProvider requirementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.Utility.Requirement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRequirementAdapter() {
+		if (requirementItemProvider == null) {
+			requirementItemProvider = new RequirementItemProvider(this);
+		}
+
+		return requirementItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,6 +481,7 @@ public class UtilityItemProviderAdapterFactory extends UtilityAdapterFactory imp
 		if (concreteSyntaxItemProvider != null) concreteSyntaxItemProvider.dispose();
 		if (abstractSyntaxItemProvider != null) abstractSyntaxItemProvider.dispose();
 		if (outsideRefItemProvider != null) outsideRefItemProvider.dispose();
+		if (requirementItemProvider != null) requirementItemProvider.dispose();
 	}
 
 }

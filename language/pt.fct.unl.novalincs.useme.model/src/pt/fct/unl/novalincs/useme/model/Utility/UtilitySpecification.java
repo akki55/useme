@@ -24,6 +24,7 @@ import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification#getSurveyEngine <em>Survey Engine</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification#getOutsideRef <em>Outside Ref</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification#getRequirement <em>Requirement</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getUtilitySpecification()
@@ -152,5 +153,21 @@ public interface UtilitySpecification extends EObject {
 	 * @generated
 	 */
 	EList<OutsideRef> getOutsideRef();
+
+	/**
+	 * Returns the value of the '<em><b>Requirement</b></em>' containment reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.Utility.Requirement}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Requirement</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requirement</em>' containment reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getUtilitySpecification_Requirement()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Requirement> getRequirement();
 
 } // UtilitySpecification

@@ -10,9 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
-
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
-
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.*;
 
 /**
@@ -104,8 +102,8 @@ public class SurveyModelingAdapterFactory extends AdapterFactoryImpl {
 				return createTestModelAdapter();
 			}
 			@Override
-			public Adapter caseEvaluationResult(EvaluationResult object) {
-				return createEvaluationResultAdapter();
+			public Adapter caseEvaluationResultAbstract(EvaluationResultAbstract object) {
+				return createEvaluationResultAbstractAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -240,16 +238,16 @@ public class SurveyModelingAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult <em>Evaluation Result</em>}'.
+	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract <em>Evaluation Result Abstract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract
 	 * @generated
 	 */
-	public Adapter createEvaluationResultAdapter() {
+	public Adapter createEvaluationResultAbstractAdapter() {
 		return null;
 	}
 

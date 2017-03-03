@@ -26,6 +26,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.RecordInput;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.Event#isManual <em>Manual</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.Event#getAnalysisType <em>Analysis Type</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.Event#getInteractionModel <em>Interaction Model</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.Event#getCaptureAction <em>Capture Action</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage#getEvent()
@@ -178,5 +179,21 @@ public interface Event extends EObject {
 	 * @generated
 	 */
 	EList<InteractionModel> getInteractionModel();
+
+	/**
+	 * Returns the value of the '<em><b>Capture Action</b></em>' containment reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Capture Action</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Capture Action</em>' containment reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage#getEvent_CaptureAction()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<CaptureAction> getCaptureAction();
 
 } // Event

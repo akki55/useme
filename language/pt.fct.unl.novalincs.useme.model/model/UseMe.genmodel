@@ -30,13 +30,11 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/ReportModel/recommendGM"/>
       </genClasses>
-      <genClasses ecoreClass="UseMe.ecore#//ReportModeling/EvaluationResult">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//ReportModeling/EvaluationResult/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//ReportModeling/EvaluationResult/outsideReference"/>
+      <genClasses ecoreClass="UseMe.ecore#//ReportModeling/EvaluationResultAbstract">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//ReportModeling/EvaluationResultAbstract/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResultAbstract/resultValue"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResult/reportModel"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResult/evaluationContext"/>
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResultAbstract/outsifeReference"/>
       </genClasses>
       <genClasses ecoreClass="UseMe.ecore#//ReportModeling/RecommendGM">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -47,6 +45,30 @@
             ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/RecommendGM/functionalGoal"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/RecommendGM/usabilityGoal"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/RecommendGM/suggestedRequirements"/>
+      </genClasses>
+      <genClasses ecoreClass="UseMe.ecore#//ReportModeling/ResultValue">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//ReportModeling/ResultValue/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//ReportModeling/ResultValue/resultValue"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/ResultValue/language"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/ResultValue/relatedQuestion"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/ResultValue/relatedAction"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/ResultValue/associatedRequirement"/>
+      </genClasses>
+      <genClasses ecoreClass="UseMe.ecore#//ReportModeling/EvaluationResult">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResult/surveyResult"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResult/interactionResult"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResult/reportModel"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//ReportModeling/EvaluationResult/evaluationContext"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="InteractionModeling" basePackage="pt.fct.unl.novalincs.useme.model"
@@ -101,10 +123,16 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//InteractionModeling/Event/analysisType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//InteractionModeling/Event/interactionModel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseMe.ecore#//InteractionModeling/Event/captureAction"/>
       </genClasses>
       <genClasses ecoreClass="UseMe.ecore#//InteractionModeling/InteractionResult">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//InteractionModeling/InteractionResult/interactionModel"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//InteractionModeling/InteractionResult/event"/>
+      </genClasses>
+      <genClasses ecoreClass="UseMe.ecore#//InteractionModeling/CaptureAction">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//InteractionModeling/CaptureAction/name"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="SurveyModeling" basePackage="pt.fct.unl.novalincs.useme.model"
@@ -135,6 +163,8 @@
       <genClasses ecoreClass="UseMe.ecore#//SurveyModeling/SurveyResult">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//SurveyModeling/SurveyResult/surveyModel"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UseMe.ecore#//SurveyModeling/SurveyResult/questionnaire"/>
       </genClasses>
       <genClasses ecoreClass="UseMe.ecore#//SurveyModeling/BackgroundQs">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -334,8 +364,8 @@
             ecoreFeature="ecore:EReference UseMe.ecore#//GoalModeling/SuccessCoverage/successFactor"/>
       </genClasses>
       <genClasses ecoreClass="UseMe.ecore#//GoalModeling/UsabilityRequirement">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//GoalModeling/UsabilityRequirement/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//GoalModeling/UsabilityRequirement/description"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//GoalModeling/UsabilityRequirement/old_name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//GoalModeling/UsabilityRequirement/description_old"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//GoalModeling/UsabilityRequirement/metric"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//GoalModeling/UsabilityRequirement/questionnaire"/>
@@ -465,6 +495,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseMe.ecore#//Utility/UtilitySpecification/surveyEngine"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseMe.ecore#//Utility/UtilitySpecification/documentation"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseMe.ecore#//Utility/UtilitySpecification/outsideRef"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseMe.ecore#//Utility/UtilitySpecification/requirement"/>
       </genClasses>
       <genClasses ecoreClass="UseMe.ecore#//Utility/SurveyEngine">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -494,9 +525,9 @@
       </genClasses>
       <genClasses ecoreClass="UseMe.ecore#//Utility/FunctionalGoal">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//Utility/FunctionalGoal/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//Utility/FunctionalGoal/requirements"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//Utility/FunctionalGoal/existingGM"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EReference UseMe.ecore#//Utility/FunctionalGoal/requirements"/>
       </genClasses>
       <genClasses ecoreClass="UseMe.ecore#//Utility/ExistingGM">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//Utility/ExistingGM/name"/>
@@ -544,6 +575,10 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//Utility/OutsideRef/tool"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference UseMe.ecore#//Utility/OutsideRef/outsideRef"/>
+      </genClasses>
+      <genClasses ecoreClass="UseMe.ecore#//Utility/Requirement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//Utility/Requirement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseMe.ecore#//Utility/Requirement/description"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

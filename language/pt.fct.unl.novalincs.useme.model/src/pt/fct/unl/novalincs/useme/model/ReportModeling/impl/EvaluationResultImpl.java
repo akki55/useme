@@ -13,17 +13,17 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
 
+import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModel;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage;
+import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,44 +33,34 @@ import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl#getName <em>Name</em>}</li>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl#getOutsideReference <em>Outside Reference</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl#getSurveyResult <em>Survey Result</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl#getInteractionResult <em>Interaction Result</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl#getReportModel <em>Report Model</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl#getEvaluationContext <em>Evaluation Context</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EvaluationResultImpl extends MinimalEObjectImpl.Container implements EvaluationResult {
+public class EvaluationResultImpl extends EvaluationResultAbstractImpl implements EvaluationResult {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getSurveyResult() <em>Survey Result</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getSurveyResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected EList<SurveyResult> surveyResult;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getInteractionResult() <em>Interaction Result</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getInteractionResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getOutsideReference() <em>Outside Reference</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutsideReference()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> outsideReference;
+	protected EList<InteractionResult> interactionResult;
 
 	/**
 	 * The cached value of the '{@link #getReportModel() <em>Report Model</em>}' reference list.
@@ -116,32 +106,23 @@ public class EvaluationResultImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ReportModelingPackage.EVALUATION_RESULT__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getOutsideReference() {
-		if (outsideReference == null) {
-			outsideReference = new EDataTypeUniqueEList<String>(String.class, this, ReportModelingPackage.EVALUATION_RESULT__OUTSIDE_REFERENCE);
+	public EList<SurveyResult> getSurveyResult() {
+		if (surveyResult == null) {
+			surveyResult = new EObjectResolvingEList<SurveyResult>(SurveyResult.class, this, ReportModelingPackage.EVALUATION_RESULT__SURVEY_RESULT);
 		}
-		return outsideReference;
+		return surveyResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<InteractionResult> getInteractionResult() {
+		if (interactionResult == null) {
+			interactionResult = new EObjectResolvingEList<InteractionResult>(InteractionResult.class, this, ReportModelingPackage.EVALUATION_RESULT__INTERACTION_RESULT);
+		}
+		return interactionResult;
 	}
 
 	/**
@@ -231,10 +212,10 @@ public class EvaluationResultImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ReportModelingPackage.EVALUATION_RESULT__NAME:
-				return getName();
-			case ReportModelingPackage.EVALUATION_RESULT__OUTSIDE_REFERENCE:
-				return getOutsideReference();
+			case ReportModelingPackage.EVALUATION_RESULT__SURVEY_RESULT:
+				return getSurveyResult();
+			case ReportModelingPackage.EVALUATION_RESULT__INTERACTION_RESULT:
+				return getInteractionResult();
 			case ReportModelingPackage.EVALUATION_RESULT__REPORT_MODEL:
 				return getReportModel();
 			case ReportModelingPackage.EVALUATION_RESULT__EVALUATION_CONTEXT:
@@ -253,12 +234,13 @@ public class EvaluationResultImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ReportModelingPackage.EVALUATION_RESULT__NAME:
-				setName((String)newValue);
+			case ReportModelingPackage.EVALUATION_RESULT__SURVEY_RESULT:
+				getSurveyResult().clear();
+				getSurveyResult().addAll((Collection<? extends SurveyResult>)newValue);
 				return;
-			case ReportModelingPackage.EVALUATION_RESULT__OUTSIDE_REFERENCE:
-				getOutsideReference().clear();
-				getOutsideReference().addAll((Collection<? extends String>)newValue);
+			case ReportModelingPackage.EVALUATION_RESULT__INTERACTION_RESULT:
+				getInteractionResult().clear();
+				getInteractionResult().addAll((Collection<? extends InteractionResult>)newValue);
 				return;
 			case ReportModelingPackage.EVALUATION_RESULT__REPORT_MODEL:
 				getReportModel().clear();
@@ -279,11 +261,11 @@ public class EvaluationResultImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ReportModelingPackage.EVALUATION_RESULT__NAME:
-				setName(NAME_EDEFAULT);
+			case ReportModelingPackage.EVALUATION_RESULT__SURVEY_RESULT:
+				getSurveyResult().clear();
 				return;
-			case ReportModelingPackage.EVALUATION_RESULT__OUTSIDE_REFERENCE:
-				getOutsideReference().clear();
+			case ReportModelingPackage.EVALUATION_RESULT__INTERACTION_RESULT:
+				getInteractionResult().clear();
 				return;
 			case ReportModelingPackage.EVALUATION_RESULT__REPORT_MODEL:
 				getReportModel().clear();
@@ -303,34 +285,16 @@ public class EvaluationResultImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ReportModelingPackage.EVALUATION_RESULT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ReportModelingPackage.EVALUATION_RESULT__OUTSIDE_REFERENCE:
-				return outsideReference != null && !outsideReference.isEmpty();
+			case ReportModelingPackage.EVALUATION_RESULT__SURVEY_RESULT:
+				return surveyResult != null && !surveyResult.isEmpty();
+			case ReportModelingPackage.EVALUATION_RESULT__INTERACTION_RESULT:
+				return interactionResult != null && !interactionResult.isEmpty();
 			case ReportModelingPackage.EVALUATION_RESULT__REPORT_MODEL:
 				return reportModel != null && !reportModel.isEmpty();
 			case ReportModelingPackage.EVALUATION_RESULT__EVALUATION_CONTEXT:
 				return evaluationContext != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", outsideReference: ");
-		result.append(outsideReference);
-		result.append(')');
-		return result.toString();
 	}
 
 } //EvaluationResultImpl

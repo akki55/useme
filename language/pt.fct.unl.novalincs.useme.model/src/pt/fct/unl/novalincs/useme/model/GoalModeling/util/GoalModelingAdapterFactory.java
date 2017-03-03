@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.*;
+import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,6 +99,10 @@ public class GoalModelingAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseUsabilityRequirement(UsabilityRequirement object) {
 				return createUsabilityRequirementAdapter();
+			}
+			@Override
+			public Adapter caseRequirement(Requirement object) {
+				return createRequirementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -228,6 +233,20 @@ public class GoalModelingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUsabilityRequirementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.Utility.Requirement <em>Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Requirement
+	 * @generated
+	 */
+	public Adapter createRequirementAdapter() {
 		return null;
 	}
 

@@ -2,7 +2,8 @@
  */
 package pt.fct.unl.novalincs.useme.model.InteractionModeling;
 
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
+import org.eclipse.emf.common.util.EList;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,13 +15,14 @@ import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
  * </p>
  * <ul>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult#getInteractionModel <em>Interaction Model</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult#getEvent <em>Event</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage#getInteractionResult()
  * @model
  * @generated
  */
-public interface InteractionResult extends EvaluationResult {
+public interface InteractionResult extends EvaluationResultAbstract {
 	/**
 	 * Returns the value of the '<em><b>Interaction Model</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModel#getInteractionResult <em>Interaction Result</em>}'.
@@ -48,5 +50,21 @@ public interface InteractionResult extends EvaluationResult {
 	 * @generated
 	 */
 	void setInteractionModel(InteractionModel value);
+
+	/**
+	 * Returns the value of the '<em><b>Event</b></em>' reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.InteractionModeling.Event}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Event</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Event</em>' reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage#getInteractionResult_Event()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<Event> getEvent();
 
 } // InteractionResult

@@ -16,12 +16,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement;
 
+import pt.fct.unl.novalincs.useme.model.InteractionModeling.CaptureAction;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.Event;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModel;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage;
@@ -43,6 +45,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.RecordInput;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.EventImpl#isManual <em>Manual</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.EventImpl#getAnalysisType <em>Analysis Type</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.EventImpl#getInteractionModel <em>Interaction Model</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.EventImpl#getCaptureAction <em>Capture Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -147,6 +150,16 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event {
 	 * @ordered
 	 */
 	protected EList<InteractionModel> interactionModel;
+
+	/**
+	 * The cached value of the '{@link #getCaptureAction() <em>Capture Action</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCaptureAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CaptureAction> captureAction;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -283,6 +296,18 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<CaptureAction> getCaptureAction() {
+		if (captureAction == null) {
+			captureAction = new EObjectContainmentEList<CaptureAction>(CaptureAction.class, this, InteractionModelingPackage.EVENT__CAPTURE_ACTION);
+		}
+		return captureAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -303,6 +328,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event {
 		switch (featureID) {
 			case InteractionModelingPackage.EVENT__INTERACTION_MODEL:
 				return ((InternalEList<?>)getInteractionModel()).basicRemove(otherEnd, msgs);
+			case InteractionModelingPackage.EVENT__CAPTURE_ACTION:
+				return ((InternalEList<?>)getCaptureAction()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -329,6 +356,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event {
 				return getAnalysisType();
 			case InteractionModelingPackage.EVENT__INTERACTION_MODEL:
 				return getInteractionModel();
+			case InteractionModelingPackage.EVENT__CAPTURE_ACTION:
+				return getCaptureAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -367,6 +396,10 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event {
 				getInteractionModel().clear();
 				getInteractionModel().addAll((Collection<? extends InteractionModel>)newValue);
 				return;
+			case InteractionModelingPackage.EVENT__CAPTURE_ACTION:
+				getCaptureAction().clear();
+				getCaptureAction().addAll((Collection<? extends CaptureAction>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -400,6 +433,9 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event {
 			case InteractionModelingPackage.EVENT__INTERACTION_MODEL:
 				getInteractionModel().clear();
 				return;
+			case InteractionModelingPackage.EVENT__CAPTURE_ACTION:
+				getCaptureAction().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -426,6 +462,8 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event {
 				return ANALYSIS_TYPE_EDEFAULT == null ? analysisType != null : !ANALYSIS_TYPE_EDEFAULT.equals(analysisType);
 			case InteractionModelingPackage.EVENT__INTERACTION_MODEL:
 				return interactionModel != null && !interactionModel.isEmpty();
+			case InteractionModelingPackage.EVENT__CAPTURE_ACTION:
+				return captureAction != null && !captureAction.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

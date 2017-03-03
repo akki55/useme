@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import pt.fct.unl.novalincs.useme.model.ReportModeling.provider.EvaluationResultItemProvider;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.provider.EvaluationResultAbstractItemProvider;
 
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult;
@@ -27,7 +27,7 @@ import pt.fct.unl.novalincs.useme.model.UseMe.provider.UseMeEditPlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SurveyResultItemProvider extends EvaluationResultItemProvider {
+public class SurveyResultItemProvider extends EvaluationResultAbstractItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -50,6 +50,7 @@ public class SurveyResultItemProvider extends EvaluationResultItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addSurveyModelPropertyDescriptor(object);
+			addQuestionnairePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +69,28 @@ public class SurveyResultItemProvider extends EvaluationResultItemProvider {
 				 getString("_UI_SurveyResult_surveyModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SurveyResult_surveyModel_feature", "_UI_SurveyResult_type"),
 				 SurveyModelingPackage.Literals.SURVEY_RESULT__SURVEY_MODEL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Questionnaire feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addQuestionnairePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SurveyResult_questionnaire_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SurveyResult_questionnaire_feature", "_UI_SurveyResult_type"),
+				 SurveyModelingPackage.Literals.SURVEY_RESULT__QUESTIONNAIRE,
 				 true,
 				 false,
 				 true,

@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult;
 
-import pt.fct.unl.novalincs.useme.model.ReportModeling.provider.EvaluationResultItemProvider;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.provider.EvaluationResultAbstractItemProvider;
 
 import pt.fct.unl.novalincs.useme.model.UseMe.provider.UseMeEditPlugin;
 
@@ -27,7 +27,7 @@ import pt.fct.unl.novalincs.useme.model.UseMe.provider.UseMeEditPlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InteractionResultItemProvider extends EvaluationResultItemProvider {
+public class InteractionResultItemProvider extends EvaluationResultAbstractItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -50,6 +50,7 @@ public class InteractionResultItemProvider extends EvaluationResultItemProvider 
 			super.getPropertyDescriptors(object);
 
 			addInteractionModelPropertyDescriptor(object);
+			addEventPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +69,28 @@ public class InteractionResultItemProvider extends EvaluationResultItemProvider 
 				 getString("_UI_InteractionResult_interactionModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_InteractionResult_interactionModel_feature", "_UI_InteractionResult_type"),
 				 InteractionModelingPackage.Literals.INTERACTION_RESULT__INTERACTION_MODEL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Event feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEventPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InteractionResult_event_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InteractionResult_event_feature", "_UI_InteractionResult_type"),
+				 InteractionModelingPackage.Literals.INTERACTION_RESULT__EVENT,
 				 true,
 				 false,
 				 true,

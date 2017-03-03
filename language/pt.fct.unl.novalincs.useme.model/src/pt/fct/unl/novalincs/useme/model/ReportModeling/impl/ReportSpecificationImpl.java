@@ -15,8 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModel;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage;
@@ -66,7 +65,7 @@ public class ReportSpecificationImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EvaluationResult> evaluationResult;
+	protected EList<EvaluationResultAbstract> evaluationResult;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,9 +115,9 @@ public class ReportSpecificationImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EvaluationResult> getEvaluationResult() {
+	public EList<EvaluationResultAbstract> getEvaluationResult() {
 		if (evaluationResult == null) {
-			evaluationResult = new EObjectContainmentEList<EvaluationResult>(EvaluationResult.class, this, ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT);
+			evaluationResult = new EObjectContainmentEList<EvaluationResultAbstract>(EvaluationResultAbstract.class, this, ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT);
 		}
 		return evaluationResult;
 	}
@@ -178,7 +177,7 @@ public class ReportSpecificationImpl extends MinimalEObjectImpl.Container implem
 				return;
 			case ReportModelingPackage.REPORT_SPECIFICATION__EVALUATION_RESULT:
 				getEvaluationResult().clear();
-				getEvaluationResult().addAll((Collection<? extends EvaluationResult>)newValue);
+				getEvaluationResult().addAll((Collection<? extends EvaluationResultAbstract>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

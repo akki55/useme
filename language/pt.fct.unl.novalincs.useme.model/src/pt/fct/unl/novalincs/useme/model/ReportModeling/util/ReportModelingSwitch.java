@@ -78,15 +78,28 @@ public class ReportModelingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ReportModelingPackage.EVALUATION_RESULT: {
-				EvaluationResult evaluationResult = (EvaluationResult)theEObject;
-				T result = caseEvaluationResult(evaluationResult);
+			case ReportModelingPackage.EVALUATION_RESULT_ABSTRACT: {
+				EvaluationResultAbstract evaluationResultAbstract = (EvaluationResultAbstract)theEObject;
+				T result = caseEvaluationResultAbstract(evaluationResultAbstract);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ReportModelingPackage.RECOMMEND_GM: {
 				RecommendGM recommendGM = (RecommendGM)theEObject;
 				T result = caseRecommendGM(recommendGM);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ReportModelingPackage.RESULT_VALUE: {
+				ResultValue resultValue = (ResultValue)theEObject;
+				T result = caseResultValue(resultValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ReportModelingPackage.EVALUATION_RESULT: {
+				EvaluationResult evaluationResult = (EvaluationResult)theEObject;
+				T result = caseEvaluationResult(evaluationResult);
+				if (result == null) result = caseEvaluationResultAbstract(evaluationResult);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,6 +138,21 @@ public class ReportModelingSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Evaluation Result Abstract</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Evaluation Result Abstract</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEvaluationResultAbstract(EvaluationResultAbstract object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Evaluation Result</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -151,6 +179,21 @@ public class ReportModelingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRecommendGM(RecommendGM object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Result Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Result Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResultValue(ResultValue object) {
 		return null;
 	}
 

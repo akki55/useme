@@ -130,6 +130,15 @@ public interface UtilityFactory extends EFactory {
 	OutsideRef createOutsideRef();
 
 	/**
+	 * Returns a new object of class '<em>Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Requirement</em>'.
+	 * @generated
+	 */
+	Requirement createRequirement();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

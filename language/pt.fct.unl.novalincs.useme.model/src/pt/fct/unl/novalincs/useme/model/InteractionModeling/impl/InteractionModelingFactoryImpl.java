@@ -62,6 +62,7 @@ public class InteractionModelingFactoryImpl extends EFactoryImpl implements Inte
 			case InteractionModelingPackage.TASK: return createTask();
 			case InteractionModelingPackage.EVENT: return createEvent();
 			case InteractionModelingPackage.INTERACTION_RESULT: return createInteractionResult();
+			case InteractionModelingPackage.CAPTURE_ACTION: return createCaptureAction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,6 +126,16 @@ public class InteractionModelingFactoryImpl extends EFactoryImpl implements Inte
 	public InteractionResult createInteractionResult() {
 		InteractionResultImpl interactionResult = new InteractionResultImpl();
 		return interactionResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CaptureAction createCaptureAction() {
+		CaptureActionImpl captureAction = new CaptureActionImpl();
+		return captureAction;
 	}
 
 	/**

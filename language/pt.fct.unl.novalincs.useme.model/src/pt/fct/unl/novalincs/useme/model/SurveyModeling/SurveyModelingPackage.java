@@ -305,34 +305,25 @@ public interface SurveyModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_RESULT__NAME = ReportModelingPackage.EVALUATION_RESULT__NAME;
+	int SURVEY_RESULT__NAME = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Outside Reference</b></em>' attribute list.
+	 * The feature id for the '<em><b>Result Value</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_RESULT__OUTSIDE_REFERENCE = ReportModelingPackage.EVALUATION_RESULT__OUTSIDE_REFERENCE;
+	int SURVEY_RESULT__RESULT_VALUE = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT__RESULT_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Report Model</b></em>' reference list.
+	 * The feature id for the '<em><b>Outsife Reference</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_RESULT__REPORT_MODEL = ReportModelingPackage.EVALUATION_RESULT__REPORT_MODEL;
-
-	/**
-	 * The feature id for the '<em><b>Evaluation Context</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SURVEY_RESULT__EVALUATION_CONTEXT = ReportModelingPackage.EVALUATION_RESULT__EVALUATION_CONTEXT;
+	int SURVEY_RESULT__OUTSIFE_REFERENCE = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT__OUTSIFE_REFERENCE;
 
 	/**
 	 * The feature id for the '<em><b>Survey Model</b></em>' reference.
@@ -341,7 +332,16 @@ public interface SurveyModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_RESULT__SURVEY_MODEL = ReportModelingPackage.EVALUATION_RESULT_FEATURE_COUNT + 0;
+	int SURVEY_RESULT__SURVEY_MODEL = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Questionnaire</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURVEY_RESULT__QUESTIONNAIRE = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Survey Result</em>' class.
@@ -350,7 +350,7 @@ public interface SurveyModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_RESULT_FEATURE_COUNT = ReportModelingPackage.EVALUATION_RESULT_FEATURE_COUNT + 1;
+	int SURVEY_RESULT_FEATURE_COUNT = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Survey Result</em>' class.
@@ -359,7 +359,7 @@ public interface SurveyModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SURVEY_RESULT_OPERATION_COUNT = ReportModelingPackage.EVALUATION_RESULT_OPERATION_COUNT + 0;
+	int SURVEY_RESULT_OPERATION_COUNT = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.impl.BackgroundQsImpl <em>Background Qs</em>}' class.
@@ -794,6 +794,17 @@ public interface SurveyModelingPackage extends EPackage {
 	EReference getSurveyResult_SurveyModel();
 
 	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult#getQuestionnaire <em>Questionnaire</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Questionnaire</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult#getQuestionnaire()
+	 * @see #getSurveyResult()
+	 * @generated
+	 */
+	EReference getSurveyResult_Questionnaire();
+
+	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.BackgroundQs <em>Background Qs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1074,6 +1085,14 @@ public interface SurveyModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SURVEY_RESULT__SURVEY_MODEL = eINSTANCE.getSurveyResult_SurveyModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Questionnaire</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SURVEY_RESULT__QUESTIONNAIRE = eINSTANCE.getSurveyResult_Questionnaire();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.impl.BackgroundQsImpl <em>Background Qs</em>}' class.

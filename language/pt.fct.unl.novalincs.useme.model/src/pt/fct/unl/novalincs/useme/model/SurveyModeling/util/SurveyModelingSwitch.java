@@ -8,9 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
-
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
-
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.*;
 
 /**
@@ -92,7 +90,7 @@ public class SurveyModelingSwitch<T> extends Switch<T> {
 			case SurveyModelingPackage.SURVEY_RESULT: {
 				SurveyResult surveyResult = (SurveyResult)theEObject;
 				T result = caseSurveyResult(surveyResult);
-				if (result == null) result = caseEvaluationResult(surveyResult);
+				if (result == null) result = caseEvaluationResultAbstract(surveyResult);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -241,17 +239,17 @@ public class SurveyModelingSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Evaluation Result</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Evaluation Result Abstract</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Evaluation Result</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Evaluation Result Abstract</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEvaluationResult(EvaluationResult object) {
+	public T caseEvaluationResultAbstract(EvaluationResultAbstract object) {
 		return null;
 	}
 

@@ -25,6 +25,7 @@ import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModel;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage;
 
 import pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal;
+import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,6 +39,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getRefersTo <em>Refers To</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getFunctionalGoal <em>Functional Goal</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getUsabilityGoal <em>Usability Goal</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getSuggestedRequirements <em>Suggested Requirements</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +84,16 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 	 * @ordered
 	 */
 	protected EList<UsabilityGoal> usabilityGoal;
+
+	/**
+	 * The cached value of the '{@link #getSuggestedRequirements() <em>Suggested Requirements</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuggestedRequirements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Requirement> suggestedRequirements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -229,6 +241,18 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Requirement> getSuggestedRequirements() {
+		if (suggestedRequirements == null) {
+			suggestedRequirements = new EObjectResolvingEList<Requirement>(Requirement.class, this, ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS);
+		}
+		return suggestedRequirements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -272,6 +296,8 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 				return getFunctionalGoal();
 			case ReportModelingPackage.RECOMMEND_GM__USABILITY_GOAL:
 				return getUsabilityGoal();
+			case ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS:
+				return getSuggestedRequirements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,6 +325,10 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 				getUsabilityGoal().clear();
 				getUsabilityGoal().addAll((Collection<? extends UsabilityGoal>)newValue);
 				return;
+			case ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS:
+				getSuggestedRequirements().clear();
+				getSuggestedRequirements().addAll((Collection<? extends Requirement>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -323,6 +353,9 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 			case ReportModelingPackage.RECOMMEND_GM__USABILITY_GOAL:
 				getUsabilityGoal().clear();
 				return;
+			case ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS:
+				getSuggestedRequirements().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -343,6 +376,8 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 				return functionalGoal != null && !functionalGoal.isEmpty();
 			case ReportModelingPackage.RECOMMEND_GM__USABILITY_GOAL:
 				return usabilityGoal != null && !usabilityGoal.isEmpty();
+			case ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS:
+				return suggestedRequirements != null && !suggestedRequirements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

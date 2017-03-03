@@ -3,10 +3,9 @@
 package pt.fct.unl.novalincs.useme.model.ReportModeling;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
-
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult;
+import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,8 +16,8 @@ import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getName <em>Name</em>}</li>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getOutsideReference <em>Outside Reference</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getSurveyResult <em>Survey Result</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getInteractionResult <em>Interaction Result</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getReportModel <em>Report Model</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getEvaluationContext <em>Evaluation Context</em>}</li>
  * </ul>
@@ -27,48 +26,38 @@ import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
  * @model
  * @generated
  */
-public interface EvaluationResult extends EObject {
+public interface EvaluationResult extends EvaluationResultAbstract {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Survey Result</b></em>' reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Survey Result</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getEvaluationResult_Name()
+	 * @return the value of the '<em>Survey Result</em>' reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getEvaluationResult_SurveyResult()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	EList<SurveyResult> getSurveyResult();
 
 	/**
-	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Outside Reference</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Interaction Result</b></em>' reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Outside Reference</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Interaction Result</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Outside Reference</em>' attribute list.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getEvaluationResult_OutsideReference()
+	 * @return the value of the '<em>Interaction Result</em>' reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getEvaluationResult_InteractionResult()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getOutsideReference();
+	EList<InteractionResult> getInteractionResult();
 
 	/**
 	 * Returns the value of the '<em><b>Report Model</b></em>' reference list.

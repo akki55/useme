@@ -21,8 +21,7 @@ import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage;
 import pt.fct.unl.novalincs.useme.model.GoalModeling.Scope;
 import pt.fct.unl.novalincs.useme.model.GoalModeling.SuccessCoverage;
 import pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityGoal;
-
-import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,7 +88,7 @@ public class SuccessCoverageImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EvaluationResult> successFactor;
+	protected EList<EvaluationResultAbstract> successFactor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -208,9 +207,9 @@ public class SuccessCoverageImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EvaluationResult> getSuccessFactor() {
+	public EList<EvaluationResultAbstract> getSuccessFactor() {
 		if (successFactor == null) {
-			successFactor = new EObjectResolvingEList<EvaluationResult>(EvaluationResult.class, this, GoalModelingPackage.SUCCESS_COVERAGE__SUCCESS_FACTOR);
+			successFactor = new EObjectResolvingEList<EvaluationResultAbstract>(EvaluationResultAbstract.class, this, GoalModelingPackage.SUCCESS_COVERAGE__SUCCESS_FACTOR);
 		}
 		return successFactor;
 	}
@@ -287,7 +286,7 @@ public class SuccessCoverageImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case GoalModelingPackage.SUCCESS_COVERAGE__SUCCESS_FACTOR:
 				getSuccessFactor().clear();
-				getSuccessFactor().addAll((Collection<? extends EvaluationResult>)newValue);
+				getSuccessFactor().addAll((Collection<? extends EvaluationResultAbstract>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

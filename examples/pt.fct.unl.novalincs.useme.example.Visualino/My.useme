@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<useme:UseMeSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:useme="http://nova-lincs.di.fct.unl.pt/useme" xmlns:useme.surveymodeling="http://nova-lincs.di.fct.unl.pt/useme.surveymodeling">
+<useme:UseMeSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:useme="http://nova-lincs.di.fct.unl.pt/useme" xmlns:useme.reportmodeling="http://nova-lincs.di.fct.unl.pt/useme.reportmodeling" xmlns:useme.surveymodeling="http://nova-lincs.di.fct.unl.pt/useme.surveymodeling">
   <contextSpecification name="csVisualino">
     <contextModel cmName="cmVisualino" domain="programming a robot" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0" language="//@utilitySpecification.0/@DSL.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.2">
       <userHierarchy userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" uhDescription="uhVisualino"/>
@@ -180,7 +180,7 @@
         <scenario name="Program robot to move front and back" doc="//@evaluationSpecification.0/@documentaton.0" question="//@surveySpecification.0/@question.6"/>
         <scenario name="Program robot to move front till it hits the obstacle and then go back" doc="//@evaluationSpecification.0/@documentaton.1"/>
         <scenario name="Program robot to make an '5' shape" doc="//@evaluationSpecification.0/@documentaton.2" question="//@surveySpecification.0/@question.7"/>
-        <scenario name="Program robot to make turns when it hits obstacle in shape of 5" doc="//@evaluationSpecification.0/@documentaton.3" aggregates="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.2 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
+        <scenario name="Program robot to make turns when it hits obstacle in shape of 5" evaluatedTask="//@interactionSpecification.0/@task.0" doc="//@evaluationSpecification.0/@documentaton.3" aggregates="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.2 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
       </workflow>
       <workflow name="W2: Configure language enviroment" priority="Medium" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" processModel="//@utilitySpecification.0/@processModel.0" contextModel="//@contextSpecification.0/@contextModel.0"/>
       <workflow name="W3: Modify language component" priority="Low" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1" processModel="//@utilitySpecification.0/@processModel.0" contextModel="//@contextSpecification.0/@contextModel.0"/>
@@ -190,16 +190,16 @@
     <usabilityRequirement name="Effectiveness" description="Programming the &lt;Robot> is effective from perspective of &lt;EndUser>">
       <metric>Correctness of programmed &lt;UseCase></metric>
     </usabilityRequirement>
-    <usabilityRequirement name="Satisfaction" description="Programming the &lt;Robot> is satisfactory from perspective of &lt;EndUser>">
-      <metric>Satisfaction questions about programmed &lt;UseCase></metric>
-    </usabilityRequirement>
     <usabilityRequirement name="Learnability" description="Programming the &lt;Robot> is easy to learn from perspective of &lt;EndUser>">
       <metric>Success reuse the knowladge of programming a &lt;UseCase></metric>
+    </usabilityRequirement>
+    <usabilityRequirement name="Satisfaction" description="Programming the &lt;Robot> is satisfactory from perspective of &lt;EndUser>">
+      <metric>Satisfaction questions about programmed &lt;UseCase></metric>
     </usabilityRequirement>
     <usabilityRequirement name="Efficiency" description="Programming the &lt;UseCase> is efficient from perspective of &lt;EndUser>">
       <metric>Programming &lt;UseCase> is efficient</metric>
     </usabilityRequirement>
-    <method name="Programming &lt;UseCase> is usable" methodDescription="Programming the &lt;Robot> is usable from the perspective of &lt;End User>" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.2" testCase="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.2 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0 //@goalSpecification.0/@usabilityRequirement.3 //@goalSpecification.0/@usabilityRequirement.2 //@goalSpecification.0/@usabilityRequirement.1" functionalGoal="//@utilitySpecification.0/@functionalGoal.0"/>
+    <method name="Programming &lt;UseCase> is usable" methodDescription="Programming the &lt;Robot> is usable from the perspective of &lt;End User>" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.2" testCase="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.2 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0 //@goalSpecification.0/@usabilityRequirement.3 //@goalSpecification.0/@usabilityRequirement.1 //@goalSpecification.0/@usabilityRequirement.2" functionalGoal="//@utilitySpecification.0/@functionalGoal.0"/>
     <actor name="Visualino development" organization="Artica" responsibleFor="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.1 //@goalSpecification.0/@goalModel.0/@usabilityGoal.3 //@goalSpecification.0/@goalModel.0/@usabilityGoal.4" stakeholder="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1"/>
     <actor name="Language evaluator" organization="NOVA-LINCS" responsibleFor="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.1 //@goalSpecification.0/@goalModel.0/@usabilityGoal.2 //@goalSpecification.0/@goalModel.0/@usabilityGoal.3 //@goalSpecification.0/@goalModel.0/@usabilityGoal.4" stakeholder="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.4"/>
     <actor name="Children robotics expert" organization="Artica" responsibleFor="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.1 //@goalSpecification.0/@goalModel.0/@usabilityGoal.3 //@goalSpecification.0/@goalModel.0/@usabilityGoal.4" stakeholder="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2"/>
@@ -222,7 +222,7 @@
       <hypothesis>H1_null: Using &lt;Visualino> has no influence on the [effectiveness] of children programming a robot when compared to programming the robot with &lt;Lego></hypothesis>
       <hypothesis>H1_alt: Using &lt;Visualino> impacts the [effectiveness] of children programming a robot when compared to programming the robot with &lt;Lego>.   </hypothesis>
     </evaluationGoal>
-    <evaluationGoal name="g2VisualinoSatisfaction" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" comperative="true" language="//@evaluationSpecification.0/@language.1 //@evaluationSpecification.0/@language.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" mesurment="//@goalSpecification.0/@method.0" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.1" responsible="//@goalSpecification.0/@actor.1" problemDescription="GQM2: Analyse the effect of the current version of the &lt;Object1: Visualino> , for the purpose of evaluation, with respect to its impact on the satisfaction in programming a robot when compared to &lt;Object2:Lego>, from the point of view of [Responsible: Expert evaluator], in the context of an experiment conducted with {secondary school subjects} during an open doors day at {Universidade Nova de Lisboa} ">
+    <evaluationGoal name="g2VisualinoSatisfaction" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" comperative="true" language="//@evaluationSpecification.0/@language.1 //@evaluationSpecification.0/@language.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" mesurment="//@goalSpecification.0/@method.0" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.2" responsible="//@goalSpecification.0/@actor.1" problemDescription="GQM2: Analyse the effect of the current version of the &lt;Object1: Visualino> , for the purpose of evaluation, with respect to its impact on the satisfaction in programming a robot when compared to &lt;Object2:Lego>, from the point of view of [Responsible: Expert evaluator], in the context of an experiment conducted with {secondary school subjects} during an open doors day at {Universidade Nova de Lisboa} ">
       <researchQuestion>RQ2: Is satisfactory for Child to program a Farrusco?</researchQuestion>
       <hypothesis>H2_null: Using &lt;Visualino> has no influence on the [satisfaction] of children programming a robot when compared to programming the robot with &lt;Lego></hypothesis>
       <hypothesis>H2_alt: Using &lt;Visualino> impacts the [satisfaction] of the children programming a robot when compared to programming the robot with &lt;Lego>.</hypothesis>
@@ -249,37 +249,61 @@
     <process name="emVisualinoProcess" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0"/>
   </evaluationSpecification>
   <interactionSpecification>
-    <interactionModel name="imVisualino" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" participant="//@evaluationSpecification.0/@participant.0" interactionResult="//@interactionSpecification.0/@interactionResult.0" interactionSyntax="//@interactionSpecification.0/@interactionSyntax.0 //@interactionSpecification.0/@interactionSyntax.1" event="//@interactionSpecification.0/@event.0 //@interactionSpecification.0/@event.1 //@interactionSpecification.0/@event.2" task="//@interactionSpecification.0/@task.0"/>
+    <interactionModel name="imVisualino" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" participant="//@evaluationSpecification.0/@participant.0" interactionResult="//@interactionSpecification.0/@interactionResult.0 //@interactionSpecification.0/@interactionResult.1" interactionSyntax="//@interactionSpecification.0/@interactionSyntax.0 //@interactionSpecification.0/@interactionSyntax.1" event="//@interactionSpecification.0/@event.0 //@interactionSpecification.0/@event.1 //@interactionSpecification.0/@event.2" task="//@interactionSpecification.0/@task.0"/>
     <interactionSyntax name="syntaxVisualino" interactionModel="//@interactionSpecification.0/@interactionModel.0" concreteSyntax="//@utilitySpecification.0/@DSL.0/@concreteSyntax.0" abstractSyntax="//@utilitySpecification.0/@DSL.0/@abstractSyntax.0"/>
     <interactionSyntax name="syntaxLego" interactionModel="//@interactionSpecification.0/@interactionModel.0" concreteSyntax="//@utilitySpecification.0/@DSL.1/@concreteSyntax.0"/>
-    <event name="Event1" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0" manual="true" analysisType="Observation" interactionModel="//@interactionSpecification.0/@interactionModel.0">
+    <event name="Effectiveness Video" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0" manual="true" analysisType="Observation" interactionModel="//@interactionSpecification.0/@interactionModel.0">
       <capture>Bumper</capture>
       <capture>First Turn Left</capture>
       <capture>Second Turn Left</capture>
       <capture>First Turn Right</capture>
       <capture>Second Turn Right</capture>
       <recordEvent>Screen  Record</recordEvent>
+      <captureAction name="Bumper"/>
+      <captureAction name="First Turn Right"/>
     </event>
-    <event name="Event2" manual="true" analysisType="Time Observation" interactionModel="//@interactionSpecification.0/@interactionModel.0">
+    <event name="Additional Video" manual="true" analysisType="Time Observation" interactionModel="//@interactionSpecification.0/@interactionModel.0">
       <capture>Save/Resuse &lt;Concept></capture>
       <capture>Technical problem</capture>
       <capture>Interaction problem</capture>
       <capture>Reused sequence</capture>
       <capture>Zooming</capture>
       <recordEvent>Screen  Record</recordEvent>
+      <captureAction name="Conecting Branch"/>
     </event>
-    <event name="Event3" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0" manual="true" analysisType="Success/Fail" interactionModel="//@interactionSpecification.0/@interactionModel.0">
+    <event name="Effectiveness Live" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0" manual="true" analysisType="Success/Fail" interactionModel="//@interactionSpecification.0/@interactionModel.0">
       <capture>Success of executing &lt;Task> on &lt;Robot></capture>
       <recordEvent>liveObservation</recordEvent>
+      <captureAction name="Effectiveness Live"/>
     </event>
-    <task name="Challenge" interactionModel="//@interactionSpecification.0/@interactionModel.0"/>
-    <interactionResult name="videoAnalysisVisualino" reportModel="//@reportSpecification.0/@reportModel.0" evaluationContext="//@evaluationSpecification.0/@evaluationContext.0" interactionModel="//@interactionSpecification.0/@interactionModel.0"/>
+    <task name="Challenge" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3" interactionModel="//@interactionSpecification.0/@interactionModel.0"/>
+    <interactionResult name="surveyExpo2015VisualinoEffectiveness" outsifeReference="//@utilitySpecification.0/@outsideRef.2" interactionModel="//@interactionSpecification.0/@interactionModel.0" event="//@interactionSpecification.0/@event.0 //@interactionSpecification.0/@event.2">
+      <resultValue name="LegoCABump" resultValue="0.7857142857" language="//@evaluationSpecification.0/@language.1" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="VisualinoCAFirstRight" resultValue="0.2352941176" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.1" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="VisualinoCABump" resultValue="0.7058823529" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="LegoCAFirstRight" resultValue="0.7142857143" language="//@evaluationSpecification.0/@language.1" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.1" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+    </interactionResult>
+    <interactionResult name="surveyExpo2015VisualinoAdditional" outsifeReference="//@utilitySpecification.0/@outsideRef.2" interactionModel="//@interactionSpecification.0/@interactionModel.0" event="//@interactionSpecification.0/@event.1">
+      <resultValue name="VisualinoBranch" resultValue="0.5882352941" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.1/@captureAction.0"/>
+      <resultValue name="LegoBranch" resultValue="0.3571428571" language="//@evaluationSpecification.0/@language.1" relatedAction="//@interactionSpecification.0/@event.1/@captureAction.0"/>
+    </interactionResult>
   </interactionSpecification>
   <surveySpecification>
-    <surveyModel name="smVisualino" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" participant="//@evaluationSpecification.0/@participant.0" questionnaire="//@surveySpecification.0/@questionnaire.0 //@surveySpecification.0/@questionnaire.1" surveyResult="//@surveySpecification.0/@surveyResult.0"/>
+    <surveyModel name="smVisualino" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" participant="//@evaluationSpecification.0/@participant.0" questionnaire="//@surveySpecification.0/@questionnaire.0 //@surveySpecification.0/@questionnaire.1" surveyResult="//@surveySpecification.0/@surveyResult.0 //@surveySpecification.0/@surveyResult.1"/>
     <questionnaire name="Background Visualino" question="//@surveySpecification.0/@question.1 //@surveySpecification.0/@question.2 //@surveySpecification.0/@question.3 //@surveySpecification.0/@question.4 //@surveySpecification.0/@question.5" surveyModel="//@surveySpecification.0/@surveyModel.0"/>
     <questionnaire name="Feedback Visualino" question="//@surveySpecification.0/@question.0 //@surveySpecification.0/@question.6 //@surveySpecification.0/@question.7" surveyModel="//@surveySpecification.0/@surveyModel.0"/>
-    <surveyResult name="surveyExpo2015Visualino" reportModel="//@reportSpecification.0/@reportModel.0" evaluationContext="//@evaluationSpecification.0/@evaluationContext.0" surveyModel="//@surveySpecification.0/@surveyModel.0"/>
+    <surveyResult name="surveyExpo2015VisualinoBackground" surveyModel="//@surveySpecification.0/@surveyModel.0" questionnaire="//@surveySpecification.0/@questionnaire.0">
+      <resultValue name="visualinoQ1" resultValue="AVG = 16.60588235" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.1"/>
+      <resultValue name="visualinoQ4" resultValue="0.9411764706" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.4"/>
+      <resultValue name="legoQ1" resultValue="AVG = 16.44285714" language="//@evaluationSpecification.0/@language.1" relatedQuestion="//@surveySpecification.0/@question.1"/>
+      <resultValue name="legoQ4" resultValue="0.7142857143" language="//@evaluationSpecification.0/@language.1" relatedQuestion="//@surveySpecification.0/@question.4"/>
+    </surveyResult>
+    <surveyResult name="surveyExpo2015VisualinoFeedback" outsifeReference="//@utilitySpecification.0/@outsideRef.2" surveyModel="//@surveySpecification.0/@surveyModel.0" questionnaire="//@surveySpecification.0/@questionnaire.1">
+      <resultValue name="legoF1" resultValue="0.9285714286" language="//@evaluationSpecification.0/@language.1" relatedQuestion="//@surveySpecification.0/@question.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+      <resultValue name="visualinoF1" resultValue="0.9411764706" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+      <resultValue name="legoF3" resultValue="0.8571428571" language="//@evaluationSpecification.0/@language.1" relatedQuestion="//@surveySpecification.0/@question.7" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+      <resultValue name="visualinoF3" resultValue="0.5294117647" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.7" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+    </surveyResult>
     <question xsi:type="useme.surveymodeling:FeedbackQs" name="F1" question="Did you like the activity?" type="Likability" questionnaire="//@surveySpecification.0/@questionnaire.1">
       <scale>[1]:Smily(positive)</scale>
       <scale>[0]:Smily(neutral)</scale>
@@ -316,8 +340,14 @@
     </question>
   </surveySpecification>
   <reportSpecification>
-    <reportModel evaluationResult="//@interactionSpecification.0/@interactionResult.0 //@surveySpecification.0/@surveyResult.0" recommendGM="//@reportSpecification.0/@recommendedGM.0"/>
-    <recommendedGM reportModel="//@reportSpecification.0/@reportModel.0" refersTo="//@goalSpecification.0/@goalModel.0"/>
+    <reportModel name="expo2015result" evaluationResult="//@reportSpecification.0/@evaluationResult.0" recommendGM="//@reportSpecification.0/@recommendedGM.0"/>
+    <recommendedGM reportModel="//@reportSpecification.0/@reportModel.0" refersTo="//@goalSpecification.0/@goalModel.0" functionalGoal="//@utilitySpecification.0/@functionalGoal.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" suggestedRequirements="//@utilitySpecification.0/@requirement.4 //@utilitySpecification.0/@requirement.5 //@utilitySpecification.0/@requirement.6"/>
+    <evaluationResult xsi:type="useme.reportmodeling:EvaluationResult" name="surveyExpo2015results" outsifeReference="//@utilitySpecification.0/@outsideRef.2" surveyResult="//@surveySpecification.0/@surveyResult.0 //@surveySpecification.0/@surveyResult.1" interactionResult="//@interactionSpecification.0/@interactionResult.1 //@interactionSpecification.0/@interactionResult.0" reportModel="//@reportSpecification.0/@reportModel.0" evaluationContext="//@evaluationSpecification.0/@evaluationContext.0">
+      <resultValue name="Effectiveness Lego" resultValue="0.7857142857" language="//@evaluationSpecification.0/@language.1" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.1 //@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="EffectivenessVisualino" resultValue="0.3764705882" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.0 //@interactionSpecification.0/@event.0/@captureAction.1" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="SatisfactionLego" resultValue="0.8571428571" language="//@evaluationSpecification.0/@language.1" relatedQuestion="//@surveySpecification.0/@question.0 //@surveySpecification.0/@question.6 //@surveySpecification.0/@question.7" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+      <resultValue name="SatisfactionVisualino" resultValue="0.6274509804" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.0 //@surveySpecification.0/@question.6 //@surveySpecification.0/@question.7" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+    </evaluationResult>
   </reportSpecification>
   <utilitySpecification>
     <DSL dslName="Visualino" contextModel="//@contextSpecification.0/@contextModel.0">
@@ -328,12 +358,7 @@
     <DSL dslName="Lego" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0">
       <concreteSyntax name="csLego" interactionSyntax="//@interactionSpecification.0/@interactionSyntax.1"/>
     </DSL>
-    <functionalGoal name="F1: provide functionality to program a robot" existingGM="//@utilitySpecification.0/@DSL.0/@existingGoalModel.0">
-      <requirements>set up motor properties</requirements>
-      <requirements>load program to &lt;Robot></requirements>
-      <requirements>save the model</requirements>
-      <requirements>create sensor</requirements>
-    </functionalGoal>
+    <functionalGoal name="F1: provide functionality to program a robot" existingGM="//@utilitySpecification.0/@DSL.0/@existingGoalModel.0" requirements="//@utilitySpecification.0/@requirement.0 //@utilitySpecification.0/@requirement.1 //@utilitySpecification.0/@requirement.2 //@utilitySpecification.0/@requirement.3"/>
     <processModel name="umlUseCasesVisualino" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.2" outsideRef="//@utilitySpecification.0/@outsideRef.0"/>
     <processModel name="evaluationProcess1" outsideRef="//@utilitySpecification.0/@outsideRef.1"/>
     <outsideRef name="visualinoUMLModeling">
@@ -344,7 +369,15 @@
     </outsideRef>
     <outsideRef name="visualinoResultAnalysis">
       <link>https://docs.google.com/spreadsheets/d/1hZ41uBcsndQop13E-1P3RmuMe9J4scE7fwZLbm-uVq4/edit#gid=1317617875</link>
+      <link>https://docs.google.com/spreadsheets/d/1_Yi1V1ks9PhcK5tCGVCalYDlKCYhl5hLltDdG_cucag/edit#gid=308366019</link>
       <tool>Excel</tool>
     </outsideRef>
+    <requirement name="create a root node" description="all the tree constructions for modelling a behavior start with a root"/>
+    <requirement name="create sequence node" description=" this node runs all child nodes sequentially, from left to right"/>
+    <requirement name="create input node" description="input nodes read data from sensors attached to the system and may either"/>
+    <requirement name="Control Bar"/>
+    <requirement name="improve Zooming option" description="introduce fit to screen operation of entire tree structure"/>
+    <requirement name="New method of collapsing and expanding tree structures"/>
+    <requirement name="Create Blocks support" description="users should be able to create blocks of tree concept structures"/>
   </utilitySpecification>
 </useme:UseMeSpecification>

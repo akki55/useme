@@ -118,26 +118,26 @@ public class ReportModelingItemProviderAdapterFactory extends ReportModelingAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult} instances.
+	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EvaluationResultItemProvider evaluationResultItemProvider;
+	protected EvaluationResultAbstractItemProvider evaluationResultAbstractItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult}.
+	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEvaluationResultAdapter() {
-		if (evaluationResultItemProvider == null) {
-			evaluationResultItemProvider = new EvaluationResultItemProvider(this);
+	public Adapter createEvaluationResultAbstractAdapter() {
+		if (evaluationResultAbstractItemProvider == null) {
+			evaluationResultAbstractItemProvider = new EvaluationResultAbstractItemProvider(this);
 		}
 
-		return evaluationResultItemProvider;
+		return evaluationResultAbstractItemProvider;
 	}
 
 	/**
@@ -161,6 +161,52 @@ public class ReportModelingItemProviderAdapterFactory extends ReportModelingAdap
 		}
 
 		return recommendGMItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.ReportModeling.ResultValue} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResultValueItemProvider resultValueItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.ReportModeling.ResultValue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResultValueAdapter() {
+		if (resultValueItemProvider == null) {
+			resultValueItemProvider = new ResultValueItemProvider(this);
+		}
+
+		return resultValueItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EvaluationResultItemProvider evaluationResultItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEvaluationResultAdapter() {
+		if (evaluationResultItemProvider == null) {
+			evaluationResultItemProvider = new EvaluationResultItemProvider(this);
+		}
+
+		return evaluationResultItemProvider;
 	}
 
 	/**
@@ -264,8 +310,10 @@ public class ReportModelingItemProviderAdapterFactory extends ReportModelingAdap
 	public void dispose() {
 		if (reportSpecificationItemProvider != null) reportSpecificationItemProvider.dispose();
 		if (reportModelItemProvider != null) reportModelItemProvider.dispose();
-		if (evaluationResultItemProvider != null) evaluationResultItemProvider.dispose();
+		if (evaluationResultAbstractItemProvider != null) evaluationResultAbstractItemProvider.dispose();
 		if (recommendGMItemProvider != null) recommendGMItemProvider.dispose();
+		if (resultValueItemProvider != null) resultValueItemProvider.dispose();
+		if (evaluationResultItemProvider != null) evaluationResultItemProvider.dispose();
 	}
 
 }

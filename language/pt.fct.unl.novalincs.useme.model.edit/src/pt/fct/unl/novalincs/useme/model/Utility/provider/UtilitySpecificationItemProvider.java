@@ -26,6 +26,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingFactory;
 
+import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingFactory;
+
 import pt.fct.unl.novalincs.useme.model.UseMe.provider.UseMeEditPlugin;
 
 import pt.fct.unl.novalincs.useme.model.Utility.UtilityFactory;
@@ -112,6 +114,7 @@ public class UtilitySpecificationItemProvider
 			childrenFeatures.add(UtilityPackage.Literals.UTILITY_SPECIFICATION__SURVEY_ENGINE);
 			childrenFeatures.add(UtilityPackage.Literals.UTILITY_SPECIFICATION__DOCUMENTATION);
 			childrenFeatures.add(UtilityPackage.Literals.UTILITY_SPECIFICATION__OUTSIDE_REF);
+			childrenFeatures.add(UtilityPackage.Literals.UTILITY_SPECIFICATION__REQUIREMENT);
 		}
 		return childrenFeatures;
 	}
@@ -176,6 +179,7 @@ public class UtilitySpecificationItemProvider
 			case UtilityPackage.UTILITY_SPECIFICATION__SURVEY_ENGINE:
 			case UtilityPackage.UTILITY_SPECIFICATION__DOCUMENTATION:
 			case UtilityPackage.UTILITY_SPECIFICATION__OUTSIDE_REF:
+			case UtilityPackage.UTILITY_SPECIFICATION__REQUIREMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -222,6 +226,16 @@ public class UtilitySpecificationItemProvider
 			(createChildParameter
 				(UtilityPackage.Literals.UTILITY_SPECIFICATION__OUTSIDE_REF,
 				 UtilityFactory.eINSTANCE.createOutsideRef()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UtilityPackage.Literals.UTILITY_SPECIFICATION__REQUIREMENT,
+				 UtilityFactory.eINSTANCE.createRequirement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UtilityPackage.Literals.UTILITY_SPECIFICATION__REQUIREMENT,
+				 GoalModelingFactory.eINSTANCE.createUsabilityRequirement()));
 	}
 
 	/**

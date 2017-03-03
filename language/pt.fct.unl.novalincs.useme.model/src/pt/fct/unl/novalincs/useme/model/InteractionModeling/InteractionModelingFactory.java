@@ -76,6 +76,15 @@ public interface InteractionModelingFactory extends EFactory {
 	InteractionResult createInteractionResult();
 
 	/**
+	 * Returns a new object of class '<em>Capture Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Capture Action</em>'.
+	 * @generated
+	 */
+	CaptureAction createCaptureAction();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

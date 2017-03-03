@@ -3,12 +3,10 @@
 package pt.fct.unl.novalincs.useme.model.GoalModeling;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
-
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.Event;
 
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.Questionnaire;
+import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,8 +17,8 @@ import pt.fct.unl.novalincs.useme.model.SurveyModeling.Questionnaire;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getName <em>Name</em>}</li>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription <em>Description</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getOld_name <em>Old name</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription_old <em>Description old</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getMetric <em>Metric</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getQuestionnaire <em>Questionnaire</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getEvent <em>Event</em>}</li>
@@ -30,59 +28,59 @@ import pt.fct.unl.novalincs.useme.model.SurveyModeling.Questionnaire;
  * @model
  * @generated
  */
-public interface UsabilityRequirement extends EObject {
+public interface UsabilityRequirement extends Requirement {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Old name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Old name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage#getUsabilityRequirement_Name()
+	 * @return the value of the '<em>Old name</em>' attribute.
+	 * @see #setOld_name(String)
+	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage#getUsabilityRequirement_Old_name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getOld_name();
 
 	/**
-	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getOld_name <em>Old name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Old name</em>' attribute.
+	 * @see #getOld_name()
 	 * @generated
 	 */
-	void setName(String value);
+	void setOld_name(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description old</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Description old</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage#getUsabilityRequirement_Description()
+	 * @return the value of the '<em>Description old</em>' attribute.
+	 * @see #setDescription_old(String)
+	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage#getUsabilityRequirement_Description_old()
 	 * @model default="" required="true"
 	 * @generated
 	 */
-	String getDescription();
+	String getDescription_old();
 
 	/**
-	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription_old <em>Description old</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
+	 * @param value the new value of the '<em>Description old</em>' attribute.
+	 * @see #getDescription_old()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription_old(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Metric</b></em>' attribute list.

@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -647,7 +648,7 @@ public interface GoalModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USABILITY_REQUIREMENT__NAME = 0;
+	int USABILITY_REQUIREMENT__NAME = UtilityPackage.REQUIREMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -656,7 +657,25 @@ public interface GoalModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USABILITY_REQUIREMENT__DESCRIPTION = 1;
+	int USABILITY_REQUIREMENT__DESCRIPTION = UtilityPackage.REQUIREMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Old name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USABILITY_REQUIREMENT__OLD_NAME = UtilityPackage.REQUIREMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description old</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USABILITY_REQUIREMENT__DESCRIPTION_OLD = UtilityPackage.REQUIREMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Metric</b></em>' attribute list.
@@ -665,7 +684,7 @@ public interface GoalModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USABILITY_REQUIREMENT__METRIC = 2;
+	int USABILITY_REQUIREMENT__METRIC = UtilityPackage.REQUIREMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Questionnaire</b></em>' reference list.
@@ -674,7 +693,7 @@ public interface GoalModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USABILITY_REQUIREMENT__QUESTIONNAIRE = 3;
+	int USABILITY_REQUIREMENT__QUESTIONNAIRE = UtilityPackage.REQUIREMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Event</b></em>' reference list.
@@ -683,7 +702,7 @@ public interface GoalModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USABILITY_REQUIREMENT__EVENT = 4;
+	int USABILITY_REQUIREMENT__EVENT = UtilityPackage.REQUIREMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Usability Requirement</em>' class.
@@ -692,7 +711,7 @@ public interface GoalModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USABILITY_REQUIREMENT_FEATURE_COUNT = 5;
+	int USABILITY_REQUIREMENT_FEATURE_COUNT = UtilityPackage.REQUIREMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Usability Requirement</em>' class.
@@ -701,7 +720,7 @@ public interface GoalModelingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USABILITY_REQUIREMENT_OPERATION_COUNT = 0;
+	int USABILITY_REQUIREMENT_OPERATION_COUNT = UtilityPackage.REQUIREMENT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1247,26 +1266,26 @@ public interface GoalModelingPackage extends EPackage {
 	EClass getUsabilityRequirement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getOld_name <em>Old name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getName()
+	 * @return the meta object for the attribute '<em>Old name</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getOld_name()
 	 * @see #getUsabilityRequirement()
 	 * @generated
 	 */
-	EAttribute getUsabilityRequirement_Name();
+	EAttribute getUsabilityRequirement_Old_name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription_old <em>Description old</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription()
+	 * @return the meta object for the attribute '<em>Description old</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getDescription_old()
 	 * @see #getUsabilityRequirement()
 	 * @generated
 	 */
-	EAttribute getUsabilityRequirement_Description();
+	EAttribute getUsabilityRequirement_Description_old();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement#getMetric <em>Metric</em>}'.
@@ -1741,20 +1760,20 @@ public interface GoalModelingPackage extends EPackage {
 		EClass USABILITY_REQUIREMENT = eINSTANCE.getUsabilityRequirement();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Old name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USABILITY_REQUIREMENT__NAME = eINSTANCE.getUsabilityRequirement_Name();
+		EAttribute USABILITY_REQUIREMENT__OLD_NAME = eINSTANCE.getUsabilityRequirement_Old_name();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Description old</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USABILITY_REQUIREMENT__DESCRIPTION = eINSTANCE.getUsabilityRequirement_Description();
+		EAttribute USABILITY_REQUIREMENT__DESCRIPTION_OLD = eINSTANCE.getUsabilityRequirement_Description_old();
 
 		/**
 		 * The meta object literal for the '<em><b>Metric</b></em>' attribute list feature.

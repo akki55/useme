@@ -63,6 +63,7 @@ public class RecommendGMItemProvider
 			addRefersToPropertyDescriptor(object);
 			addFunctionalGoalPropertyDescriptor(object);
 			addUsabilityGoalPropertyDescriptor(object);
+			addSuggestedRequirementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -147,6 +148,28 @@ public class RecommendGMItemProvider
 				 getString("_UI_RecommendGM_usabilityGoal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RecommendGM_usabilityGoal_feature", "_UI_RecommendGM_type"),
 				 ReportModelingPackage.Literals.RECOMMEND_GM__USABILITY_GOAL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Suggested Requirements feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSuggestedRequirementsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RecommendGM_suggestedRequirements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RecommendGM_suggestedRequirements_feature", "_UI_RecommendGM_type"),
+				 ReportModelingPackage.Literals.RECOMMEND_GM__SUGGESTED_REQUIREMENTS,
 				 true,
 				 false,
 				 true,

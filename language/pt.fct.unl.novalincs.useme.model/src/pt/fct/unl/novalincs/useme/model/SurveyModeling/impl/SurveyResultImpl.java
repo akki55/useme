@@ -2,16 +2,19 @@
  */
 package pt.fct.unl.novalincs.useme.model.SurveyModeling.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl;
-
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultAbstractImpl;
+import pt.fct.unl.novalincs.useme.model.SurveyModeling.Questionnaire;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModel;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult;
@@ -25,11 +28,12 @@ import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult;
  * </p>
  * <ul>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.impl.SurveyResultImpl#getSurveyModel <em>Survey Model</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.SurveyModeling.impl.SurveyResultImpl#getQuestionnaire <em>Questionnaire</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SurveyResultImpl extends EvaluationResultImpl implements SurveyResult {
+public class SurveyResultImpl extends EvaluationResultAbstractImpl implements SurveyResult {
 	/**
 	 * The cached value of the '{@link #getSurveyModel() <em>Survey Model</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -39,6 +43,16 @@ public class SurveyResultImpl extends EvaluationResultImpl implements SurveyResu
 	 * @ordered
 	 */
 	protected SurveyModel surveyModel;
+
+	/**
+	 * The cached value of the '{@link #getQuestionnaire() <em>Questionnaire</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuestionnaire()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Questionnaire> questionnaire;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,6 +138,18 @@ public class SurveyResultImpl extends EvaluationResultImpl implements SurveyResu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Questionnaire> getQuestionnaire() {
+		if (questionnaire == null) {
+			questionnaire = new EObjectResolvingEList<Questionnaire>(Questionnaire.class, this, SurveyModelingPackage.SURVEY_RESULT__QUESTIONNAIRE);
+		}
+		return questionnaire;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -160,6 +186,8 @@ public class SurveyResultImpl extends EvaluationResultImpl implements SurveyResu
 			case SurveyModelingPackage.SURVEY_RESULT__SURVEY_MODEL:
 				if (resolve) return getSurveyModel();
 				return basicGetSurveyModel();
+			case SurveyModelingPackage.SURVEY_RESULT__QUESTIONNAIRE:
+				return getQuestionnaire();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,11 +197,16 @@ public class SurveyResultImpl extends EvaluationResultImpl implements SurveyResu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case SurveyModelingPackage.SURVEY_RESULT__SURVEY_MODEL:
 				setSurveyModel((SurveyModel)newValue);
+				return;
+			case SurveyModelingPackage.SURVEY_RESULT__QUESTIONNAIRE:
+				getQuestionnaire().clear();
+				getQuestionnaire().addAll((Collection<? extends Questionnaire>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,6 +223,9 @@ public class SurveyResultImpl extends EvaluationResultImpl implements SurveyResu
 			case SurveyModelingPackage.SURVEY_RESULT__SURVEY_MODEL:
 				setSurveyModel((SurveyModel)null);
 				return;
+			case SurveyModelingPackage.SURVEY_RESULT__QUESTIONNAIRE:
+				getQuestionnaire().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -204,6 +240,8 @@ public class SurveyResultImpl extends EvaluationResultImpl implements SurveyResu
 		switch (featureID) {
 			case SurveyModelingPackage.SURVEY_RESULT__SURVEY_MODEL:
 				return surveyModel != null;
+			case SurveyModelingPackage.SURVEY_RESULT__QUESTIONNAIRE:
+				return questionnaire != null && !questionnaire.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

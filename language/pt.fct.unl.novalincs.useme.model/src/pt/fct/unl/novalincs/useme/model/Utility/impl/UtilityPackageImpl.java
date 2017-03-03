@@ -49,6 +49,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.PriorityValue;
 import pt.fct.unl.novalincs.useme.model.Utility.ProcessModel;
 import pt.fct.unl.novalincs.useme.model.Utility.ProfileTemplate;
 import pt.fct.unl.novalincs.useme.model.Utility.RecordInput;
+import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 import pt.fct.unl.novalincs.useme.model.Utility.SurveyEngine;
 import pt.fct.unl.novalincs.useme.model.Utility.UtilityFactory;
 import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
@@ -144,6 +145,13 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * @generated
 	 */
 	private EClass outsideRefEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requirementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -320,6 +328,15 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getUtilitySpecification_Requirement() {
+		return (EReference)utilitySpecificationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSurveyEngine() {
 		return surveyEngineEClass;
 	}
@@ -482,8 +499,8 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionalGoal_Requirements() {
-		return (EAttribute)functionalGoalEClass.getEStructuralFeatures().get(1);
+	public EReference getFunctionalGoal_Requirements() {
+		return (EReference)functionalGoalEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -492,7 +509,7 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * @generated
 	 */
 	public EReference getFunctionalGoal_ExistingGM() {
-		return (EReference)functionalGoalEClass.getEStructuralFeatures().get(2);
+		return (EReference)functionalGoalEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -788,6 +805,33 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRequirement() {
+		return requirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirement_Name() {
+		return (EAttribute)requirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirement_Description() {
+		return (EAttribute)requirementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPriorityValue() {
 		return priorityValueEEnum;
 	}
@@ -837,6 +881,7 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		createEReference(utilitySpecificationEClass, UTILITY_SPECIFICATION__SURVEY_ENGINE);
 		createEReference(utilitySpecificationEClass, UTILITY_SPECIFICATION__DOCUMENTATION);
 		createEReference(utilitySpecificationEClass, UTILITY_SPECIFICATION__OUTSIDE_REF);
+		createEReference(utilitySpecificationEClass, UTILITY_SPECIFICATION__REQUIREMENT);
 
 		surveyEngineEClass = createEClass(SURVEY_ENGINE);
 		createEReference(surveyEngineEClass, SURVEY_ENGINE__SURVEY_MODEL);
@@ -859,8 +904,8 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 
 		functionalGoalEClass = createEClass(FUNCTIONAL_GOAL);
 		createEAttribute(functionalGoalEClass, FUNCTIONAL_GOAL__NAME);
-		createEAttribute(functionalGoalEClass, FUNCTIONAL_GOAL__REQUIREMENTS);
 		createEReference(functionalGoalEClass, FUNCTIONAL_GOAL__EXISTING_GM);
+		createEReference(functionalGoalEClass, FUNCTIONAL_GOAL__REQUIREMENTS);
 
 		existingGMEClass = createEClass(EXISTING_GM);
 		createEAttribute(existingGMEClass, EXISTING_GM__NAME);
@@ -900,6 +945,10 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		createEAttribute(outsideRefEClass, OUTSIDE_REF__LINK);
 		createEAttribute(outsideRefEClass, OUTSIDE_REF__TOOL);
 		createEReference(outsideRefEClass, OUTSIDE_REF__OUTSIDE_REF);
+
+		requirementEClass = createEClass(REQUIREMENT);
+		createEAttribute(requirementEClass, REQUIREMENT__NAME);
+		createEAttribute(requirementEClass, REQUIREMENT__DESCRIPTION);
 
 		// Create enums
 		priorityValueEEnum = createEEnum(PRIORITY_VALUE);
@@ -951,6 +1000,7 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		initEReference(getUtilitySpecification_SurveyEngine(), this.getSurveyEngine(), null, "surveyEngine", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUtilitySpecification_Documentation(), theEvaluationModelingPackage.getDocumentation(), null, "documentation", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUtilitySpecification_OutsideRef(), this.getOutsideRef(), null, "outsideRef", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUtilitySpecification_Requirement(), this.getRequirement(), null, "requirement", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(surveyEngineEClass, SurveyEngine.class, "SurveyEngine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSurveyEngine_SurveyModel(), theSurveyModelingPackage.getSurveyModel(), theSurveyModelingPackage.getSurveyModel_SurveyEngine(), "surveyModel", null, 1, 1, SurveyEngine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -973,8 +1023,8 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 
 		initEClass(functionalGoalEClass, FunctionalGoal.class, "FunctionalGoal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionalGoal_Name(), ecorePackage.getEString(), "name", null, 0, 1, FunctionalGoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFunctionalGoal_Requirements(), ecorePackage.getEString(), "requirements", null, 0, -1, FunctionalGoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionalGoal_ExistingGM(), this.getExistingGM(), this.getExistingGM_FunctionalGoal(), "existingGM", null, 0, -1, FunctionalGoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFunctionalGoal_Requirements(), this.getRequirement(), null, "requirements", null, 0, -1, FunctionalGoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(existingGMEClass, ExistingGM.class, "ExistingGM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExistingGM_Name(), ecorePackage.getEString(), "name", null, 0, 1, ExistingGM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1014,6 +1064,10 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		initEAttribute(getOutsideRef_Link(), ecorePackage.getEString(), "link", null, 0, -1, OutsideRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutsideRef_Tool(), ecorePackage.getEString(), "tool", null, 0, -1, OutsideRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutsideRef_OutsideRef(), this.getOutsideRef(), null, "outsideRef", null, 0, 1, OutsideRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(requirementEClass, Requirement.class, "Requirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRequirement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRequirement_Description(), ecorePackage.getEString(), "description", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(priorityValueEEnum, PriorityValue.class, "PriorityValue");

@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import pt.fct.unl.novalincs.useme.model.Utility.ExistingGM;
 import pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal;
+import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
 
 /**
@@ -32,8 +32,8 @@ import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
  * </p>
  * <ul>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.FunctionalGoalImpl#getName <em>Name</em>}</li>
- *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.FunctionalGoalImpl#getRequirements <em>Requirements</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.FunctionalGoalImpl#getExistingGM <em>Existing GM</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.FunctionalGoalImpl#getRequirements <em>Requirements</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,16 +60,6 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRequirements() <em>Requirements</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequirements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> requirements;
-
-	/**
 	 * The cached value of the '{@link #getExistingGM() <em>Existing GM</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,6 +68,16 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<ExistingGM> existingGM;
+
+	/**
+	 * The cached value of the '{@link #getRequirements() <em>Requirements</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequirements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Requirement> requirements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,9 +124,9 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getRequirements() {
+	public EList<Requirement> getRequirements() {
 		if (requirements == null) {
-			requirements = new EDataTypeUniqueEList<String>(String.class, this, UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS);
+			requirements = new EObjectResolvingEList<Requirement>(Requirement.class, this, UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS);
 		}
 		return requirements;
 	}
@@ -182,10 +182,10 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case UtilityPackage.FUNCTIONAL_GOAL__NAME:
 				return getName();
-			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
-				return getRequirements();
 			case UtilityPackage.FUNCTIONAL_GOAL__EXISTING_GM:
 				return getExistingGM();
+			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
+				return getRequirements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,13 +202,13 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 			case UtilityPackage.FUNCTIONAL_GOAL__NAME:
 				setName((String)newValue);
 				return;
-			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
-				getRequirements().clear();
-				getRequirements().addAll((Collection<? extends String>)newValue);
-				return;
 			case UtilityPackage.FUNCTIONAL_GOAL__EXISTING_GM:
 				getExistingGM().clear();
 				getExistingGM().addAll((Collection<? extends ExistingGM>)newValue);
+				return;
+			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
+				getRequirements().clear();
+				getRequirements().addAll((Collection<? extends Requirement>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,11 +225,11 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 			case UtilityPackage.FUNCTIONAL_GOAL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
-				getRequirements().clear();
-				return;
 			case UtilityPackage.FUNCTIONAL_GOAL__EXISTING_GM:
 				getExistingGM().clear();
+				return;
+			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
+				getRequirements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -245,10 +245,10 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case UtilityPackage.FUNCTIONAL_GOAL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
-				return requirements != null && !requirements.isEmpty();
 			case UtilityPackage.FUNCTIONAL_GOAL__EXISTING_GM:
 				return existingGM != null && !existingGM.isEmpty();
+			case UtilityPackage.FUNCTIONAL_GOAL__REQUIREMENTS:
+				return requirements != null && !requirements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -265,8 +265,6 @@ public class FunctionalGoalImpl extends MinimalEObjectImpl.Container implements 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", requirements: ");
-		result.append(requirements);
 		result.append(')');
 		return result.toString();
 	}

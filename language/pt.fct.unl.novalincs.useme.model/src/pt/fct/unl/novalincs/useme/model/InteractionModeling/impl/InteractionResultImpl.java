@@ -2,19 +2,23 @@
  */
 package pt.fct.unl.novalincs.useme.model.InteractionModeling.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import pt.fct.unl.novalincs.useme.model.InteractionModeling.Event;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModel;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult;
 
-import pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultAbstractImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,11 +29,12 @@ import pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl
  * </p>
  * <ul>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.InteractionResultImpl#getInteractionModel <em>Interaction Model</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.InteractionResultImpl#getEvent <em>Event</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class InteractionResultImpl extends EvaluationResultImpl implements InteractionResult {
+public class InteractionResultImpl extends EvaluationResultAbstractImpl implements InteractionResult {
 	/**
 	 * The cached value of the '{@link #getInteractionModel() <em>Interaction Model</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -39,6 +44,16 @@ public class InteractionResultImpl extends EvaluationResultImpl implements Inter
 	 * @ordered
 	 */
 	protected InteractionModel interactionModel;
+
+	/**
+	 * The cached value of the '{@link #getEvent() <em>Event</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvent()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Event> event;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,6 +139,18 @@ public class InteractionResultImpl extends EvaluationResultImpl implements Inter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Event> getEvent() {
+		if (event == null) {
+			event = new EObjectResolvingEList<Event>(Event.class, this, InteractionModelingPackage.INTERACTION_RESULT__EVENT);
+		}
+		return event;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -160,6 +187,8 @@ public class InteractionResultImpl extends EvaluationResultImpl implements Inter
 			case InteractionModelingPackage.INTERACTION_RESULT__INTERACTION_MODEL:
 				if (resolve) return getInteractionModel();
 				return basicGetInteractionModel();
+			case InteractionModelingPackage.INTERACTION_RESULT__EVENT:
+				return getEvent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,11 +198,16 @@ public class InteractionResultImpl extends EvaluationResultImpl implements Inter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case InteractionModelingPackage.INTERACTION_RESULT__INTERACTION_MODEL:
 				setInteractionModel((InteractionModel)newValue);
+				return;
+			case InteractionModelingPackage.INTERACTION_RESULT__EVENT:
+				getEvent().clear();
+				getEvent().addAll((Collection<? extends Event>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,6 +224,9 @@ public class InteractionResultImpl extends EvaluationResultImpl implements Inter
 			case InteractionModelingPackage.INTERACTION_RESULT__INTERACTION_MODEL:
 				setInteractionModel((InteractionModel)null);
 				return;
+			case InteractionModelingPackage.INTERACTION_RESULT__EVENT:
+				getEvent().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -204,6 +241,8 @@ public class InteractionResultImpl extends EvaluationResultImpl implements Inter
 		switch (featureID) {
 			case InteractionModelingPackage.INTERACTION_RESULT__INTERACTION_MODEL:
 				return interactionModel != null;
+			case InteractionModelingPackage.INTERACTION_RESULT__EVENT:
+				return event != null && !event.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

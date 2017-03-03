@@ -12,14 +12,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage;
@@ -27,20 +21,15 @@ import pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement;
 
 import pt.fct.unl.novalincs.useme.model.UseMe.provider.UseMeEditPlugin;
 
+import pt.fct.unl.novalincs.useme.model.Utility.provider.RequirementItemProvider;
+
 /**
  * This is the item provider adapter for a {@link pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityRequirement} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UsabilityRequirementItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class UsabilityRequirementItemProvider extends RequirementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -62,8 +51,8 @@ public class UsabilityRequirementItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
+			addOld_namePropertyDescriptor(object);
+			addDescription_oldPropertyDescriptor(object);
 			addMetricPropertyDescriptor(object);
 			addQuestionnairePropertyDescriptor(object);
 			addEventPropertyDescriptor(object);
@@ -72,19 +61,19 @@ public class UsabilityRequirementItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Old name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addOld_namePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UsabilityRequirement_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UsabilityRequirement_name_feature", "_UI_UsabilityRequirement_type"),
-				 GoalModelingPackage.Literals.USABILITY_REQUIREMENT__NAME,
+				 getString("_UI_UsabilityRequirement_old_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UsabilityRequirement_old_name_feature", "_UI_UsabilityRequirement_type"),
+				 GoalModelingPackage.Literals.USABILITY_REQUIREMENT__OLD_NAME,
 				 true,
 				 false,
 				 false,
@@ -94,19 +83,19 @@ public class UsabilityRequirementItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the Description old feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addDescription_oldPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UsabilityRequirement_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UsabilityRequirement_description_feature", "_UI_UsabilityRequirement_type"),
-				 GoalModelingPackage.Literals.USABILITY_REQUIREMENT__DESCRIPTION,
+				 getString("_UI_UsabilityRequirement_description_old_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UsabilityRequirement_description_old_feature", "_UI_UsabilityRequirement_type"),
+				 GoalModelingPackage.Literals.USABILITY_REQUIREMENT__DESCRIPTION_OLD,
 				 true,
 				 false,
 				 false,
@@ -219,8 +208,8 @@ public class UsabilityRequirementItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UsabilityRequirement.class)) {
-			case GoalModelingPackage.USABILITY_REQUIREMENT__NAME:
-			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION:
+			case GoalModelingPackage.USABILITY_REQUIREMENT__OLD_NAME:
+			case GoalModelingPackage.USABILITY_REQUIREMENT__DESCRIPTION_OLD:
 			case GoalModelingPackage.USABILITY_REQUIREMENT__METRIC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

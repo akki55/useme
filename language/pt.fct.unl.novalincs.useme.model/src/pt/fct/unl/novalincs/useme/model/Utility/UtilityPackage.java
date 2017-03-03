@@ -131,13 +131,22 @@ public interface UtilityPackage extends EPackage {
 	int UTILITY_SPECIFICATION__OUTSIDE_REF = 6;
 
 	/**
+	 * The feature id for the '<em><b>Requirement</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UTILITY_SPECIFICATION__REQUIREMENT = 7;
+
+	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UTILITY_SPECIFICATION_FEATURE_COUNT = 7;
+	int UTILITY_SPECIFICATION_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Specification</em>' class.
@@ -369,22 +378,22 @@ public interface UtilityPackage extends EPackage {
 	int FUNCTIONAL_GOAL__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Requirements</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTIONAL_GOAL__REQUIREMENTS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Existing GM</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONAL_GOAL__EXISTING_GM = 2;
+	int FUNCTIONAL_GOAL__EXISTING_GM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Requirements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONAL_GOAL__REQUIREMENTS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Functional Goal</em>' class.
@@ -826,6 +835,52 @@ public interface UtilityPackage extends EPackage {
 	int OUTSIDE_REF_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.RequirementImpl <em>Requirement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.RequirementImpl
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getRequirement()
+	 * @generated
+	 */
+	int REQUIREMENT = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__DESCRIPTION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Requirement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Requirement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.Utility.PriorityValue <em>Priority Value</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -833,7 +888,7 @@ public interface UtilityPackage extends EPackage {
 	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getPriorityValue()
 	 * @generated
 	 */
-	int PRIORITY_VALUE = 12;
+	int PRIORITY_VALUE = 13;
 
 	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.Utility.RecordInput <em>Record Input</em>}' enum.
@@ -843,7 +898,7 @@ public interface UtilityPackage extends EPackage {
 	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getRecordInput()
 	 * @generated
 	 */
-	int RECORD_INPUT = 13;
+	int RECORD_INPUT = 14;
 
 
 	/**
@@ -932,6 +987,17 @@ public interface UtilityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUtilitySpecification_OutsideRef();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification#getRequirement <em>Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Requirement</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.UtilitySpecification#getRequirement()
+	 * @see #getUtilitySpecification()
+	 * @generated
+	 */
+	EReference getUtilitySpecification_Requirement();
 
 	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.Utility.SurveyEngine <em>Survey Engine</em>}'.
@@ -1128,15 +1194,15 @@ public interface UtilityPackage extends EPackage {
 	EAttribute getFunctionalGoal_Name();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements <em>Requirements</em>}'.
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements <em>Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Requirements</em>'.
+	 * @return the meta object for the reference list '<em>Requirements</em>'.
 	 * @see pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements()
 	 * @see #getFunctionalGoal()
 	 * @generated
 	 */
-	EAttribute getFunctionalGoal_Requirements();
+	EReference getFunctionalGoal_Requirements();
 
 	/**
 	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getExistingGM <em>Existing GM</em>}'.
@@ -1495,6 +1561,38 @@ public interface UtilityPackage extends EPackage {
 	EReference getOutsideRef_OutsideRef();
 
 	/**
+	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.Utility.Requirement <em>Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Requirement</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Requirement
+	 * @generated
+	 */
+	EClass getRequirement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.Utility.Requirement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Requirement#getName()
+	 * @see #getRequirement()
+	 * @generated
+	 */
+	EAttribute getRequirement_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.Utility.Requirement#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Requirement#getDescription()
+	 * @see #getRequirement()
+	 * @generated
+	 */
+	EAttribute getRequirement_Description();
+
+	/**
 	 * Returns the meta object for enum '{@link pt.fct.unl.novalincs.useme.model.Utility.PriorityValue <em>Priority Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1602,6 +1700,14 @@ public interface UtilityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UTILITY_SPECIFICATION__OUTSIDE_REF = eINSTANCE.getUtilitySpecification_OutsideRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Requirement</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UTILITY_SPECIFICATION__REQUIREMENT = eINSTANCE.getUtilitySpecification_Requirement();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.SurveyEngineImpl <em>Survey Engine</em>}' class.
@@ -1756,12 +1862,12 @@ public interface UtilityPackage extends EPackage {
 		EAttribute FUNCTIONAL_GOAL__NAME = eINSTANCE.getFunctionalGoal_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Requirements</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Requirements</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FUNCTIONAL_GOAL__REQUIREMENTS = eINSTANCE.getFunctionalGoal_Requirements();
+		EReference FUNCTIONAL_GOAL__REQUIREMENTS = eINSTANCE.getFunctionalGoal_Requirements();
 
 		/**
 		 * The meta object literal for the '<em><b>Existing GM</b></em>' reference list feature.
@@ -2040,6 +2146,32 @@ public interface UtilityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OUTSIDE_REF__OUTSIDE_REF = eINSTANCE.getOutsideRef_OutsideRef();
+
+		/**
+		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.RequirementImpl <em>Requirement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.RequirementImpl
+		 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getRequirement()
+		 * @generated
+		 */
+		EClass REQUIREMENT = eINSTANCE.getRequirement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUIREMENT__NAME = eINSTANCE.getRequirement_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUIREMENT__DESCRIPTION = eINSTANCE.getRequirement_Description();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.PriorityValue <em>Priority Value</em>}' enum.

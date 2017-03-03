@@ -1063,4 +1063,197 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
+  <ownedViewpoints name="reportModeling">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ResultAnalysis" domainClass="ReportModeling.ReportModel" enablePopupBars="true">
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#/"/>
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//ContextModeling"/>
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//EvaluationModeling"/>
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//GoalModeling"/>
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//InteractionModeling"/>
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//ReportModeling"/>
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//SurveyModeling"/>
+      <metamodel href="http://nova-lincs.di.fct.unl.pt/useme#//Utility"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="ReportModelNode" semanticCandidatesExpression="var:self" domainClass="ReportModeling.ReportModel">
+          <style xsi:type="style:BundledImageDescription" labelExpression="aql: 'Report Model: ' + self.name" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name=" UsabilityRequirementNode" semanticCandidatesExpression="aql:self.evaluationResult.resultValue.associatedRequirement" domainClass="GoalModeling.UsabilityRequirement">
+          <style xsi:type="style:EllipseNodeDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="LanguageNode" semanticCandidatesExpression="aql:self.evaluationResult.resultValue.language" domainClass="EvaluationModeling.Language">
+          <style xsi:type="style:EllipseNodeDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ResultLanguageEdge" sourceMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='EvaluationResultContainer']/@subContainerMappings[name='ResultContainer']" targetMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@nodeMappings[name='LanguageNode']" targetFinderExpression="feature:language">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ResultRequirementEdge" sourceMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='EvaluationResultContainer']/@subContainerMappings[name='ResultContainer'] //@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='InteractionResultContainer']/@subContainerMappings[name='ResultContainer'] //@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='SurveyResultsContainer']/@subContainerMappings[name='ResultContainer']" targetMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@nodeMappings[name='%20UsabilityRequirementNode']" targetFinderExpression="feature:associatedRequirement">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ReportResultEdge" sourceMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@nodeMappings[name='ReportModelNode']" targetMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='EvaluationResultContainer']" targetFinderExpression="feature:evaluationResult">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ReportRecommEdge" sourceMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@nodeMappings[name='ReportModelNode']" targetMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='EvaluationRecommendationContainer']" targetFinderExpression="feature:recommendGM">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EvaluationInteracResultRelEdge" sourceMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='EvaluationResultContainer']" targetMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='InteractionResultContainer']" targetFinderExpression="feature:interactionResult">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EvaluationSurveyResultRelEdge" sourceMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='EvaluationResultContainer']" targetMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='SurveyResultsContainer']" targetFinderExpression="feature:surveyResult">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EvaluationRecommendatioUGEdge" sourceMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='EvaluationRecommendationContainer']" targetMapping="//@ownedViewpoints[name='reportModeling']/@ownedRepresentations[name='ResultAnalysis']/@defaultLayer/@containerMappings[name='UsabilityGoalContainer']" targetFinderExpression="feature:usabilityGoal">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="EvaluationResultContainer" semanticCandidatesExpression="aql: self.evaluationResult" domainClass="ReportModeling.EvaluationResult" childrenPresentation="VerticalStack">
+          <subContainerMappings name="ResultContainer" semanticCandidatesExpression="aql:self.resultValue" domainClass="ReportModeling.ResultValue">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: self.name + '=' +self.resultValue">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'Evaluation result:' + self.name">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="SurveyResultsContainer" semanticCandidatesExpression="aql: self.evaluationResult.surveyResult" domainClass="SurveyModeling.SurveyResult" childrenPresentation="VerticalStack">
+          <subContainerMappings name="ResultContainer" semanticCandidatesExpression="aql:self.resultValue" domainClass="ReportModeling.ResultValue">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: self.name + '=' +self.resultValue">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql: 'Survey Result: \n' +  self.name">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="InteractionResultContainer" semanticCandidatesExpression="aql: self.evaluationResult.interactionResult" domainClass="InteractionModeling.InteractionResult" childrenPresentation="VerticalStack">
+          <subContainerMappings name="ResultContainer" semanticCandidatesExpression="aql:self.resultValue" domainClass="ReportModeling.ResultValue">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: self.name + '=' +self.resultValue">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:'Interaction result: \n' + self.name">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="EvaluationRecommendationContainer" semanticCandidatesExpression="aql: self.recommendGM" domainClass="ReportModeling.RecommendGM" childrenPresentation="VerticalStack">
+          <subContainerMappings name="ResultContainer" semanticCandidatesExpression="aql:self.suggestedRequirements" domainClass="Utility.Requirement">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: self.name">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'Recommendations '">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="UsabilityGoalContainer" semanticCandidatesExpression="aql:self.recommendGM.usabilityGoal" domainClass="GoalModeling.UsabilityGoal" childrenPresentation="List">
+          <borderedNodeMappings name="ActorBNode" semanticCandidatesExpression="aql: self.responsibleActor" domainClass="GoalModeling.Actor">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="aql:self.name" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/UCActor.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <subNodeMappings name="QuestionNode" semanticCandidatesExpression="var:self" domainClass="GoalModeling.UsabilityGoal">
+            <style xsi:type="style:SquareDescription" labelExpression="aql:'Q: ' + self.question" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelFormat>italic</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="ScopeCMNode" semanticCandidatesExpression="feature:scope" domainClass="GoalModeling.Scope">
+            <style xsi:type="style:SquareDescription" labelExpression="aql: 'Scope: ' + self.name" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="UserGoalPriorityBNode" semanticCandidatesExpression="var:self" domainClass="GoalModeling.UsabilityGoal">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:'Priority: ' + self.priority" sizeComputationExpression="1" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:ShapeContainerStyleDescription" borderSizeComputationExpression="1">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
 </description:Group>
