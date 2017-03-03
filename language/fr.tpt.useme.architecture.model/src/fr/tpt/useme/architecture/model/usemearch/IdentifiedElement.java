@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.IdentifiedElement#getName <em>Name</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.IdentifiedElement#getId <em>Id</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.IdentifiedElement#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getIdentifiedElement()
@@ -73,5 +74,31 @@ public interface IdentifiedElement extends EObject {
 	 * @generated
 	 */
 	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getIdentifiedElement_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link fr.tpt.useme.architecture.model.usemearch.IdentifiedElement#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // IdentifiedElement

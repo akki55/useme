@@ -50,12 +50,9 @@ public class DslItemProvider extends ContextElementTypeItemProvider {
 			addConcreteSyntaxesPropertyDescriptor(object);
 			addAbstractsyntaxPropertyDescriptor(object);
 			addSupportingToolsPropertyDescriptor(object);
-			addSemanticsPropertyDescriptor(object);
-			addDomainConceptsPropertyDescriptor(object);
-			addFeatureDiagramsPropertyDescriptor(object);
-			addModelCheckersPropertyDescriptor(object);
-			addModelSimulatorsPropertyDescriptor(object);
-			addDocumentationsPropertyDescriptor(object);
+			addOwnedSemanticsPropertyDescriptor(object);
+			addOwnedFeatureDiagramsPropertyDescriptor(object);
+			addOwnedDocumentationsPropertyDescriptor(object);
 			addMaintenanceServicePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -128,19 +125,19 @@ public class DslItemProvider extends ContextElementTypeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Semantics feature.
+	 * This adds a property descriptor for the Owned Semantics feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSemanticsPropertyDescriptor(Object object) {
+	protected void addOwnedSemanticsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Dsl_semantics_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_semantics_feature", "_UI_Dsl_type"),
-				 UsemearchPackage.Literals.DSL__SEMANTICS,
+				 getString("_UI_Dsl_ownedSemantics_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_ownedSemantics_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__OWNED_SEMANTICS,
 				 true,
 				 false,
 				 true,
@@ -150,19 +147,19 @@ public class DslItemProvider extends ContextElementTypeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Domain Concepts feature.
+	 * This adds a property descriptor for the Owned Feature Diagrams feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDomainConceptsPropertyDescriptor(Object object) {
+	protected void addOwnedFeatureDiagramsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Dsl_domainConcepts_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_domainConcepts_feature", "_UI_Dsl_type"),
-				 UsemearchPackage.Literals.DSL__DOMAIN_CONCEPTS,
+				 getString("_UI_Dsl_ownedFeatureDiagrams_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_ownedFeatureDiagrams_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__OWNED_FEATURE_DIAGRAMS,
 				 true,
 				 false,
 				 true,
@@ -172,85 +169,19 @@ public class DslItemProvider extends ContextElementTypeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Feature Diagrams feature.
+	 * This adds a property descriptor for the Owned Documentations feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFeatureDiagramsPropertyDescriptor(Object object) {
+	protected void addOwnedDocumentationsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Dsl_featureDiagrams_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_featureDiagrams_feature", "_UI_Dsl_type"),
-				 UsemearchPackage.Literals.DSL__FEATURE_DIAGRAMS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Model Checkers feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addModelCheckersPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dsl_modelCheckers_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_modelCheckers_feature", "_UI_Dsl_type"),
-				 UsemearchPackage.Literals.DSL__MODEL_CHECKERS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Model Simulators feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addModelSimulatorsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dsl_modelSimulators_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_modelSimulators_feature", "_UI_Dsl_type"),
-				 UsemearchPackage.Literals.DSL__MODEL_SIMULATORS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Documentations feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDocumentationsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Dsl_documentations_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_documentations_feature", "_UI_Dsl_type"),
-				 UsemearchPackage.Literals.DSL__DOCUMENTATIONS,
+				 getString("_UI_Dsl_ownedDocumentations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Dsl_ownedDocumentations_feature", "_UI_Dsl_type"),
+				 UsemearchPackage.Literals.DSL__OWNED_DOCUMENTATIONS,
 				 true,
 				 false,
 				 true,
@@ -294,6 +225,9 @@ public class DslItemProvider extends ContextElementTypeItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(UsemearchPackage.Literals.DSL__OWNED_SYNTAXES);
+			childrenFeatures.add(UsemearchPackage.Literals.DSL__OWNED_SEMANTICS);
+			childrenFeatures.add(UsemearchPackage.Literals.DSL__OWNED_FEATURE_DIAGRAMS);
+			childrenFeatures.add(UsemearchPackage.Literals.DSL__OWNED_DOCUMENTATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -350,6 +284,9 @@ public class DslItemProvider extends ContextElementTypeItemProvider {
 
 		switch (notification.getFeatureID(Dsl.class)) {
 			case UsemearchPackage.DSL__OWNED_SYNTAXES:
+			case UsemearchPackage.DSL__OWNED_SEMANTICS:
+			case UsemearchPackage.DSL__OWNED_FEATURE_DIAGRAMS:
+			case UsemearchPackage.DSL__OWNED_DOCUMENTATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -376,6 +313,11 @@ public class DslItemProvider extends ContextElementTypeItemProvider {
 			(createChildParameter
 				(UsemearchPackage.Literals.DSL__OWNED_SYNTAXES,
 				 UsemearchFactory.eINSTANCE.createSiriusConcreteSyntax()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UsemearchPackage.Literals.DSL__OWNED_FEATURE_DIAGRAMS,
+				 UsemearchFactory.eINSTANCE.createFeatureDiagram()));
 	}
 
 }

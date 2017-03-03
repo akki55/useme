@@ -56,7 +56,7 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case UsemearchPackage.DSL_DEVELOPMENT_SPECIFICATION: return createDslDevelopmentSpecification();
+			case UsemearchPackage.DSL_BASED_SYSTEM_SPECIFICATION: return createDslBasedSystemSpecification();
 			case UsemearchPackage.CONTEXT_SPECIFICATION: return createContextSpecification();
 			case UsemearchPackage.DSL: return createDsl();
 			case UsemearchPackage.ECORE_ABSTRACT_SYNTAX: return createECoreAbstractSyntax();
@@ -66,15 +66,14 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 			case UsemearchPackage.COMPUTER: return createComputer();
 			case UsemearchPackage.SOFTWARE_TOOL: return createSoftwareTool();
 			case UsemearchPackage.OPERATING_SYSTEM: return createOperatingSystem();
-			case UsemearchPackage.SEMANTIC: return createSemantic();
 			case UsemearchPackage.ECORE_DOMAIN_CONCEPT: return createECoreDomainConcept();
 			case UsemearchPackage.FEATURE_DIAGRAM: return createFeatureDiagram();
 			case UsemearchPackage.MODEL_CHECKER: return createModelChecker();
 			case UsemearchPackage.MODEL_SIMULATOR: return createModelSimulator();
-			case UsemearchPackage.DOCUMENTATION: return createDocumentation();
 			case UsemearchPackage.MAINTENANCE_SERVICE: return createMaintenanceService();
-			case UsemearchPackage.CONTEXT_ELEMENT_INSTANCE: return createContextElementInstance();
-			case UsemearchPackage.ELEMENT_INSTANCE_CONNECTION: return createElementInstanceConnection();
+			case UsemearchPackage.CONTEXT_INSTANCE_ELEMENT: return createContextInstanceElement();
+			case UsemearchPackage.INSTANCE_ELEMENTS_CONNECTION: return createInstanceElementsConnection();
+			case UsemearchPackage.PHYSICAL_SYSTEM: return createPhysicalSystem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,9 +84,9 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DslDevelopmentSpecification createDslDevelopmentSpecification() {
-		DslDevelopmentSpecificationImpl dslDevelopmentSpecification = new DslDevelopmentSpecificationImpl();
-		return dslDevelopmentSpecification;
+	public DslBasedSystemSpecification createDslBasedSystemSpecification() {
+		DslBasedSystemSpecificationImpl dslBasedSystemSpecification = new DslBasedSystemSpecificationImpl();
+		return dslBasedSystemSpecification;
 	}
 
 	/**
@@ -185,16 +184,6 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Semantic createSemantic() {
-		SemanticImpl semantic = new SemanticImpl();
-		return semantic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ECoreDomainConcept createECoreDomainConcept() {
 		ECoreDomainConceptImpl eCoreDomainConcept = new ECoreDomainConceptImpl();
 		return eCoreDomainConcept;
@@ -235,16 +224,6 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Documentation createDocumentation() {
-		DocumentationImpl documentation = new DocumentationImpl();
-		return documentation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MaintenanceService createMaintenanceService() {
 		MaintenanceServiceImpl maintenanceService = new MaintenanceServiceImpl();
 		return maintenanceService;
@@ -255,9 +234,9 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextElementInstance createContextElementInstance() {
-		ContextElementInstanceImpl contextElementInstance = new ContextElementInstanceImpl();
-		return contextElementInstance;
+	public ContextInstanceElement createContextInstanceElement() {
+		ContextInstanceElementImpl contextInstanceElement = new ContextInstanceElementImpl();
+		return contextInstanceElement;
 	}
 
 	/**
@@ -265,9 +244,19 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementInstanceConnection createElementInstanceConnection() {
-		ElementInstanceConnectionImpl elementInstanceConnection = new ElementInstanceConnectionImpl();
-		return elementInstanceConnection;
+	public InstanceElementsConnection createInstanceElementsConnection() {
+		InstanceElementsConnectionImpl instanceElementsConnection = new InstanceElementsConnectionImpl();
+		return instanceElementsConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PhysicalSystem createPhysicalSystem() {
+		PhysicalSystemImpl physicalSystem = new PhysicalSystemImpl();
+		return physicalSystem;
 	}
 
 	/**

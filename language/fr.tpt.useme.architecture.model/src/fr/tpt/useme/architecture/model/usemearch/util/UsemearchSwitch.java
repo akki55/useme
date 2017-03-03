@@ -89,10 +89,10 @@ public class UsemearchSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.DSL_DEVELOPMENT_SPECIFICATION: {
-				DslDevelopmentSpecification dslDevelopmentSpecification = (DslDevelopmentSpecification)theEObject;
-				T result = caseDslDevelopmentSpecification(dslDevelopmentSpecification);
-				if (result == null) result = caseIdentifiedElement(dslDevelopmentSpecification);
+			case UsemearchPackage.DSL_BASED_SYSTEM_SPECIFICATION: {
+				DslBasedSystemSpecification dslBasedSystemSpecification = (DslBasedSystemSpecification)theEObject;
+				T result = caseDslBasedSystemSpecification(dslBasedSystemSpecification);
+				if (result == null) result = caseIdentifiedElement(dslBasedSystemSpecification);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -211,10 +211,10 @@ public class UsemearchSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.SEMANTIC: {
-				Semantic semantic = (Semantic)theEObject;
-				T result = caseSemantic(semantic);
-				if (result == null) result = caseDescription_IdentifiedElement(semantic);
+			case UsemearchPackage.SEMANTICS: {
+				Semantics semantics = (Semantics)theEObject;
+				T result = caseSemantics(semantics);
+				if (result == null) result = caseDescription_IdentifiedElement(semantics);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -236,7 +236,7 @@ public class UsemearchSwitch<T> {
 			case UsemearchPackage.FEATURE_DIAGRAM: {
 				FeatureDiagram featureDiagram = (FeatureDiagram)theEObject;
 				T result = caseFeatureDiagram(featureDiagram);
-				if (result == null) result = caseDescription_IdentifiedElement(featureDiagram);
+				if (result == null) result = caseIdentifiedElement(featureDiagram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -263,6 +263,7 @@ public class UsemearchSwitch<T> {
 			case UsemearchPackage.DOCUMENTATION: {
 				Documentation documentation = (Documentation)theEObject;
 				T result = caseDocumentation(documentation);
+				if (result == null) result = caseContextElementType(documentation);
 				if (result == null) result = caseIdentifiedElement(documentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -274,17 +275,25 @@ public class UsemearchSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.CONTEXT_ELEMENT_INSTANCE: {
-				ContextElementInstance contextElementInstance = (ContextElementInstance)theEObject;
-				T result = caseContextElementInstance(contextElementInstance);
-				if (result == null) result = caseIdentifiedElement(contextElementInstance);
+			case UsemearchPackage.CONTEXT_INSTANCE_ELEMENT: {
+				ContextInstanceElement contextInstanceElement = (ContextInstanceElement)theEObject;
+				T result = caseContextInstanceElement(contextInstanceElement);
+				if (result == null) result = caseIdentifiedElement(contextInstanceElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.ELEMENT_INSTANCE_CONNECTION: {
-				ElementInstanceConnection elementInstanceConnection = (ElementInstanceConnection)theEObject;
-				T result = caseElementInstanceConnection(elementInstanceConnection);
-				if (result == null) result = caseIdentifiedElement(elementInstanceConnection);
+			case UsemearchPackage.INSTANCE_ELEMENTS_CONNECTION: {
+				InstanceElementsConnection instanceElementsConnection = (InstanceElementsConnection)theEObject;
+				T result = caseInstanceElementsConnection(instanceElementsConnection);
+				if (result == null) result = caseIdentifiedElement(instanceElementsConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.PHYSICAL_SYSTEM: {
+				PhysicalSystem physicalSystem = (PhysicalSystem)theEObject;
+				T result = casePhysicalSystem(physicalSystem);
+				if (result == null) result = caseContextElementType(physicalSystem);
+				if (result == null) result = caseIdentifiedElement(physicalSystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -308,17 +317,17 @@ public class UsemearchSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dsl Development Specification</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dsl Based System Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dsl Development Specification</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dsl Based System Specification</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDslDevelopmentSpecification(DslDevelopmentSpecification object) {
+	public T caseDslBasedSystemSpecification(DslBasedSystemSpecification object) {
 		return null;
 	}
 
@@ -533,17 +542,17 @@ public class UsemearchSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Semantic</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Semantics</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Semantic</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Semantics</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSemantic(Semantic object) {
+	public T caseSemantics(Semantics object) {
 		return null;
 	}
 
@@ -653,32 +662,47 @@ public class UsemearchSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Context Element Instance</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Context Instance Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Context Element Instance</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Context Instance Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseContextElementInstance(ContextElementInstance object) {
+	public T caseContextInstanceElement(ContextInstanceElement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element Instance Connection</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Instance Elements Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element Instance Connection</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Instance Elements Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementInstanceConnection(ElementInstanceConnection object) {
+	public T caseInstanceElementsConnection(InstanceElementsConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Physical System</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Physical System</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePhysicalSystem(PhysicalSystem object) {
 		return null;
 	}
 
