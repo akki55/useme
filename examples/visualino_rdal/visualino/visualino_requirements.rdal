@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdal:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:rdal="http://www.open-people.fr/rdal2" name="Visualino System" id="_FMREoN5sEeaU5bsIjJAn4w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
   <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_MuevQd8kEea2BJXh0b62wQ">
-    <ownedDesignElementRefs id="_htGtEODLEearDeIEXm32LA">
+    <ownedDesignElementRefs id="_-rvacDQsEee2fof3jl46Gw">
       <designElement href="visualino_design.usemearch#_165NYPEkEeaFcM395dpt6Q"/>
     </ownedDesignElementRefs>
-    <ownedDesignElementRefs id="_htGtEeDLEearDeIEXm32LA">
+    <ownedDesignElementRefs id="_-rvacTQsEee2fof3jl46Gw">
       <designElement href="program_robot.jucm#/"/>
+    </ownedDesignElementRefs>
+    <ownedDesignElementRefs id="_-rvacjQsEee2fof3jl46Gw">
+      <designElement href="../org.farrusco/model/farrusco.ecore#/"/>
     </ownedDesignElementRefs>
   </ownedReferencedDesignElements>
   <ownedPackages xsi:type="rdal:GoalsPackage" name="High Level Goals" id="_U9_S8ODHEearDeIEXm32LA">
-    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="Program Robot" id="_bj2MouDHEearDeIEXm32LA" description="The DSL should allow to program the behavior of a robot">
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G1" id="_bj2MouDHEearDeIEXm32LA" description="The user should be provided with a concepts to model behaviors of robot" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEXm32LA">
         <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeaVQqY6DpBpBw">
           <designElement href="visualino_design.usemearch#_16_UAPEkEeaFcM395dpt6e"/>
@@ -25,9 +28,25 @@
       </ownedReferencedDesignElements>
       <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_non_functional_goal_Usability"/>
     </ownedGoals>
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G2" id="_bj2MouDHEearDeIEXm32LA" description="The domain experts should be supported to create customized configurations" stakeholders="_tqSwvTMxEeeHT7vuJ8Hf1w">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeaVQqY6DpBpBw">
+          <designElement href="visualino_design.usemearch#_16_UAPEkEeaFcM395dpt6e"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <useCases href="program_robot.jucm#2"/>
+    </ownedGoals>
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G3" id="_bj2MouDHEearDeIEXm32LA" description="The software engineers should be supported to create new language component" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeaVQqY6DpBpBw">
+          <designElement href="visualino_design.usemearch#_16_UAPEkEeaFcM395dpt6e"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <useCases href="program_robot.jucm#2"/>
+    </ownedGoals>
   </ownedPackages>
-  <ownedPackages xsi:type="rdal:RequirementsPackage" name="Visualino Requirements" id="_rKlhZuvSEeabG6EdqbdIDg">
-    <ownedRequirements xsi:type="rdal:Requirement" name="Specify a Root Node" id="_uWbLQuvSEeabG6EdqbdIDg" description="">
+  <ownedPackages xsi:type="rdal:RequirementsPackage" name="Visualino Functional Requirements" id="_rKlhZuvSEeabG6EdqbdIDg">
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1 Create Root Node" id="_uWbLQuvSEeabG6EdqbdIDg" description="all the tree constructions for modelling a behavior start with a root. This is where the hardware construction is made. All actuators and sensors that are connected to the hardware are defined and configured here">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_03WhoOvSEeabG6EdqbdIDg">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_wl4scOvSEeabG6EdqbdIDg">
           <designElement href="visualino_design.usemearch#_17BJM_EkEeaFcM395dpt6Q"/>
@@ -36,13 +55,56 @@
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_mCPVQOvXEeaAYYxNlIy_8w" text="self">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
       </ownedExpression>
-      <functionUsedIn href="program_robot.jucm#6084"/>
-      <functionUsedIn href="program_robot.jucm#10380"/>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Assumption" id="_YGOJE-xVEeasmNxQC8ra6w" description=""/>
+    <ownedRequirements xsi:type="rdal:Assumption" name="Child User" id="_YGOJE-xVEeasmNxQC8ra6w" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_1gRKQTM4EeeHT7vuJ8Hf1w">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_1gRKQDM4EeeHT7vuJ8Hf1w">
+          <designElement href="visualino_design.usemearch#_17CXUPEkEeaFcM395dpt6Q"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_eq6H8DQ8EeeRNNEigitqHA" text="self.ageMin >= 5 and self.ageMax &lt;= 12">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Assumption" name="Low Cost Arduino Robot" id="_sLcv8zM4EeeHT7vuJ8Hf1w" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_8BUccTM4EeeHT7vuJ8Hf1w">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_8BUccDM4EeeHT7vuJ8Hf1w">
+          <designElement href="visualino_design.usemearch#_17CXUfEkEeaFcM395dpt6Q"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R2 Sequence Node" id="_bFX1MjP7EeeHT7vuJ8Hf1w" description="this node runs all child nodes sequentially, from left to right. Each node runs and can end in success or failure. When a node ends with Success, the next node (from left to right) runs. The sequence ends with a failure if one of the nodes fails, or ends in success when all nodes have finished in success.">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_xDJc0TQ3Eeecw_beU43oAg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_xDJc0DQ3Eeecw_beU43oAg">
+          <designElement href="../org.farrusco/model/farrusco.ecore#/"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_x0faMDQ3Eeecw_beU43oAg" text="not self.getEClassifier( 'Sequencial' ).oclIsUndefined()">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R3 Parallel Node" id="_jQh2wjQREee2fof3jl46Gw" description="the parallel node runs all child nodes at the same time.  This node can be configured with different termination conditions. They may end in success or failure when all child nodes succeed or fail, respectively.">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_QMx2ATQyEeef355uq_mXVg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_4XUnUDQyEeef355uq_mXVg">
+          <designElement href="../org.farrusco/model/farrusco.ecore#/"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_BdyfwDQ3Eeecw_beU43oAg" text="not self.getEClassifier( 'Paralelo' ).oclIsUndefined()">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R4 Masking Result " id="_k1NgIjQSEee2fof3jl46Gw" description="sometimes it is necessary to change the normal termination result of a node to create a behavior. With this node, we can directly change the state in the node child, allowing you to create loops and various types of conditions."/>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R5 Import Tree Node " id="_O24yMjQTEee2fof3jl46Gw" description="with this node, we can import a tree from another file and insert it as a branch of the current tree."/>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R6 Input Node" id="_WPsy0jQTEee2fof3jl46Gw" description="input nodes read data from sensors attached to the system and may either succeed or fail depending on the value of the sensor."/>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R7 Output Node" id="_x6AWsjQTEee2fof3jl46Gw" description="Output nodes are used to change the state of the actuators defined in the root node."/>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R8 Waiting Node" id="_7683MjQTEee2fof3jl46Gw" description="Also called a delay, this node runs for a configurable period of time, and ends in success."/>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R9 Control Bar" id="_H8BcYDQUEee2fof3jl46Gw" description="at the top of the interface should be a bar where different tasks can be done:"/>
   </ownedPackages>
   <ownedContactInformation name="Artica" id="_WlQAGN8kEea2BJXh0b62wQ" email=""/>
-  <ownedSystOverview id="_IlId6t5sEeaU5bsIjJAn4w" description="The system being specified is a DSL for programming rover-like robots built with Arduino hardware. The DSL is made of an abstract syntax providing the domain concepts and their relations and an graphical concrete syntax to be used by users via a web-based application.." contactInformation="_WlQAGN8kEea2BJXh0b62wQ" purpose="The purpose of the language is to ease programming of the robot and make it accessible to children.">
+  <ownedSystOverview id="_IlId6t5sEeaU5bsIjJAn4w" description="The system being specified is the DSL for programming robots, called Visualino. The DSL is meant to introduce programming concepts to the children by using a visual syntax based on behavior tree diagrams." contactInformation="_WlQAGN8kEea2BJXh0b62wQ" purpose="The purpose of Visualino is to enable the persons without programming experience, especially the children, to program a behavior of low-cost robot.">
     <globalSystem href="visualino_design.usemearch#_165NYPEkEeaFcM395dpt6Q"/>
     <systemToBe href="visualino_design.usemearch#_16_UAPEkEeaFcM395dpt6e"/>
     <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w">
@@ -50,4 +112,7 @@
     </ownedContexts>
   </ownedSystOverview>
   <constraintLanguagesSpec href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#5663deb5-f5c5-4a39-a324-8da2b395dd7c"/>
+  <ownedStakeholders name="User" id="_quZnXTMxEeeHT7vuJ8Hf1w"/>
+  <ownedStakeholders name="Domain Expert" id="_tqSwvTMxEeeHT7vuJ8Hf1w"/>
+  <ownedStakeholders name="Software Engineer" id="_xR5JjTMxEeeHT7vuJ8Hf1w"/>
 </rdal:Specification>
