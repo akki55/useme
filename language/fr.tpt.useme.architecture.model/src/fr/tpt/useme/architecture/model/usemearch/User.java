@@ -14,6 +14,8 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getUses <em>Uses</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMin <em>Age Min</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMax <em>Age Max</em>}</li>
  * </ul>
  *
  * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getUser()
@@ -38,5 +40,57 @@ public interface User extends ContextElementType {
 	 * @generated
 	 */
 	EList<Tool> getUses();
+
+	/**
+	 * Returns the value of the '<em><b>Age Min</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Age Min</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Age Min</em>' attribute.
+	 * @see #setAgeMin(int)
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getUser_AgeMin()
+	 * @model required="true"
+	 * @generated
+	 */
+	int getAgeMin();
+
+	/**
+	 * Sets the value of the '{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMin <em>Age Min</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Age Min</em>' attribute.
+	 * @see #getAgeMin()
+	 * @generated
+	 */
+	void setAgeMin(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Age Max</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Age Max</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Age Max</em>' attribute.
+	 * @see #setAgeMax(int)
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getUser_AgeMax()
+	 * @model required="true"
+	 * @generated
+	 */
+	int getAgeMax();
+
+	/**
+	 * Sets the value of the '{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMax <em>Age Max</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Age Max</em>' attribute.
+	 * @see #getAgeMax()
+	 * @generated
+	 */
+	void setAgeMax(int value);
 
 } // User

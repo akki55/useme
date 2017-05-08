@@ -14,6 +14,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link fr.tpt.useme.architecture.model.usemearch.User} object.
@@ -44,6 +46,8 @@ public class UserItemProvider extends ContextElementTypeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addUsesPropertyDescriptor(object);
+			addAgeMinPropertyDescriptor(object);
+			addAgeMaxPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,6 +70,50 @@ public class UserItemProvider extends ContextElementTypeItemProvider {
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Age Min feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAgeMinPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_User_ageMin_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_User_ageMin_feature", "_UI_User_type"),
+				 UsemearchPackage.Literals.USER__AGE_MIN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Age Max feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAgeMaxPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_User_ageMax_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_User_ageMax_feature", "_UI_User_type"),
+				 UsemearchPackage.Literals.USER__AGE_MAX,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -106,6 +154,13 @@ public class UserItemProvider extends ContextElementTypeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(User.class)) {
+			case UsemearchPackage.USER__AGE_MIN:
+			case UsemearchPackage.USER__AGE_MAX:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

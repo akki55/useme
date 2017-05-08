@@ -8,12 +8,14 @@ import fr.tpt.useme.architecture.model.usemearch.User;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -26,6 +28,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getUses <em>Uses</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getAgeMin <em>Age Min</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getAgeMax <em>Age Max</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,6 +44,43 @@ public class UserImpl extends ContextElementTypeImpl implements User {
 	 * @ordered
 	 */
 	protected EList<Tool> uses;
+
+	/**
+	 * The default value of the '{@link #getAgeMin() <em>Age Min</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgeMin()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int AGE_MIN_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getAgeMin() <em>Age Min</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgeMin()
+	 * @generated
+	 * @ordered
+	 */
+	protected int ageMin = AGE_MIN_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getAgeMax() <em>Age Max</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgeMax()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int AGE_MAX_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getAgeMax() <em>Age Max</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgeMax()
+	 * @generated
+	 * @ordered
+	 */
+	protected int ageMax = AGE_MAX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,6 +111,48 @@ public class UserImpl extends ContextElementTypeImpl implements User {
 			uses = new EObjectWithInverseResolvingEList.ManyInverse<Tool>(Tool.class, this, UsemearchPackage.USER__USES, UsemearchPackage.TOOL__USED_BY);
 		}
 		return uses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getAgeMin() {
+		return ageMin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAgeMin(int newAgeMin) {
+		int oldAgeMin = ageMin;
+		ageMin = newAgeMin;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsemearchPackage.USER__AGE_MIN, oldAgeMin, ageMin));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getAgeMax() {
+		return ageMax;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAgeMax(int newAgeMax) {
+		int oldAgeMax = ageMax;
+		ageMax = newAgeMax;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsemearchPackage.USER__AGE_MAX, oldAgeMax, ageMax));
 	}
 
 	/**
@@ -111,6 +194,10 @@ public class UserImpl extends ContextElementTypeImpl implements User {
 		switch (featureID) {
 			case UsemearchPackage.USER__USES:
 				return getUses();
+			case UsemearchPackage.USER__AGE_MIN:
+				return getAgeMin();
+			case UsemearchPackage.USER__AGE_MAX:
+				return getAgeMax();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -128,6 +215,12 @@ public class UserImpl extends ContextElementTypeImpl implements User {
 				getUses().clear();
 				getUses().addAll((Collection<? extends Tool>)newValue);
 				return;
+			case UsemearchPackage.USER__AGE_MIN:
+				setAgeMin((Integer)newValue);
+				return;
+			case UsemearchPackage.USER__AGE_MAX:
+				setAgeMax((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -143,6 +236,12 @@ public class UserImpl extends ContextElementTypeImpl implements User {
 			case UsemearchPackage.USER__USES:
 				getUses().clear();
 				return;
+			case UsemearchPackage.USER__AGE_MIN:
+				setAgeMin(AGE_MIN_EDEFAULT);
+				return;
+			case UsemearchPackage.USER__AGE_MAX:
+				setAgeMax(AGE_MAX_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -157,8 +256,30 @@ public class UserImpl extends ContextElementTypeImpl implements User {
 		switch (featureID) {
 			case UsemearchPackage.USER__USES:
 				return uses != null && !uses.isEmpty();
+			case UsemearchPackage.USER__AGE_MIN:
+				return ageMin != AGE_MIN_EDEFAULT;
+			case UsemearchPackage.USER__AGE_MAX:
+				return ageMax != AGE_MAX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (ageMin: ");
+		result.append(ageMin);
+		result.append(", ageMax: ");
+		result.append(ageMax);
+		result.append(')');
+		return result.toString();
 	}
 
 } //UserImpl

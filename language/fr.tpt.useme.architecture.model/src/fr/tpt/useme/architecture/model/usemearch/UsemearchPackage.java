@@ -836,13 +836,31 @@ public interface UsemearchPackage extends EPackage {
 	int USER__USES = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Age Min</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__AGE_MIN = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Age Max</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__AGE_MAX = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_FEATURE_COUNT = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 1;
+	int USER_FEATURE_COUNT = CONTEXT_ELEMENT_TYPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.WorkPlaceImpl <em>Work Place</em>}' class.
@@ -2153,6 +2171,28 @@ public interface UsemearchPackage extends EPackage {
 	EReference getUser_Uses();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMin <em>Age Min</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Age Min</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.User#getAgeMin()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EAttribute getUser_AgeMin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMax <em>Age Max</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Age Max</em>'.
+	 * @see fr.tpt.useme.architecture.model.usemearch.User#getAgeMax()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EAttribute getUser_AgeMax();
+
+	/**
 	 * Returns the meta object for class '{@link fr.tpt.useme.architecture.model.usemearch.WorkPlace <em>Work Place</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2757,6 +2797,22 @@ public interface UsemearchPackage extends EPackage {
 		 * @generated
 		 */
 		EReference USER__USES = eINSTANCE.getUser_Uses();
+
+		/**
+		 * The meta object literal for the '<em><b>Age Min</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER__AGE_MIN = eINSTANCE.getUser_AgeMin();
+
+		/**
+		 * The meta object literal for the '<em><b>Age Max</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER__AGE_MAX = eINSTANCE.getUser_AgeMax();
 
 		/**
 		 * The meta object literal for the '{@link fr.tpt.useme.architecture.model.usemearch.impl.WorkPlaceImpl <em>Work Place</em>}' class.

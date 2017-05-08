@@ -637,6 +637,24 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getUser_AgeMin() {
+		return (EAttribute)userEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUser_AgeMax() {
+		return (EAttribute)userEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWorkPlace() {
 		return workPlaceEClass;
 	}
@@ -941,6 +959,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 
 		userEClass = createEClass(USER);
 		createEReference(userEClass, USER__USES);
+		createEAttribute(userEClass, USER__AGE_MIN);
+		createEAttribute(userEClass, USER__AGE_MAX);
 
 		workPlaceEClass = createEClass(WORK_PLACE);
 
@@ -1093,6 +1113,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 
 		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUser_Uses(), this.getTool(), this.getTool_UsedBy(), "uses", null, 1, -1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_AgeMin(), theEcorePackage.getEInt(), "ageMin", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_AgeMax(), theEcorePackage.getEInt(), "ageMax", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(workPlaceEClass, WorkPlace.class, "WorkPlace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
