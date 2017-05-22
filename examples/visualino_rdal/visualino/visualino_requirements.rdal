@@ -55,6 +55,9 @@
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_mCPVQOvXEeaAYYxNlIy_8w" text="self">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
       </ownedExpression>
+      <functionUsedIn href="program_robot.jucm#5629"/>
+      <functionUsedIn href="program_robot.jucm#5633"/>
+      <functionUsedIn href="program_robot.jucm#5641"/>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Assumption" name="Child User" id="_YGOJE-xVEeasmNxQC8ra6w" description="">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_1gRKQTM4EeeHT7vuJ8Hf1w">
@@ -62,7 +65,7 @@
           <designElement href="visualino_design.usemearch#_17CXUPEkEeaFcM395dpt6Q"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
-      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_eq6H8DQ8EeeRNNEigitqHA" text="self.ageMin >= 5 and self.ageMax &lt;= 12">
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_eq6H8DQ8EeeRNNEigitqHA" text="self.ageMin >= 5 and self.ageMax &lt;= 19">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
         <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
       </ownedExpression>
@@ -96,18 +99,19 @@
         <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
       </ownedExpression>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R4 Masking Result " id="_k1NgIjQSEee2fof3jl46Gw" description="sometimes it is necessary to change the normal termination result of a node to create a behavior. With this node, we can directly change the state in the node child, allowing you to create loops and various types of conditions."/>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R4 Masking Result " id="_k1NgIjQSEee2fof3jl46Gw" description="sometimes it is necessary to change the normal termination result of a node to create a behavior. With this node, we can directly change the state in the node child, allowing you to create loops and various types of conditions.">
+      <ownedRationales id="_HjT0ozTIEeemDca565NGsA"/>
+    </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Requirement" name="R5 Import Tree Node " id="_O24yMjQTEee2fof3jl46Gw" description="with this node, we can import a tree from another file and insert it as a branch of the current tree."/>
     <ownedRequirements xsi:type="rdal:Requirement" name="R6 Input Node" id="_WPsy0jQTEee2fof3jl46Gw" description="input nodes read data from sensors attached to the system and may either succeed or fail depending on the value of the sensor."/>
     <ownedRequirements xsi:type="rdal:Requirement" name="R7 Output Node" id="_x6AWsjQTEee2fof3jl46Gw" description="Output nodes are used to change the state of the actuators defined in the root node."/>
     <ownedRequirements xsi:type="rdal:Requirement" name="R8 Waiting Node" id="_7683MjQTEee2fof3jl46Gw" description="Also called a delay, this node runs for a configurable period of time, and ends in success."/>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R9 Control Bar" id="_H8BcYDQUEee2fof3jl46Gw" description="at the top of the interface should be a bar where different tasks can be done:"/>
   </ownedPackages>
   <ownedContactInformation name="Artica" id="_WlQAGN8kEea2BJXh0b62wQ" email=""/>
   <ownedSystOverview id="_IlId6t5sEeaU5bsIjJAn4w" description="The system being specified is the DSL for programming robots, called Visualino. The DSL is meant to introduce programming concepts to the children by using a visual syntax based on behavior tree diagrams." contactInformation="_WlQAGN8kEea2BJXh0b62wQ" purpose="The purpose of Visualino is to enable the persons without programming experience, especially the children, to program a behavior of low-cost robot.">
     <globalSystem href="visualino_design.usemearch#_165NYPEkEeaFcM395dpt6Q"/>
     <systemToBe href="visualino_design.usemearch#_16_UAPEkEeaFcM395dpt6e"/>
-    <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w">
+    <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w" description="">
       <globalSystemContext href="visualino_design.usemearch#_17AiIPEkEeaFcM395dpt6Q"/>
     </ownedContexts>
   </ownedSystOverview>
