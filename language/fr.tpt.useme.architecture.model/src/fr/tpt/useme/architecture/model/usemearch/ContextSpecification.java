@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getOwnedInstanceElements <em>Owned Instance Elements</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getOwnedEntityInstances <em>Owned Entity Instances</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getDevelopedDsl <em>Developed Dsl</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.ContextSpecification#getOwnedConnections <em>Owned Connections</em>}</li>
  * </ul>
@@ -24,20 +24,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ContextSpecification extends IdentifiedElement {
 	/**
-	 * Returns the value of the '<em><b>Owned Instance Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement}.
+	 * Returns the value of the '<em><b>Owned Entity Instances</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Owned Instance Elements</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Owned Entity Instances</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned Instance Elements</em>' containment reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getContextSpecification_OwnedInstanceElements()
+	 * @return the value of the '<em>Owned Entity Instances</em>' containment reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getContextSpecification_OwnedEntityInstances()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ContextInstanceElement> getOwnedInstanceElements();
+	EList<ContextEntityInstance> getOwnedEntityInstances();
 
 	/**
 	 * Returns the value of the '<em><b>Developed Dsl</b></em>' reference.
@@ -56,7 +56,7 @@ public interface ContextSpecification extends IdentifiedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Owned Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection}.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Owned Connections</em>' containment reference list isn't clear,
@@ -68,6 +68,6 @@ public interface ContextSpecification extends IdentifiedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<InstanceElementsConnection> getOwnedConnections();
+	EList<EntityInstancesConnection> getOwnedConnections();
 
 } // ContextSpecification

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdal:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:rdal="http://www.open-people.fr/rdal2" name="Visualino System" id="_FMREoN5sEeaU5bsIjJAn4w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+<rdal:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:rdal="http://www.open-people.fr/rdal2" name="Visualino System" id="_FMREoN5sEeaU5bsIjJAn4w" description="" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
   <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_MuevQd8kEea2BJXh0b62wQ">
     <ownedDesignElementRefs id="_-rvacDQsEee2fof3jl46Gw">
       <designElement href="visualino_design.usemearch#_165NYPEkEeaFcM395dpt6Q"/>
@@ -12,9 +12,9 @@
     </ownedDesignElementRefs>
   </ownedReferencedDesignElements>
   <ownedPackages xsi:type="rdal:GoalsPackage" name="High Level Goals" id="_U9_S8ODHEearDeIEXm32LA">
-    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G1" id="_bj2MouDHEearDeIEXm32LA" description="The user should be provided with a concepts to model behaviors of robot" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w">
-      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEXm32LA">
-        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeaVQqY6DpBpBw">
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G1" id="_bj2MouDHEearDeIEXm32L" description="The user should be provided with a concepts to model behaviors of robot" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_mDN0PbeEeaVQqY6DpBpBw">
           <designElement href="visualino_design.usemearch#_16_UAPEkEeaFcM395dpt6e"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
@@ -28,9 +28,9 @@
       </ownedReferencedDesignElements>
       <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_non_functional_goal_Usability"/>
     </ownedGoals>
-    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G2" id="_bj2MouDHEearDeIEXm32LA" description="The domain experts should be supported to create customized configurations" stakeholders="_tqSwvTMxEeeHT7vuJ8Hf1w">
-      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEXm32LA">
-        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeaVQqY6DpBpBw">
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G2" id="_bj2MouDHEearDeIEXm2LA" description="The domain experts should be supported to create customized configurations" stakeholders="_tqSwvTMxEeeHT7vuJ8Hf1w">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWADMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeVQqY6DpBpBw">
           <designElement href="visualino_design.usemearch#_16_UAPEkEeaFcM395dpt6e"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>

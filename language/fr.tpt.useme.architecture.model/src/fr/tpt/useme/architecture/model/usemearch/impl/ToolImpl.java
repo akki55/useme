@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class ToolImpl extends ContextElementTypeImpl implements Tool {
+public abstract class ToolImpl extends ContextEntityTypeImpl implements Tool {
 	/**
 	 * The cached value of the '{@link #getUsedBy() <em>Used By</em>}' reference list.
 	 * <!-- begin-user-doc -->

@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class UserImpl extends ContextElementTypeImpl implements User {
+public class UserImpl extends ContextEntityTypeImpl implements User {
 	/**
 	 * The cached value of the '{@link #getUses() <em>Uses</em>}' reference list.
 	 * <!-- begin-user-doc -->

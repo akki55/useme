@@ -76,8 +76,8 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createDslBasedSystemSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseContextElementType(ContextElementType object) {
-				return createContextElementTypeAdapter();
+			public Adapter caseContextEntityType(ContextEntityType object) {
+				return createContextEntityTypeAdapter();
 			}
 			@Override
 			public Adapter caseContextSpecification(ContextSpecification object) {
@@ -164,16 +164,20 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createMaintenanceServiceAdapter();
 			}
 			@Override
-			public Adapter caseContextInstanceElement(ContextInstanceElement object) {
-				return createContextInstanceElementAdapter();
+			public Adapter caseContextEntityInstance(ContextEntityInstance object) {
+				return createContextEntityInstanceAdapter();
 			}
 			@Override
-			public Adapter caseInstanceElementsConnection(InstanceElementsConnection object) {
-				return createInstanceElementsConnectionAdapter();
+			public Adapter caseEntityInstancesConnection(EntityInstancesConnection object) {
+				return createEntityInstancesConnectionAdapter();
 			}
 			@Override
 			public Adapter casePhysicalSystem(PhysicalSystem object) {
 				return createPhysicalSystemAdapter();
+			}
+			@Override
+			public Adapter caseInteractionFeature(InteractionFeature object) {
+				return createInteractionFeatureAdapter();
 			}
 			@Override
 			public Adapter caseDescription_IdentifiedElement(org.eclipse.sirius.viewpoint.description.IdentifiedElement object) {
@@ -228,16 +232,16 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextElementType <em>Context Element Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextEntityType <em>Context Entity Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ContextElementType
+	 * @see fr.tpt.useme.architecture.model.usemearch.ContextEntityType
 	 * @generated
 	 */
-	public Adapter createContextElementTypeAdapter() {
+	public Adapter createContextEntityTypeAdapter() {
 		return null;
 	}
 
@@ -536,30 +540,30 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement <em>Context Instance Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance <em>Context Entity Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement
+	 * @see fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance
 	 * @generated
 	 */
-	public Adapter createContextInstanceElementAdapter() {
+	public Adapter createContextEntityInstanceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection <em>Instance Elements Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection <em>Entity Instances Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection
+	 * @see fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection
 	 * @generated
 	 */
-	public Adapter createInstanceElementsConnectionAdapter() {
+	public Adapter createEntityInstancesConnectionAdapter() {
 		return null;
 	}
 
@@ -574,6 +578,20 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPhysicalSystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.InteractionFeature <em>Interaction Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.InteractionFeature
+	 * @generated
+	 */
+	public Adapter createInteractionFeatureAdapter() {
 		return null;
 	}
 

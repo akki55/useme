@@ -8,8 +8,8 @@ import fr.labsticc.framework.settings.model.settings.SettingsPackage;
 import fr.tpt.useme.architecture.model.usemearch.AbstractSyntax;
 import fr.tpt.useme.architecture.model.usemearch.Computer;
 import fr.tpt.useme.architecture.model.usemearch.ConcreteSyntax;
-import fr.tpt.useme.architecture.model.usemearch.ContextElementType;
-import fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement;
+import fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance;
+import fr.tpt.useme.architecture.model.usemearch.ContextEntityType;
 import fr.tpt.useme.architecture.model.usemearch.ContextSpecification;
 import fr.tpt.useme.architecture.model.usemearch.Documentation;
 import fr.tpt.useme.architecture.model.usemearch.DomainConcept;
@@ -17,9 +17,10 @@ import fr.tpt.useme.architecture.model.usemearch.Dsl;
 import fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification;
 import fr.tpt.useme.architecture.model.usemearch.ECoreAbstractSyntax;
 import fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept;
+import fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection;
 import fr.tpt.useme.architecture.model.usemearch.FeatureDiagram;
 import fr.tpt.useme.architecture.model.usemearch.IdentifiedElement;
-import fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection;
+import fr.tpt.useme.architecture.model.usemearch.InteractionFeature;
 import fr.tpt.useme.architecture.model.usemearch.MaintenanceService;
 import fr.tpt.useme.architecture.model.usemearch.ModelChecker;
 import fr.tpt.useme.architecture.model.usemearch.ModelSimulator;
@@ -73,7 +74,7 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass contextElementTypeEClass = null;
+	private EClass contextEntityTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -227,14 +228,14 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass contextInstanceElementEClass = null;
+	private EClass contextEntityInstanceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass instanceElementsConnectionEClass = null;
+	private EClass entityInstancesConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,6 +243,13 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * @generated
 	 */
 	private EClass physicalSystemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interactionFeatureEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -376,7 +384,7 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDslBasedSystemSpecification_OwnedContextElementTypes() {
+	public EReference getDslBasedSystemSpecification_OwnedContextEntityTypes() {
 		return (EReference)dslBasedSystemSpecificationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -385,8 +393,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getContextElementType() {
-		return contextElementTypeEClass;
+	public EClass getContextEntityType() {
+		return contextEntityTypeEClass;
 	}
 
 	/**
@@ -394,8 +402,17 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContextElementType_Category() {
-		return (EReference)contextElementTypeEClass.getEStructuralFeatures().get(0);
+	public EReference getContextEntityType_Category() {
+		return (EReference)contextEntityTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getContextEntityType_OwnedInteractionFeatures() {
+		return (EReference)contextEntityTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -412,7 +429,7 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContextSpecification_OwnedInstanceElements() {
+	public EReference getContextSpecification_OwnedEntityInstances() {
 		return (EReference)contextSpecificationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -799,8 +816,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getContextInstanceElement() {
-		return contextInstanceElementEClass;
+	public EClass getContextEntityInstance() {
+		return contextEntityInstanceEClass;
 	}
 
 	/**
@@ -808,8 +825,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContextInstanceElement_ElementType() {
-		return (EReference)contextInstanceElementEClass.getEStructuralFeatures().get(0);
+	public EReference getContextEntityInstance_EntityType() {
+		return (EReference)contextEntityInstanceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -817,8 +834,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInstanceElementsConnection() {
-		return instanceElementsConnectionEClass;
+	public EClass getEntityInstancesConnection() {
+		return entityInstancesConnectionEClass;
 	}
 
 	/**
@@ -826,8 +843,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstanceElementsConnection_SourceFeature() {
-		return (EReference)instanceElementsConnectionEClass.getEStructuralFeatures().get(0);
+	public EReference getEntityInstancesConnection_SourceFeature() {
+		return (EReference)entityInstancesConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -835,8 +852,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstanceElementsConnection_DestinationFeature() {
-		return (EReference)instanceElementsConnectionEClass.getEStructuralFeatures().get(1);
+	public EReference getEntityInstancesConnection_DestinationFeature() {
+		return (EReference)entityInstancesConnectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -844,8 +861,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstanceElementsConnection_SourceInstanceElement() {
-		return (EReference)instanceElementsConnectionEClass.getEStructuralFeatures().get(2);
+	public EReference getEntityInstancesConnection_SourceEntityInstance() {
+		return (EReference)entityInstancesConnectionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -853,8 +870,8 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInstanceElementsConnection_DestinationInstanceElement() {
-		return (EReference)instanceElementsConnectionEClass.getEStructuralFeatures().get(3);
+	public EReference getEntityInstancesConnection_DestinationEntityInstance() {
+		return (EReference)entityInstancesConnectionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -882,6 +899,24 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 	 */
 	public EReference getPhysicalSystem_Outputs() {
 		return (EReference)physicalSystemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInteractionFeature() {
+		return interactionFeatureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInteractionFeature_Feature() {
+		return (EReference)interactionFeatureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -920,13 +955,14 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 		dslBasedSystemSpecificationEClass = createEClass(DSL_BASED_SYSTEM_SPECIFICATION);
 		createEReference(dslBasedSystemSpecificationEClass, DSL_BASED_SYSTEM_SPECIFICATION__DEVELOPED_DSL);
 		createEReference(dslBasedSystemSpecificationEClass, DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXTS);
-		createEReference(dslBasedSystemSpecificationEClass, DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES);
+		createEReference(dslBasedSystemSpecificationEClass, DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES);
 
-		contextElementTypeEClass = createEClass(CONTEXT_ELEMENT_TYPE);
-		createEReference(contextElementTypeEClass, CONTEXT_ELEMENT_TYPE__CATEGORY);
+		contextEntityTypeEClass = createEClass(CONTEXT_ENTITY_TYPE);
+		createEReference(contextEntityTypeEClass, CONTEXT_ENTITY_TYPE__CATEGORY);
+		createEReference(contextEntityTypeEClass, CONTEXT_ENTITY_TYPE__OWNED_INTERACTION_FEATURES);
 
 		contextSpecificationEClass = createEClass(CONTEXT_SPECIFICATION);
-		createEReference(contextSpecificationEClass, CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS);
+		createEReference(contextSpecificationEClass, CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES);
 		createEReference(contextSpecificationEClass, CONTEXT_SPECIFICATION__DEVELOPED_DSL);
 		createEReference(contextSpecificationEClass, CONTEXT_SPECIFICATION__OWNED_CONNECTIONS);
 
@@ -990,18 +1026,21 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 
 		maintenanceServiceEClass = createEClass(MAINTENANCE_SERVICE);
 
-		contextInstanceElementEClass = createEClass(CONTEXT_INSTANCE_ELEMENT);
-		createEReference(contextInstanceElementEClass, CONTEXT_INSTANCE_ELEMENT__ELEMENT_TYPE);
+		contextEntityInstanceEClass = createEClass(CONTEXT_ENTITY_INSTANCE);
+		createEReference(contextEntityInstanceEClass, CONTEXT_ENTITY_INSTANCE__ENTITY_TYPE);
 
-		instanceElementsConnectionEClass = createEClass(INSTANCE_ELEMENTS_CONNECTION);
-		createEReference(instanceElementsConnectionEClass, INSTANCE_ELEMENTS_CONNECTION__SOURCE_FEATURE);
-		createEReference(instanceElementsConnectionEClass, INSTANCE_ELEMENTS_CONNECTION__DESTINATION_FEATURE);
-		createEReference(instanceElementsConnectionEClass, INSTANCE_ELEMENTS_CONNECTION__SOURCE_INSTANCE_ELEMENT);
-		createEReference(instanceElementsConnectionEClass, INSTANCE_ELEMENTS_CONNECTION__DESTINATION_INSTANCE_ELEMENT);
+		entityInstancesConnectionEClass = createEClass(ENTITY_INSTANCES_CONNECTION);
+		createEReference(entityInstancesConnectionEClass, ENTITY_INSTANCES_CONNECTION__SOURCE_FEATURE);
+		createEReference(entityInstancesConnectionEClass, ENTITY_INSTANCES_CONNECTION__DESTINATION_FEATURE);
+		createEReference(entityInstancesConnectionEClass, ENTITY_INSTANCES_CONNECTION__SOURCE_ENTITY_INSTANCE);
+		createEReference(entityInstancesConnectionEClass, ENTITY_INSTANCES_CONNECTION__DESTINATION_ENTITY_INSTANCE);
 
 		physicalSystemEClass = createEClass(PHYSICAL_SYSTEM);
 		createEReference(physicalSystemEClass, PHYSICAL_SYSTEM__INPUTS);
 		createEReference(physicalSystemEClass, PHYSICAL_SYSTEM__OUTPUTS);
+
+		interactionFeatureEClass = createEClass(INTERACTION_FEATURE);
+		createEReference(interactionFeatureEClass, INTERACTION_FEATURE__FEATURE);
 	}
 
 	/**
@@ -1039,17 +1078,17 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 
 		// Add supertypes to classes
 		dslBasedSystemSpecificationEClass.getESuperTypes().add(this.getIdentifiedElement());
-		contextElementTypeEClass.getESuperTypes().add(this.getIdentifiedElement());
+		contextEntityTypeEClass.getESuperTypes().add(this.getIdentifiedElement());
 		contextSpecificationEClass.getESuperTypes().add(this.getIdentifiedElement());
-		dslEClass.getESuperTypes().add(this.getContextElementType());
+		dslEClass.getESuperTypes().add(this.getContextEntityType());
 		syntaxEClass.getESuperTypes().add(this.getIdentifiedElement());
 		abstractSyntaxEClass.getESuperTypes().add(this.getSyntax());
 		concreteSyntaxEClass.getESuperTypes().add(this.getSyntax());
 		eCoreAbstractSyntaxEClass.getESuperTypes().add(this.getAbstractSyntax());
 		siriusConcreteSyntaxEClass.getESuperTypes().add(this.getConcreteSyntax());
-		toolEClass.getESuperTypes().add(this.getContextElementType());
-		userEClass.getESuperTypes().add(this.getContextElementType());
-		workPlaceEClass.getESuperTypes().add(this.getContextElementType());
+		toolEClass.getESuperTypes().add(this.getContextEntityType());
+		userEClass.getESuperTypes().add(this.getContextEntityType());
+		workPlaceEClass.getESuperTypes().add(this.getContextEntityType());
 		computerEClass.getESuperTypes().add(this.getTool());
 		softwareToolEClass.getESuperTypes().add(this.getTool());
 		operatingSystemEClass.getESuperTypes().add(this.getSoftwareTool());
@@ -1059,11 +1098,12 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 		featureDiagramEClass.getESuperTypes().add(this.getIdentifiedElement());
 		modelCheckerEClass.getESuperTypes().add(this.getSoftwareTool());
 		modelSimulatorEClass.getESuperTypes().add(this.getSoftwareTool());
-		documentationEClass.getESuperTypes().add(this.getContextElementType());
+		documentationEClass.getESuperTypes().add(this.getContextEntityType());
 		maintenanceServiceEClass.getESuperTypes().add(theDescriptionPackage.getIdentifiedElement());
-		contextInstanceElementEClass.getESuperTypes().add(this.getIdentifiedElement());
-		instanceElementsConnectionEClass.getESuperTypes().add(this.getIdentifiedElement());
-		physicalSystemEClass.getESuperTypes().add(this.getContextElementType());
+		contextEntityInstanceEClass.getESuperTypes().add(this.getIdentifiedElement());
+		entityInstancesConnectionEClass.getESuperTypes().add(this.getIdentifiedElement());
+		physicalSystemEClass.getESuperTypes().add(this.getContextEntityType());
+		interactionFeatureEClass.getESuperTypes().add(this.getIdentifiedElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(identifiedElementEClass, IdentifiedElement.class, "IdentifiedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1074,15 +1114,16 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 		initEClass(dslBasedSystemSpecificationEClass, DslBasedSystemSpecification.class, "DslBasedSystemSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDslBasedSystemSpecification_DevelopedDsl(), this.getDsl(), null, "developedDsl", null, 1, 1, DslBasedSystemSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDslBasedSystemSpecification_OwnedContexts(), this.getContextSpecification(), null, "ownedContexts", null, 1, -1, DslBasedSystemSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDslBasedSystemSpecification_OwnedContextElementTypes(), this.getContextElementType(), null, "ownedContextElementTypes", null, 1, -1, DslBasedSystemSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDslBasedSystemSpecification_OwnedContextEntityTypes(), this.getContextEntityType(), null, "ownedContextEntityTypes", null, 1, -1, DslBasedSystemSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(contextElementTypeEClass, ContextElementType.class, "ContextElementType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContextElementType_Category(), theSettingsPackage.getCategory(), null, "category", null, 0, -1, ContextElementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(contextEntityTypeEClass, ContextEntityType.class, "ContextEntityType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContextEntityType_Category(), theSettingsPackage.getCategory(), null, "category", null, 0, -1, ContextEntityType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContextEntityType_OwnedInteractionFeatures(), this.getInteractionFeature(), null, "ownedInteractionFeatures", null, 0, -1, ContextEntityType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contextSpecificationEClass, ContextSpecification.class, "ContextSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContextSpecification_OwnedInstanceElements(), this.getContextInstanceElement(), null, "ownedInstanceElements", null, 1, -1, ContextSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContextSpecification_OwnedEntityInstances(), this.getContextEntityInstance(), null, "ownedEntityInstances", null, 1, -1, ContextSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContextSpecification_DevelopedDsl(), this.getDsl(), null, "developedDsl", null, 1, 1, ContextSpecification.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getContextSpecification_OwnedConnections(), this.getInstanceElementsConnection(), null, "ownedConnections", null, 0, -1, ContextSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContextSpecification_OwnedConnections(), this.getEntityInstancesConnection(), null, "ownedConnections", null, 0, -1, ContextSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dslEClass, Dsl.class, "Dsl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDsl_OwnedSyntaxes(), this.getSyntax(), null, "ownedSyntaxes", null, 2, -1, Dsl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1144,18 +1185,21 @@ public class UsemearchPackageImpl extends EPackageImpl implements UsemearchPacka
 
 		initEClass(maintenanceServiceEClass, MaintenanceService.class, "MaintenanceService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(contextInstanceElementEClass, ContextInstanceElement.class, "ContextInstanceElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContextInstanceElement_ElementType(), this.getContextElementType(), null, "elementType", null, 1, 1, ContextInstanceElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(contextEntityInstanceEClass, ContextEntityInstance.class, "ContextEntityInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContextEntityInstance_EntityType(), this.getContextEntityType(), null, "entityType", null, 1, 1, ContextEntityInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(instanceElementsConnectionEClass, InstanceElementsConnection.class, "InstanceElementsConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInstanceElementsConnection_SourceFeature(), theEcorePackage.getEReference(), null, "sourceFeature", null, 1, 1, InstanceElementsConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInstanceElementsConnection_DestinationFeature(), theEcorePackage.getEReference(), null, "destinationFeature", null, 1, 1, InstanceElementsConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInstanceElementsConnection_SourceInstanceElement(), this.getContextInstanceElement(), null, "sourceInstanceElement", null, 1, 1, InstanceElementsConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInstanceElementsConnection_DestinationInstanceElement(), this.getContextInstanceElement(), null, "destinationInstanceElement", null, 1, 1, InstanceElementsConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(entityInstancesConnectionEClass, EntityInstancesConnection.class, "EntityInstancesConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEntityInstancesConnection_SourceFeature(), this.getInteractionFeature(), null, "sourceFeature", null, 1, 1, EntityInstancesConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntityInstancesConnection_DestinationFeature(), this.getInteractionFeature(), null, "destinationFeature", null, 1, 1, EntityInstancesConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntityInstancesConnection_SourceEntityInstance(), this.getContextEntityInstance(), null, "sourceEntityInstance", null, 1, 1, EntityInstancesConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntityInstancesConnection_DestinationEntityInstance(), this.getContextEntityInstance(), null, "destinationEntityInstance", null, 1, 1, EntityInstancesConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalSystemEClass, PhysicalSystem.class, "PhysicalSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPhysicalSystem_Inputs(), theEcorePackage.getEReference(), null, "inputs", null, 1, -1, PhysicalSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPhysicalSystem_Outputs(), theEcorePackage.getEReference(), null, "outputs", null, 1, -1, PhysicalSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(interactionFeatureEClass, InteractionFeature.class, "InteractionFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInteractionFeature_Feature(), theEcorePackage.getEReference(), null, "feature", null, 1, 1, InteractionFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

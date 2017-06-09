@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * @model
  * @generated
  */
-public interface PhysicalSystem extends ContextElementType {
+public interface PhysicalSystem extends ContextEntityType {
 
 	/**
 	 * Returns the value of the '<em><b>Inputs</b></em>' reference list.

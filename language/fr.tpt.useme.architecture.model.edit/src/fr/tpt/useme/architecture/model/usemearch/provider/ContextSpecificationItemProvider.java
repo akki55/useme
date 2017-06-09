@@ -85,7 +85,7 @@ public class ContextSpecificationItemProvider extends IdentifiedElementItemProvi
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS);
+			childrenFeatures.add(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES);
 			childrenFeatures.add(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS);
 		}
 		return childrenFeatures;
@@ -142,7 +142,7 @@ public class ContextSpecificationItemProvider extends IdentifiedElementItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContextSpecification.class)) {
-			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS:
+			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES:
 			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -163,13 +163,13 @@ public class ContextSpecificationItemProvider extends IdentifiedElementItemProvi
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS,
-				 UsemearchFactory.eINSTANCE.createContextInstanceElement()));
+				(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES,
+				 UsemearchFactory.eINSTANCE.createContextEntityInstance()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS,
-				 UsemearchFactory.eINSTANCE.createInstanceElementsConnection()));
+				 UsemearchFactory.eINSTANCE.createEntityInstancesConnection()));
 	}
 
 }

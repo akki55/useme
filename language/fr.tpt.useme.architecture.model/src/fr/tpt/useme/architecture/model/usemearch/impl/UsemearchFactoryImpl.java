@@ -71,9 +71,10 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 			case UsemearchPackage.MODEL_CHECKER: return createModelChecker();
 			case UsemearchPackage.MODEL_SIMULATOR: return createModelSimulator();
 			case UsemearchPackage.MAINTENANCE_SERVICE: return createMaintenanceService();
-			case UsemearchPackage.CONTEXT_INSTANCE_ELEMENT: return createContextInstanceElement();
-			case UsemearchPackage.INSTANCE_ELEMENTS_CONNECTION: return createInstanceElementsConnection();
+			case UsemearchPackage.CONTEXT_ENTITY_INSTANCE: return createContextEntityInstance();
+			case UsemearchPackage.ENTITY_INSTANCES_CONNECTION: return createEntityInstancesConnection();
 			case UsemearchPackage.PHYSICAL_SYSTEM: return createPhysicalSystem();
+			case UsemearchPackage.INTERACTION_FEATURE: return createInteractionFeature();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -234,9 +235,9 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextInstanceElement createContextInstanceElement() {
-		ContextInstanceElementImpl contextInstanceElement = new ContextInstanceElementImpl();
-		return contextInstanceElement;
+	public ContextEntityInstance createContextEntityInstance() {
+		ContextEntityInstanceImpl contextEntityInstance = new ContextEntityInstanceImpl();
+		return contextEntityInstance;
 	}
 
 	/**
@@ -244,9 +245,9 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InstanceElementsConnection createInstanceElementsConnection() {
-		InstanceElementsConnectionImpl instanceElementsConnection = new InstanceElementsConnectionImpl();
-		return instanceElementsConnection;
+	public EntityInstancesConnection createEntityInstancesConnection() {
+		EntityInstancesConnectionImpl entityInstancesConnection = new EntityInstancesConnectionImpl();
+		return entityInstancesConnection;
 	}
 
 	/**
@@ -257,6 +258,16 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	public PhysicalSystem createPhysicalSystem() {
 		PhysicalSystemImpl physicalSystem = new PhysicalSystemImpl();
 		return physicalSystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InteractionFeature createInteractionFeature() {
+		InteractionFeatureImpl interactionFeature = new InteractionFeatureImpl();
+		return interactionFeature;
 	}
 
 	/**

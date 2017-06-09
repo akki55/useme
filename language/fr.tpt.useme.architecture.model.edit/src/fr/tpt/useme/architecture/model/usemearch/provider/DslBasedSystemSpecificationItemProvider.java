@@ -87,7 +87,7 @@ public class DslBasedSystemSpecificationItemProvider extends IdentifiedElementIt
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXTS);
-			childrenFeatures.add(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES);
+			childrenFeatures.add(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,7 @@ public class DslBasedSystemSpecificationItemProvider extends IdentifiedElementIt
 
 		switch (notification.getFeatureID(DslBasedSystemSpecification.class)) {
 			case UsemearchPackage.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXTS:
-			case UsemearchPackage.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES:
+			case UsemearchPackage.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -169,47 +169,47 @@ public class DslBasedSystemSpecificationItemProvider extends IdentifiedElementIt
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createDsl()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createUser()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createWorkPlace()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createComputer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createSoftwareTool()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createOperatingSystem()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createModelChecker()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createModelSimulator()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ELEMENT_TYPES,
+				(UsemearchPackage.Literals.DSL_BASED_SYSTEM_SPECIFICATION__OWNED_CONTEXT_ENTITY_TYPES,
 				 UsemearchFactory.eINSTANCE.createPhysicalSystem()));
 	}
 

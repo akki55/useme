@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class PhysicalSystemImpl extends ContextElementTypeImpl implements PhysicalSystem {
+public class PhysicalSystemImpl extends ContextEntityTypeImpl implements PhysicalSystem {
 	/**
 	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' reference list.
 	 * <!-- begin-user-doc -->

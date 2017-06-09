@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface Tool extends ContextElementType {
+public interface Tool extends ContextEntityType {
 	/**
 	 * Returns the value of the '<em><b>Used By</b></em>' reference list.
 	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.User}.

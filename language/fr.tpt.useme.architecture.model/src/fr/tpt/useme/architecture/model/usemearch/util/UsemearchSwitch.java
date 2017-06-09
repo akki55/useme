@@ -96,10 +96,10 @@ public class UsemearchSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.CONTEXT_ELEMENT_TYPE: {
-				ContextElementType contextElementType = (ContextElementType)theEObject;
-				T result = caseContextElementType(contextElementType);
-				if (result == null) result = caseIdentifiedElement(contextElementType);
+			case UsemearchPackage.CONTEXT_ENTITY_TYPE: {
+				ContextEntityType contextEntityType = (ContextEntityType)theEObject;
+				T result = caseContextEntityType(contextEntityType);
+				if (result == null) result = caseIdentifiedElement(contextEntityType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -113,7 +113,7 @@ public class UsemearchSwitch<T> {
 			case UsemearchPackage.DSL: {
 				Dsl dsl = (Dsl)theEObject;
 				T result = caseDsl(dsl);
-				if (result == null) result = caseContextElementType(dsl);
+				if (result == null) result = caseContextEntityType(dsl);
 				if (result == null) result = caseIdentifiedElement(dsl);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -162,7 +162,7 @@ public class UsemearchSwitch<T> {
 			case UsemearchPackage.TOOL: {
 				Tool tool = (Tool)theEObject;
 				T result = caseTool(tool);
-				if (result == null) result = caseContextElementType(tool);
+				if (result == null) result = caseContextEntityType(tool);
 				if (result == null) result = caseIdentifiedElement(tool);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -170,7 +170,7 @@ public class UsemearchSwitch<T> {
 			case UsemearchPackage.USER: {
 				User user = (User)theEObject;
 				T result = caseUser(user);
-				if (result == null) result = caseContextElementType(user);
+				if (result == null) result = caseContextEntityType(user);
 				if (result == null) result = caseIdentifiedElement(user);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -178,7 +178,7 @@ public class UsemearchSwitch<T> {
 			case UsemearchPackage.WORK_PLACE: {
 				WorkPlace workPlace = (WorkPlace)theEObject;
 				T result = caseWorkPlace(workPlace);
-				if (result == null) result = caseContextElementType(workPlace);
+				if (result == null) result = caseContextEntityType(workPlace);
 				if (result == null) result = caseIdentifiedElement(workPlace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -187,7 +187,7 @@ public class UsemearchSwitch<T> {
 				Computer computer = (Computer)theEObject;
 				T result = caseComputer(computer);
 				if (result == null) result = caseTool(computer);
-				if (result == null) result = caseContextElementType(computer);
+				if (result == null) result = caseContextEntityType(computer);
 				if (result == null) result = caseIdentifiedElement(computer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -196,7 +196,7 @@ public class UsemearchSwitch<T> {
 				SoftwareTool softwareTool = (SoftwareTool)theEObject;
 				T result = caseSoftwareTool(softwareTool);
 				if (result == null) result = caseTool(softwareTool);
-				if (result == null) result = caseContextElementType(softwareTool);
+				if (result == null) result = caseContextEntityType(softwareTool);
 				if (result == null) result = caseIdentifiedElement(softwareTool);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -206,7 +206,7 @@ public class UsemearchSwitch<T> {
 				T result = caseOperatingSystem(operatingSystem);
 				if (result == null) result = caseSoftwareTool(operatingSystem);
 				if (result == null) result = caseTool(operatingSystem);
-				if (result == null) result = caseContextElementType(operatingSystem);
+				if (result == null) result = caseContextEntityType(operatingSystem);
 				if (result == null) result = caseIdentifiedElement(operatingSystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -245,7 +245,7 @@ public class UsemearchSwitch<T> {
 				T result = caseModelChecker(modelChecker);
 				if (result == null) result = caseSoftwareTool(modelChecker);
 				if (result == null) result = caseTool(modelChecker);
-				if (result == null) result = caseContextElementType(modelChecker);
+				if (result == null) result = caseContextEntityType(modelChecker);
 				if (result == null) result = caseIdentifiedElement(modelChecker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -255,7 +255,7 @@ public class UsemearchSwitch<T> {
 				T result = caseModelSimulator(modelSimulator);
 				if (result == null) result = caseSoftwareTool(modelSimulator);
 				if (result == null) result = caseTool(modelSimulator);
-				if (result == null) result = caseContextElementType(modelSimulator);
+				if (result == null) result = caseContextEntityType(modelSimulator);
 				if (result == null) result = caseIdentifiedElement(modelSimulator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -263,7 +263,7 @@ public class UsemearchSwitch<T> {
 			case UsemearchPackage.DOCUMENTATION: {
 				Documentation documentation = (Documentation)theEObject;
 				T result = caseDocumentation(documentation);
-				if (result == null) result = caseContextElementType(documentation);
+				if (result == null) result = caseContextEntityType(documentation);
 				if (result == null) result = caseIdentifiedElement(documentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -275,25 +275,32 @@ public class UsemearchSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.CONTEXT_INSTANCE_ELEMENT: {
-				ContextInstanceElement contextInstanceElement = (ContextInstanceElement)theEObject;
-				T result = caseContextInstanceElement(contextInstanceElement);
-				if (result == null) result = caseIdentifiedElement(contextInstanceElement);
+			case UsemearchPackage.CONTEXT_ENTITY_INSTANCE: {
+				ContextEntityInstance contextEntityInstance = (ContextEntityInstance)theEObject;
+				T result = caseContextEntityInstance(contextEntityInstance);
+				if (result == null) result = caseIdentifiedElement(contextEntityInstance);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UsemearchPackage.INSTANCE_ELEMENTS_CONNECTION: {
-				InstanceElementsConnection instanceElementsConnection = (InstanceElementsConnection)theEObject;
-				T result = caseInstanceElementsConnection(instanceElementsConnection);
-				if (result == null) result = caseIdentifiedElement(instanceElementsConnection);
+			case UsemearchPackage.ENTITY_INSTANCES_CONNECTION: {
+				EntityInstancesConnection entityInstancesConnection = (EntityInstancesConnection)theEObject;
+				T result = caseEntityInstancesConnection(entityInstancesConnection);
+				if (result == null) result = caseIdentifiedElement(entityInstancesConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case UsemearchPackage.PHYSICAL_SYSTEM: {
 				PhysicalSystem physicalSystem = (PhysicalSystem)theEObject;
 				T result = casePhysicalSystem(physicalSystem);
-				if (result == null) result = caseContextElementType(physicalSystem);
+				if (result == null) result = caseContextEntityType(physicalSystem);
 				if (result == null) result = caseIdentifiedElement(physicalSystem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UsemearchPackage.INTERACTION_FEATURE: {
+				InteractionFeature interactionFeature = (InteractionFeature)theEObject;
+				T result = caseInteractionFeature(interactionFeature);
+				if (result == null) result = caseIdentifiedElement(interactionFeature);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -332,17 +339,17 @@ public class UsemearchSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Context Element Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Context Entity Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Context Element Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Context Entity Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseContextElementType(ContextElementType object) {
+	public T caseContextEntityType(ContextEntityType object) {
 		return null;
 	}
 
@@ -662,32 +669,32 @@ public class UsemearchSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Context Instance Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Context Entity Instance</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Context Instance Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Context Entity Instance</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseContextInstanceElement(ContextInstanceElement object) {
+	public T caseContextEntityInstance(ContextEntityInstance object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Instance Elements Connection</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entity Instances Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Instance Elements Connection</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entity Instances Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInstanceElementsConnection(InstanceElementsConnection object) {
+	public T caseEntityInstancesConnection(EntityInstancesConnection object) {
 		return null;
 	}
 
@@ -703,6 +710,21 @@ public class UsemearchSwitch<T> {
 	 * @generated
 	 */
 	public T casePhysicalSystem(PhysicalSystem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interaction Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interaction Feature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInteractionFeature(InteractionFeature object) {
 		return null;
 	}
 

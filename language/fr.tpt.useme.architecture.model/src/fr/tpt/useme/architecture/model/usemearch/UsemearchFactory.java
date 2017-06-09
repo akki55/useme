@@ -157,22 +157,22 @@ public interface UsemearchFactory extends EFactory {
 	MaintenanceService createMaintenanceService();
 
 	/**
-	 * Returns a new object of class '<em>Context Instance Element</em>'.
+	 * Returns a new object of class '<em>Context Entity Instance</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Context Instance Element</em>'.
+	 * @return a new object of class '<em>Context Entity Instance</em>'.
 	 * @generated
 	 */
-	ContextInstanceElement createContextInstanceElement();
+	ContextEntityInstance createContextEntityInstance();
 
 	/**
-	 * Returns a new object of class '<em>Instance Elements Connection</em>'.
+	 * Returns a new object of class '<em>Entity Instances Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Instance Elements Connection</em>'.
+	 * @return a new object of class '<em>Entity Instances Connection</em>'.
 	 * @generated
 	 */
-	InstanceElementsConnection createInstanceElementsConnection();
+	EntityInstancesConnection createEntityInstancesConnection();
 
 	/**
 	 * Returns a new object of class '<em>Physical System</em>'.
@@ -182,6 +182,15 @@ public interface UsemearchFactory extends EFactory {
 	 * @generated
 	 */
 	PhysicalSystem createPhysicalSystem();
+
+	/**
+	 * Returns a new object of class '<em>Interaction Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interaction Feature</em>'.
+	 * @generated
+	 */
+	InteractionFeature createInteractionFeature();
 
 	/**
 	 * Returns the package supported by this factory.

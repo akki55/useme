@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getDevelopedDsl <em>Developed Dsl</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getOwnedContexts <em>Owned Contexts</em>}</li>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getOwnedContextElementTypes <em>Owned Context Element Types</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification#getOwnedContextEntityTypes <em>Owned Context Entity Types</em>}</li>
  * </ul>
  *
  * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDslBasedSystemSpecification()
@@ -66,19 +66,19 @@ public interface DslBasedSystemSpecification extends IdentifiedElement {
 	EList<ContextSpecification> getOwnedContexts();
 
 	/**
-	 * Returns the value of the '<em><b>Owned Context Element Types</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ContextElementType}.
+	 * Returns the value of the '<em><b>Owned Context Entity Types</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ContextEntityType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Owned Context Element Types</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Owned Context Entity Types</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned Context Element Types</em>' containment reference list.
-	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDslBasedSystemSpecification_OwnedContextElementTypes()
+	 * @return the value of the '<em>Owned Context Entity Types</em>' containment reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getDslBasedSystemSpecification_OwnedContextEntityTypes()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ContextElementType> getOwnedContextElementTypes();
+	EList<ContextEntityType> getOwnedContextEntityTypes();
 
 } // DslBasedSystemSpecification

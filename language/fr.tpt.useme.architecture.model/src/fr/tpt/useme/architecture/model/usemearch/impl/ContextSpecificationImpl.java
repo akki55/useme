@@ -2,11 +2,11 @@
  */
 package fr.tpt.useme.architecture.model.usemearch.impl;
 
-import fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement;
+import fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance;
 import fr.tpt.useme.architecture.model.usemearch.ContextSpecification;
 import fr.tpt.useme.architecture.model.usemearch.Dsl;
 import fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification;
-import fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection;
+import fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection;
 import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
 
 import java.util.Collection;
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextSpecificationImpl#getOwnedInstanceElements <em>Owned Instance Elements</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextSpecificationImpl#getOwnedEntityInstances <em>Owned Entity Instances</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextSpecificationImpl#getDevelopedDsl <em>Developed Dsl</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.ContextSpecificationImpl#getOwnedConnections <em>Owned Connections</em>}</li>
  * </ul>
@@ -35,14 +35,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ContextSpecificationImpl extends IdentifiedElementImpl implements ContextSpecification {
 	/**
-	 * The cached value of the '{@link #getOwnedInstanceElements() <em>Owned Instance Elements</em>}' containment reference list.
+	 * The cached value of the '{@link #getOwnedEntityInstances() <em>Owned Entity Instances</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOwnedInstanceElements()
+	 * @see #getOwnedEntityInstances()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ContextInstanceElement> ownedInstanceElements;
+	protected EList<ContextEntityInstance> ownedEntityInstances;
 	/**
 	 * The cached value of the '{@link #getOwnedConnections() <em>Owned Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InstanceElementsConnection> ownedConnections;
+	protected EList<EntityInstancesConnection> ownedConnections;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,11 +76,11 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ContextInstanceElement> getOwnedInstanceElements() {
-		if (ownedInstanceElements == null) {
-			ownedInstanceElements = new EObjectContainmentEList<ContextInstanceElement>(ContextInstanceElement.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS);
+	public EList<ContextEntityInstance> getOwnedEntityInstances() {
+		if (ownedEntityInstances == null) {
+			ownedEntityInstances = new EObjectContainmentEList<ContextEntityInstance>(ContextEntityInstance.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES);
 		}
-		return ownedInstanceElements;
+		return ownedEntityInstances;
 	}
 
 	/**
@@ -107,9 +107,9 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InstanceElementsConnection> getOwnedConnections() {
+	public EList<EntityInstancesConnection> getOwnedConnections() {
 		if (ownedConnections == null) {
-			ownedConnections = new EObjectContainmentEList<InstanceElementsConnection>(InstanceElementsConnection.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS);
+			ownedConnections = new EObjectContainmentEList<EntityInstancesConnection>(EntityInstancesConnection.class, this, UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS);
 		}
 		return ownedConnections;
 	}
@@ -122,8 +122,8 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS:
-				return ((InternalEList<?>)getOwnedInstanceElements()).basicRemove(otherEnd, msgs);
+			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES:
+				return ((InternalEList<?>)getOwnedEntityInstances()).basicRemove(otherEnd, msgs);
 			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS:
 				return ((InternalEList<?>)getOwnedConnections()).basicRemove(otherEnd, msgs);
 		}
@@ -138,8 +138,8 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS:
-				return getOwnedInstanceElements();
+			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES:
+				return getOwnedEntityInstances();
 			case UsemearchPackage.CONTEXT_SPECIFICATION__DEVELOPED_DSL:
 				if (resolve) return getDevelopedDsl();
 				return basicGetDevelopedDsl();
@@ -158,13 +158,13 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS:
-				getOwnedInstanceElements().clear();
-				getOwnedInstanceElements().addAll((Collection<? extends ContextInstanceElement>)newValue);
+			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES:
+				getOwnedEntityInstances().clear();
+				getOwnedEntityInstances().addAll((Collection<? extends ContextEntityInstance>)newValue);
 				return;
 			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS:
 				getOwnedConnections().clear();
-				getOwnedConnections().addAll((Collection<? extends InstanceElementsConnection>)newValue);
+				getOwnedConnections().addAll((Collection<? extends EntityInstancesConnection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,8 +178,8 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS:
-				getOwnedInstanceElements().clear();
+			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES:
+				getOwnedEntityInstances().clear();
 				return;
 			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS:
 				getOwnedConnections().clear();
@@ -196,8 +196,8 @@ public class ContextSpecificationImpl extends IdentifiedElementImpl implements C
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_INSTANCE_ELEMENTS:
-				return ownedInstanceElements != null && !ownedInstanceElements.isEmpty();
+			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES:
+				return ownedEntityInstances != null && !ownedEntityInstances.isEmpty();
 			case UsemearchPackage.CONTEXT_SPECIFICATION__DEVELOPED_DSL:
 				return basicGetDevelopedDsl() != null;
 			case UsemearchPackage.CONTEXT_SPECIFICATION__OWNED_CONNECTIONS:

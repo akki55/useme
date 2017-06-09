@@ -17,13 +17,14 @@
     <genClasses ecoreClass="usemearch.ecore#//DslBasedSystemSpecification">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslBasedSystemSpecification/developedDsl"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslBasedSystemSpecification/ownedContexts"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslBasedSystemSpecification/ownedContextelementTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//DslBasedSystemSpecification/ownedContextEntityTypes"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="usemearch.ecore#//ContextElementType">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextElementType/category"/>
+    <genClasses image="false" ecoreClass="usemearch.ecore#//ContextEntityType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextEntityType/category"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextEntityType/ownedInteractionFeatures"/>
     </genClasses>
     <genClasses ecoreClass="usemearch.ecore#//ContextSpecification">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/ownedInstanceElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/ownedEntityInstances"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/developedDsl"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextSpecification/ownedConnections"/>
     </genClasses>
@@ -55,6 +56,8 @@
     </genClasses>
     <genClasses ecoreClass="usemearch.ecore#//User">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//User/uses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//User/ageMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usemearch.ecore#//User/ageMax"/>
     </genClasses>
     <genClasses ecoreClass="usemearch.ecore#//WorkPlace"/>
     <genClasses ecoreClass="usemearch.ecore#//Computer">
@@ -75,18 +78,19 @@
     <genClasses ecoreClass="usemearch.ecore#//ModelSimulator"/>
     <genClasses ecoreClass="usemearch.ecore#//Documentation"/>
     <genClasses ecoreClass="usemearch.ecore#//MaintenanceService"/>
-    <genClasses ecoreClass="usemearch.ecore#//ContextInstanceElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextInstanceElement/elementType"/>
+    <genClasses ecoreClass="usemearch.ecore#//ContextEntityInstance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//ContextEntityInstance/entityType"/>
     </genClasses>
-    <genClasses ecoreClass="usemearch.ecore#//InstanceElementsConnection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//InstanceElementsConnection/sourceFeature"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//InstanceElementsConnection/destinationFeature"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//InstanceElementsConnection/sourceInstanceElement"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//InstanceElementsConnection/destinationInstanceElement"/>
+    <genClasses ecoreClass="usemearch.ecore#//EntityInstancesConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//EntityInstancesConnection/sourceFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//EntityInstancesConnection/destinationFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//EntityInstancesConnection/sourceEntityInstance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//EntityInstancesConnection/destinationEntityInstance"/>
     </genClasses>
     <genClasses ecoreClass="usemearch.ecore#//PhysicalSystem">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//PhysicalSystem/inputs"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usemearch.ecore#//PhysicalSystem/outputs"/>
     </genClasses>
+    <genClasses ecoreClass="usemearch.ecore#//InteractionFeature"/>
   </genPackages>
 </genmodel:GenModel>

@@ -417,49 +417,49 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement} instances.
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ContextInstanceElementItemProvider contextInstanceElementItemProvider;
+	protected ContextEntityInstanceItemProvider contextEntityInstanceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ContextInstanceElement}.
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createContextInstanceElementAdapter() {
-		if (contextInstanceElementItemProvider == null) {
-			contextInstanceElementItemProvider = new ContextInstanceElementItemProvider(this);
+	public Adapter createContextEntityInstanceAdapter() {
+		if (contextEntityInstanceItemProvider == null) {
+			contextEntityInstanceItemProvider = new ContextEntityInstanceItemProvider(this);
 		}
 
-		return contextInstanceElementItemProvider;
+		return contextEntityInstanceItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection} instances.
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InstanceElementsConnectionItemProvider instanceElementsConnectionItemProvider;
+	protected EntityInstancesConnectionItemProvider entityInstancesConnectionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.InstanceElementsConnection}.
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createInstanceElementsConnectionAdapter() {
-		if (instanceElementsConnectionItemProvider == null) {
-			instanceElementsConnectionItemProvider = new InstanceElementsConnectionItemProvider(this);
+	public Adapter createEntityInstancesConnectionAdapter() {
+		if (entityInstancesConnectionItemProvider == null) {
+			entityInstancesConnectionItemProvider = new EntityInstancesConnectionItemProvider(this);
 		}
 
-		return instanceElementsConnectionItemProvider;
+		return entityInstancesConnectionItemProvider;
 	}
 
 	/**
@@ -483,6 +483,29 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 		}
 
 		return physicalSystemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.InteractionFeature} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InteractionFeatureItemProvider interactionFeatureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.InteractionFeature}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInteractionFeatureAdapter() {
+		if (interactionFeatureItemProvider == null) {
+			interactionFeatureItemProvider = new InteractionFeatureItemProvider(this);
+		}
+
+		return interactionFeatureItemProvider;
 	}
 
 	/**
@@ -599,9 +622,10 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 		if (modelCheckerItemProvider != null) modelCheckerItemProvider.dispose();
 		if (modelSimulatorItemProvider != null) modelSimulatorItemProvider.dispose();
 		if (maintenanceServiceItemProvider != null) maintenanceServiceItemProvider.dispose();
-		if (contextInstanceElementItemProvider != null) contextInstanceElementItemProvider.dispose();
-		if (instanceElementsConnectionItemProvider != null) instanceElementsConnectionItemProvider.dispose();
+		if (contextEntityInstanceItemProvider != null) contextEntityInstanceItemProvider.dispose();
+		if (entityInstancesConnectionItemProvider != null) entityInstancesConnectionItemProvider.dispose();
 		if (physicalSystemItemProvider != null) physicalSystemItemProvider.dispose();
+		if (interactionFeatureItemProvider != null) interactionFeatureItemProvider.dispose();
 	}
 
 }
