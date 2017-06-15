@@ -84,12 +84,12 @@ public interface EntityInstancesConnection extends IdentifiedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source Entity Instance</em>' reference.
-	 * @see #setSourceEntityInstance(ContextEntityInstance)
+	 * @see #setSourceEntityInstance(EntityInstance)
 	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getEntityInstancesConnection_SourceEntityInstance()
 	 * @model required="true"
 	 * @generated
 	 */
-	ContextEntityInstance getSourceEntityInstance();
+	EntityInstance getSourceEntityInstance();
 
 	/**
 	 * Sets the value of the '{@link fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection#getSourceEntityInstance <em>Source Entity Instance</em>}' reference.
@@ -99,7 +99,7 @@ public interface EntityInstancesConnection extends IdentifiedElement {
 	 * @see #getSourceEntityInstance()
 	 * @generated
 	 */
-	void setSourceEntityInstance(ContextEntityInstance value);
+	void setSourceEntityInstance(EntityInstance value);
 
 	/**
 	 * Returns the value of the '<em><b>Destination Entity Instance</b></em>' reference.
@@ -110,12 +110,12 @@ public interface EntityInstancesConnection extends IdentifiedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Destination Entity Instance</em>' reference.
-	 * @see #setDestinationEntityInstance(ContextEntityInstance)
+	 * @see #setDestinationEntityInstance(EntityInstance)
 	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getEntityInstancesConnection_DestinationEntityInstance()
 	 * @model required="true"
 	 * @generated
 	 */
-	ContextEntityInstance getDestinationEntityInstance();
+	EntityInstance getDestinationEntityInstance();
 
 	/**
 	 * Sets the value of the '{@link fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection#getDestinationEntityInstance <em>Destination Entity Instance</em>}' reference.
@@ -125,6 +125,6 @@ public interface EntityInstancesConnection extends IdentifiedElement {
 	 * @see #getDestinationEntityInstance()
 	 * @generated
 	 */
-	void setDestinationEntityInstance(ContextEntityInstance value);
+	void setDestinationEntityInstance(EntityInstance value);
 
 } // EntityInstancesConnection

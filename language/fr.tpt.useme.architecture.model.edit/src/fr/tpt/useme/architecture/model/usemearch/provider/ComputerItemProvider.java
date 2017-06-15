@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComputerItemProvider extends ToolItemProvider {
+public class ComputerItemProvider extends HardwareToolItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -44,6 +44,8 @@ public class ComputerItemProvider extends ToolItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addExecutesPropertyDescriptor(object);
+			addDisplaysPropertyDescriptor(object);
+			addMousesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +64,50 @@ public class ComputerItemProvider extends ToolItemProvider {
 				 getString("_UI_Computer_executes_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_executes_feature", "_UI_Computer_type"),
 				 UsemearchPackage.Literals.COMPUTER__EXECUTES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Displays feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDisplaysPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Computer_displays_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_displays_feature", "_UI_Computer_type"),
+				 UsemearchPackage.Literals.COMPUTER__DISPLAYS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Mouses feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMousesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Computer_mouses_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_mouses_feature", "_UI_Computer_type"),
+				 UsemearchPackage.Literals.COMPUTER__MOUSES,
 				 true,
 				 false,
 				 true,

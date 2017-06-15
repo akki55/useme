@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class WorkPlaceImpl extends ContextEntityTypeImpl implements WorkPlace {
+public class WorkPlaceImpl extends EntityTypeImpl implements WorkPlace {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

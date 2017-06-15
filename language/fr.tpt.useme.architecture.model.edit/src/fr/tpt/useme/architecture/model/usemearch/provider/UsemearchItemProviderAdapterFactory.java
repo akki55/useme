@@ -72,26 +72,26 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification} instances.
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.DsslSpecification} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DslBasedSystemSpecificationItemProvider dslBasedSystemSpecificationItemProvider;
+	protected DsslSpecificationItemProvider dsslSpecificationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification}.
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.DsslSpecification}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDslBasedSystemSpecificationAdapter() {
-		if (dslBasedSystemSpecificationItemProvider == null) {
-			dslBasedSystemSpecificationItemProvider = new DslBasedSystemSpecificationItemProvider(this);
+	public Adapter createDsslSpecificationAdapter() {
+		if (dsslSpecificationItemProvider == null) {
+			dsslSpecificationItemProvider = new DsslSpecificationItemProvider(this);
 		}
 
-		return dslBasedSystemSpecificationItemProvider;
+		return dsslSpecificationItemProvider;
 	}
 
 	/**
@@ -302,29 +302,6 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ECoreDomainConceptItemProvider eCoreDomainConceptItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createECoreDomainConceptAdapter() {
-		if (eCoreDomainConceptItemProvider == null) {
-			eCoreDomainConceptItemProvider = new ECoreDomainConceptItemProvider(this);
-		}
-
-		return eCoreDomainConceptItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.FeatureDiagram} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -417,26 +394,26 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance} instances.
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.EntityInstance} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ContextEntityInstanceItemProvider contextEntityInstanceItemProvider;
+	protected EntityInstanceItemProvider entityInstanceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance}.
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.EntityInstance}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createContextEntityInstanceAdapter() {
-		if (contextEntityInstanceItemProvider == null) {
-			contextEntityInstanceItemProvider = new ContextEntityInstanceItemProvider(this);
+	public Adapter createEntityInstanceAdapter() {
+		if (entityInstanceItemProvider == null) {
+			entityInstanceItemProvider = new EntityInstanceItemProvider(this);
 		}
 
-		return contextEntityInstanceItemProvider;
+		return entityInstanceItemProvider;
 	}
 
 	/**
@@ -506,6 +483,75 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 		}
 
 		return interactionFeatureItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.Display} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DisplayItemProvider displayItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.Display}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDisplayAdapter() {
+		if (displayItemProvider == null) {
+			displayItemProvider = new DisplayItemProvider(this);
+		}
+
+		return displayItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.Mouse} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MouseItemProvider mouseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.Mouse}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMouseAdapter() {
+		if (mouseItemProvider == null) {
+			mouseItemProvider = new MouseItemProvider(this);
+		}
+
+		return mouseItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.tpt.useme.architecture.model.usemearch.HardwareTool} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HardwareToolItemProvider hardwareToolItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.tpt.useme.architecture.model.usemearch.HardwareTool}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHardwareToolAdapter() {
+		if (hardwareToolItemProvider == null) {
+			hardwareToolItemProvider = new HardwareToolItemProvider(this);
+		}
+
+		return hardwareToolItemProvider;
 	}
 
 	/**
@@ -607,7 +653,7 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (dslBasedSystemSpecificationItemProvider != null) dslBasedSystemSpecificationItemProvider.dispose();
+		if (dsslSpecificationItemProvider != null) dsslSpecificationItemProvider.dispose();
 		if (contextSpecificationItemProvider != null) contextSpecificationItemProvider.dispose();
 		if (dslItemProvider != null) dslItemProvider.dispose();
 		if (eCoreAbstractSyntaxItemProvider != null) eCoreAbstractSyntaxItemProvider.dispose();
@@ -617,15 +663,17 @@ public class UsemearchItemProviderAdapterFactory extends UsemearchAdapterFactory
 		if (computerItemProvider != null) computerItemProvider.dispose();
 		if (softwareToolItemProvider != null) softwareToolItemProvider.dispose();
 		if (operatingSystemItemProvider != null) operatingSystemItemProvider.dispose();
-		if (eCoreDomainConceptItemProvider != null) eCoreDomainConceptItemProvider.dispose();
 		if (featureDiagramItemProvider != null) featureDiagramItemProvider.dispose();
 		if (modelCheckerItemProvider != null) modelCheckerItemProvider.dispose();
 		if (modelSimulatorItemProvider != null) modelSimulatorItemProvider.dispose();
 		if (maintenanceServiceItemProvider != null) maintenanceServiceItemProvider.dispose();
-		if (contextEntityInstanceItemProvider != null) contextEntityInstanceItemProvider.dispose();
+		if (entityInstanceItemProvider != null) entityInstanceItemProvider.dispose();
 		if (entityInstancesConnectionItemProvider != null) entityInstancesConnectionItemProvider.dispose();
 		if (physicalSystemItemProvider != null) physicalSystemItemProvider.dispose();
 		if (interactionFeatureItemProvider != null) interactionFeatureItemProvider.dispose();
+		if (displayItemProvider != null) displayItemProvider.dispose();
+		if (mouseItemProvider != null) mouseItemProvider.dispose();
+		if (hardwareToolItemProvider != null) hardwareToolItemProvider.dispose();
 	}
 
 }

@@ -72,12 +72,12 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createIdentifiedElementAdapter();
 			}
 			@Override
-			public Adapter caseDslBasedSystemSpecification(DslBasedSystemSpecification object) {
-				return createDslBasedSystemSpecificationAdapter();
+			public Adapter caseDsslSpecification(DsslSpecification object) {
+				return createDsslSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseContextEntityType(ContextEntityType object) {
-				return createContextEntityTypeAdapter();
+			public Adapter caseEntityType(EntityType object) {
+				return createEntityTypeAdapter();
 			}
 			@Override
 			public Adapter caseContextSpecification(ContextSpecification object) {
@@ -136,14 +136,6 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createSemanticsAdapter();
 			}
 			@Override
-			public Adapter caseDomainConcept(DomainConcept object) {
-				return createDomainConceptAdapter();
-			}
-			@Override
-			public Adapter caseECoreDomainConcept(ECoreDomainConcept object) {
-				return createECoreDomainConceptAdapter();
-			}
-			@Override
 			public Adapter caseFeatureDiagram(FeatureDiagram object) {
 				return createFeatureDiagramAdapter();
 			}
@@ -164,8 +156,8 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 				return createMaintenanceServiceAdapter();
 			}
 			@Override
-			public Adapter caseContextEntityInstance(ContextEntityInstance object) {
-				return createContextEntityInstanceAdapter();
+			public Adapter caseEntityInstance(EntityInstance object) {
+				return createEntityInstanceAdapter();
 			}
 			@Override
 			public Adapter caseEntityInstancesConnection(EntityInstancesConnection object) {
@@ -178,6 +170,18 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseInteractionFeature(InteractionFeature object) {
 				return createInteractionFeatureAdapter();
+			}
+			@Override
+			public Adapter caseDisplay(Display object) {
+				return createDisplayAdapter();
+			}
+			@Override
+			public Adapter caseMouse(Mouse object) {
+				return createMouseAdapter();
+			}
+			@Override
+			public Adapter caseHardwareTool(HardwareTool object) {
+				return createHardwareToolAdapter();
 			}
 			@Override
 			public Adapter caseDescription_IdentifiedElement(org.eclipse.sirius.viewpoint.description.IdentifiedElement object) {
@@ -218,30 +222,30 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification <em>Dsl Based System Specification</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.DsslSpecification <em>Dssl Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DslBasedSystemSpecification
+	 * @see fr.tpt.useme.architecture.model.usemearch.DsslSpecification
 	 * @generated
 	 */
-	public Adapter createDslBasedSystemSpecificationAdapter() {
+	public Adapter createDsslSpecificationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextEntityType <em>Context Entity Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.EntityType <em>Entity Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ContextEntityType
+	 * @see fr.tpt.useme.architecture.model.usemearch.EntityType
 	 * @generated
 	 */
-	public Adapter createContextEntityTypeAdapter() {
+	public Adapter createEntityTypeAdapter() {
 		return null;
 	}
 
@@ -442,34 +446,6 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.DomainConcept <em>Domain Concept</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.DomainConcept
-	 * @generated
-	 */
-	public Adapter createDomainConceptAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept <em>ECore Domain Concept</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ECoreDomainConcept
-	 * @generated
-	 */
-	public Adapter createECoreDomainConceptAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.FeatureDiagram <em>Feature Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -540,16 +516,16 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance <em>Context Entity Instance</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.EntityInstance <em>Entity Instance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance
+	 * @see fr.tpt.useme.architecture.model.usemearch.EntityInstance
 	 * @generated
 	 */
-	public Adapter createContextEntityInstanceAdapter() {
+	public Adapter createEntityInstanceAdapter() {
 		return null;
 	}
 
@@ -592,6 +568,48 @@ public class UsemearchAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInteractionFeatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.Display <em>Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Display
+	 * @generated
+	 */
+	public Adapter createDisplayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.Mouse <em>Mouse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.Mouse
+	 * @generated
+	 */
+	public Adapter createMouseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.tpt.useme.architecture.model.usemearch.HardwareTool <em>Hardware Tool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.tpt.useme.architecture.model.usemearch.HardwareTool
+	 * @generated
+	 */
+	public Adapter createHardwareToolAdapter() {
 		return null;
 	}
 

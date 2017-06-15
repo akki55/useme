@@ -16,13 +16,15 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getUses <em>Uses</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMin <em>Age Min</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getAgeMax <em>Age Max</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getPerception <em>Perception</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.User#getSpokenLanguages <em>Spoken Languages</em>}</li>
  * </ul>
  *
  * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getUser()
  * @model
  * @generated
  */
-public interface User extends ContextEntityType {
+public interface User extends EntityType {
 	/**
 	 * Returns the value of the '<em><b>Uses</b></em>' reference list.
 	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.Tool}.
@@ -92,5 +94,37 @@ public interface User extends ContextEntityType {
 	 * @generated
 	 */
 	void setAgeMax(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Perception</b></em>' reference list.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.PhysicalSystem}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Perception</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Perception</em>' reference list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getUser_Perception()
+	 * @model
+	 * @generated
+	 */
+	EList<PhysicalSystem> getPerception();
+
+	/**
+	 * Returns the value of the '<em><b>Spoken Languages</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Spoken Languages</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Spoken Languages</em>' attribute list.
+	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getUser_SpokenLanguages()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getSpokenLanguages();
 
 } // User

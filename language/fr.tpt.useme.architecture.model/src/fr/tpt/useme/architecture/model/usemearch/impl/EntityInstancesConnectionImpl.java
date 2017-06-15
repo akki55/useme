@@ -2,7 +2,7 @@
  */
 package fr.tpt.useme.architecture.model.usemearch.impl;
 
-import fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance;
+import fr.tpt.useme.architecture.model.usemearch.EntityInstance;
 import fr.tpt.useme.architecture.model.usemearch.EntityInstancesConnection;
 import fr.tpt.useme.architecture.model.usemearch.InteractionFeature;
 import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
@@ -59,7 +59,7 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected ContextEntityInstance sourceEntityInstance;
+	protected EntityInstance sourceEntityInstance;
 
 	/**
 	 * The cached value of the '{@link #getDestinationEntityInstance() <em>Destination Entity Instance</em>}' reference.
@@ -69,7 +69,7 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected ContextEntityInstance destinationEntityInstance;
+	protected EntityInstance destinationEntityInstance;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,10 +171,10 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextEntityInstance getSourceEntityInstance() {
+	public EntityInstance getSourceEntityInstance() {
 		if (sourceEntityInstance != null && sourceEntityInstance.eIsProxy()) {
 			InternalEObject oldSourceEntityInstance = (InternalEObject)sourceEntityInstance;
-			sourceEntityInstance = (ContextEntityInstance)eResolveProxy(oldSourceEntityInstance);
+			sourceEntityInstance = (EntityInstance)eResolveProxy(oldSourceEntityInstance);
 			if (sourceEntityInstance != oldSourceEntityInstance) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UsemearchPackage.ENTITY_INSTANCES_CONNECTION__SOURCE_ENTITY_INSTANCE, oldSourceEntityInstance, sourceEntityInstance));
@@ -188,7 +188,7 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextEntityInstance basicGetSourceEntityInstance() {
+	public EntityInstance basicGetSourceEntityInstance() {
 		return sourceEntityInstance;
 	}
 
@@ -197,8 +197,8 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSourceEntityInstance(ContextEntityInstance newSourceEntityInstance) {
-		ContextEntityInstance oldSourceEntityInstance = sourceEntityInstance;
+	public void setSourceEntityInstance(EntityInstance newSourceEntityInstance) {
+		EntityInstance oldSourceEntityInstance = sourceEntityInstance;
 		sourceEntityInstance = newSourceEntityInstance;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UsemearchPackage.ENTITY_INSTANCES_CONNECTION__SOURCE_ENTITY_INSTANCE, oldSourceEntityInstance, sourceEntityInstance));
@@ -209,10 +209,10 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextEntityInstance getDestinationEntityInstance() {
+	public EntityInstance getDestinationEntityInstance() {
 		if (destinationEntityInstance != null && destinationEntityInstance.eIsProxy()) {
 			InternalEObject oldDestinationEntityInstance = (InternalEObject)destinationEntityInstance;
-			destinationEntityInstance = (ContextEntityInstance)eResolveProxy(oldDestinationEntityInstance);
+			destinationEntityInstance = (EntityInstance)eResolveProxy(oldDestinationEntityInstance);
 			if (destinationEntityInstance != oldDestinationEntityInstance) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UsemearchPackage.ENTITY_INSTANCES_CONNECTION__DESTINATION_ENTITY_INSTANCE, oldDestinationEntityInstance, destinationEntityInstance));
@@ -226,7 +226,7 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextEntityInstance basicGetDestinationEntityInstance() {
+	public EntityInstance basicGetDestinationEntityInstance() {
 		return destinationEntityInstance;
 	}
 
@@ -235,8 +235,8 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDestinationEntityInstance(ContextEntityInstance newDestinationEntityInstance) {
-		ContextEntityInstance oldDestinationEntityInstance = destinationEntityInstance;
+	public void setDestinationEntityInstance(EntityInstance newDestinationEntityInstance) {
+		EntityInstance oldDestinationEntityInstance = destinationEntityInstance;
 		destinationEntityInstance = newDestinationEntityInstance;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UsemearchPackage.ENTITY_INSTANCES_CONNECTION__DESTINATION_ENTITY_INSTANCE, oldDestinationEntityInstance, destinationEntityInstance));
@@ -281,10 +281,10 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 				setDestinationFeature((InteractionFeature)newValue);
 				return;
 			case UsemearchPackage.ENTITY_INSTANCES_CONNECTION__SOURCE_ENTITY_INSTANCE:
-				setSourceEntityInstance((ContextEntityInstance)newValue);
+				setSourceEntityInstance((EntityInstance)newValue);
 				return;
 			case UsemearchPackage.ENTITY_INSTANCES_CONNECTION__DESTINATION_ENTITY_INSTANCE:
-				setDestinationEntityInstance((ContextEntityInstance)newValue);
+				setDestinationEntityInstance((EntityInstance)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -305,10 +305,10 @@ public class EntityInstancesConnectionImpl extends IdentifiedElementImpl impleme
 				setDestinationFeature((InteractionFeature)null);
 				return;
 			case UsemearchPackage.ENTITY_INSTANCES_CONNECTION__SOURCE_ENTITY_INSTANCE:
-				setSourceEntityInstance((ContextEntityInstance)null);
+				setSourceEntityInstance((EntityInstance)null);
 				return;
 			case UsemearchPackage.ENTITY_INSTANCES_CONNECTION__DESTINATION_ENTITY_INSTANCE:
-				setDestinationEntityInstance((ContextEntityInstance)null);
+				setDestinationEntityInstance((EntityInstance)null);
 				return;
 		}
 		super.eUnset(featureID);

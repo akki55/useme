@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Dsl extends ContextEntityType {
+public interface Dsl extends EntityType {
 	/**
 	 * Returns the value of the '<em><b>Owned Syntaxes</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.Syntax}.

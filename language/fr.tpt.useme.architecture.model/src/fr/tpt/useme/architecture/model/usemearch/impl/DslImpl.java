@@ -51,7 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class DslImpl extends ContextEntityTypeImpl implements Dsl {
+public class DslImpl extends EntityTypeImpl implements Dsl {
 	/**
 	 * The cached value of the '{@link #getOwnedSyntaxes() <em>Owned Syntaxes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

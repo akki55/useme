@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PhysicalSystemItemProvider extends ContextEntityTypeItemProvider {
+public class PhysicalSystemItemProvider extends EntityTypeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -43,10 +43,33 @@ public class PhysicalSystemItemProvider extends ContextEntityTypeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addControlledByPropertyDescriptor(object);
 			addInputsPropertyDescriptor(object);
-			addOutputsPropertyDescriptor(object);
+			addVisualPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Controlled By feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addControlledByPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PhysicalSystem_controlledBy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalSystem_controlledBy_feature", "_UI_PhysicalSystem_type"),
+				 UsemearchPackage.Literals.PHYSICAL_SYSTEM__CONTROLLED_BY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -72,19 +95,19 @@ public class PhysicalSystemItemProvider extends ContextEntityTypeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Outputs feature.
+	 * This adds a property descriptor for the Visual feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOutputsPropertyDescriptor(Object object) {
+	protected void addVisualPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PhysicalSystem_outputs_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalSystem_outputs_feature", "_UI_PhysicalSystem_type"),
-				 UsemearchPackage.Literals.PHYSICAL_SYSTEM__OUTPUTS,
+				 getString("_UI_PhysicalSystem_visual_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalSystem_visual_feature", "_UI_PhysicalSystem_type"),
+				 UsemearchPackage.Literals.PHYSICAL_SYSTEM__VISUAL,
 				 true,
 				 false,
 				 true,

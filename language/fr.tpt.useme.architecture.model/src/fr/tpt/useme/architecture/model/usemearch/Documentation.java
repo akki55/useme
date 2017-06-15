@@ -13,5 +13,5 @@ package fr.tpt.useme.architecture.model.usemearch;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface Documentation extends ContextEntityType {
+public interface Documentation extends EntityType {
 } // Documentation

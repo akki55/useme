@@ -35,7 +35,7 @@ public interface SoftwareTool extends Tool {
 	 * @return the value of the '<em>Supported Languages</em>' reference list.
 	 * @see fr.tpt.useme.architecture.model.usemearch.UsemearchPackage#getSoftwareTool_SupportedLanguages()
 	 * @see fr.tpt.useme.architecture.model.usemearch.Dsl#getSupportingTools
-	 * @model opposite="supportingTools" required="true"
+	 * @model opposite="supportingTools"
 	 * @generated
 	 */
 	EList<Dsl> getSupportedLanguages();

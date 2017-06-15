@@ -2,6 +2,7 @@
  */
 package fr.tpt.useme.architecture.model.usemearch.impl;
 
+import fr.tpt.useme.architecture.model.usemearch.PhysicalSystem;
 import fr.tpt.useme.architecture.model.usemearch.Tool;
 import fr.tpt.useme.architecture.model.usemearch.UsemearchPackage;
 import fr.tpt.useme.architecture.model.usemearch.User;
@@ -13,9 +14,10 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -30,11 +32,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getUses <em>Uses</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getAgeMin <em>Age Min</em>}</li>
  *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getAgeMax <em>Age Max</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getPerception <em>Perception</em>}</li>
+ *   <li>{@link fr.tpt.useme.architecture.model.usemearch.impl.UserImpl#getSpokenLanguages <em>Spoken Languages</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class UserImpl extends ContextEntityTypeImpl implements User {
+public class UserImpl extends EntityTypeImpl implements User {
 	/**
 	 * The cached value of the '{@link #getUses() <em>Uses</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -81,6 +85,26 @@ public class UserImpl extends ContextEntityTypeImpl implements User {
 	 * @ordered
 	 */
 	protected int ageMax = AGE_MAX_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPerception() <em>Perception</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPerception()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PhysicalSystem> perception;
+
+	/**
+	 * The cached value of the '{@link #getSpokenLanguages() <em>Spoken Languages</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpokenLanguages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> spokenLanguages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,6 +184,30 @@ public class UserImpl extends ContextEntityTypeImpl implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<PhysicalSystem> getPerception() {
+		if (perception == null) {
+			perception = new EObjectResolvingEList<PhysicalSystem>(PhysicalSystem.class, this, UsemearchPackage.USER__PERCEPTION);
+		}
+		return perception;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getSpokenLanguages() {
+		if (spokenLanguages == null) {
+			spokenLanguages = new EDataTypeUniqueEList<String>(String.class, this, UsemearchPackage.USER__SPOKEN_LANGUAGES);
+		}
+		return spokenLanguages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -198,6 +246,10 @@ public class UserImpl extends ContextEntityTypeImpl implements User {
 				return getAgeMin();
 			case UsemearchPackage.USER__AGE_MAX:
 				return getAgeMax();
+			case UsemearchPackage.USER__PERCEPTION:
+				return getPerception();
+			case UsemearchPackage.USER__SPOKEN_LANGUAGES:
+				return getSpokenLanguages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -221,6 +273,14 @@ public class UserImpl extends ContextEntityTypeImpl implements User {
 			case UsemearchPackage.USER__AGE_MAX:
 				setAgeMax((Integer)newValue);
 				return;
+			case UsemearchPackage.USER__PERCEPTION:
+				getPerception().clear();
+				getPerception().addAll((Collection<? extends PhysicalSystem>)newValue);
+				return;
+			case UsemearchPackage.USER__SPOKEN_LANGUAGES:
+				getSpokenLanguages().clear();
+				getSpokenLanguages().addAll((Collection<? extends String>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -242,6 +302,12 @@ public class UserImpl extends ContextEntityTypeImpl implements User {
 			case UsemearchPackage.USER__AGE_MAX:
 				setAgeMax(AGE_MAX_EDEFAULT);
 				return;
+			case UsemearchPackage.USER__PERCEPTION:
+				getPerception().clear();
+				return;
+			case UsemearchPackage.USER__SPOKEN_LANGUAGES:
+				getSpokenLanguages().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,6 +326,10 @@ public class UserImpl extends ContextEntityTypeImpl implements User {
 				return ageMin != AGE_MIN_EDEFAULT;
 			case UsemearchPackage.USER__AGE_MAX:
 				return ageMax != AGE_MAX_EDEFAULT;
+			case UsemearchPackage.USER__PERCEPTION:
+				return perception != null && !perception.isEmpty();
+			case UsemearchPackage.USER__SPOKEN_LANGUAGES:
+				return spokenLanguages != null && !spokenLanguages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -278,6 +348,8 @@ public class UserImpl extends ContextEntityTypeImpl implements User {
 		result.append(ageMin);
 		result.append(", ageMax: ");
 		result.append(ageMax);
+		result.append(", spokenLanguages: ");
+		result.append(spokenLanguages);
 		result.append(')');
 		return result.toString();
 	}

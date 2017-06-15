@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class UserItemProvider extends ContextEntityTypeItemProvider {
+public class UserItemProvider extends EntityTypeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -48,6 +48,8 @@ public class UserItemProvider extends ContextEntityTypeItemProvider {
 			addUsesPropertyDescriptor(object);
 			addAgeMinPropertyDescriptor(object);
 			addAgeMaxPropertyDescriptor(object);
+			addPerceptionPropertyDescriptor(object);
+			addSpokenLanguagesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -119,6 +121,50 @@ public class UserItemProvider extends ContextEntityTypeItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Perception feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPerceptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_User_perception_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_User_perception_feature", "_UI_User_type"),
+				 UsemearchPackage.Literals.USER__PERCEPTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Spoken Languages feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSpokenLanguagesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_User_spokenLanguages_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_User_spokenLanguages_feature", "_UI_User_type"),
+				 UsemearchPackage.Literals.USER__SPOKEN_LANGUAGES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns User.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -158,6 +204,7 @@ public class UserItemProvider extends ContextEntityTypeItemProvider {
 		switch (notification.getFeatureID(User.class)) {
 			case UsemearchPackage.USER__AGE_MIN:
 			case UsemearchPackage.USER__AGE_MAX:
+			case UsemearchPackage.USER__SPOKEN_LANGUAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -5,6 +5,7 @@ package fr.tpt.useme.architecture.model.usemearch.impl;
 import fr.tpt.useme.architecture.model.usemearch.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -56,7 +57,7 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case UsemearchPackage.DSL_BASED_SYSTEM_SPECIFICATION: return createDslBasedSystemSpecification();
+			case UsemearchPackage.DSSL_SPECIFICATION: return createDsslSpecification();
 			case UsemearchPackage.CONTEXT_SPECIFICATION: return createContextSpecification();
 			case UsemearchPackage.DSL: return createDsl();
 			case UsemearchPackage.ECORE_ABSTRACT_SYNTAX: return createECoreAbstractSyntax();
@@ -66,15 +67,17 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 			case UsemearchPackage.COMPUTER: return createComputer();
 			case UsemearchPackage.SOFTWARE_TOOL: return createSoftwareTool();
 			case UsemearchPackage.OPERATING_SYSTEM: return createOperatingSystem();
-			case UsemearchPackage.ECORE_DOMAIN_CONCEPT: return createECoreDomainConcept();
 			case UsemearchPackage.FEATURE_DIAGRAM: return createFeatureDiagram();
 			case UsemearchPackage.MODEL_CHECKER: return createModelChecker();
 			case UsemearchPackage.MODEL_SIMULATOR: return createModelSimulator();
 			case UsemearchPackage.MAINTENANCE_SERVICE: return createMaintenanceService();
-			case UsemearchPackage.CONTEXT_ENTITY_INSTANCE: return createContextEntityInstance();
+			case UsemearchPackage.ENTITY_INSTANCE: return createEntityInstance();
 			case UsemearchPackage.ENTITY_INSTANCES_CONNECTION: return createEntityInstancesConnection();
 			case UsemearchPackage.PHYSICAL_SYSTEM: return createPhysicalSystem();
 			case UsemearchPackage.INTERACTION_FEATURE: return createInteractionFeature();
+			case UsemearchPackage.DISPLAY: return createDisplay();
+			case UsemearchPackage.MOUSE: return createMouse();
+			case UsemearchPackage.HARDWARE_TOOL: return createHardwareTool();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,9 +88,39 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DslBasedSystemSpecification createDslBasedSystemSpecification() {
-		DslBasedSystemSpecificationImpl dslBasedSystemSpecification = new DslBasedSystemSpecificationImpl();
-		return dslBasedSystemSpecification;
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case UsemearchPackage.COLOR_SCHEME:
+				return createColorSchemeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case UsemearchPackage.COLOR_SCHEME:
+				return convertColorSchemeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DsslSpecification createDsslSpecification() {
+		DsslSpecificationImpl dsslSpecification = new DsslSpecificationImpl();
+		return dsslSpecification;
 	}
 
 	/**
@@ -185,16 +218,6 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ECoreDomainConcept createECoreDomainConcept() {
-		ECoreDomainConceptImpl eCoreDomainConcept = new ECoreDomainConceptImpl();
-		return eCoreDomainConcept;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public FeatureDiagram createFeatureDiagram() {
 		FeatureDiagramImpl featureDiagram = new FeatureDiagramImpl();
 		return featureDiagram;
@@ -235,9 +258,9 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContextEntityInstance createContextEntityInstance() {
-		ContextEntityInstanceImpl contextEntityInstance = new ContextEntityInstanceImpl();
-		return contextEntityInstance;
+	public EntityInstance createEntityInstance() {
+		EntityInstanceImpl entityInstance = new EntityInstanceImpl();
+		return entityInstance;
 	}
 
 	/**
@@ -268,6 +291,56 @@ public class UsemearchFactoryImpl extends EFactoryImpl implements UsemearchFacto
 	public InteractionFeature createInteractionFeature() {
 		InteractionFeatureImpl interactionFeature = new InteractionFeatureImpl();
 		return interactionFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Display createDisplay() {
+		DisplayImpl display = new DisplayImpl();
+		return display;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Mouse createMouse() {
+		MouseImpl mouse = new MouseImpl();
+		return mouse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HardwareTool createHardwareTool() {
+		HardwareToolImpl hardwareTool = new HardwareToolImpl();
+		return hardwareTool;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColorScheme createColorSchemeFromString(EDataType eDataType, String initialValue) {
+		ColorScheme result = ColorScheme.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertColorSchemeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

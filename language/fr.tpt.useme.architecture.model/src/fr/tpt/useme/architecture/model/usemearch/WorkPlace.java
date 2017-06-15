@@ -13,5 +13,5 @@ package fr.tpt.useme.architecture.model.usemearch;
  * @model
  * @generated
  */
-public interface WorkPlace extends ContextEntityType {
+public interface WorkPlace extends EntityType {
 } // WorkPlace

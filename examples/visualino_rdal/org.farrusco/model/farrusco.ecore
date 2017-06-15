@@ -204,4 +204,18 @@
     <eLiterals name="Menor"/>
     <eLiterals name="Maior" value="1"/>
   </eClassifiers>
+  <eSubpackages name="gyro" nsURI="http://gyro.artica.cc/gyro" nsPrefix="gyro">
+    <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BehaviorNode" abstract="true" eSuperTypes="#//gyro/Node"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SequenceNode" eSuperTypes="#//gyro/BehaviorNode">
+      <eAnnotations source="gyro.abstract_syntax">
+        <details key="role" value="Sequence"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParallelNode" eSuperTypes="#//gyro/BehaviorNode">
+      <eAnnotations source="gyro.abstract_syntax">
+        <details key="role" value="Parallel"/>
+      </eAnnotations>
+    </eClassifiers>
+  </eSubpackages>
 </ecore:EPackage>

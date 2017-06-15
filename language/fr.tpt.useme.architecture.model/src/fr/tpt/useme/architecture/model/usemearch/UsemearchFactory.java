@@ -22,13 +22,13 @@ public interface UsemearchFactory extends EFactory {
 	UsemearchFactory eINSTANCE = fr.tpt.useme.architecture.model.usemearch.impl.UsemearchFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Dsl Based System Specification</em>'.
+	 * Returns a new object of class '<em>Dssl Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dsl Based System Specification</em>'.
+	 * @return a new object of class '<em>Dssl Specification</em>'.
 	 * @generated
 	 */
-	DslBasedSystemSpecification createDslBasedSystemSpecification();
+	DsslSpecification createDsslSpecification();
 
 	/**
 	 * Returns a new object of class '<em>Context Specification</em>'.
@@ -112,15 +112,6 @@ public interface UsemearchFactory extends EFactory {
 	OperatingSystem createOperatingSystem();
 
 	/**
-	 * Returns a new object of class '<em>ECore Domain Concept</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ECore Domain Concept</em>'.
-	 * @generated
-	 */
-	ECoreDomainConcept createECoreDomainConcept();
-
-	/**
 	 * Returns a new object of class '<em>Feature Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,13 +148,13 @@ public interface UsemearchFactory extends EFactory {
 	MaintenanceService createMaintenanceService();
 
 	/**
-	 * Returns a new object of class '<em>Context Entity Instance</em>'.
+	 * Returns a new object of class '<em>Entity Instance</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Context Entity Instance</em>'.
+	 * @return a new object of class '<em>Entity Instance</em>'.
 	 * @generated
 	 */
-	ContextEntityInstance createContextEntityInstance();
+	EntityInstance createEntityInstance();
 
 	/**
 	 * Returns a new object of class '<em>Entity Instances Connection</em>'.
@@ -191,6 +182,33 @@ public interface UsemearchFactory extends EFactory {
 	 * @generated
 	 */
 	InteractionFeature createInteractionFeature();
+
+	/**
+	 * Returns a new object of class '<em>Display</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Display</em>'.
+	 * @generated
+	 */
+	Display createDisplay();
+
+	/**
+	 * Returns a new object of class '<em>Mouse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mouse</em>'.
+	 * @generated
+	 */
+	Mouse createMouse();
+
+	/**
+	 * Returns a new object of class '<em>Hardware Tool</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Hardware Tool</em>'.
+	 * @generated
+	 */
+	HardwareTool createHardwareTool();
 
 	/**
 	 * Returns the package supported by this factory.

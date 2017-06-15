@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
 public interface ContextSpecification extends IdentifiedElement {
 	/**
 	 * Returns the value of the '<em><b>Owned Entity Instances</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.ContextEntityInstance}.
+	 * The list contents are of type {@link fr.tpt.useme.architecture.model.usemearch.EntityInstance}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Owned Entity Instances</em>' containment reference list isn't clear,
@@ -37,7 +37,7 @@ public interface ContextSpecification extends IdentifiedElement {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ContextEntityInstance> getOwnedEntityInstances();
+	EList<EntityInstance> getOwnedEntityInstances();
 
 	/**
 	 * Returns the value of the '<em><b>Developed Dsl</b></em>' reference.

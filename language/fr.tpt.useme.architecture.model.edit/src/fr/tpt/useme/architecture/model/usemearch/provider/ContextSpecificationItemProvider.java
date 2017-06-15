@@ -164,7 +164,7 @@ public class ContextSpecificationItemProvider extends IdentifiedElementItemProvi
 		newChildDescriptors.add
 			(createChildParameter
 				(UsemearchPackage.Literals.CONTEXT_SPECIFICATION__OWNED_ENTITY_INSTANCES,
-				 UsemearchFactory.eINSTANCE.createContextEntityInstance()));
+				 UsemearchFactory.eINSTANCE.createEntityInstance()));
 
 		newChildDescriptors.add
 			(createChildParameter
