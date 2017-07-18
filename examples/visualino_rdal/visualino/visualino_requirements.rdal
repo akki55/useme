@@ -60,7 +60,7 @@
       <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_non_functional_goal_Usability"/>
     </ownedGoals>
   </ownedPackages>
-  <ownedPackages xsi:type="rdal:RequirementsPackage" name="Visualino Functional Requirements" id="_rKlhZuvSEeabG6EdqbdIDg">
+  <ownedPackages xsi:type="rdal:RequirementsPackage" name="Gyro Functional Requirements" id="_rKlhZuvSEeabG6EdqbdIDg">
     <ownedRequirements xsi:type="rdal:Assumption" name="A1 User Speaks English" id="_YGOJE-xVEeasmNxQC8ra6w" description="User can speak english " stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_1gRKQTM4EeeHT7vuJ8Hf1w">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_1gRKQDM4EeeHT7vuJ8Hf1w">
