@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<useme:UseMeSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:useme="http://nova-lincs.di.fct.unl.pt/useme" xmlns:useme.reportmodeling="http://nova-lincs.di.fct.unl.pt/useme.reportmodeling" xmlns:useme.surveymodeling="http://nova-lincs.di.fct.unl.pt/useme.surveymodeling">
+  <contextSpecification name="cs">
+    <contextModel cmName="cmLego" domain="Program a robot" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0" language="//@utilitySpecification.0/@DSL.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.1">
+      <userHierarchy userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" uhDescription="uhLego"/>
+      <contextProvider>FCT</contextProvider>
+    </contextModel>
+    <userProfileSpecification name="upsLego">
+      <userProfile name="DSL Stakeholder" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.6 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.7 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" userHierarchy="//@contextSpecification.0/@contextModel.0/@userHierarchy" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.0" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.0 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <userProfile name="End User" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.5" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.1" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.0 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <userProfile name="Children" backgroundQs="//@surveySpecification.0/@question.0 //@surveySpecification.0/@question.1 //@surveySpecification.0/@question.2 //@surveySpecification.0/@question.3" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.3 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.4" participant="//@evaluationSpecification.0/@participant.0" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.2" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.1 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5"/>
+      <userProfile name="Grade-Schoolers" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.3" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.2 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5"/>
+      <userProfile name="Teens" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.3 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5"/>
+      <userProfile name="Adults" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.5" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.4"/>
+      <userProfile name="Domain Expert" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0"/>
+      <userProfile name="Expert Evaluator" priority="Low" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0"/>
+      <userProfile name="Language Engineer" priority="Low" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0"/>
+      <profileTemplate name="DSL Stakeholder" category="background demographics knowledge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.0 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <profileTemplate name="End User" category="background demographics knowledge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.0 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <profileTemplate name="Children" category="background demographics knowledge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.1 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <profileTemplate name="Grade-Schoolers" category="background demographics knowledge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.2 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <profileTemplate name="Teens" category="background demographics knowledge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.3 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <profileTemplate name="Adults" category="background demographics knowledge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.4 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7"/>
+      <logicalExpression name="Age" classifierName="Age" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.0 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.1">
+        <expression>>5</expression>
+      </logicalExpression>
+      <logicalExpression name="Age Children" classifierName="Age Children" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.2" question="//@surveySpecification.0/@question.0">
+        <expression>5-18</expression>
+      </logicalExpression>
+      <logicalExpression name="Age Grade-Schoolers" classifierName="Age Grade-Schoolers" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.3">
+        <expression>5-12</expression>
+      </logicalExpression>
+      <logicalExpression name="Age Teens" classifierName="Age Teens" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4">
+        <expression>13-18</expression>
+      </logicalExpression>
+      <logicalExpression name="Age Adults" classifierName="Age Adults" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.5">
+        <expression>>18</expression>
+      </logicalExpression>
+      <logicalExpression name="School Grade" classifierName="School Grade" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.2 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.3 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4" question="//@surveySpecification.0/@question.1">
+        <expression>1-12</expression>
+      </logicalExpression>
+      <logicalExpression name="Computers" classifierName="Computers" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.5 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.2 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.0 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.1 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.3 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4" question="//@surveySpecification.0/@question.2">
+        <expression>ordinal</expression>
+        <expression>scale</expression>
+        <expression>experience</expression>
+      </logicalExpression>
+      <logicalExpression name="Programming" classifierName="Programming" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.5 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.2 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.0 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.1 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.3 //@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4" question="//@surveySpecification.0/@question.3">
+        <expression>ordinal</expression>
+        <expression>scale</expression>
+        <expression>experience</expression>
+      </logicalExpression>
+    </userProfileSpecification>
+    <enviromentSpecification name="esLego">
+      <technicalEnvironment name="teLego" contextModel="//@contextSpecification.0/@contextModel.0" ceElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.2" outsideRef="//@utilitySpecification.0/@outsideRef.0"/>
+      <physicalEnvironment name="peLego" contextModel="//@contextSpecification.0/@contextModel.0" ceElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.0 //@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.1" outsideRef="//@utilitySpecification.0/@outsideRef.0"/>
+      <socialEnvironment name="seLego" contextModel="//@contextSpecification.0/@contextModel.0" ceElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.3" outsideRef="//@utilitySpecification.0/@outsideRef.0"/>
+      <enviromentalVariable name="Robot" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0">
+        <type>Mindstorms</type>
+        <composedElement name="Mindstorms" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0"/>
+      </enviromentalVariable>
+      <enviromentalVariable name="Computer" mandatory="true" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0">
+        <type>Desktop</type>
+        <composedElement name="Desktop" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0"/>
+      </enviromentalVariable>
+      <enviromentalVariable name="Application" mandatory="true" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0">
+        <type>Computer App</type>
+        <composedElement name="Computer App" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0"/>
+      </enviromentalVariable>
+      <enviromentalVariable name="Workplace" mandatory="true" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0">
+        <type>Classroom</type>
+        <composedElement name="Classroom" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0"/>
+      </enviromentalVariable>
+    </enviromentSpecification>
+    <workflowSpecification name="wsLego">
+      <workflow name="W1: Program the robot" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1" contextElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.0" processModel="//@utilitySpecification.0/@processModel.0" contextModel="//@contextSpecification.0/@contextModel.0">
+        <scenario name="Move front and back" evaluatedTask="//@interactionSpecification.0/@task.0" doc="//@utilitySpecification.0/@documentation.0 //@evaluationSpecification.0/@documentaton.0" question="//@surveySpecification.0/@question.4 //@surveySpecification.0/@question.5 //@surveySpecification.0/@question.6 //@surveySpecification.0/@question.7"/>
+        <scenario name="Move forward until it hits an obstacle and then stop" evaluatedTask="//@interactionSpecification.0/@task.0" doc="//@utilitySpecification.0/@documentation.0 //@evaluationSpecification.0/@documentaton.0" question="//@surveySpecification.0/@question.4 //@surveySpecification.0/@question.5 //@surveySpecification.0/@question.6 //@surveySpecification.0/@question.7"/>
+      </workflow>
+      <workflow name="W2: Modify the language" priority="Low" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" contextElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.2" processModel="//@utilitySpecification.0/@processModel.0" contextModel="//@contextSpecification.0/@contextModel.0"/>
+    </workflowSpecification>
+  </contextSpecification>
+  <goalSpecification name="gs">
+    <usabilityRequirement name="Effectiveness" description="programming the robot is effective" old_name="Effectiveness" description_old="programming the robot is effective">
+      <metric>Correctness of programmed code</metric>
+    </usabilityRequirement>
+    <usabilityRequirement name="Learnability" description="programming the robot is easy to learn" old_name="Learnability" description_old="programming the robot is easy to learn">
+      <metric>Reused knowledge</metric>
+    </usabilityRequirement>
+    <usabilityRequirement name="Satisfaction" description="programming the robot is satisfactory" old_name="Satisfaction" description_old="programming the robot is satisfactory" questionnaire="//@surveySpecification.0/@questionnaire.1">
+      <metric>Satisfaction questions</metric>
+    </usabilityRequirement>
+    <usabilityRequirement name="Efficiency" description="programming the robot is efficient" old_name="Efficiency" description_old="programming the robot is efficient">
+      <metric>Efficient programming</metric>
+    </usabilityRequirement>
+    <method name="Programming Robot is usable" methodDescription="Programming the robot is usable from end user perspective" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.2" testCase="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0 //@goalSpecification.0/@usabilityRequirement.3 //@goalSpecification.0/@usabilityRequirement.1 //@goalSpecification.0/@usabilityRequirement.2" functionalGoal="//@utilitySpecification.0/@functionalGoal.0"/>
+    <actor name="Lego Development" organization="Lego Dev" responsibleFor="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.1 //@goalSpecification.0/@goalModel.0/@usabilityGoal.3" stakeholder="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.8"/>
+    <actor name="Expert Evaluator" organization="Language Evaluator" responsibleFor="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0 //@goalSpecification.0/@goalModel.0/@usabilityGoal.1 //@goalSpecification.0/@goalModel.0/@usabilityGoal.2 //@goalSpecification.0/@goalModel.0/@usabilityGoal.3" stakeholder="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.7"/>
+    <scope name="QualityInUse" contextModel="//@contextSpecification.0/@contextModel.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0" userProfileSelection="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.1"/>
+    <scope name="CapabilityProgramRobot" contextModel="//@contextSpecification.0/@contextModel.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1 //@goalSpecification.0/@goalModel.0/@usabilityGoal.2" userProfileSelection="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+    <scope name="EvolveLanguage" contextModel="//@contextSpecification.0/@contextModel.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.3" userProfileSelection="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.1"/>
+    <successCoverage name="scLego" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" scope="//@goalSpecification.0/@scope.1 //@goalSpecification.0/@scope.2 //@goalSpecification.0/@scope.0" successFactor="//@reportSpecification.0/@evaluationResult.0 //@interactionSpecification.0/@interactionResult.0 //@surveySpecification.0/@surveyResult.0"/>
+    <goalModel name="gmLego" language="//@utilitySpecification.0/@DSL.0">
+      <usabilityGoal responsibleActor="//@goalSpecification.0/@actor.0 //@goalSpecification.0/@actor.1" question="Is the Quality in Use achieved?" method="//@goalSpecification.0/@method.0" scope="//@goalSpecification.0/@scope.0" subGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1 //@goalSpecification.0/@goalModel.0/@usabilityGoal.3"/>
+      <usabilityGoal name="UG1: Capability to program the robot" responsibleActor="//@goalSpecification.0/@actor.0 //@goalSpecification.0/@actor.1" question="Are the End Users capable of program the robot?" scope="//@goalSpecification.0/@scope.1" subGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" parentGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0"/>
+      <usabilityGoal name="UG1.1: Usability of programming the robot" responsibleActor="//@goalSpecification.0/@actor.1" question="Is it usable to program the robot?" method="//@goalSpecification.0/@method.0" successCoverage="//@goalSpecification.0/@successCoverage.0" providedFunctionality="//@utilitySpecification.0/@functionalGoal.0" scope="//@goalSpecification.0/@scope.1 //@evaluationSpecification.0/@evaluationContext.0" evaluationGoal="//@evaluationSpecification.0/@evaluationGoal.0 //@evaluationSpecification.0/@evaluationGoal.1" parentGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1"/>
+      <usabilityGoal name="UG2: Evolve the language" responsibleActor="//@goalSpecification.0/@actor.0 //@goalSpecification.0/@actor.1" priority="Medium" question="Are Language Engineers capable of evolve the language?" scope="//@goalSpecification.0/@scope.2" parentGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0"/>
+    </goalModel>
+  </goalSpecification>
+  <evaluationSpecification name="es">
+    <evaluationModel name="emLego" evaluationGoal="//@evaluationSpecification.0/@evaluationGoal.0 //@evaluationSpecification.0/@evaluationGoal.1" evaluationContext="//@evaluationSpecification.0/@evaluationContext.0" language="//@evaluationSpecification.0/@language.0" process="//@evaluationSpecification.0/@process.0" testModel="//@interactionSpecification.0/@interactionModel.0 //@surveySpecification.0/@surveyModel.0" doc="//@evaluationSpecification.0/@documentaton.0 //@utilitySpecification.0/@documentation.0" participant="//@evaluationSpecification.0/@participant.0"/>
+    <evaluationGoal name="egLegoEffectiveness" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" language="//@evaluationSpecification.0/@language.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" mesurment="//@goalSpecification.0/@method.0" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0" responsible="//@goalSpecification.0/@actor.1" problemDescription="analyse the impact of effectiveness on robot programming">
+      <researchQuestion>is it effective to program the robot?</researchQuestion>
+      <hypothesis>effectiveness has no impact in robot programming</hypothesis>
+      <hypothesis>effectiveness has impact in robot programming</hypothesis>
+    </evaluationGoal>
+    <evaluationGoal name="egLegoSatisfaction" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" language="//@evaluationSpecification.0/@language.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" mesurment="//@goalSpecification.0/@method.0" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.2" responsible="//@goalSpecification.0/@actor.1" problemDescription="analyse the impact of satisfaction on robot programming">
+      <researchQuestion>is it satisfactory to program the robot?</researchQuestion>
+      <hypothesis>satisfaction has no impact in robot programming</hypothesis>
+      <hypothesis>satisfaction has impact in robot programming</hypothesis>
+    </evaluationGoal>
+    <participant name="Children" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2">
+      <contact>Teacher contact</contact>
+    </participant>
+    <documentaton evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0" name="doc" outsideRef="//@utilitySpecification.0/@outsideRef.0"/>
+    <language name="Lego" version="Mindstorms" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" DSL="//@utilitySpecification.0/@DSL.0"/>
+    <evaluationContext name="ecLego" contextModel="//@contextSpecification.0/@contextModel.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" userProfileSelection="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0">
+      <enviromentInstance>Robot={Lego Mindstorms}, Computer={Laptop}, Application={Computer app}, Workplace={Classroom}</enviromentInstance>
+    </evaluationContext>
+    <process name="EvaluationProcess" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" processModel="//@utilitySpecification.0/@processModel.0"/>
+  </evaluationSpecification>
+  <interactionSpecification name="is">
+    <interactionModel name="imLego" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" participant="//@evaluationSpecification.0/@participant.0" interactionResult="//@interactionSpecification.0/@interactionResult.0" interactionSyntax="//@interactionSpecification.0/@interactionSyntax.0" event="//@interactionSpecification.0/@event.0" task="//@interactionSpecification.0/@task.0"/>
+    <interactionSyntax name="isLego" interactionModel="//@interactionSpecification.0/@interactionModel.0" concreteSyntax="//@utilitySpecification.0/@DSL.0/@concreteSyntax.0" abstractSyntax="//@utilitySpecification.0/@DSL.0/@abstractSyntax.0" outsideRef="//@utilitySpecification.0/@outsideRef.0" documentation="//@evaluationSpecification.0/@documentaton.0 //@utilitySpecification.0/@documentation.0"/>
+    <event name="EffectivenessVideo" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.0" manual="true" analysisType="Observation" interactionModel="//@interactionSpecification.0/@interactionModel.0">
+      <capture>Move front</capture>
+      <capture>Move back</capture>
+      <capture>Bump</capture>
+      <recordEvent>Screen  Record</recordEvent>
+      <captureAction name="Move front"/>
+      <captureAction name="Move back"/>
+      <captureAction name="Bump"/>
+    </event>
+    <task name="taskLego" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0" interactionModel="//@interactionSpecification.0/@interactionModel.0" documentation="//@utilitySpecification.0/@documentation.0 //@evaluationSpecification.0/@documentaton.0"/>
+    <interactionResult name="irLego" outsifeReference="//@utilitySpecification.0/@outsideRef.0" interactionModel="//@interactionSpecification.0/@interactionModel.0" event="//@interactionSpecification.0/@event.0">
+      <resultValue name="MoveFront" resultValue="0,75" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="MoveBack" resultValue="0,75" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.1" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="Bump" resultValue="0,78" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.2" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+    </interactionResult>
+  </interactionSpecification>
+  <surveySpecification name="ss">
+    <surveyModel name="smLego" evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" participant="//@evaluationSpecification.0/@participant.0" questionnaire="//@surveySpecification.0/@questionnaire.1 //@surveySpecification.0/@questionnaire.0" surveyEngine="//@utilitySpecification.0/@surveyEngine.0" surveyResult="//@surveySpecification.0/@surveyResult.0"/>
+    <questionnaire name="Background Questions" question="//@surveySpecification.0/@question.0 //@surveySpecification.0/@question.1 //@surveySpecification.0/@question.2 //@surveySpecification.0/@question.3" surveyModel="//@surveySpecification.0/@surveyModel.0"/>
+    <questionnaire name="Feedback Questions" question="//@surveySpecification.0/@question.5 //@surveySpecification.0/@question.6 //@surveySpecification.0/@question.7 //@surveySpecification.0/@question.4" surveyModel="//@surveySpecification.0/@surveyModel.0" usabilityRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+    <surveyResult name="srLego" outsifeReference="//@utilitySpecification.0/@outsideRef.0" surveyModel="//@surveySpecification.0/@surveyModel.0" questionnaire="//@surveySpecification.0/@questionnaire.0 //@surveySpecification.0/@questionnaire.1">
+      <resultValue name="Q1" resultValue="11,5" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.0"/>
+      <resultValue name="Q2" resultValue="6" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.1"/>
+      <resultValue name="Q3" resultValue="0,71" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.2"/>
+      <resultValue name="Q4" resultValue="0,8" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.3"/>
+      <resultValue name="F1" resultValue="0,94" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.4" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.2 //@interactionSpecification.0/@event.0/@captureAction.1 //@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+      <resultValue name="F2" resultValue="0,52" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.5" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.2 //@interactionSpecification.0/@event.0/@captureAction.1 //@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+      <resultValue name="F3" resultValue="0,53" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.6" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.2 //@interactionSpecification.0/@event.0/@captureAction.1 //@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+      <resultValue name="F4" resultValue="0,95" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.7" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.2 //@interactionSpecification.0/@event.0/@captureAction.1 //@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+    </surveyResult>
+    <question xsi:type="useme.surveymodeling:BackgroundQs" name="Q1" question="Age" type="Demographics" questionnaire="//@surveySpecification.0/@questionnaire.0" userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" logicalExpression="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.1">
+      <scale>Integer</scale>
+    </question>
+    <question xsi:type="useme.surveymodeling:BackgroundQs" name="Q2" question="School grade" type="Demographics" questionnaire="//@surveySpecification.0/@questionnaire.0" userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" logicalExpression="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.5">
+      <scale>Integer</scale>
+    </question>
+    <question xsi:type="useme.surveymodeling:BackgroundQs" name="Q3" question="How often do you play computer games?" type="Experience" questionnaire="//@surveySpecification.0/@questionnaire.0" userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" logicalExpression="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.6">
+      <scale>Every day</scale>
+      <scale>Sometimes</scale>
+      <scale>Rarely</scale>
+    </question>
+    <question xsi:type="useme.surveymodeling:BackgroundQs" name="Q4" question="Have you ever program?" type="Experience" questionnaire="//@surveySpecification.0/@questionnaire.0" userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" logicalExpression="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7">
+      <scale>Yes</scale>
+      <scale>No</scale>
+    </question>
+    <question xsi:type="useme.surveymodeling:FeedbackQs" name="F1" question="Did you enjoy the activity?" type="Likeability" questionnaire="//@surveySpecification.0/@questionnaire.1" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0">
+      <scale>Smiley face</scale>
+      <scale>Neutral face</scale>
+      <scale>Sad face</scale>
+    </question>
+    <question xsi:type="useme.surveymodeling:FeedbackQs" name="F2" question="Did you find it hard to move the robot front and back?" type="Confidence" questionnaire="//@surveySpecification.0/@questionnaire.1" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0">
+      <scale>Smiley face</scale>
+      <scale>Neutral face</scale>
+      <scale>Sad face</scale>
+    </question>
+    <question xsi:type="useme.surveymodeling:FeedbackQs" name="F3" question="And to move front until it hits an obstacle and then stop?" type="Confidence" questionnaire="//@surveySpecification.0/@questionnaire.1" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0">
+      <scale>Smiley face</scale>
+      <scale>Neutral face</scale>
+      <scale>Sad face</scale>
+    </question>
+    <question xsi:type="useme.surveymodeling:FeedbackQs" name="F4" question="Would you like to repeat this activity?" type="Confidence" questionnaire="//@surveySpecification.0/@questionnaire.1" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0">
+      <scale>Smiley face</scale>
+      <scale>Neutral face</scale>
+      <scale>Sad face</scale>
+    </question>
+  </surveySpecification>
+  <reportSpecification name="rs">
+    <reportModel name="rmLego" evaluationResult="//@reportSpecification.0/@evaluationResult.0" recommendGM="//@reportSpecification.0/@recommendedGM.0"/>
+    <recommendedGM reportModel="//@reportSpecification.0/@reportModel.0" refersTo="//@goalSpecification.0/@goalModel.0" functionalGoal="//@utilitySpecification.0/@functionalGoal.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.2" suggestedRequirements="//@utilitySpecification.0/@requirement.0" name="rgmLego"/>
+    <evaluationResult xsi:type="useme.reportmodeling:EvaluationResult" name="erLego" outsifeReference="//@utilitySpecification.0/@outsideRef.0" surveyResult="//@surveySpecification.0/@surveyResult.0" interactionResult="//@interactionSpecification.0/@interactionResult.0" reportModel="//@reportSpecification.0/@reportModel.0" evaluationContext="//@evaluationSpecification.0/@evaluationContext.0">
+      <resultValue name="EffectivenessLego" resultValue="0,78" language="//@evaluationSpecification.0/@language.0" relatedAction="//@interactionSpecification.0/@event.0/@captureAction.2 //@interactionSpecification.0/@event.0/@captureAction.1 //@interactionSpecification.0/@event.0/@captureAction.0" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.0"/>
+      <resultValue name="SatisfactionLego" resultValue="0,85" language="//@evaluationSpecification.0/@language.0" relatedQuestion="//@surveySpecification.0/@question.4 //@surveySpecification.0/@question.5 //@surveySpecification.0/@question.6 //@surveySpecification.0/@question.7" associatedRequirement="//@goalSpecification.0/@usabilityRequirement.2"/>
+    </evaluationResult>
+  </reportSpecification>
+  <utilitySpecification name="us">
+    <DSL dslName="Lego" contextModel="//@contextSpecification.0/@contextModel.0" documentation="//@utilitySpecification.0/@documentation.0">
+      <concreteSyntax name="csLego" interactionSyntax="//@interactionSpecification.0/@interactionSyntax.0"/>
+      <abstractSyntax name="asLego" interactionSyntax="//@interactionSpecification.0/@interactionSyntax.0"/>
+      <existingGoalModel name="gmLego" functionalGoal="//@utilitySpecification.0/@functionalGoal.0"/>
+    </DSL>
+    <functionalGoal name="fgLego" existingGM="//@utilitySpecification.0/@DSL.0/@existingGoalModel.0" requirements="//@utilitySpecification.0/@requirement.0"/>
+    <processModel name="pmLego" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.1" evaluationProcess="//@evaluationSpecification.0/@process.0" outsideRef="//@utilitySpecification.0/@outsideRef.0"/>
+    <surveyEngine surveyModel="//@surveySpecification.0/@surveyModel.0"/>
+    <documentation evaluationModel="//@evaluationSpecification.0/@evaluationModel.0" scenario="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1" name="docLego" outsideRef="//@utilitySpecification.0/@outsideRef.0"/>
+    <outsideRef name="refLegoModeling">
+      <link>cameo.com</link>
+      <tool>Cameo System Modeler</tool>
+    </outsideRef>
+    <requirement name="Zooming" description="Improve zooming option"/>
+  </utilitySpecification>
+</useme:UseMeSpecification>
