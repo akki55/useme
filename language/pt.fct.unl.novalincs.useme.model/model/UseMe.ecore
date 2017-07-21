@@ -26,6 +26,7 @@
           eType="#//ReportModeling/RecommendGM" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationResult" upperBound="-1"
           eType="#//ReportModeling/EvaluationResultAbstract" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ReportModel">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -53,6 +54,7 @@
           eType="#//GoalModeling/UsabilityGoal"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="suggestedRequirements"
           upperBound="-1" eType="#//Utility/Requirement"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ResultValue">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -654,8 +656,8 @@
           eType="#//SurveyModeling/BackgroundQs" eOpposite="#//SurveyModeling/BackgroundQs/logicalExpression"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="PriorityValue">
-      <eLiterals name="High"/>
-      <eLiterals name="Medium"/>
+      <eLiterals name="High" value="2"/>
+      <eLiterals name="Medium" value="1"/>
       <eLiterals name="Low"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ConcreteSyntax">

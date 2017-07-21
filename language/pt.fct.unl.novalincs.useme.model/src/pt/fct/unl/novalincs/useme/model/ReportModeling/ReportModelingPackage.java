@@ -94,13 +94,22 @@ public interface ReportModelingPackage extends EPackage {
 	int REPORT_SPECIFICATION__EVALUATION_RESULT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPORT_SPECIFICATION__NAME = 3;
+
+	/**
 	 * The number of structural features of the '<em>Report Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPORT_SPECIFICATION_FEATURE_COUNT = 3;
+	int REPORT_SPECIFICATION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Report Specification</em>' class.
@@ -287,13 +296,22 @@ public interface ReportModelingPackage extends EPackage {
 	int RECOMMEND_GM__SUGGESTED_REQUIREMENTS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECOMMEND_GM__NAME = 5;
+
+	/**
 	 * The number of structural features of the '<em>Recommend GM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECOMMEND_GM_FEATURE_COUNT = 5;
+	int RECOMMEND_GM_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Recommend GM</em>' class.
@@ -513,6 +531,17 @@ public interface ReportModelingPackage extends EPackage {
 	EReference getReportSpecification_EvaluationResult();
 
 	/**
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification#getName()
+	 * @see #getReportSpecification()
+	 * @generated
+	 */
+	EAttribute getReportSpecification_Name();
+
+	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModel <em>Report Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -718,6 +747,17 @@ public interface ReportModelingPackage extends EPackage {
 	EReference getRecommendGM_SuggestedRequirements();
 
 	/**
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getName()
+	 * @see #getRecommendGM()
+	 * @generated
+	 */
+	EAttribute getRecommendGM_Name();
+
+	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ResultValue <em>Result Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -849,6 +889,14 @@ public interface ReportModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REPORT_SPECIFICATION__EVALUATION_RESULT = eINSTANCE.getReportSpecification_EvaluationResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPORT_SPECIFICATION__NAME = eINSTANCE.getReportSpecification_Name();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportModelImpl <em>Report Model</em>}' class.
@@ -1009,6 +1057,14 @@ public interface ReportModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RECOMMEND_GM__SUGGESTED_REQUIREMENTS = eINSTANCE.getRecommendGM_SuggestedRequirements();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECOMMEND_GM__NAME = eINSTANCE.getRecommendGM_Name();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ResultValueImpl <em>Result Value</em>}' class.

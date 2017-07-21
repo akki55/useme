@@ -3,7 +3,6 @@
 package pt.fct.unl.novalincs.useme.model.ReportModeling.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -11,12 +10,9 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModel;
 import pt.fct.unl.novalincs.useme.model.GoalModeling.UsabilityGoal;
 
@@ -40,6 +36,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getFunctionalGoal <em>Functional Goal</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getUsabilityGoal <em>Usability Goal</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getSuggestedRequirements <em>Suggested Requirements</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,6 +91,26 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 	 * @ordered
 	 */
 	protected EList<Requirement> suggestedRequirements;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,6 +270,27 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ReportModelingPackage.RECOMMEND_GM__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -298,6 +336,8 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 				return getUsabilityGoal();
 			case ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS:
 				return getSuggestedRequirements();
+			case ReportModelingPackage.RECOMMEND_GM__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -329,6 +369,9 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 				getSuggestedRequirements().clear();
 				getSuggestedRequirements().addAll((Collection<? extends Requirement>)newValue);
 				return;
+			case ReportModelingPackage.RECOMMEND_GM__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -356,6 +399,9 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 			case ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS:
 				getSuggestedRequirements().clear();
 				return;
+			case ReportModelingPackage.RECOMMEND_GM__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -378,8 +424,26 @@ public class RecommendGMImpl extends MinimalEObjectImpl.Container implements Rec
 				return usabilityGoal != null && !usabilityGoal.isEmpty();
 			case ReportModelingPackage.RECOMMEND_GM__SUGGESTED_REQUIREMENTS:
 				return suggestedRequirements != null && !suggestedRequirements.isEmpty();
+			case ReportModelingPackage.RECOMMEND_GM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //RecommendGMImpl

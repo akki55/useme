@@ -18,8 +18,11 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
+import org.eclipse.emf.edit.provider.ViewerNotification;
+import pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage;
 
 import pt.fct.unl.novalincs.useme.model.UseMe.provider.UseMeEditPlugin;
@@ -64,6 +67,7 @@ public class RecommendGMItemProvider
 			addFunctionalGoalPropertyDescriptor(object);
 			addUsabilityGoalPropertyDescriptor(object);
 			addSuggestedRequirementsPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -179,6 +183,28 @@ public class RecommendGMItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RecommendGM_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RecommendGM_name_feature", "_UI_RecommendGM_type"),
+				 ReportModelingPackage.Literals.RECOMMEND_GM__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns RecommendGM.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,7 +223,10 @@ public class RecommendGMItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RecommendGM_type");
+		String label = ((RecommendGM)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_RecommendGM_type") :
+			getString("_UI_RecommendGM_type") + " " + label;
 	}
 	
 
@@ -211,6 +240,12 @@ public class RecommendGMItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(RecommendGM.class)) {
+			case ReportModelingPackage.RECOMMEND_GM__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

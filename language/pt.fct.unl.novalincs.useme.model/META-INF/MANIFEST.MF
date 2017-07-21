@@ -32,5 +32,7 @@ Export-Package: pt.fct.unl.novalincs.useme.model.ContextModeling,
  pt.fct.unl.novalincs.useme.model.Utility.impl,
  pt.fct.unl.novalincs.useme.model.Utility.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.ui.ide;bundle-version="3.12.3",
+ org.eclipse.epsilon.evl.emf.validation;bundle-version="1.4.0"
 Bundle-ActivationPolicy: lazy

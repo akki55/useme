@@ -3,7 +3,6 @@
 package pt.fct.unl.novalincs.useme.model.ReportModeling;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModel;
@@ -26,6 +25,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getFunctionalGoal <em>Functional Goal</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getUsabilityGoal <em>Usability Goal</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getSuggestedRequirements <em>Suggested Requirements</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getRecommendGM()
@@ -134,5 +134,31 @@ public interface RecommendGM extends EObject {
 	 * @generated
 	 */
 	EList<Requirement> getSuggestedRequirements();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getRecommendGM_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // RecommendGM

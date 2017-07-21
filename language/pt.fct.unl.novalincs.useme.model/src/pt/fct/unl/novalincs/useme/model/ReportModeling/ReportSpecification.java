@@ -3,7 +3,6 @@
 package pt.fct.unl.novalincs.useme.model.ReportModeling;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification#getReportModel <em>Report Model</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification#getRecommendedGM <em>Recommended GM</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification#getEvaluationResult <em>Evaluation Result</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getReportSpecification()
@@ -72,5 +72,31 @@ public interface ReportSpecification extends EObject {
 	 * @generated
 	 */
 	EList<EvaluationResultAbstract> getEvaluationResult();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage#getReportSpecification_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // ReportSpecification

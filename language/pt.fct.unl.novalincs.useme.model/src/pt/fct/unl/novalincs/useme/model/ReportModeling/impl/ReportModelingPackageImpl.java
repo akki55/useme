@@ -220,6 +220,15 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getReportSpecification_Name() {
+		return (EAttribute)reportSpecificationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getReportModel() {
 		return reportModelEClass;
 	}
@@ -391,6 +400,15 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRecommendGM_Name() {
+		return (EAttribute)recommendGMEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getResultValue() {
 		return resultValueEClass;
 	}
@@ -481,6 +499,7 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 		createEReference(reportSpecificationEClass, REPORT_SPECIFICATION__REPORT_MODEL);
 		createEReference(reportSpecificationEClass, REPORT_SPECIFICATION__RECOMMENDED_GM);
 		createEReference(reportSpecificationEClass, REPORT_SPECIFICATION__EVALUATION_RESULT);
+		createEAttribute(reportSpecificationEClass, REPORT_SPECIFICATION__NAME);
 
 		reportModelEClass = createEClass(REPORT_MODEL);
 		createEAttribute(reportModelEClass, REPORT_MODEL__NAME);
@@ -498,6 +517,7 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 		createEReference(recommendGMEClass, RECOMMEND_GM__FUNCTIONAL_GOAL);
 		createEReference(recommendGMEClass, RECOMMEND_GM__USABILITY_GOAL);
 		createEReference(recommendGMEClass, RECOMMEND_GM__SUGGESTED_REQUIREMENTS);
+		createEAttribute(recommendGMEClass, RECOMMEND_GM__NAME);
 
 		resultValueEClass = createEClass(RESULT_VALUE);
 		createEAttribute(resultValueEClass, RESULT_VALUE__NAME);
@@ -556,6 +576,7 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 		initEReference(getReportSpecification_ReportModel(), this.getReportModel(), null, "reportModel", null, 0, -1, ReportSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getReportSpecification_RecommendedGM(), this.getRecommendGM(), null, "recommendedGM", null, 0, -1, ReportSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getReportSpecification_EvaluationResult(), this.getEvaluationResultAbstract(), null, "evaluationResult", null, 0, -1, ReportSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReportSpecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, ReportSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reportModelEClass, ReportModel.class, "ReportModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getReportModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, ReportModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -573,6 +594,7 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 		initEReference(getRecommendGM_FunctionalGoal(), theUtilityPackage.getFunctionalGoal(), null, "functionalGoal", null, 0, -1, RecommendGM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRecommendGM_UsabilityGoal(), theGoalModelingPackage.getUsabilityGoal(), null, "usabilityGoal", null, 0, -1, RecommendGM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRecommendGM_SuggestedRequirements(), theUtilityPackage.getRequirement(), null, "suggestedRequirements", null, 0, -1, RecommendGM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecommendGM_Name(), ecorePackage.getEString(), "name", null, 0, 1, RecommendGM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultValueEClass, ResultValue.class, "ResultValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResultValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, ResultValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

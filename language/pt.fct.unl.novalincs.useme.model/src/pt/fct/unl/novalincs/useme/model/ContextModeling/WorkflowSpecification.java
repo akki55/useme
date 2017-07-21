@@ -3,7 +3,6 @@
 package pt.fct.unl.novalincs.useme.model.ContextModeling;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.Task;

@@ -26,7 +26,7 @@ public enum PriorityValue implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	HIGH(0, "High", "High"),
+	HIGH(2, "High", "High"),
 
 	/**
 	 * The '<em><b>Medium</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum PriorityValue implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MEDIUM(0, "Medium", "Medium"),
+	MEDIUM(1, "Medium", "Medium"),
 
 	/**
 	 * The '<em><b>Low</b></em>' literal object.
@@ -61,7 +61,7 @@ public enum PriorityValue implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HIGH_VALUE = 0;
+	public static final int HIGH_VALUE = 2;
 
 	/**
 	 * The '<em><b>Medium</b></em>' literal value.
@@ -76,7 +76,7 @@ public enum PriorityValue implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MEDIUM_VALUE = 0;
+	public static final int MEDIUM_VALUE = 1;
 
 	/**
 	 * The '<em><b>Low</b></em>' literal value.
@@ -161,6 +161,8 @@ public enum PriorityValue implements Enumerator {
 	public static PriorityValue get(int value) {
 		switch (value) {
 			case HIGH_VALUE: return HIGH;
+			case MEDIUM_VALUE: return MEDIUM;
+			case LOW_VALUE: return LOW;
 		}
 		return null;
 	}
