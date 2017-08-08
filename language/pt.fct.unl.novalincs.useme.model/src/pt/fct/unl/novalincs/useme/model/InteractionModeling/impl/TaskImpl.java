@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.InteractionModeling.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -10,15 +11,18 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import pt.fct.unl.novalincs.useme.model.ContextModeling.ContextModelingPackage;
 import pt.fct.unl.novalincs.useme.model.ContextModeling.Scenario;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
+import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation;
 
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModel;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage;
@@ -89,7 +93,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Documentation> documentation;
+	protected EList<EvaluationDocumentation> documentation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,9 +164,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Documentation> getDocumentation() {
+	public EList<EvaluationDocumentation> getDocumentation() {
 		if (documentation == null) {
-			documentation = new EObjectResolvingEList<Documentation>(Documentation.class, this, InteractionModelingPackage.TASK__DOCUMENTATION);
+			documentation = new EObjectResolvingEList<EvaluationDocumentation>(EvaluationDocumentation.class, this, InteractionModelingPackage.TASK__DOCUMENTATION);
 		}
 		return documentation;
 	}
@@ -242,7 +246,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task {
 				return;
 			case InteractionModelingPackage.TASK__DOCUMENTATION:
 				getDocumentation().clear();
-				getDocumentation().addAll((Collection<? extends Documentation>)newValue);
+				getDocumentation().addAll((Collection<? extends EvaluationDocumentation>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

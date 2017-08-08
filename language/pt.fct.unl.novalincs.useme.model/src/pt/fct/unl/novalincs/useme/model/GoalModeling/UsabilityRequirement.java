@@ -3,9 +3,11 @@
 package pt.fct.unl.novalincs.useme.model.GoalModeling;
 
 import org.eclipse.emf.common.util.EList;
+
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.Event;
 
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.Questionnaire;
+
 import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 
 /**

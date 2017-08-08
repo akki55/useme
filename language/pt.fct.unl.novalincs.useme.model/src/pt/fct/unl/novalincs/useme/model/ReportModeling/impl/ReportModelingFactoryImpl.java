@@ -102,16 +102,6 @@ public class ReportModelingFactoryImpl extends EFactoryImpl implements ReportMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EvaluationResult createEvaluationResult() {
-		EvaluationResultImpl evaluationResult = new EvaluationResultImpl();
-		return evaluationResult;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RecommendGM createRecommendGM() {
 		RecommendGMImpl recommendGM = new RecommendGMImpl();
 		return recommendGM;
@@ -125,6 +115,16 @@ public class ReportModelingFactoryImpl extends EFactoryImpl implements ReportMod
 	public ResultValue createResultValue() {
 		ResultValueImpl resultValue = new ResultValueImpl();
 		return resultValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EvaluationResult createEvaluationResult() {
+		EvaluationResultImpl evaluationResult = new EvaluationResultImpl();
+		return evaluationResult;
 	}
 
 	/**

@@ -8,7 +8,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
+
 import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
+
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.*;
 
 /**

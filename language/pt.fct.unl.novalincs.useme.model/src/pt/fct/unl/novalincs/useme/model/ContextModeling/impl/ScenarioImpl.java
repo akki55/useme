@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.ContextModeling.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -10,8 +11,10 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -19,13 +22,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import pt.fct.unl.novalincs.useme.model.ContextModeling.ContextModelingPackage;
 import pt.fct.unl.novalincs.useme.model.ContextModeling.Scenario;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingPackage;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.Task;
 
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.FeedbackQs;
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage;
+
+import pt.fct.unl.novalincs.useme.model.Utility.Documentation;
 import pt.fct.unl.novalincs.useme.model.Utility.PriorityValue;
 
 /**
@@ -207,7 +210,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 */
 	public EList<Documentation> getDoc() {
 		if (doc == null) {
-			doc = new EObjectWithInverseResolvingEList.ManyInverse<Documentation>(Documentation.class, this, ContextModelingPackage.SCENARIO__DOC, EvaluationModelingPackage.DOCUMENTATION__SCENARIO);
+			doc = new EObjectResolvingEList<Documentation>(Documentation.class, this, ContextModelingPackage.SCENARIO__DOC);
 		}
 		return doc;
 	}
@@ -247,8 +250,6 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		switch (featureID) {
 			case ContextModelingPackage.SCENARIO__EVALUATED_TASK:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEvaluatedTask()).basicAdd(otherEnd, msgs);
-			case ContextModelingPackage.SCENARIO__DOC:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDoc()).basicAdd(otherEnd, msgs);
 			case ContextModelingPackage.SCENARIO__QUESTION:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getQuestion()).basicAdd(otherEnd, msgs);
 		}
@@ -265,8 +266,6 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		switch (featureID) {
 			case ContextModelingPackage.SCENARIO__EVALUATED_TASK:
 				return ((InternalEList<?>)getEvaluatedTask()).basicRemove(otherEnd, msgs);
-			case ContextModelingPackage.SCENARIO__DOC:
-				return ((InternalEList<?>)getDoc()).basicRemove(otherEnd, msgs);
 			case ContextModelingPackage.SCENARIO__QUESTION:
 				return ((InternalEList<?>)getQuestion()).basicRemove(otherEnd, msgs);
 		}

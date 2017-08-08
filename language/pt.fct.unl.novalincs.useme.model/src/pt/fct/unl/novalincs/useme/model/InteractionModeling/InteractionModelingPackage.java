@@ -552,7 +552,6 @@ public interface InteractionModelingPackage extends EPackage {
 	 */
 	int INTERACTION_RESULT_OPERATION_COUNT = ReportModelingPackage.EVALUATION_RESULT_ABSTRACT_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.InteractionModeling.impl.CaptureActionImpl <em>Capture Action</em>}' class.
 	 * <!-- begin-user-doc -->

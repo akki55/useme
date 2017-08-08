@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.Utility.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -10,16 +11,20 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionModelingPackage;
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionSyntax;
 
 import pt.fct.unl.novalincs.useme.model.Utility.AbstractSyntax;
 import pt.fct.unl.novalincs.useme.model.Utility.DSL;
+import pt.fct.unl.novalincs.useme.model.Utility.OutsideRef;
 import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
 
 /**
@@ -33,6 +38,7 @@ import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.AbstractSyntaxImpl#getName <em>Name</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.AbstractSyntaxImpl#getDsl <em>Dsl</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.AbstractSyntaxImpl#getInteractionSyntax <em>Interaction Syntax</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.impl.AbstractSyntaxImpl#getOutsideRef <em>Outside Ref</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,6 +73,16 @@ public class AbstractSyntaxImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<InteractionSyntax> interactionSyntax;
+
+	/**
+	 * The cached value of the '{@link #getOutsideRef() <em>Outside Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutsideRef()
+	 * @generated
+	 * @ordered
+	 */
+	protected OutsideRef outsideRef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,6 +182,44 @@ public class AbstractSyntaxImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OutsideRef getOutsideRef() {
+		if (outsideRef != null && outsideRef.eIsProxy()) {
+			InternalEObject oldOutsideRef = (InternalEObject)outsideRef;
+			outsideRef = (OutsideRef)eResolveProxy(oldOutsideRef);
+			if (outsideRef != oldOutsideRef) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UtilityPackage.ABSTRACT_SYNTAX__OUTSIDE_REF, oldOutsideRef, outsideRef));
+			}
+		}
+		return outsideRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutsideRef basicGetOutsideRef() {
+		return outsideRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOutsideRef(OutsideRef newOutsideRef) {
+		OutsideRef oldOutsideRef = outsideRef;
+		outsideRef = newOutsideRef;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UtilityPackage.ABSTRACT_SYNTAX__OUTSIDE_REF, oldOutsideRef, outsideRef));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -224,6 +278,9 @@ public class AbstractSyntaxImpl extends MinimalEObjectImpl.Container implements 
 				return getDsl();
 			case UtilityPackage.ABSTRACT_SYNTAX__INTERACTION_SYNTAX:
 				return getInteractionSyntax();
+			case UtilityPackage.ABSTRACT_SYNTAX__OUTSIDE_REF:
+				if (resolve) return getOutsideRef();
+				return basicGetOutsideRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -247,6 +304,9 @@ public class AbstractSyntaxImpl extends MinimalEObjectImpl.Container implements 
 				getInteractionSyntax().clear();
 				getInteractionSyntax().addAll((Collection<? extends InteractionSyntax>)newValue);
 				return;
+			case UtilityPackage.ABSTRACT_SYNTAX__OUTSIDE_REF:
+				setOutsideRef((OutsideRef)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -268,6 +328,9 @@ public class AbstractSyntaxImpl extends MinimalEObjectImpl.Container implements 
 			case UtilityPackage.ABSTRACT_SYNTAX__INTERACTION_SYNTAX:
 				getInteractionSyntax().clear();
 				return;
+			case UtilityPackage.ABSTRACT_SYNTAX__OUTSIDE_REF:
+				setOutsideRef((OutsideRef)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -286,6 +349,8 @@ public class AbstractSyntaxImpl extends MinimalEObjectImpl.Container implements 
 				return getDsl() != null;
 			case UtilityPackage.ABSTRACT_SYNTAX__INTERACTION_SYNTAX:
 				return interactionSyntax != null && !interactionSyntax.isEmpty();
+			case UtilityPackage.ABSTRACT_SYNTAX__OUTSIDE_REF:
+				return outsideRef != null;
 		}
 		return super.eIsSet(featureID);
 	}

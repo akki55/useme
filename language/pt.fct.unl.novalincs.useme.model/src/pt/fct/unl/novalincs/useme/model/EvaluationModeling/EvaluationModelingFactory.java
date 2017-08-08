@@ -67,15 +67,6 @@ public interface EvaluationModelingFactory extends EFactory {
 	EvaluationContext createEvaluationContext();
 
 	/**
-	 * Returns a new object of class '<em>Documentation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Documentation</em>'.
-	 * @generated
-	 */
-	Documentation createDocumentation();
-
-	/**
 	 * Returns a new object of class '<em>Process</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +92,15 @@ public interface EvaluationModelingFactory extends EFactory {
 	 * @generated
 	 */
 	Participant createParticipant();
+
+	/**
+	 * Returns a new object of class '<em>Evaluation Documentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Evaluation Documentation</em>'.
+	 * @generated
+	 */
+	EvaluationDocumentation createEvaluationDocumentation();
 
 	/**
 	 * Returns the package supported by this factory.

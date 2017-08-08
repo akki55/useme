@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -10,13 +11,16 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationGoal;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModel;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingPackage;
@@ -123,7 +127,7 @@ public class EvaluationModelImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Documentation> doc;
+	protected EList<EvaluationDocumentation> doc;
 
 	/**
 	 * The cached value of the '{@link #getParticipant() <em>Participant</em>}' reference list.
@@ -288,9 +292,9 @@ public class EvaluationModelImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Documentation> getDoc() {
+	public EList<EvaluationDocumentation> getDoc() {
 		if (doc == null) {
-			doc = new EObjectWithInverseResolvingEList<Documentation>(Documentation.class, this, EvaluationModelingPackage.EVALUATION_MODEL__DOC, EvaluationModelingPackage.DOCUMENTATION__EVALUATION_MODEL);
+			doc = new EObjectResolvingEList<EvaluationDocumentation>(EvaluationDocumentation.class, this, EvaluationModelingPackage.EVALUATION_MODEL__DOC);
 		}
 		return doc;
 	}
@@ -328,8 +332,6 @@ public class EvaluationModelImpl extends MinimalEObjectImpl.Container implements
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProcess()).basicAdd(otherEnd, msgs);
 			case EvaluationModelingPackage.EVALUATION_MODEL__TEST_MODEL:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTestModel()).basicAdd(otherEnd, msgs);
-			case EvaluationModelingPackage.EVALUATION_MODEL__DOC:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDoc()).basicAdd(otherEnd, msgs);
 			case EvaluationModelingPackage.EVALUATION_MODEL__PARTICIPANT:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParticipant()).basicAdd(otherEnd, msgs);
 		}
@@ -354,8 +356,6 @@ public class EvaluationModelImpl extends MinimalEObjectImpl.Container implements
 				return ((InternalEList<?>)getProcess()).basicRemove(otherEnd, msgs);
 			case EvaluationModelingPackage.EVALUATION_MODEL__TEST_MODEL:
 				return ((InternalEList<?>)getTestModel()).basicRemove(otherEnd, msgs);
-			case EvaluationModelingPackage.EVALUATION_MODEL__DOC:
-				return ((InternalEList<?>)getDoc()).basicRemove(otherEnd, msgs);
 			case EvaluationModelingPackage.EVALUATION_MODEL__PARTICIPANT:
 				return ((InternalEList<?>)getParticipant()).basicRemove(otherEnd, msgs);
 		}
@@ -424,7 +424,7 @@ public class EvaluationModelImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case EvaluationModelingPackage.EVALUATION_MODEL__DOC:
 				getDoc().clear();
-				getDoc().addAll((Collection<? extends Documentation>)newValue);
+				getDoc().addAll((Collection<? extends EvaluationDocumentation>)newValue);
 				return;
 			case EvaluationModelingPackage.EVALUATION_MODEL__PARTICIPANT:
 				getParticipant().clear();

@@ -10,7 +10,9 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
+
 import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
+
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.*;
 
 /**

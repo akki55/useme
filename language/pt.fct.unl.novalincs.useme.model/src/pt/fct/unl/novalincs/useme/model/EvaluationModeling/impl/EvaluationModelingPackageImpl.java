@@ -13,8 +13,8 @@ import pt.fct.unl.novalincs.useme.model.ContextModeling.ContextModelingPackage;
 
 import pt.fct.unl.novalincs.useme.model.ContextModeling.impl.ContextModelingPackageImpl;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationGoal;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModel;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingFactory;
@@ -95,13 +95,6 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass documentationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass processEClass = null;
 
 	/**
@@ -117,6 +110,13 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 	 * @generated
 	 */
 	private EClass participantEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass evaluationDocumentationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -567,51 +567,6 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDocumentation() {
-		return documentationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDocumentation_EvaluationModel() {
-		return (EReference)documentationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDocumentation_Scenario() {
-		return (EReference)documentationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentation_Name() {
-		return (EAttribute)documentationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDocumentation_OutsideRef() {
-		return (EReference)documentationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getProcess() {
 		return processEClass;
 	}
@@ -729,6 +684,42 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEvaluationDocumentation() {
+		return evaluationDocumentationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluationDocumentation_EvaluationModel() {
+		return (EReference)evaluationDocumentationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluationDocumentation_Scenario() {
+		return (EReference)evaluationDocumentationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluationDocumentation_RelatedDocumentation() {
+		return (EReference)evaluationDocumentationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EvaluationModelingFactory getEvaluationModelingFactory() {
 		return (EvaluationModelingFactory)getEFactoryInstance();
 	}
@@ -797,12 +788,6 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 		createEReference(evaluationContextEClass, EVALUATION_CONTEXT__SCENARIO);
 		createEAttribute(evaluationContextEClass, EVALUATION_CONTEXT__ENVIROMENT_INSTANCE);
 
-		documentationEClass = createEClass(DOCUMENTATION);
-		createEReference(documentationEClass, DOCUMENTATION__EVALUATION_MODEL);
-		createEReference(documentationEClass, DOCUMENTATION__SCENARIO);
-		createEAttribute(documentationEClass, DOCUMENTATION__NAME);
-		createEReference(documentationEClass, DOCUMENTATION__OUTSIDE_REF);
-
 		processEClass = createEClass(PROCESS);
 		createEAttribute(processEClass, PROCESS__NAME);
 		createEReference(processEClass, PROCESS__EVALUATION_MODEL);
@@ -818,6 +803,11 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 		createEAttribute(participantEClass, PARTICIPANT__CONTACT);
 		createEReference(participantEClass, PARTICIPANT__EVALUATION_MODEL);
 		createEReference(participantEClass, PARTICIPANT__USER_PROFILE);
+
+		evaluationDocumentationEClass = createEClass(EVALUATION_DOCUMENTATION);
+		createEReference(evaluationDocumentationEClass, EVALUATION_DOCUMENTATION__EVALUATION_MODEL);
+		createEReference(evaluationDocumentationEClass, EVALUATION_DOCUMENTATION__SCENARIO);
+		createEReference(evaluationDocumentationEClass, EVALUATION_DOCUMENTATION__RELATED_DOCUMENTATION);
 	}
 
 	/**
@@ -854,6 +844,7 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 
 		// Add supertypes to classes
 		evaluationContextEClass.getESuperTypes().add(theGoalModelingPackage.getScope());
+		evaluationDocumentationEClass.getESuperTypes().add(theUtilityPackage.getDocumentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(evaluationSpecificationEClass, EvaluationSpecification.class, "EvaluationSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -861,7 +852,7 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 		initEReference(getEvaluationSpecification_EvaluationModel(), this.getEvaluationModel(), null, "evaluationModel", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvaluationSpecification_EvaluationGoal(), this.getEvaluationGoal(), null, "evaluationGoal", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvaluationSpecification_Participant(), this.getParticipant(), null, "participant", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEvaluationSpecification_Documentaton(), this.getDocumentation(), null, "documentaton", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEvaluationSpecification_Documentaton(), this.getEvaluationDocumentation(), null, "documentaton", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvaluationSpecification_Language(), this.getLanguage(), null, "language", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvaluationSpecification_EvaluationContext(), this.getEvaluationContext(), null, "evaluationContext", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvaluationSpecification_Process(), this.getProcess(), null, "process", null, 0, -1, EvaluationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -874,7 +865,7 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 		initEReference(getEvaluationModel_Language(), this.getLanguage(), this.getLanguage_EvaluationModel(), "language", null, 1, -1, EvaluationModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEvaluationModel_Process(), this.getProcess(), this.getProcess_EvaluationModel(), "process", null, 1, -1, EvaluationModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEvaluationModel_TestModel(), this.getTestModel(), this.getTestModel_EvaluationModel(), "testModel", null, 1, -1, EvaluationModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEvaluationModel_Doc(), this.getDocumentation(), this.getDocumentation_EvaluationModel(), "doc", null, 0, -1, EvaluationModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEvaluationModel_Doc(), this.getEvaluationDocumentation(), null, "doc", null, 0, -1, EvaluationModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getEvaluationModel_Participant(), this.getParticipant(), this.getParticipant_EvaluationModel(), "participant", null, 1, -1, EvaluationModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(evaluationGoalEClass, EvaluationGoal.class, "EvaluationGoal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -901,12 +892,6 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 		initEReference(getEvaluationContext_Scenario(), theContextModelingPackage.getScenario(), null, "scenario", null, 0, -1, EvaluationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEvaluationContext_EnviromentInstance(), ecorePackage.getEString(), "enviromentInstance", null, 0, -1, EvaluationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(documentationEClass, Documentation.class, "Documentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDocumentation_EvaluationModel(), this.getEvaluationModel(), this.getEvaluationModel_Doc(), "evaluationModel", null, 1, 1, Documentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDocumentation_Scenario(), theContextModelingPackage.getScenario(), theContextModelingPackage.getScenario_Doc(), "scenario", null, 0, -1, Documentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDocumentation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Documentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDocumentation_OutsideRef(), theUtilityPackage.getOutsideRef(), null, "outsideRef", null, 0, 1, Documentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(processEClass, pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process.class, "Process", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProcess_Name(), ecorePackage.getEString(), "name", null, 0, 1, pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcess_EvaluationModel(), this.getEvaluationModel(), this.getEvaluationModel_Process(), "evaluationModel", null, 1, 1, pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -922,6 +907,11 @@ public class EvaluationModelingPackageImpl extends EPackageImpl implements Evalu
 		initEAttribute(getParticipant_Contact(), ecorePackage.getEString(), "contact", null, 1, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getParticipant_EvaluationModel(), this.getEvaluationModel(), this.getEvaluationModel_Participant(), "evaluationModel", null, 1, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getParticipant_UserProfile(), theContextModelingPackage.getUserProfile(), theContextModelingPackage.getUserProfile_Participant(), "userProfile", null, 1, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(evaluationDocumentationEClass, EvaluationDocumentation.class, "EvaluationDocumentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEvaluationDocumentation_EvaluationModel(), this.getEvaluationModel(), null, "evaluationModel", null, 0, 1, EvaluationDocumentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEvaluationDocumentation_Scenario(), theContextModelingPackage.getScenario(), null, "scenario", null, 0, -1, EvaluationDocumentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEvaluationDocumentation_RelatedDocumentation(), theUtilityPackage.getDocumentation(), null, "relatedDocumentation", null, 0, -1, EvaluationDocumentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //EvaluationModelingPackageImpl

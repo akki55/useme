@@ -698,13 +698,22 @@ public interface UtilityPackage extends EPackage {
 	int CONCRETE_SYNTAX__INTERACTION_SYNTAX = 2;
 
 	/**
+	 * The feature id for the '<em><b>Outside Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_SYNTAX__OUTSIDE_REF = 3;
+
+	/**
 	 * The number of structural features of the '<em>Concrete Syntax</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_SYNTAX_FEATURE_COUNT = 3;
+	int CONCRETE_SYNTAX_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Concrete Syntax</em>' class.
@@ -753,13 +762,22 @@ public interface UtilityPackage extends EPackage {
 	int ABSTRACT_SYNTAX__INTERACTION_SYNTAX = 2;
 
 	/**
+	 * The feature id for the '<em><b>Outside Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_SYNTAX__OUTSIDE_REF = 3;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Syntax</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_SYNTAX_FEATURE_COUNT = 3;
+	int ABSTRACT_SYNTAX_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Abstract Syntax</em>' class.
@@ -881,6 +899,52 @@ public interface UtilityPackage extends EPackage {
 	int REQUIREMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.DocumentationImpl <em>Documentation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.DocumentationImpl
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getDocumentation()
+	 * @generated
+	 */
+	int DOCUMENTATION = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Outside Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION__OUTSIDE_REF = 1;
+
+	/**
+	 * The number of structural features of the '<em>Documentation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Documentation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.Utility.PriorityValue <em>Priority Value</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -888,7 +952,7 @@ public interface UtilityPackage extends EPackage {
 	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getPriorityValue()
 	 * @generated
 	 */
-	int PRIORITY_VALUE = 13;
+	int PRIORITY_VALUE = 14;
 
 	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.Utility.RecordInput <em>Record Input</em>}' enum.
@@ -898,7 +962,7 @@ public interface UtilityPackage extends EPackage {
 	 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getRecordInput()
 	 * @generated
 	 */
-	int RECORD_INPUT = 14;
+	int RECORD_INPUT = 15;
 
 
 	/**
@@ -1194,17 +1258,6 @@ public interface UtilityPackage extends EPackage {
 	EAttribute getFunctionalGoal_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements <em>Requirements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Requirements</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements()
-	 * @see #getFunctionalGoal()
-	 * @generated
-	 */
-	EReference getFunctionalGoal_Requirements();
-
-	/**
 	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getExistingGM <em>Existing GM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1214,6 +1267,17 @@ public interface UtilityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFunctionalGoal_ExistingGM();
+
+	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements <em>Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Requirements</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal#getRequirements()
+	 * @see #getFunctionalGoal()
+	 * @generated
+	 */
+	EReference getFunctionalGoal_Requirements();
 
 	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.Utility.ExistingGM <em>Existing GM</em>}'.
@@ -1464,6 +1528,17 @@ public interface UtilityPackage extends EPackage {
 	EReference getConcreteSyntax_InteractionSyntax();
 
 	/**
+	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax#getOutsideRef <em>Outside Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Outside Ref</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax#getOutsideRef()
+	 * @see #getConcreteSyntax()
+	 * @generated
+	 */
+	EReference getConcreteSyntax_OutsideRef();
+
+	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.Utility.AbstractSyntax <em>Abstract Syntax</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1505,6 +1580,17 @@ public interface UtilityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAbstractSyntax_InteractionSyntax();
+
+	/**
+	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.Utility.AbstractSyntax#getOutsideRef <em>Outside Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Outside Ref</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.AbstractSyntax#getOutsideRef()
+	 * @see #getAbstractSyntax()
+	 * @generated
+	 */
+	EReference getAbstractSyntax_OutsideRef();
 
 	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.Utility.OutsideRef <em>Outside Ref</em>}'.
@@ -1591,6 +1677,38 @@ public interface UtilityPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRequirement_Description();
+
+	/**
+	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.Utility.Documentation <em>Documentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Documentation</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Documentation
+	 * @generated
+	 */
+	EClass getDocumentation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.Utility.Documentation#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Documentation#getName()
+	 * @see #getDocumentation()
+	 * @generated
+	 */
+	EAttribute getDocumentation_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.Utility.Documentation#getOutsideRef <em>Outside Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Outside Ref</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Documentation#getOutsideRef()
+	 * @see #getDocumentation()
+	 * @generated
+	 */
+	EReference getDocumentation_OutsideRef();
 
 	/**
 	 * Returns the meta object for enum '{@link pt.fct.unl.novalincs.useme.model.Utility.PriorityValue <em>Priority Value</em>}'.
@@ -1862,20 +1980,20 @@ public interface UtilityPackage extends EPackage {
 		EAttribute FUNCTIONAL_GOAL__NAME = eINSTANCE.getFunctionalGoal_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Requirements</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTIONAL_GOAL__REQUIREMENTS = eINSTANCE.getFunctionalGoal_Requirements();
-
-		/**
 		 * The meta object literal for the '<em><b>Existing GM</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference FUNCTIONAL_GOAL__EXISTING_GM = eINSTANCE.getFunctionalGoal_ExistingGM();
+
+		/**
+		 * The meta object literal for the '<em><b>Requirements</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTIONAL_GOAL__REQUIREMENTS = eINSTANCE.getFunctionalGoal_Requirements();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.ExistingGMImpl <em>Existing GM</em>}' class.
@@ -2072,6 +2190,14 @@ public interface UtilityPackage extends EPackage {
 		EReference CONCRETE_SYNTAX__INTERACTION_SYNTAX = eINSTANCE.getConcreteSyntax_InteractionSyntax();
 
 		/**
+		 * The meta object literal for the '<em><b>Outside Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCRETE_SYNTAX__OUTSIDE_REF = eINSTANCE.getConcreteSyntax_OutsideRef();
+
+		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.AbstractSyntaxImpl <em>Abstract Syntax</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2104,6 +2230,14 @@ public interface UtilityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_SYNTAX__INTERACTION_SYNTAX = eINSTANCE.getAbstractSyntax_InteractionSyntax();
+
+		/**
+		 * The meta object literal for the '<em><b>Outside Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_SYNTAX__OUTSIDE_REF = eINSTANCE.getAbstractSyntax_OutsideRef();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.OutsideRefImpl <em>Outside Ref</em>}' class.
@@ -2172,6 +2306,32 @@ public interface UtilityPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REQUIREMENT__DESCRIPTION = eINSTANCE.getRequirement_Description();
+
+		/**
+		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.impl.DocumentationImpl <em>Documentation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.DocumentationImpl
+		 * @see pt.fct.unl.novalincs.useme.model.Utility.impl.UtilityPackageImpl#getDocumentation()
+		 * @generated
+		 */
+		EClass DOCUMENTATION = eINSTANCE.getDocumentation();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOCUMENTATION__NAME = eINSTANCE.getDocumentation_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Outside Ref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOCUMENTATION__OUTSIDE_REF = eINSTANCE.getDocumentation_OutsideRef();
 
 		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.Utility.PriorityValue <em>Priority Value</em>}' enum.

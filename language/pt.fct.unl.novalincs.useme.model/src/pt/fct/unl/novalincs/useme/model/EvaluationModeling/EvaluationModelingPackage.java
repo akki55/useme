@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModelingPackage;
 
+import pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -568,70 +570,6 @@ public interface EvaluationModelingPackage extends EPackage {
 	int EVALUATION_CONTEXT_OPERATION_COUNT = GoalModelingPackage.SCOPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.DocumentationImpl <em>Documentation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.DocumentationImpl
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationModelingPackageImpl#getDocumentation()
-	 * @generated
-	 */
-	int DOCUMENTATION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Evaluation Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENTATION__EVALUATION_MODEL = 0;
-
-	/**
-	 * The feature id for the '<em><b>Scenario</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENTATION__SCENARIO = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENTATION__NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Outside Ref</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENTATION__OUTSIDE_REF = 3;
-
-	/**
-	 * The number of structural features of the '<em>Documentation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENTATION_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Documentation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENTATION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.ProcessImpl <em>Process</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -639,7 +577,7 @@ public interface EvaluationModelingPackage extends EPackage {
 	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationModelingPackageImpl#getProcess()
 	 * @generated
 	 */
-	int PROCESS = 6;
+	int PROCESS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -694,7 +632,7 @@ public interface EvaluationModelingPackage extends EPackage {
 	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationModelingPackageImpl#getTestModel()
 	 * @generated
 	 */
-	int TEST_MODEL = 7;
+	int TEST_MODEL = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -749,7 +687,7 @@ public interface EvaluationModelingPackage extends EPackage {
 	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationModelingPackageImpl#getParticipant()
 	 * @generated
 	 */
-	int PARTICIPANT = 8;
+	int PARTICIPANT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -804,6 +742,79 @@ public interface EvaluationModelingPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARTICIPANT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationDocumentationImpl <em>Evaluation Documentation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationDocumentationImpl
+	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationModelingPackageImpl#getEvaluationDocumentation()
+	 * @generated
+	 */
+	int EVALUATION_DOCUMENTATION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_DOCUMENTATION__NAME = UtilityPackage.DOCUMENTATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Outside Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_DOCUMENTATION__OUTSIDE_REF = UtilityPackage.DOCUMENTATION__OUTSIDE_REF;
+
+	/**
+	 * The feature id for the '<em><b>Evaluation Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_DOCUMENTATION__EVALUATION_MODEL = UtilityPackage.DOCUMENTATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Scenario</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_DOCUMENTATION__SCENARIO = UtilityPackage.DOCUMENTATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Related Documentation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_DOCUMENTATION__RELATED_DOCUMENTATION = UtilityPackage.DOCUMENTATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Evaluation Documentation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_DOCUMENTATION_FEATURE_COUNT = UtilityPackage.DOCUMENTATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Evaluation Documentation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVALUATION_DOCUMENTATION_OPERATION_COUNT = UtilityPackage.DOCUMENTATION_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1242,60 +1253,6 @@ public interface EvaluationModelingPackage extends EPackage {
 	EAttribute getEvaluationContext_EnviromentInstance();
 
 	/**
-	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation <em>Documentation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Documentation</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation
-	 * @generated
-	 */
-	EClass getDocumentation();
-
-	/**
-	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getEvaluationModel <em>Evaluation Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Evaluation Model</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getEvaluationModel()
-	 * @see #getDocumentation()
-	 * @generated
-	 */
-	EReference getDocumentation_EvaluationModel();
-
-	/**
-	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getScenario <em>Scenario</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Scenario</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getScenario()
-	 * @see #getDocumentation()
-	 * @generated
-	 */
-	EReference getDocumentation_Scenario();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getName()
-	 * @see #getDocumentation()
-	 * @generated
-	 */
-	EAttribute getDocumentation_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getOutsideRef <em>Outside Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Outside Ref</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation#getOutsideRef()
-	 * @see #getDocumentation()
-	 * @generated
-	 */
-	EReference getDocumentation_OutsideRef();
-
-	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process <em>Process</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1434,6 +1391,49 @@ public interface EvaluationModelingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getParticipant_UserProfile();
+
+	/**
+	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation <em>Evaluation Documentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Evaluation Documentation</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation
+	 * @generated
+	 */
+	EClass getEvaluationDocumentation();
+
+	/**
+	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation#getEvaluationModel <em>Evaluation Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Evaluation Model</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation#getEvaluationModel()
+	 * @see #getEvaluationDocumentation()
+	 * @generated
+	 */
+	EReference getEvaluationDocumentation_EvaluationModel();
+
+	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation#getScenario <em>Scenario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Scenario</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation#getScenario()
+	 * @see #getEvaluationDocumentation()
+	 * @generated
+	 */
+	EReference getEvaluationDocumentation_Scenario();
+
+	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation#getRelatedDocumentation <em>Related Documentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Related Documentation</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation#getRelatedDocumentation()
+	 * @see #getEvaluationDocumentation()
+	 * @generated
+	 */
+	EReference getEvaluationDocumentation_RelatedDocumentation();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1789,48 +1789,6 @@ public interface EvaluationModelingPackage extends EPackage {
 		EAttribute EVALUATION_CONTEXT__ENVIROMENT_INSTANCE = eINSTANCE.getEvaluationContext_EnviromentInstance();
 
 		/**
-		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.DocumentationImpl <em>Documentation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.DocumentationImpl
-		 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationModelingPackageImpl#getDocumentation()
-		 * @generated
-		 */
-		EClass DOCUMENTATION = eINSTANCE.getDocumentation();
-
-		/**
-		 * The meta object literal for the '<em><b>Evaluation Model</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOCUMENTATION__EVALUATION_MODEL = eINSTANCE.getDocumentation_EvaluationModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Scenario</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOCUMENTATION__SCENARIO = eINSTANCE.getDocumentation_Scenario();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENTATION__NAME = eINSTANCE.getDocumentation_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Outside Ref</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOCUMENTATION__OUTSIDE_REF = eINSTANCE.getDocumentation_OutsideRef();
-
-		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.ProcessImpl <em>Process</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1939,6 +1897,40 @@ public interface EvaluationModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PARTICIPANT__USER_PROFILE = eINSTANCE.getParticipant_UserProfile();
+
+		/**
+		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationDocumentationImpl <em>Evaluation Documentation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationDocumentationImpl
+		 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl.EvaluationModelingPackageImpl#getEvaluationDocumentation()
+		 * @generated
+		 */
+		EClass EVALUATION_DOCUMENTATION = eINSTANCE.getEvaluationDocumentation();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluation Model</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATION_DOCUMENTATION__EVALUATION_MODEL = eINSTANCE.getEvaluationDocumentation_EvaluationModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Scenario</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATION_DOCUMENTATION__SCENARIO = eINSTANCE.getEvaluationDocumentation_Scenario();
+
+		/**
+		 * The meta object literal for the '<em><b>Related Documentation</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATION_DOCUMENTATION__RELATED_DOCUMENTATION = eINSTANCE.getEvaluationDocumentation_RelatedDocumentation();
 
 	}
 

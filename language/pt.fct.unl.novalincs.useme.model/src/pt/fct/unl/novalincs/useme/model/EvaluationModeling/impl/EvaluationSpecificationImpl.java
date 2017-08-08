@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.EvaluationModeling.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -10,13 +11,15 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationGoal;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModel;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingPackage;
@@ -105,7 +108,7 @@ public class EvaluationSpecificationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Documentation> documentaton;
+	protected EList<EvaluationDocumentation> documentaton;
 
 	/**
 	 * The cached value of the '{@link #getLanguage() <em>Language</em>}' containment reference list.
@@ -228,9 +231,9 @@ public class EvaluationSpecificationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Documentation> getDocumentaton() {
+	public EList<EvaluationDocumentation> getDocumentaton() {
 		if (documentaton == null) {
-			documentaton = new EObjectContainmentEList<Documentation>(Documentation.class, this, EvaluationModelingPackage.EVALUATION_SPECIFICATION__DOCUMENTATON);
+			documentaton = new EObjectContainmentEList<EvaluationDocumentation>(EvaluationDocumentation.class, this, EvaluationModelingPackage.EVALUATION_SPECIFICATION__DOCUMENTATON);
 		}
 		return documentaton;
 	}
@@ -367,7 +370,7 @@ public class EvaluationSpecificationImpl extends MinimalEObjectImpl.Container im
 				return;
 			case EvaluationModelingPackage.EVALUATION_SPECIFICATION__DOCUMENTATON:
 				getDocumentaton().clear();
-				getDocumentaton().addAll((Collection<? extends Documentation>)newValue);
+				getDocumentaton().addAll((Collection<? extends EvaluationDocumentation>)newValue);
 				return;
 			case EvaluationModelingPackage.EVALUATION_SPECIFICATION__LANGUAGE:
 				getLanguage().clear();

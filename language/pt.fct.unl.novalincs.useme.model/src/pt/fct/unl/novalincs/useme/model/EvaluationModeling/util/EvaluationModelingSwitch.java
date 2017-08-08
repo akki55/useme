@@ -7,8 +7,8 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationGoal;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModel;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingPackage;
@@ -18,6 +18,8 @@ import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Participant;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.Scope;
+
+import pt.fct.unl.novalincs.useme.model.Utility.Documentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -107,12 +109,6 @@ public class EvaluationModelingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EvaluationModelingPackage.DOCUMENTATION: {
-				Documentation documentation = (Documentation)theEObject;
-				T result = caseDocumentation(documentation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EvaluationModelingPackage.PROCESS: {
 				pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process process = (pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process)theEObject;
 				T result = caseProcess(process);
@@ -128,6 +124,13 @@ public class EvaluationModelingSwitch<T> extends Switch<T> {
 			case EvaluationModelingPackage.PARTICIPANT: {
 				Participant participant = (Participant)theEObject;
 				T result = caseParticipant(participant);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EvaluationModelingPackage.EVALUATION_DOCUMENTATION: {
+				EvaluationDocumentation evaluationDocumentation = (EvaluationDocumentation)theEObject;
+				T result = caseEvaluationDocumentation(evaluationDocumentation);
+				if (result == null) result = caseDocumentation(evaluationDocumentation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -211,21 +214,6 @@ public class EvaluationModelingSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Documentation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Documentation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDocumentation(Documentation object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Process</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -271,6 +259,21 @@ public class EvaluationModelingSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Evaluation Documentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Evaluation Documentation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEvaluationDocumentation(EvaluationDocumentation object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Scope</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -282,6 +285,21 @@ public class EvaluationModelingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseScope(Scope object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Documentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Documentation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDocumentation(Documentation object) {
 		return null;
 	}
 

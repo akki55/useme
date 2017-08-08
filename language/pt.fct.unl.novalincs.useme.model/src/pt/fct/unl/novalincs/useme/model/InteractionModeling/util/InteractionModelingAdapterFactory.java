@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
 
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.*;
+
 import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 
 /**

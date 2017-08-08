@@ -41,6 +41,7 @@ import pt.fct.unl.novalincs.useme.model.UseMe.impl.UseMePackageImpl;
 import pt.fct.unl.novalincs.useme.model.Utility.AbstractSyntax;
 import pt.fct.unl.novalincs.useme.model.Utility.CEVariable;
 import pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax;
+import pt.fct.unl.novalincs.useme.model.Utility.Documentation;
 import pt.fct.unl.novalincs.useme.model.Utility.ExistingGM;
 import pt.fct.unl.novalincs.useme.model.Utility.FunctionalGoal;
 import pt.fct.unl.novalincs.useme.model.Utility.LogicalExpression;
@@ -152,6 +153,13 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * @generated
 	 */
 	private EClass requirementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass documentationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -499,8 +507,8 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionalGoal_Requirements() {
-		return (EReference)functionalGoalEClass.getEStructuralFeatures().get(2);
+	public EReference getFunctionalGoal_ExistingGM() {
+		return (EReference)functionalGoalEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -508,8 +516,8 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionalGoal_ExistingGM() {
-		return (EReference)functionalGoalEClass.getEStructuralFeatures().get(1);
+	public EReference getFunctionalGoal_Requirements() {
+		return (EReference)functionalGoalEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -724,6 +732,15 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConcreteSyntax_OutsideRef() {
+		return (EReference)concreteSyntaxEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbstractSyntax() {
 		return abstractSyntaxEClass;
 	}
@@ -753,6 +770,15 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 */
 	public EReference getAbstractSyntax_InteractionSyntax() {
 		return (EReference)abstractSyntaxEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractSyntax_OutsideRef() {
+		return (EReference)abstractSyntaxEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -825,6 +851,33 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 	 */
 	public EAttribute getRequirement_Description() {
 		return (EAttribute)requirementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDocumentation() {
+		return documentationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDocumentation_Name() {
+		return (EAttribute)documentationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDocumentation_OutsideRef() {
+		return (EReference)documentationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -934,11 +987,13 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		createEAttribute(concreteSyntaxEClass, CONCRETE_SYNTAX__NAME);
 		createEReference(concreteSyntaxEClass, CONCRETE_SYNTAX__DSL);
 		createEReference(concreteSyntaxEClass, CONCRETE_SYNTAX__INTERACTION_SYNTAX);
+		createEReference(concreteSyntaxEClass, CONCRETE_SYNTAX__OUTSIDE_REF);
 
 		abstractSyntaxEClass = createEClass(ABSTRACT_SYNTAX);
 		createEAttribute(abstractSyntaxEClass, ABSTRACT_SYNTAX__NAME);
 		createEReference(abstractSyntaxEClass, ABSTRACT_SYNTAX__DSL);
 		createEReference(abstractSyntaxEClass, ABSTRACT_SYNTAX__INTERACTION_SYNTAX);
+		createEReference(abstractSyntaxEClass, ABSTRACT_SYNTAX__OUTSIDE_REF);
 
 		outsideRefEClass = createEClass(OUTSIDE_REF);
 		createEAttribute(outsideRefEClass, OUTSIDE_REF__NAME);
@@ -949,6 +1004,10 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		requirementEClass = createEClass(REQUIREMENT);
 		createEAttribute(requirementEClass, REQUIREMENT__NAME);
 		createEAttribute(requirementEClass, REQUIREMENT__DESCRIPTION);
+
+		documentationEClass = createEClass(DOCUMENTATION);
+		createEAttribute(documentationEClass, DOCUMENTATION__NAME);
+		createEReference(documentationEClass, DOCUMENTATION__OUTSIDE_REF);
 
 		// Create enums
 		priorityValueEEnum = createEEnum(PRIORITY_VALUE);
@@ -979,10 +1038,10 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		EvaluationModelingPackage theEvaluationModelingPackage = (EvaluationModelingPackage)EPackage.Registry.INSTANCE.getEPackage(EvaluationModelingPackage.eNS_URI);
 		SurveyModelingPackage theSurveyModelingPackage = (SurveyModelingPackage)EPackage.Registry.INSTANCE.getEPackage(SurveyModelingPackage.eNS_URI);
 		ContextModelingPackage theContextModelingPackage = (ContextModelingPackage)EPackage.Registry.INSTANCE.getEPackage(ContextModelingPackage.eNS_URI);
 		GoalModelingPackage theGoalModelingPackage = (GoalModelingPackage)EPackage.Registry.INSTANCE.getEPackage(GoalModelingPackage.eNS_URI);
+		EvaluationModelingPackage theEvaluationModelingPackage = (EvaluationModelingPackage)EPackage.Registry.INSTANCE.getEPackage(EvaluationModelingPackage.eNS_URI);
 		InteractionModelingPackage theInteractionModelingPackage = (InteractionModelingPackage)EPackage.Registry.INSTANCE.getEPackage(InteractionModelingPackage.eNS_URI);
 
 		// Create type parameters
@@ -998,7 +1057,7 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		initEReference(getUtilitySpecification_FunctionalGoal(), this.getFunctionalGoal(), null, "functionalGoal", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUtilitySpecification_ProcessModel(), this.getProcessModel(), null, "processModel", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUtilitySpecification_SurveyEngine(), this.getSurveyEngine(), null, "surveyEngine", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUtilitySpecification_Documentation(), theEvaluationModelingPackage.getDocumentation(), null, "documentation", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUtilitySpecification_Documentation(), this.getDocumentation(), null, "documentation", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUtilitySpecification_OutsideRef(), this.getOutsideRef(), null, "outsideRef", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUtilitySpecification_Requirement(), this.getRequirement(), null, "requirement", null, 0, -1, UtilitySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1013,7 +1072,7 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		initEReference(getDSL_GoalModel(), theGoalModelingPackage.getGoalModel(), null, "goalModel", null, 0, -1, pt.fct.unl.novalincs.useme.model.Utility.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDSL_EvaluationModel(), theEvaluationModelingPackage.getEvaluationModel(), null, "evaluationModel", null, 0, -1, pt.fct.unl.novalincs.useme.model.Utility.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDSL_ExistingGoalModel(), this.getExistingGM(), null, "existingGoalModel", null, 0, -1, pt.fct.unl.novalincs.useme.model.Utility.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDSL_Documentation(), theEvaluationModelingPackage.getDocumentation(), null, "documentation", null, 0, -1, pt.fct.unl.novalincs.useme.model.Utility.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDSL_Documentation(), this.getDocumentation(), null, "documentation", null, 0, -1, pt.fct.unl.novalincs.useme.model.Utility.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processModelEClass, ProcessModel.class, "ProcessModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProcessModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, ProcessModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1053,11 +1112,13 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		initEAttribute(getConcreteSyntax_Name(), ecorePackage.getEString(), "name", null, 0, 1, ConcreteSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConcreteSyntax_Dsl(), this.getDSL(), this.getDSL_ConcreteSyntax(), "dsl", null, 1, 1, ConcreteSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getConcreteSyntax_InteractionSyntax(), theInteractionModelingPackage.getInteractionSyntax(), theInteractionModelingPackage.getInteractionSyntax_ConcreteSyntax(), "interactionSyntax", null, 0, -1, ConcreteSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getConcreteSyntax_OutsideRef(), this.getOutsideRef(), null, "outsideRef", null, 0, 1, ConcreteSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractSyntaxEClass, AbstractSyntax.class, "AbstractSyntax", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractSyntax_Name(), ecorePackage.getEString(), "name", null, 0, 1, AbstractSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractSyntax_Dsl(), this.getDSL(), this.getDSL_AbstractSyntax(), "dsl", null, 1, 1, AbstractSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAbstractSyntax_InteractionSyntax(), theInteractionModelingPackage.getInteractionSyntax(), theInteractionModelingPackage.getInteractionSyntax_AbstractSyntax(), "interactionSyntax", null, 0, -1, AbstractSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAbstractSyntax_OutsideRef(), this.getOutsideRef(), null, "outsideRef", null, 0, 1, AbstractSyntax.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outsideRefEClass, OutsideRef.class, "OutsideRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOutsideRef_Name(), ecorePackage.getEString(), "name", null, 0, 1, OutsideRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1068,6 +1129,10 @@ public class UtilityPackageImpl extends EPackageImpl implements UtilityPackage {
 		initEClass(requirementEClass, Requirement.class, "Requirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRequirement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRequirement_Description(), ecorePackage.getEString(), "description", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(documentationEClass, Documentation.class, "Documentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDocumentation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Documentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDocumentation_OutsideRef(), this.getOutsideRef(), null, "outsideRef", null, 0, 1, Documentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(priorityValueEEnum, PriorityValue.class, "PriorityValue");

@@ -154,20 +154,6 @@ public class ReportModelingAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult <em>Evaluation Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult
-	 * @generated
-	 */
-	public Adapter createEvaluationResultAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM <em>Recommend GM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -192,6 +178,20 @@ public class ReportModelingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResultValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult <em>Evaluation Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult
+	 * @generated
+	 */
+	public Adapter createEvaluationResultAdapter() {
 		return null;
 	}
 

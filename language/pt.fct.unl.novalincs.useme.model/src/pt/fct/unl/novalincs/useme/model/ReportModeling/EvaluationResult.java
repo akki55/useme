@@ -3,8 +3,11 @@
 package pt.fct.unl.novalincs.useme.model.ReportModeling;
 
 import org.eclipse.emf.common.util.EList;
+
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionResult;
+
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyResult;
 
 /**

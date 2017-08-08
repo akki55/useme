@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationGoal;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModel;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingFactory;
@@ -70,10 +70,10 @@ public class EvaluationModelingFactoryImpl extends EFactoryImpl implements Evalu
 			case EvaluationModelingPackage.EVALUATION_GOAL: return createEvaluationGoal();
 			case EvaluationModelingPackage.LANGUAGE: return createLanguage();
 			case EvaluationModelingPackage.EVALUATION_CONTEXT: return createEvaluationContext();
-			case EvaluationModelingPackage.DOCUMENTATION: return createDocumentation();
 			case EvaluationModelingPackage.PROCESS: return createProcess();
 			case EvaluationModelingPackage.TEST_MODEL: return createTestModel();
 			case EvaluationModelingPackage.PARTICIPANT: return createParticipant();
+			case EvaluationModelingPackage.EVALUATION_DOCUMENTATION: return createEvaluationDocumentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -134,16 +134,6 @@ public class EvaluationModelingFactoryImpl extends EFactoryImpl implements Evalu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Documentation createDocumentation() {
-		DocumentationImpl documentation = new DocumentationImpl();
-		return documentation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process createProcess() {
 		ProcessImpl process = new ProcessImpl();
 		return process;
@@ -167,6 +157,16 @@ public class EvaluationModelingFactoryImpl extends EFactoryImpl implements Evalu
 	public Participant createParticipant() {
 		ParticipantImpl participant = new ParticipantImpl();
 		return participant;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EvaluationDocumentation createEvaluationDocumentation() {
+		EvaluationDocumentationImpl evaluationDocumentation = new EvaluationDocumentationImpl();
+		return evaluationDocumentation;
 	}
 
 	/**

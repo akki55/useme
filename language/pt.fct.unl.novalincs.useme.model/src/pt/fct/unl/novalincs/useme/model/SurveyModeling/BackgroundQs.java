@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.SurveyModeling;
 
 import org.eclipse.emf.common.util.EList;
+
 import pt.fct.unl.novalincs.useme.model.ContextModeling.UserProfile;
 
 import pt.fct.unl.novalincs.useme.model.Utility.LogicalExpression;

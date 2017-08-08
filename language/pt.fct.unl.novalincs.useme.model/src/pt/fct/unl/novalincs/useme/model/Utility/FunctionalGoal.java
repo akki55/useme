@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.Utility;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -51,22 +52,6 @@ public interface FunctionalGoal extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Requirements</b></em>' reference list.
-	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.Utility.Requirement}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requirements</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requirements</em>' reference list.
-	 * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getFunctionalGoal_Requirements()
-	 * @model
-	 * @generated
-	 */
-	EList<Requirement> getRequirements();
-
-	/**
 	 * Returns the value of the '<em><b>Existing GM</b></em>' reference list.
 	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.Utility.ExistingGM}.
 	 * It is bidirectional and its opposite is '{@link pt.fct.unl.novalincs.useme.model.Utility.ExistingGM#getFunctionalGoal <em>Functional Goal</em>}'.
@@ -83,5 +68,21 @@ public interface FunctionalGoal extends EObject {
 	 * @generated
 	 */
 	EList<ExistingGM> getExistingGM();
+
+	/**
+	 * Returns the value of the '<em><b>Requirements</b></em>' reference list.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.Utility.Requirement}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Requirements</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requirements</em>' reference list.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getFunctionalGoal_Requirements()
+	 * @model
+	 * @generated
+	 */
+	EList<Requirement> getRequirements();
 
 } // FunctionalGoal

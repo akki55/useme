@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
 
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.*;
+
 import pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResultAbstract;
 
 /**

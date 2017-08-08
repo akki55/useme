@@ -9,8 +9,8 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationContext;
+import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationGoal;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModel;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModelingPackage;
@@ -20,6 +20,8 @@ import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Participant;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.TestModel;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.Scope;
+
+import pt.fct.unl.novalincs.useme.model.Utility.Documentation;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,10 +100,6 @@ public class EvaluationModelingAdapterFactory extends AdapterFactoryImpl {
 				return createEvaluationContextAdapter();
 			}
 			@Override
-			public Adapter caseDocumentation(Documentation object) {
-				return createDocumentationAdapter();
-			}
-			@Override
 			public Adapter caseProcess(pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process object) {
 				return createProcessAdapter();
 			}
@@ -114,8 +112,16 @@ public class EvaluationModelingAdapterFactory extends AdapterFactoryImpl {
 				return createParticipantAdapter();
 			}
 			@Override
+			public Adapter caseEvaluationDocumentation(EvaluationDocumentation object) {
+				return createEvaluationDocumentationAdapter();
+			}
+			@Override
 			public Adapter caseScope(Scope object) {
 				return createScopeAdapter();
+			}
+			@Override
+			public Adapter caseDocumentation(Documentation object) {
+				return createDocumentationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -208,20 +214,6 @@ public class EvaluationModelingAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation <em>Documentation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation
-	 * @generated
-	 */
-	public Adapter createDocumentationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process <em>Process</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -264,6 +256,20 @@ public class EvaluationModelingAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation <em>Evaluation Documentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation
+	 * @generated
+	 */
+	public Adapter createEvaluationDocumentationAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.GoalModeling.Scope <em>Scope</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -274,6 +280,20 @@ public class EvaluationModelingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createScopeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pt.fct.unl.novalincs.useme.model.Utility.Documentation <em>Documentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.Documentation
+	 * @generated
+	 */
+	public Adapter createDocumentationAdapter() {
 		return null;
 	}
 

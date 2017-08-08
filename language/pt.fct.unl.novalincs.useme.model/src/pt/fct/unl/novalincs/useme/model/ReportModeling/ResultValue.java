@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.ReportModeling;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Language;

@@ -70,6 +70,7 @@ public class UtilityFactoryImpl extends EFactoryImpl implements UtilityFactory {
 			case UtilityPackage.ABSTRACT_SYNTAX: return createAbstractSyntax();
 			case UtilityPackage.OUTSIDE_REF: return createOutsideRef();
 			case UtilityPackage.REQUIREMENT: return createRequirement();
+			case UtilityPackage.DOCUMENTATION: return createDocumentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -237,6 +238,16 @@ public class UtilityFactoryImpl extends EFactoryImpl implements UtilityFactory {
 	public Requirement createRequirement() {
 		RequirementImpl requirement = new RequirementImpl();
 		return requirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Documentation createDocumentation() {
+		DocumentationImpl documentation = new DocumentationImpl();
+		return documentation;
 	}
 
 	/**

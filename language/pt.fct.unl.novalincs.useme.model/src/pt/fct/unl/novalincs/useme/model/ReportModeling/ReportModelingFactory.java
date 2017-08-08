@@ -49,15 +49,6 @@ public interface ReportModelingFactory extends EFactory {
 	EvaluationResultAbstract createEvaluationResultAbstract();
 
 	/**
-	 * Returns a new object of class '<em>Evaluation Result</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Evaluation Result</em>'.
-	 * @generated
-	 */
-	EvaluationResult createEvaluationResult();
-
-	/**
 	 * Returns a new object of class '<em>Recommend GM</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +65,15 @@ public interface ReportModelingFactory extends EFactory {
 	 * @generated
 	 */
 	ResultValue createResultValue();
+
+	/**
+	 * Returns a new object of class '<em>Evaluation Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Evaluation Result</em>'.
+	 * @generated
+	 */
+	EvaluationResult createEvaluationResult();
 
 	/**
 	 * Returns the package supported by this factory.

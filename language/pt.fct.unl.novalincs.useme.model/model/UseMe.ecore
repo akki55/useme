@@ -117,7 +117,7 @@
           upperBound="-1" eType="#//Utility/AbstractSyntax" eOpposite="#//Utility/AbstractSyntax/interactionSyntax"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="outsideRef" eType="#//Utility/OutsideRef"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" upperBound="-1"
-          eType="#//EvaluationModeling/Documentation"/>
+          eType="#//Utility/Documentation"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Task">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -126,7 +126,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="interactionModel" upperBound="-1"
           eType="#//InteractionModeling/InteractionModel" eOpposite="#//InteractionModeling/InteractionModel/task"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" upperBound="-1"
-          eType="#//EvaluationModeling/Documentation"/>
+          eType="#//EvaluationModeling/EvaluationDocumentation"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Event">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -224,7 +224,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="participant" upperBound="-1"
           eType="#//EvaluationModeling/Participant" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="documentaton" upperBound="-1"
-          eType="#//EvaluationModeling/Documentation" containment="true"/>
+          eType="#//EvaluationModeling/EvaluationDocumentation" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="language" upperBound="-1"
           eType="#//EvaluationModeling/Language" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationContext" upperBound="-1"
@@ -248,7 +248,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="testModel" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//EvaluationModeling/TestModel" eOpposite="#//EvaluationModeling/TestModel/evaluationModel"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="doc" ordered="false"
-          upperBound="-1" eType="#//EvaluationModeling/Documentation" eOpposite="#//EvaluationModeling/Documentation/evaluationModel"/>
+          upperBound="-1" eType="#//EvaluationModeling/EvaluationDocumentation"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="participant" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//EvaluationModeling/Participant"
           eOpposite="#//EvaluationModeling/Participant/evaluationModel"/>
@@ -291,15 +291,6 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="enviromentInstance" upperBound="-1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Documentation">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationModel" ordered="false"
-          lowerBound="1" eType="#//EvaluationModeling/EvaluationModel" eOpposite="#//EvaluationModeling/EvaluationModel/doc"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" ordered="false"
-          upperBound="-1" eType="#//ContextModeling/Scenario" eOpposite="#//ContextModeling/Scenario/doc"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outsideRef" eType="#//Utility/OutsideRef"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Process">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationModel" ordered="false"
@@ -324,6 +315,14 @@
           eOpposite="#//EvaluationModeling/EvaluationModel/participant"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="userProfile" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//ContextModeling/UserProfile" eOpposite="#//ContextModeling/UserProfile/participant"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EvaluationDocumentation" eSuperTypes="#//Utility/Documentation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationModel" ordered="false"
+          eType="#//EvaluationModeling/EvaluationModel"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" ordered="false"
+          upperBound="-1" eType="#//ContextModeling/Scenario"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="relatedDocumentation"
+          upperBound="-1" eType="#//Utility/Documentation"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="GoalModeling" nsURI="http://nova-lincs.di.fct.unl.pt/useme.goalmodeling"
@@ -550,7 +549,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatedTask" ordered="false"
           upperBound="-1" eType="#//InteractionModeling/Task" eOpposite="#//InteractionModeling/Task/scenario"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="doc" ordered="false"
-          upperBound="-1" eType="#//EvaluationModeling/Documentation" eOpposite="#//EvaluationModeling/Documentation/scenario"/>
+          upperBound="-1" eType="#//Utility/Documentation"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="aggregates" upperBound="-1"
           eType="#//ContextModeling/Scenario"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="question" upperBound="-1"
@@ -578,7 +577,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="surveyEngine" upperBound="-1"
           eType="#//Utility/SurveyEngine" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" upperBound="-1"
-          eType="#//EvaluationModeling/Documentation" containment="true"/>
+          eType="#//Utility/Documentation" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="outsideRef" upperBound="-1"
           eType="#//Utility/OutsideRef" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" upperBound="-1"
@@ -604,7 +603,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="existingGoalModel" upperBound="-1"
           eType="#//Utility/ExistingGM" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" upperBound="-1"
-          eType="#//EvaluationModeling/Documentation"/>
+          eType="#//Utility/Documentation"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ProcessModel">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -666,6 +665,7 @@
           lowerBound="1" eType="#//Utility/DSL" eOpposite="#//Utility/DSL/concreteSyntax"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="interactionSyntax" ordered="false"
           upperBound="-1" eType="#//InteractionModeling/InteractionSyntax" eOpposite="#//InteractionModeling/InteractionSyntax/concreteSyntax"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outsideRef" eType="#//Utility/OutsideRef"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AbstractSyntax">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -673,6 +673,7 @@
           lowerBound="1" eType="#//Utility/DSL" eOpposite="#//Utility/DSL/abstractSyntax"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="interactionSyntax" ordered="false"
           upperBound="-1" eType="#//InteractionModeling/InteractionSyntax" eOpposite="#//InteractionModeling/InteractionSyntax/abstractSyntax"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outsideRef" eType="#//Utility/OutsideRef"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OutsideRef">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -690,6 +691,11 @@
     <eClassifiers xsi:type="ecore:EClass" name="Requirement">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Documentation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outsideRef" eType="#//Utility/OutsideRef"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

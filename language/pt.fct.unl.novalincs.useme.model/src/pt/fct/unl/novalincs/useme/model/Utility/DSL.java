@@ -3,11 +3,11 @@
 package pt.fct.unl.novalincs.useme.model.Utility;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.ContextModeling.ContextModel;
 
-import pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation;
 import pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationModel;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.GoalModel;
@@ -166,7 +166,7 @@ public interface DSL extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Documentation</b></em>' reference list.
-	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation}.
+	 * The list contents are of type {@link pt.fct.unl.novalincs.useme.model.Utility.Documentation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Documentation</em>' reference list isn't clear,

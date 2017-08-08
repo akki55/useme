@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import pt.fct.unl.novalincs.useme.model.GoalModeling.*;
+
 import pt.fct.unl.novalincs.useme.model.Utility.Requirement;
 
 /**

@@ -231,16 +231,6 @@ public interface ReportModelingPackage extends EPackage {
 	int EVALUATION_RESULT_ABSTRACT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl <em>Evaluation Result</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportModelingPackageImpl#getEvaluationResult()
-	 * @generated
-	 */
-	int EVALUATION_RESULT = 5;
-
-	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl <em>Recommend GM</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,7 +311,6 @@ public interface ReportModelingPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECOMMEND_GM_OPERATION_COUNT = 0;
-
 
 	/**
 	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ResultValueImpl <em>Result Value</em>}' class.
@@ -404,6 +393,16 @@ public interface ReportModelingPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESULT_VALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl <em>Evaluation Result</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportModelingPackageImpl#getEvaluationResult()
+	 * @generated
+	 */
+	int EVALUATION_RESULT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -628,60 +627,6 @@ public interface ReportModelingPackage extends EPackage {
 	EReference getEvaluationResultAbstract_OutsifeReference();
 
 	/**
-	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult <em>Evaluation Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Evaluation Result</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult
-	 * @generated
-	 */
-	EClass getEvaluationResult();
-
-	/**
-	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getSurveyResult <em>Survey Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Survey Result</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getSurveyResult()
-	 * @see #getEvaluationResult()
-	 * @generated
-	 */
-	EReference getEvaluationResult_SurveyResult();
-
-	/**
-	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getInteractionResult <em>Interaction Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interaction Result</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getInteractionResult()
-	 * @see #getEvaluationResult()
-	 * @generated
-	 */
-	EReference getEvaluationResult_InteractionResult();
-
-	/**
-	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getReportModel <em>Report Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Report Model</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getReportModel()
-	 * @see #getEvaluationResult()
-	 * @generated
-	 */
-	EReference getEvaluationResult_ReportModel();
-
-	/**
-	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getEvaluationContext <em>Evaluation Context</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Evaluation Context</em>'.
-	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getEvaluationContext()
-	 * @see #getEvaluationResult()
-	 * @generated
-	 */
-	EReference getEvaluationResult_EvaluationContext();
-
-	/**
 	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.RecommendGM <em>Recommend GM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -834,6 +779,60 @@ public interface ReportModelingPackage extends EPackage {
 	EReference getResultValue_AssociatedRequirement();
 
 	/**
+	 * Returns the meta object for class '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult <em>Evaluation Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Evaluation Result</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult
+	 * @generated
+	 */
+	EClass getEvaluationResult();
+
+	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getSurveyResult <em>Survey Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Survey Result</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getSurveyResult()
+	 * @see #getEvaluationResult()
+	 * @generated
+	 */
+	EReference getEvaluationResult_SurveyResult();
+
+	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getInteractionResult <em>Interaction Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interaction Result</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getInteractionResult()
+	 * @see #getEvaluationResult()
+	 * @generated
+	 */
+	EReference getEvaluationResult_InteractionResult();
+
+	/**
+	 * Returns the meta object for the reference list '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getReportModel <em>Report Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Report Model</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getReportModel()
+	 * @see #getEvaluationResult()
+	 * @generated
+	 */
+	EReference getEvaluationResult_ReportModel();
+
+	/**
+	 * Returns the meta object for the reference '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getEvaluationContext <em>Evaluation Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Evaluation Context</em>'.
+	 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.EvaluationResult#getEvaluationContext()
+	 * @see #getEvaluationResult()
+	 * @generated
+	 */
+	EReference getEvaluationResult_EvaluationContext();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -967,48 +966,6 @@ public interface ReportModelingPackage extends EPackage {
 		EReference EVALUATION_RESULT_ABSTRACT__OUTSIFE_REFERENCE = eINSTANCE.getEvaluationResultAbstract_OutsifeReference();
 
 		/**
-		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl <em>Evaluation Result</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl
-		 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportModelingPackageImpl#getEvaluationResult()
-		 * @generated
-		 */
-		EClass EVALUATION_RESULT = eINSTANCE.getEvaluationResult();
-
-		/**
-		 * The meta object literal for the '<em><b>Survey Result</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EVALUATION_RESULT__SURVEY_RESULT = eINSTANCE.getEvaluationResult_SurveyResult();
-
-		/**
-		 * The meta object literal for the '<em><b>Interaction Result</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EVALUATION_RESULT__INTERACTION_RESULT = eINSTANCE.getEvaluationResult_InteractionResult();
-
-		/**
-		 * The meta object literal for the '<em><b>Report Model</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EVALUATION_RESULT__REPORT_MODEL = eINSTANCE.getEvaluationResult_ReportModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Evaluation Context</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EVALUATION_RESULT__EVALUATION_CONTEXT = eINSTANCE.getEvaluationResult_EvaluationContext();
-
-		/**
 		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.RecommendGMImpl <em>Recommend GM</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1123,6 +1080,48 @@ public interface ReportModelingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESULT_VALUE__ASSOCIATED_REQUIREMENT = eINSTANCE.getResultValue_AssociatedRequirement();
+
+		/**
+		 * The meta object literal for the '{@link pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl <em>Evaluation Result</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.EvaluationResultImpl
+		 * @see pt.fct.unl.novalincs.useme.model.ReportModeling.impl.ReportModelingPackageImpl#getEvaluationResult()
+		 * @generated
+		 */
+		EClass EVALUATION_RESULT = eINSTANCE.getEvaluationResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Survey Result</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATION_RESULT__SURVEY_RESULT = eINSTANCE.getEvaluationResult_SurveyResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Interaction Result</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATION_RESULT__INTERACTION_RESULT = eINSTANCE.getEvaluationResult_InteractionResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Report Model</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATION_RESULT__REPORT_MODEL = eINSTANCE.getEvaluationResult_ReportModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Evaluation Context</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVALUATION_RESULT__EVALUATION_CONTEXT = eINSTANCE.getEvaluationResult_EvaluationContext();
 
 	}
 

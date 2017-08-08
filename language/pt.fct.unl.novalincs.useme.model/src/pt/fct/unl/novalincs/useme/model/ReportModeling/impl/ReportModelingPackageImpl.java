@@ -32,8 +32,8 @@ import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModel;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingFactory;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportModelingPackage;
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ReportSpecification;
-
 import pt.fct.unl.novalincs.useme.model.ReportModeling.ResultValue;
+
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.SurveyModelingPackage;
 
 import pt.fct.unl.novalincs.useme.model.SurveyModeling.impl.SurveyModelingPackageImpl;
@@ -79,13 +79,6 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass evaluationResultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass recommendGMEClass = null;
 
 	/**
@@ -94,6 +87,13 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 	 * @generated
 	 */
 	private EClass resultValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass evaluationResultEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -301,51 +301,6 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEvaluationResult() {
-		return evaluationResultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEvaluationResult_SurveyResult() {
-		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEvaluationResult_InteractionResult() {
-		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEvaluationResult_ReportModel() {
-		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEvaluationResult_EvaluationContext() {
-		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRecommendGM() {
 		return recommendGMEClass;
 	}
@@ -465,6 +420,51 @@ public class ReportModelingPackageImpl extends EPackageImpl implements ReportMod
 	 */
 	public EReference getResultValue_AssociatedRequirement() {
 		return (EReference)resultValueEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEvaluationResult() {
+		return evaluationResultEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluationResult_SurveyResult() {
+		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluationResult_InteractionResult() {
+		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluationResult_ReportModel() {
+		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvaluationResult_EvaluationContext() {
+		return (EReference)evaluationResultEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**

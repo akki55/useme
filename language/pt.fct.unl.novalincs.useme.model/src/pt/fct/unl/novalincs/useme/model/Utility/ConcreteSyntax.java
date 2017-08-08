@@ -3,6 +3,7 @@
 package pt.fct.unl.novalincs.useme.model.Utility;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionSyntax;
@@ -19,6 +20,7 @@ import pt.fct.unl.novalincs.useme.model.InteractionModeling.InteractionSyntax;
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax#getName <em>Name</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax#getDsl <em>Dsl</em>}</li>
  *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax#getInteractionSyntax <em>Interaction Syntax</em>}</li>
+ *   <li>{@link pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax#getOutsideRef <em>Outside Ref</em>}</li>
  * </ul>
  *
  * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getConcreteSyntax()
@@ -97,5 +99,31 @@ public interface ConcreteSyntax extends EObject {
 	 * @generated
 	 */
 	EList<InteractionSyntax> getInteractionSyntax();
+
+	/**
+	 * Returns the value of the '<em><b>Outside Ref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Outside Ref</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Outside Ref</em>' reference.
+	 * @see #setOutsideRef(OutsideRef)
+	 * @see pt.fct.unl.novalincs.useme.model.Utility.UtilityPackage#getConcreteSyntax_OutsideRef()
+	 * @model
+	 * @generated
+	 */
+	OutsideRef getOutsideRef();
+
+	/**
+	 * Sets the value of the '{@link pt.fct.unl.novalincs.useme.model.Utility.ConcreteSyntax#getOutsideRef <em>Outside Ref</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Outside Ref</em>' reference.
+	 * @see #getOutsideRef()
+	 * @generated
+	 */
+	void setOutsideRef(OutsideRef value);
 
 } // ConcreteSyntax
