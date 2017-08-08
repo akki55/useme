@@ -220,7 +220,12 @@ public class UtilitySpecificationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(UtilityPackage.Literals.UTILITY_SPECIFICATION__DOCUMENTATION,
-				 EvaluationModelingFactory.eINSTANCE.createDocumentation()));
+				 UtilityFactory.eINSTANCE.createDocumentation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UtilityPackage.Literals.UTILITY_SPECIFICATION__DOCUMENTATION,
+				 EvaluationModelingFactory.eINSTANCE.createEvaluationDocumentation()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -187,29 +187,6 @@ public class EvaluationModelingItemProviderAdapterFactory extends EvaluationMode
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DocumentationItemProvider documentationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Documentation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDocumentationAdapter() {
-		if (documentationItemProvider == null) {
-			documentationItemProvider = new DocumentationItemProvider(this);
-		}
-
-		return documentationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.Process} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,6 +253,29 @@ public class EvaluationModelingItemProviderAdapterFactory extends EvaluationMode
 		}
 
 		return participantItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EvaluationDocumentationItemProvider evaluationDocumentationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.EvaluationModeling.EvaluationDocumentation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEvaluationDocumentationAdapter() {
+		if (evaluationDocumentationItemProvider == null) {
+			evaluationDocumentationItemProvider = new EvaluationDocumentationItemProvider(this);
+		}
+
+		return evaluationDocumentationItemProvider;
 	}
 
 	/**
@@ -382,10 +382,10 @@ public class EvaluationModelingItemProviderAdapterFactory extends EvaluationMode
 		if (evaluationGoalItemProvider != null) evaluationGoalItemProvider.dispose();
 		if (languageItemProvider != null) languageItemProvider.dispose();
 		if (evaluationContextItemProvider != null) evaluationContextItemProvider.dispose();
-		if (documentationItemProvider != null) documentationItemProvider.dispose();
 		if (processItemProvider != null) processItemProvider.dispose();
 		if (testModelItemProvider != null) testModelItemProvider.dispose();
 		if (participantItemProvider != null) participantItemProvider.dispose();
+		if (evaluationDocumentationItemProvider != null) evaluationDocumentationItemProvider.dispose();
 	}
 
 }

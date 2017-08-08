@@ -64,6 +64,7 @@ public class AbstractSyntaxItemProvider
 
 			addNamePropertyDescriptor(object);
 			addInteractionSyntaxPropertyDescriptor(object);
+			addOutsideRefPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -104,6 +105,28 @@ public class AbstractSyntaxItemProvider
 				 getString("_UI_AbstractSyntax_interactionSyntax_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractSyntax_interactionSyntax_feature", "_UI_AbstractSyntax_type"),
 				 UtilityPackage.Literals.ABSTRACT_SYNTAX__INTERACTION_SYNTAX,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Outside Ref feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutsideRefPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AbstractSyntax_outsideRef_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractSyntax_outsideRef_feature", "_UI_AbstractSyntax_type"),
+				 UtilityPackage.Literals.ABSTRACT_SYNTAX__OUTSIDE_REF,
 				 true,
 				 false,
 				 true,

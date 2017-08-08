@@ -217,7 +217,7 @@ public class EvaluationSpecificationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(EvaluationModelingPackage.Literals.EVALUATION_SPECIFICATION__DOCUMENTATON,
-				 EvaluationModelingFactory.eINSTANCE.createDocumentation()));
+				 EvaluationModelingFactory.eINSTANCE.createEvaluationDocumentation()));
 
 		newChildDescriptors.add
 			(createChildParameter

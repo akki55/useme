@@ -371,6 +371,29 @@ public class UtilityItemProviderAdapterFactory extends UtilityAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link pt.fct.unl.novalincs.useme.model.Utility.Documentation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DocumentationItemProvider documentationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link pt.fct.unl.novalincs.useme.model.Utility.Documentation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDocumentationAdapter() {
+		if (documentationItemProvider == null) {
+			documentationItemProvider = new DocumentationItemProvider(this);
+		}
+
+		return documentationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -482,6 +505,7 @@ public class UtilityItemProviderAdapterFactory extends UtilityAdapterFactory imp
 		if (abstractSyntaxItemProvider != null) abstractSyntaxItemProvider.dispose();
 		if (outsideRefItemProvider != null) outsideRefItemProvider.dispose();
 		if (requirementItemProvider != null) requirementItemProvider.dispose();
+		if (documentationItemProvider != null) documentationItemProvider.dispose();
 	}
 
 }
