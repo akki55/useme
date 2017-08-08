@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="fr.tpt.useme.architecture.model"
-      label="USEME Architecture Language Feature"
+      id="fr.tpt.mem4csd.dssl.model"
+      label="DSSL Metamodel and Tree Editor"
       version="1.0.0.qualifier">
 
    <description url="http://www.example.com/description">
@@ -17,21 +17,21 @@
    </license>
 
    <plugin
-         id="fr.tpt.useme.architecture.model"
+         id="fr.tpt.mem4csd.dssl.model"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="fr.tpt.useme.architecture.model.edit"
+         id="fr.tpt.mem4csd.dssl.model.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="fr.tpt.useme.architecture.model.editor"
+         id="fr.tpt.mem4csd.dssl.model.editor"
          download-size="0"
          install-size="0"
          version="0.0.0"

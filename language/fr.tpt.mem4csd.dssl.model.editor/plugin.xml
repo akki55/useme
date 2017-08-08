@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="fr.tpt.mem4csd.dssl.Wizard.category.ID"
+            name="%_UI_Wizard_category">
+      </category>
+      <!-- @generated dssl -->
+      <wizard
+            id="fr.tpt.mem4csd.dssl.model.dssl.presentation.DsslModelWizardID"
+            name="%_UI_DsslModelWizard_label"
+            class="fr.tpt.mem4csd.dssl.model.dssl.presentation.DsslModelWizard"
+            category="fr.tpt.mem4csd.dssl.Wizard.category.ID/fr.openpeople.rdal.Wizard.category.ID"
+            icon="icons/full/obj16/DsslModelFile.gif">
+         <description>%_UI_DsslModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dssl -->
+      <editor
+            id="fr.tpt.mem4csd.dssl.model.dssl.presentation.DsslEditorID"
+            name="%_UI_DsslEditor_label"
+            icon="icons/full/obj16/DsslModelFile.gif"
+            extensions="dssl"
+            class="fr.tpt.mem4csd.dssl.model.dssl.presentation.DsslEditor"
+            contributorClass="fr.tpt.mem4csd.dssl.model.dssl.presentation.DsslActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

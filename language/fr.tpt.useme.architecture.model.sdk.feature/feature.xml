@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="fr.tpt.useme.architecture.model.sdk"
-      label="USEME Architecture Language SDK Feature"
+      id="fr.tpt.mem4csd.dssl.model.sdk"
+      label="DSSL Metamodel and Tree Editor SDK"
       version="1.0.0.qualifier">
 
    <description url="http://www.example.com/description">
@@ -17,10 +17,11 @@
    </license>
 
    <includes
-         id="fr.tpt.useme.architecture.model"
+         id="fr.tpt.mem4csd.dssl.model"
          version="0.0.0"/>
+
    <includes
-         id="fr.tpt.useme.architecture.model.source"
+         id="fr.tpt.mem4csd.dssl.model.source"
          version="0.0.0"/>
 
 </feature>

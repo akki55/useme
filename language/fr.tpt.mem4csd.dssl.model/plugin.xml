@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dssl -->
+      <package
+            uri="http://mem4cds.telecom-paristech.fr/languages/dssl/"
+            class="fr.tpt.mem4csd.dssl.model.dssl.DsslPackage"
+            genModel="model/dssl.genmodel"/>
+   </extension>
+
+</plugin>

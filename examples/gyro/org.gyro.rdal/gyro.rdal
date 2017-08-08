@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdal:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cst="http://www.lab-sticc.fr/framework/constraints" xmlns:rdal="http://www.open-people.fr/rdal2" name="Gyro DSL System" id="_FMREoN5sEeaU5bsIjJAn4w" description="" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+  <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_MuevQd8kEea2BJXh0b62wQ">
+    <ownedDesignElementRefs id="_IF0csFHQEeeDHsDqBtgnOQ">
+      <designElement href="gyro.dssl#_165NYPEkEeaFcM395dpt6Q"/>
+    </ownedDesignElementRefs>
+    <ownedDesignElementRefs id="_IF0csVHQEeeDHsDqBtgnOQ">
+      <designElement href="gyro.jucm#/"/>
+    </ownedDesignElementRefs>
+    <ownedDesignElementRefs id="_IF0cslHQEeeDHsDqBtgnOQ">
+      <designElement href="../org.gyro.metamodel/model/gyro.ecore#/"/>
+    </ownedDesignElementRefs>
+    <ownedDesignElementRefs id="_IF0cs1HQEeeDHsDqBtgnOQ">
+      <designElement href="../org.gyro.metamodel.design/description/gyro.odesign#/"/>
+    </ownedDesignElementRefs>
+  </ownedReferencedDesignElements>
+  <ownedPackages xsi:type="rdal:GoalsPackage" name="Gyro System Goals" id="_U9_S8ODHEearDeIEXm32LA">
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G1 Specify robot behavior" id="_bj2MouDHEearDeIEXm32L" description="The user should be provided with a concepts to model behaviors of robot" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_mDN0PbeEeaVQqY6DpBpBw">
+          <designElement href="gyro.dssl#_16_UAPEkEeaFcM395dpt6e"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_geisUFHWEeet3O1YUJkoRg" text="The user should be provided with a concepts to model behaviors of robot">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+      <useCases href="gyro.jucm#102"/>
+    </ownedGoals>
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G2 Support customized configurations" id="_bj2MouDHEearDeIEXm2LA" description="The domain experts should be supported to create customized configurations" stakeholders="_tqSwvTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWADMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeVQqY6DpBpBw">
+          <designElement href="gyro.dssl#_16_UAPEkEeaFcM395dpt6e"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedRationales name="Adapt usability" id="_FJj2A1HHEeeDHsDqBtgnOQ" description="Adapt usability to the level of knowledge of users" stakeholders="_tqSwvTMxEeeHT7vuJ8Hf1w"/>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_haDSUFHWEeet3O1YUJkoRg" text="The domain experts should be supported to create customized configurations">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+    </ownedGoals>
+    <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G3 Support creation new language components" id="_bj2MouDHEearDeIEXm32LA" description="The software engineers should be supported to create new language component" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_YhZWAeDMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_AmDN0PbeEeaVQqY6DpBpBw">
+          <designElement href="gyro.dssl#_16_UAPEkEeaFcM395dpt6e"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedRationales name="Evolution" id="_7Gywk1HGEeeDHsDqBtgnOQ" description="Support evolution of robot platform" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w"/>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_h7Fi0FHWEeet3O1YUJkoRg" text="The software engineers should be supported to create new language component">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+    </ownedGoals>
+    <ownedGoals xsi:type="rdal:NonFunctionalGoal" name="G4 Ease of use" id="_yqW4Y-DLEearDeIEXm32LA" description="The DSL should be easy to use for non robot specialists" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_WKl2seDMEearDeIEXm32LA">
+        <ownedDesignElementRefs xsi:type="rdal:SatisfiableDesignElementRef" id="_wB6GEPbdEeaVQqY6DpBpBw">
+          <designElement href="gyro.dssl#_16_UAPEkEeaFcM395dpt6e"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_ihLScFHWEeet3O1YUJkoRg" text="The DSL should be easy to use for non robot specialists">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_non_functional_goal_Usability"/>
+    </ownedGoals>
+  </ownedPackages>
+  <ownedPackages xsi:type="rdal:RequirementsPackage" name="Gyro Functional Requirements" id="_rKlhZuvSEeabG6EdqbdIDg">
+    <ownedRequirements xsi:type="rdal:Assumption" name="A1 User Speaks English" id="_YGOJE-xVEeasmNxQC8ra6w" description="User can speak english " stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_1gRKQTM4EeeHT7vuJ8Hf1w">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_1gRKQDM4EeeHT7vuJ8Hf1w">
+          <designElement href="gyro.dssl#_17CXUPEkEeaFcM395dpt6Q"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedRationales name="English Concrete Syntax" id="_hI03M1BcEee-SugvAqJPGg" description="This is because the concrete syntax of Gyro is in english" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w"/>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_eq6H8DQ8EeeRNNEigitqHA" text="self.spokenLanguages->exists( el | el = 'EN' )">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Assumption" name="A2 Color Display" id="_8Dt-E1BhEee-SugvAqJPGg" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_Hmv8YVBiEee-SugvAqJPGg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_Hmv8YFBiEee-SugvAqJPGg">
+          <designElement href="gyro.dssl#_4NZ4ClBaEee-SugvAqJPGg"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_Ib-7QFBiEee-SugvAqJPGg" text="self.supportedColors->exists( el | el =ColorScheme::ColorsTrue or  el =ColorScheme::Colors65536 )">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Assumption" name="A3 Planar Motion Robot" id="_zhPms1BhEee-SugvAqJPGg" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_5SMRoVBhEee-SugvAqJPGg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_5SMRoFBhEee-SugvAqJPGg">
+          <designElement href="gyro.dssl#_17CXUfEkEeaFcM395dpt6Q"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_lP67MFHXEeet3O1YUJkoRg" text="The robot can move on a plane">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1 Specify Robot Behavior" id="_STt4QlHJEeeDHsDqBtgnOQ" description="" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_z97wIVHJEeeDHsDqBtgnOQ">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_z97wIFHJEeeDHsDqBtgnOQ">
+          <designElement href="gyro.dssl#_16_UAPEkEeaFcM395dpt6e"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_W_Oy4FHOEeeDHsDqBtgnOQ" text="Specify robot behavior">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1 Provide Concrete Syntax" id="_uWbLQuvSEeabG6EdqbdIDg" description="" verified="false">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_03WhoOvSEeabG6EdqbdIDg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_AE1QgFHKEeeDHsDqBtgnOQ">
+          <designElement href="gyro.dssl#_167poPEkEeaFcM395dpt6Q"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_J-fP4E0tEee8T-sZnIB6dg" text="">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <functionUsedIn href="gyro.jucm#5629"/>
+      <functionUsedIn href="gyro.jucm#5633"/>
+      <functionUsedIn href="gyro.jucm#5641"/>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1 Provide Diagram Description" id="_mz3JQlHOEeeDHsDqBtgnOQ" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_MhuAQVHQEeeDHsDqBtgnOQ">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_MhuAQFHQEeeDHsDqBtgnOQ">
+          <designElement href="../org.gyro.metamodel.design/description/gyro.odesign#//@ownedViewpoints[name='default']"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_OLokYFHQEeeDHsDqBtgnOQ" text="Provide diagram desctiption">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.2 Provide Abstract Syntax" id="_C08AolHKEeeDHsDqBtgnOQ" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_IJ1owVHKEeeDHsDqBtgnOQ">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_IJ1owFHKEeeDHsDqBtgnOQ">
+          <designElement href="gyro.dssl#_167CkPEkEeaFcM395dpt6Q"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_ZbPiUFHOEeeDHsDqBtgnOQ" text="Provide abstract syntax">
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+      </ownedExpression>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.2.1 Provide Parallel Node" id="_bFX1MjP7EeeHT7vuJ8Hf1w" description="This node runs all child nodes sequentially, from left to right. Each node runs and can end in success or failure. When a node ends with Success, the next node (from left to right) runs. The sequence ends with a failure if one of the nodes fails, or ends in success when all nodes have finished in success.">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_xDJc0TQ3Eeecw_beU43oAg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_vFqJMHx0EeeCD9nZapJXXw">
+          <designElement href="../org.gyro.metamodel/model/gyro.ecore#/"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_x0faMDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( ela | ela.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Parallel' ) ) )">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+      </ownedExpression>
+      <ownedCondition xsi:type="cst:FormalLanguageExpression" id="_ICE7qU0vEee8T-sZnIB6dg" text="">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedCondition>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <functionUsedIn href="gyro.jucm#6921"/>
+      <functionUsedIn href="gyro.jucm#6944"/>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.2.2 Provide Sequence Node" id="_jQh2wjQREee2fof3jl46Gw" description="the parallel node runs all child nodes at the same time.  This node can be configured with different termination conditions. They may end in success or failure when all child nodes succeed or fail, respectively.">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_QMx2ATQyEeef355uq_mXVg">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_5VA5IHx0EeeCD9nZapJXXw">
+          <designElement href="../org.gyro.metamodel/model/gyro.ecore#/"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_BdyfwDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( ela | ela.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Sequence' ) ) )">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <functionUsedIn href="gyro.jucm#6934"/>
+      <functionUsedIn href="gyro.jucm#6940"/>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1.1 Provide Graphical Parallel Node" id="_aSdzUlHQEeeDHsDqBtgnOQ" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_jKjOUVHQEeeDHsDqBtgnOQ">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_jKjOUFHQEeeDHsDqBtgnOQ">
+          <designElement href="../org.gyro.metamodel.design/description/gyro.odesign#//@ownedViewpoints[name='default']/@ownedRepresentations[name='graphical_diagram']/@defaultLayer"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_VK7cUFHREeeDHsDqBtgnOQ" text="true -- TODO self.oclAsType( ecore::EObject ).eContainer().oclAsType( viewpoint::description::RepresentationDescription ).metamodel->select( el | self.nodeMappings->first().domainClass.startsWith() --.eClassifiers->select( el | el.name = self.nodeMappings->first().domainClass ) --.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Sequence' ) )">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+      </ownedExpression>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+    </ownedRequirements>
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1.2 Provide Graphical Sequence Node" id="_PGNZclHUEeeDHsDqBtgnOQ" description="">
+      <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_WeQlEVHUEeeDHsDqBtgnOQ">
+        <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_WeQlEFHUEeeDHsDqBtgnOQ">
+          <designElement href="../org.gyro.metamodel.design/description/gyro.odesign#//@ownedViewpoints[name='default']/@ownedRepresentations[name='graphical_diagram']/@defaultLayer"/>
+        </ownedDesignElementRefs>
+      </ownedReferencedDesignElements>
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_XQi9oFHUEeeDHsDqBtgnOQ" text="true -- TODO">
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+      </ownedExpression>
+      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+    </ownedRequirements>
+    <ownedRefinements xsi:type="rdal:RequirementRefinement" name="R1" id="_NgFuYE0tEee8T-sZnIB6dg">
+      <ownedSubRequirementRefs name="" id="_ImePsE-AEeez0tytZDYKnA" weight="0.5">
+        <requirement href="#_uWbLQuvSEeabG6EdqbdIDg"/>
+      </ownedSubRequirementRefs>
+      <ownedSubRequirementRefs id="_TKw_kFHKEeeDHsDqBtgnOQ" weight="0.5">
+        <requirement href="#_C08AolHKEeeDHsDqBtgnOQ"/>
+      </ownedSubRequirementRefs>
+      <refinedRequirement href="#_STt4QlHJEeeDHsDqBtgnOQ"/>
+    </ownedRefinements>
+    <ownedRefinements xsi:type="rdal:RequirementRefinement" name="R1.1" id="_cd3-IFHUEeeDHsDqBtgnOQ">
+      <ownedSubRequirementRefs id="_iWtZwFHUEeeDHsDqBtgnOQ" weight="1.0">
+        <requirement href="#_mz3JQlHOEeeDHsDqBtgnOQ"/>
+      </ownedSubRequirementRefs>
+      <refinedRequirement href="#_uWbLQuvSEeabG6EdqbdIDg"/>
+    </ownedRefinements>
+    <ownedRefinements xsi:type="rdal:RequirementRefinement" name="R1.1.1" id="_liTMAFHUEeeDHsDqBtgnOQ">
+      <ownedSubRequirementRefs id="_psUVYFHUEeeDHsDqBtgnOQ" weight="0.5">
+        <requirement href="#_aSdzUlHQEeeDHsDqBtgnOQ"/>
+      </ownedSubRequirementRefs>
+      <ownedSubRequirementRefs id="_rqIs8FHUEeeDHsDqBtgnOQ" weight="0.5">
+        <requirement href="#_PGNZclHUEeeDHsDqBtgnOQ"/>
+      </ownedSubRequirementRefs>
+      <refinedRequirement href="#_mz3JQlHOEeeDHsDqBtgnOQ"/>
+    </ownedRefinements>
+    <ownedRefinements xsi:type="rdal:RequirementRefinement" name="R1.2" id="_75EI8E9_Eeez0tytZDYKnA">
+      <ownedSubRequirementRefs id="_tN5C4FHNEeeDHsDqBtgnOQ" weight="0.5">
+        <requirement href="#_bFX1MjP7EeeHT7vuJ8Hf1w"/>
+      </ownedSubRequirementRefs>
+      <ownedSubRequirementRefs id="_vz3moFHNEeeDHsDqBtgnOQ" weight="0.5">
+        <requirement href="#_jQh2wjQREee2fof3jl46Gw"/>
+      </ownedSubRequirementRefs>
+      <refinedRequirement href="#_C08AolHKEeeDHsDqBtgnOQ"/>
+    </ownedRefinements>
+  </ownedPackages>
+  <ownedContactInformation name="Artica" id="_WlQAGN8kEea2BJXh0b62wQ" address="Madan Parque, Rua dos Inventores, Lote 4 2825-182 Caparica" email=" info@artica.cc" phoneNumber="+351 212 947 828" country="Portugal"/>
+  <ownedSystOverview id="_IlId6t5sEeaU5bsIjJAn4w" description="The system being specified is the DSL for programming robots, called Gyro. The DSL is meant to introduce programming concepts to the children by using a visual syntax based on behavior tree diagrams." contactInformation="_WlQAGN8kEea2BJXh0b62wQ" purpose="The purpose of Gyro is to enable the persons without programming experience, especially the children, to program a behavior of low-cost robot.">
+    <ownedCapabilities name="Specify the behavior of a robot" id="__e4-9lHWEeet3O1YUJkoRg"/>
+    <ownedCapabilities name="Provide notation for user" id="_DfMytlHXEeet3O1YUJkoRg"/>
+    <globalSystem href="gyro.dssl#_165NYPEkEeaFcM395dpt6Q"/>
+    <systemToBe href="gyro.dssl#_16_UAPEkEeaFcM395dpt6e"/>
+    <ownedContexts name="Normal Use" id="_JUF1oN5sEeaU5bsIjJAn4w" description="">
+      <globalSystemContext href="gyro.dssl#_17AiIPEkEeaFcM395dpt6Q"/>
+      <systemToBe href="gyro.dssl#_17BJM_EkEeaFcM395dpt6Q"/>
+    </ownedContexts>
+    <ownedSystemBoundary name="Abstract Syntax" id="_QPLseHxBEeepWLBDlSxU2A" type="Controllable">
+      <designVariable href="gyro.dssl#_cZOYwE0gEee8T-sZnIB6dg"/>
+    </ownedSystemBoundary>
+    <ownedSystemBoundary name="Concrete Syntax" id="_QPLseHxBEeepWLBDSxU2A" description="">
+      <designVariable href="gyro.dssl#_eo0EUE9mEee8T-sZnIB6dg"/>
+    </ownedSystemBoundary>
+  </ownedSystOverview>
+  <constraintLanguagesSpec href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#5663deb5-f5c5-4a39-a324-8da2b395dd7c"/>
+  <ownedStakeholders name="User" id="_quZnXTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ"/>
+  <ownedStakeholders name="Teacher" id="_tqSwvTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ"/>
+  <ownedStakeholders name="Software Engineer" id="_xR5JjTMxEeeHT7vuJ8Hf1w" description="" contactInformation="_WlQAGN8kEea2BJXh0b62wQ"/>
+</rdal:Specification>
