@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: fr.tpt.dssl.model.design
-Bundle-SymbolicName: fr.tpt.dssl.model.design;singleton:=true
+Bundle-SymbolicName: fr.tpt.mem4csd.dssl.model.design;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: fr.tpt.dssl.model.design.Activator
 Require-Bundle: org.eclipse.ui,
