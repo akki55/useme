@@ -4970,7 +4970,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_7gI-k1EfEee-VYhw9iJTdw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_7gIXgVEfEee-VYhw9iJTdw" fontName="Segoe UI" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7gIXglEfEee-VYhw9iJTdw" x="1080" y="310"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7gIXglEfEee-VYhw9iJTdw" x="740" y="323"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_08GqAFFEEee-VYhw9iJTdw" type="2003" element="_07IZoFFEEee-VYhw9iJTdw">
             <children xmi:type="notation:Node" xmi:id="_08HREFFEEee-VYhw9iJTdw" type="5007"/>

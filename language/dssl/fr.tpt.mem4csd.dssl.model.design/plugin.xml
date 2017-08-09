@@ -2,8 +2,8 @@
 <?eclipse version="3.0"?>
 <plugin>
   <extension point="org.eclipse.sirius.componentization">
-    <component class="fr.tpt.dssl.model.design.Activator"
-               id="fr.tpt.dssl.model.design"
+    <component class="fr.tpt.mem4csd.dssl.model.design.Activator"
+               id="fr.tpt.mem4csd.dssl.model.design"
 	       name="dssl">
     </component>
   </extension>
