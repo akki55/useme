@@ -22,7 +22,7 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_geisUFHWEeet3O1YUJkoRg" text="The user should be provided with a concepts to model behaviors of robot">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
       <useCases href="gyro.jucm#102"/>
     </ownedGoals>
@@ -34,7 +34,7 @@
       </ownedReferencedDesignElements>
       <ownedRationales name="Adapt usability" id="_FJj2A1HHEeeDHsDqBtgnOQ" description="Adapt usability to the level of knowledge of users" stakeholders="_tqSwvTMxEeeHT7vuJ8Hf1w"/>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_haDSUFHWEeet3O1YUJkoRg" text="The domain experts should be supported to create customized configurations">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
     </ownedGoals>
     <ownedGoals xsi:type="rdal:SystemFunctionGoal" name="G3 Support creation new language components" id="_bj2MouDHEearDeIEXm32LA" description="The software engineers should be supported to create new language component" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
@@ -45,7 +45,7 @@
       </ownedReferencedDesignElements>
       <ownedRationales name="Evolution" id="_7Gywk1HGEeeDHsDqBtgnOQ" description="Support evolution of robot platform" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w"/>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_h7Fi0FHWEeet3O1YUJkoRg" text="The software engineers should be supported to create new language component">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
     </ownedGoals>
     <ownedGoals xsi:type="rdal:NonFunctionalGoal" name="G4 Ease of use" id="_yqW4Y-DLEearDeIEXm32LA" description="The DSL should be easy to use for non robot specialists" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ">
@@ -55,9 +55,9 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_ihLScFHWEeet3O1YUJkoRg" text="The DSL should be easy to use for non robot specialists">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_non_functional_goal_Usability"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_non_functional_goal_Usability"/>
     </ownedGoals>
   </ownedPackages>
   <ownedPackages xsi:type="rdal:RequirementsPackage" name="Gyro Functional Requirements" id="_rKlhZuvSEeabG6EdqbdIDg">
@@ -69,8 +69,8 @@
       </ownedReferencedDesignElements>
       <ownedRationales name="English Concrete Syntax" id="_hI03M1BcEee-SugvAqJPGg" description="This is because the concrete syntax of Gyro is in english" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w"/>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_eq6H8DQ8EeeRNNEigitqHA" text="self.spokenLanguages->exists( el | el = 'EN' )">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libComponent.ocl"/>
       </ownedExpression>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Assumption" name="A2 Color Display" id="_8Dt-E1BhEee-SugvAqJPGg" description="">
@@ -80,8 +80,8 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_Ib-7QFBiEee-SugvAqJPGg" text="self.supportedColors->exists( el | el =ColorScheme::ColorsTrue or  el =ColorScheme::Colors65536 )">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libComponent.ocl"/>
       </ownedExpression>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Assumption" name="A3 Planar Motion Robot" id="_zhPms1BhEee-SugvAqJPGg" description="">
@@ -91,7 +91,7 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_lP67MFHXEeet3O1YUJkoRg" text="The robot can move on a plane">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Requirement" name="R1 Specify Robot Behavior" id="_STt4QlHJEeeDHsDqBtgnOQ" description="" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w">
@@ -101,9 +101,9 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_W_Oy4FHOEeeDHsDqBtgnOQ" text="Specify robot behavior">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Requirement" name="R1.1 Provide Concrete Syntax" id="_uWbLQuvSEeabG6EdqbdIDg" description="" verified="false">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_03WhoOvSEeabG6EdqbdIDg">
@@ -112,9 +112,9 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_J-fP4E0tEee8T-sZnIB6dg" text="">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
       <functionUsedIn href="gyro.jucm#5629"/>
       <functionUsedIn href="gyro.jucm#5633"/>
       <functionUsedIn href="gyro.jucm#5641"/>
@@ -126,7 +126,7 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_OLokYFHQEeeDHsDqBtgnOQ" text="Provide diagram desctiption">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Requirement" name="R1.2 Provide Abstract Syntax" id="_C08AolHKEeeDHsDqBtgnOQ" description="">
@@ -136,9 +136,9 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_ZbPiUFHOEeeDHsDqBtgnOQ" text="Provide abstract syntax">
-        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
+        <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Requirement" name="R1.2.1 Provide Parallel Node" id="_bFX1MjP7EeeHT7vuJ8Hf1w" description="This node runs all child nodes sequentially, from left to right. Each node runs and can end in success or failure. When a node ends with Success, the next node (from left to right) runs. The sequence ends with a failure if one of the nodes fails, or ends in success when all nodes have finished in success.">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_xDJc0TQ3Eeecw_beU43oAg">
@@ -147,13 +147,13 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_x0faMDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( ela | ela.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Parallel' ) ) )">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
       </ownedExpression>
       <ownedCondition xsi:type="cst:FormalLanguageExpression" id="_ICE7qU0vEee8T-sZnIB6dg" text="">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libComponent.ocl"/>
       </ownedCondition>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
       <functionUsedIn href="gyro.jucm#6921"/>
       <functionUsedIn href="gyro.jucm#6944"/>
     </ownedRequirements>
@@ -164,10 +164,9 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_BdyfwDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( ela | ela.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Sequence' ) ) )">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
       </ownedExpression>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
       <functionUsedIn href="gyro.jucm#6934"/>
       <functionUsedIn href="gyro.jucm#6940"/>
     </ownedRequirements>
@@ -178,9 +177,9 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_VK7cUFHREeeDHsDqBtgnOQ" text="true -- TODO self.oclAsType( ecore::EObject ).eContainer().oclAsType( viewpoint::description::RepresentationDescription ).metamodel->select( el | self.nodeMappings->first().domainClass.startsWith() --.eClassifiers->select( el | el.name = self.nodeMappings->first().domainClass ) --.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Sequence' ) )">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
       </ownedExpression>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1.2 Provide Graphical Sequence Node" id="_PGNZclHUEeeDHsDqBtgnOQ" description="">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_WeQlEVHUEeeDHsDqBtgnOQ">
@@ -189,10 +188,9 @@
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_XQi9oFHUEeeDHsDqBtgnOQ" text="true -- TODO">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.useme.settings/ocl/default/libComponent.ocl"/>
+        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
       </ownedExpression>
-      <category href="platform:/config/fr.tpt.useme.settings/default.settings#cat_requirement_System_Function"/>
+      <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
     </ownedRequirements>
     <ownedRefinements xsi:type="rdal:RequirementRefinement" name="R1" id="_NgFuYE0tEee8T-sZnIB6dg">
       <ownedSubRequirementRefs name="" id="_ImePsE-AEeez0tytZDYKnA" weight="0.5">
@@ -245,7 +243,7 @@
       <designVariable href="gyro.dssl#_eo0EUE9mEee8T-sZnIB6dg"/>
     </ownedSystemBoundary>
   </ownedSystOverview>
-  <constraintLanguagesSpec href="platform:/config/fr.tpt.useme.settings/defaultConstraintsLanguages.constraints#5663deb5-f5c5-4a39-a324-8da2b395dd7c"/>
+  <constraintLanguagesSpec href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#5663deb5-f5c5-4a39-a324-8da2b395dd7c"/>
   <ownedStakeholders name="User" id="_quZnXTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ"/>
   <ownedStakeholders name="Teacher" id="_tqSwvTMxEeeHT7vuJ8Hf1w" contactInformation="_WlQAGN8kEea2BJXh0b62wQ"/>
   <ownedStakeholders name="Software Engineer" id="_xR5JjTMxEeeHT7vuJ8Hf1w" description="" contactInformation="_WlQAGN8kEea2BJXh0b62wQ"/>
