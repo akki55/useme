@@ -29,12 +29,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Behavior" abstract="true" eSuperTypes="#//Node"/>
   <eClassifiers xsi:type="ecore:EClass" name="Priority" eSuperTypes="#//Behavior"/>
   <eClassifiers xsi:type="ecore:EClass" name="Parallel" eSuperTypes="#//Behavior">
-    <eAnnotations source="gyro.abstract_syntax">
+    <eAnnotations source="dssl.abstract_syntax">
       <details key="role" value="Parallel"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sequential" eSuperTypes="#//Behavior">
-    <eAnnotations source="gyro.abstract_syntax">
+    <eAnnotations source="dssl.abstract_syntax">
       <details key="role" value="Sequence"/>
     </eAnnotations>
   </eClassifiers>

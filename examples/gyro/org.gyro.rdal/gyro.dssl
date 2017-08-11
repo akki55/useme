@@ -22,10 +22,10 @@
       <feature href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//Dsl/supportingTools"/>
     </ownedInteractionFeatures>
     <ownedSyntaxes xsi:type="dssl:ECoreAbstractSyntax" name="Gyro Abstract Syntax" id="_167CkPEkEeaFcM395dpt6Q" description="This is the abstract syntax for Gyro implemented as an Ecore metamodel.">
-      <packages href="../org.farrusco/model/farrusco.ecore#/"/>
+      <packages href="../org.gyro.metamodel/model/gyro.ecore#/"/>
     </ownedSyntaxes>
     <ownedSyntaxes xsi:type="dssl:SiriusConcreteSyntax" name="Gyro Graphical Syntax" id="_167poPEkEeaFcM395dpt6Q" description="This is the concrete graphical syntax for Gyro implemented as a Sirius model.">
-      <siriusSpecification href="../org.farrusco.design/description/farrusco.odesign#/"/>
+      <siriusSpecification href="../org.gyro.metamodel.design/description/gyro.odesign#/"/>
     </ownedSyntaxes>
   </ownedEntityTypes>
   <ownedEntityTypes xsi:type="dssl:SoftwareTool" name="Web_Browser" id="_16_7EPEkEeaFcM395dpt6Q" description="The user interface is a web browser on which the user can draw a diagram of  the Gyro DSL to specify the behavior of the robot." executedBy="_16_UAPEkEeaFcM395dpt6Q">
@@ -54,7 +54,7 @@
     </ownedInteractionFeatures>
   </ownedEntityTypes>
   <ownedEntityTypes xsi:type="dssl:User" name="Child_User" id="_17CXUPEkEeaFcM395dpt6Q" description="The typical user of Gyro is a child aged between 5 and 12 years old." uses="_16_UAPEkEeaFcM395dpt6Q" ageMin="7" ageMax="18">
-    <category href="../../config/fr.tpt.useme.settings/default.settings#dssl_technical"/>
+    <category href="../../config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#dssl_technical"/>
     <ownedInteractionFeatures name="browser" id="_5_qrQE9nEee8T-sZnIB6dg">
       <feature href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//User/uses"/>
     </ownedInteractionFeatures>
@@ -65,7 +65,7 @@
     <spokenLanguages>EN</spokenLanguages>
   </ownedEntityTypes>
   <ownedEntityTypes xsi:type="dssl:PhysicalSystem" name="Farrusco_Robot" id="_17CXUfEkEeaFcM395dpt6Q" description="Farrusco is a small robot based on the Arduino platform using a Motoruino, wich is inspired on the Arduino but with a couple of enhancements.">
-    <category href="../../config/fr.tpt.useme.settings/default.settings#dssl_physical"/>
+    <category href="../../config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#dssl_physical"/>
     <ownedInteractionFeatures name="code" id="_oh-MsE9kEee8T-sZnIB6dg">
       <feature href="http://mem4cds.telecom-paristech.fr/languages/dssl/#//PhysicalSystem/inputs"/>
     </ownedInteractionFeatures>
@@ -77,13 +77,13 @@
     </ownedInteractionFeatures>
   </ownedEntityTypes>
   <ownedEntityTypes xsi:type="dssl:Computer" name="PC" id="_16_UAPEkEeaFcM395dpt6Q" description="This is the computer that executes the Gyro software" usedBy="_17CXUPEkEeaFcM395dpt6Q" version="HP EliteBook" executes="_16_7EPEkEeaFcM395dpt6Q _RTkNtTMbEeeMRuIsTiuubQ _DXP2RjM7EeeHT7vuJ8Hf1w" displays="_4NZ4ClBaEee-SugvAqJPGg">
-    <category href="../../config/fr.tpt.useme.settings/default.settings#dssl_physical"/>
+    <category href="../../config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#dssl_physical"/>
   </ownedEntityTypes>
   <ownedEntityTypes xsi:type="dssl:OperatingSystem" name="Windows" id="_DXP2RjM7EeeHT7vuJ8Hf1w" description="Windows operating system " version="Windows 10" executedBy="_16_UAPEkEeaFcM395dpt6Q">
-    <category href="../../config/fr.tpt.useme.settings/default.settings#dssl_technical"/>
+    <category href="../../config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#dssl_technical"/>
   </ownedEntityTypes>
   <ownedEntityTypes xsi:type="dssl:Display" name="Monitor17Inches" id="_4NZ4ClBaEee-SugvAqJPGg" description="This is the display used by the computer running the Gyro application" version="Dell 17" resolutionX="1920" resolutionY="1080">
-    <category href="../../config/fr.tpt.useme.settings/default.settings#dssl_physical"/>
+    <category href="../../config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#dssl_physical"/>
     <supportedColors>ColorsTrue</supportedColors>
     <supportedColors>MonoChrome</supportedColors>
   </ownedEntityTypes>

@@ -70,7 +70,6 @@
       <ownedRationales name="English Concrete Syntax" id="_hI03M1BcEee-SugvAqJPGg" description="This is because the concrete syntax of Gyro is in english" stakeholders="_xR5JjTMxEeeHT7vuJ8Hf1w"/>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_eq6H8DQ8EeeRNNEigitqHA" text="self.spokenLanguages->exists( el | el = 'EN' )">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libComponent.ocl"/>
       </ownedExpression>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Assumption" name="A2 Color Display" id="_8Dt-E1BhEee-SugvAqJPGg" description="">
@@ -81,7 +80,6 @@
       </ownedReferencedDesignElements>
       <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_Ib-7QFBiEee-SugvAqJPGg" text="self.supportedColors->exists( el | el =ColorScheme::ColorsTrue or  el =ColorScheme::Colors65536 )">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libComponent.ocl"/>
       </ownedExpression>
     </ownedRequirements>
     <ownedRequirements xsi:type="rdal:Assumption" name="A3 Planar Motion Robot" id="_zhPms1BhEee-SugvAqJPGg" description="">
@@ -94,7 +92,7 @@
         <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R1 Specify Robot Behavior" id="_STt4QlHJEeeDHsDqBtgnOQ" description="" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w">
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1 Specify Robot Behavior" id="_STt4QlHJEeeDHsDqBtgnOQ" description="The DSL shall be able to specify the behavior of a robot" stakeholders="_quZnXTMxEeeHT7vuJ8Hf1w">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_z97wIVHJEeeDHsDqBtgnOQ">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_z97wIFHJEeeDHsDqBtgnOQ">
           <designElement href="gyro.dssl#_16_UAPEkEeaFcM395dpt6e"/>
@@ -105,13 +103,13 @@
       </ownedExpression>
       <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1 Provide Concrete Syntax" id="_uWbLQuvSEeabG6EdqbdIDg" description="" verified="false">
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1 Provide Concrete Syntax" id="_uWbLQuvSEeabG6EdqbdIDg" description="The DSL shall provide a concrete syntax to be used by user" verified="false">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_03WhoOvSEeabG6EdqbdIDg">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_AE1QgFHKEeeDHsDqBtgnOQ">
           <designElement href="gyro.dssl#_167poPEkEeaFcM395dpt6Q"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
-      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_J-fP4E0tEee8T-sZnIB6dg" text="">
+      <ownedExpression xsi:type="cst:NaturalLanguageExpression" id="_J-fP4E0tEee8T-sZnIB6dg" text="Provide concrete syntax">
         <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
       <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
@@ -119,7 +117,7 @@
       <functionUsedIn href="gyro.jucm#5633"/>
       <functionUsedIn href="gyro.jucm#5641"/>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1 Provide Diagram Description" id="_mz3JQlHOEeeDHsDqBtgnOQ" description="">
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1 Provide Diagram Description" id="_mz3JQlHOEeeDHsDqBtgnOQ" description="The DSL shall provide a description of the concrete syntax in the form of a diagram">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_MhuAQVHQEeeDHsDqBtgnOQ">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_MhuAQFHQEeeDHsDqBtgnOQ">
           <designElement href="../org.gyro.metamodel.design/description/gyro.odesign#//@ownedViewpoints[name='default']"/>
@@ -129,7 +127,7 @@
         <language xsi:type="cst:NaturalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.core.natural"/>
       </ownedExpression>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R1.2 Provide Abstract Syntax" id="_C08AolHKEeeDHsDqBtgnOQ" description="">
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.2 Provide Abstract Syntax" id="_C08AolHKEeeDHsDqBtgnOQ" description="The DSL shall provide an abstract syntax to be used by tools">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_IJ1owVHKEeeDHsDqBtgnOQ">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_IJ1owFHKEeeDHsDqBtgnOQ">
           <designElement href="gyro.dssl#_167CkPEkEeaFcM395dpt6Q"/>
@@ -146,13 +144,11 @@
           <designElement href="../org.gyro.metamodel/model/gyro.ecore#/"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
-      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_x0faMDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( ela | ela.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Parallel' ) ) )">
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_x0faMDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( cl | cl.hasRole( 'Parallel' ) )">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libEcore.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libDssl.ocl"/>
       </ownedExpression>
-      <ownedCondition xsi:type="cst:FormalLanguageExpression" id="_ICE7qU0vEee8T-sZnIB6dg" text="">
-        <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
-        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libComponent.ocl"/>
-      </ownedCondition>
       <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
       <functionUsedIn href="gyro.jucm#6921"/>
       <functionUsedIn href="gyro.jucm#6944"/>
@@ -163,32 +159,40 @@
           <designElement href="../org.gyro.metamodel/model/gyro.ecore#/"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
-      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_BdyfwDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( ela | ela.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Sequence' ) ) )">
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_BdyfwDQ3Eeecw_beU43oAg" text="self.eClassifiers->exists( cl | cl.hasRole( 'Sequence' ) )">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libEcore.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libDssl.ocl"/>
       </ownedExpression>
       <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
       <functionUsedIn href="gyro.jucm#6934"/>
       <functionUsedIn href="gyro.jucm#6940"/>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1.1 Provide Graphical Parallel Node" id="_aSdzUlHQEeeDHsDqBtgnOQ" description="">
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1.1 Provide Graphical Parallel Node" id="_aSdzUlHQEeeDHsDqBtgnOQ" description="A Sirius graphical node shall be declared for the Parallel class of the Gyro metamodel ">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_jKjOUVHQEeeDHsDqBtgnOQ">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_jKjOUFHQEeeDHsDqBtgnOQ">
           <designElement href="../org.gyro.metamodel.design/description/gyro.odesign#//@ownedViewpoints[name='default']/@ownedRepresentations[name='graphical_diagram']/@defaultLayer"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
-      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_VK7cUFHREeeDHsDqBtgnOQ" text="true -- TODO self.oclAsType( ecore::EObject ).eContainer().oclAsType( viewpoint::description::RepresentationDescription ).metamodel->select( el | self.nodeMappings->first().domainClass.startsWith() --.eClassifiers->select( el | el.name = self.nodeMappings->first().domainClass ) --.getEAnnotation( 'gyro.abstract_syntax' )->exists( eld | eld.details->select( elk | elk.key = 'role' )->exists( elv | elv.value = 'Sequence' ) )">
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_VK7cUFHREeeDHsDqBtgnOQ" text="self.nodeMappingForClass( self.metamodels()->any( mm | mm.name = 'gyro' ).eClassifiers->any( cl  | cl.hasRole(  'Parallel' ) ) ) &lt;> null">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libEcore.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libSirius.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libDssl.ocl"/>
       </ownedExpression>
       <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
     </ownedRequirements>
-    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1.2 Provide Graphical Sequence Node" id="_PGNZclHUEeeDHsDqBtgnOQ" description="">
+    <ownedRequirements xsi:type="rdal:Requirement" name="R1.1.1.2 Provide Graphical Sequence Node" id="_PGNZclHUEeeDHsDqBtgnOQ" description="A Sirius graphical node shall be declared for the Sequence class of the Gyro metamodel">
       <ownedReferencedDesignElements xsi:type="rdal:RefManuallySelectedDesignElements" id="_WeQlEVHUEeeDHsDqBtgnOQ">
         <ownedDesignElementRefs xsi:type="rdal:VerifiableDesignElementRef" id="_WeQlEFHUEeeDHsDqBtgnOQ">
           <designElement href="../org.gyro.metamodel.design/description/gyro.odesign#//@ownedViewpoints[name='default']/@ownedRepresentations[name='graphical_diagram']/@defaultLayer"/>
         </ownedDesignElementRefs>
       </ownedReferencedDesignElements>
-      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_XQi9oFHUEeeDHsDqBtgnOQ" text="true -- TODO">
+      <ownedExpression xsi:type="cst:FormalLanguageExpression" id="_XQi9oFHUEeeDHsDqBtgnOQ" text="self.nodeMappingForClass( self.metamodels()->any( mm | mm.name = 'gyro' ).eClassifiers->any( cl  | cl.hasRole(  'Sequence' ) ) ) &lt;> null">
         <language xsi:type="cst:FormalConstraintLanguage" href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#fr.labsticc.framework.constraints.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libEcore.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libSirius.ocl"/>
+        <usedLibraries href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/defaultConstraintsLanguages.constraints#platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/ocl/default/libDssl.ocl"/>
       </ownedExpression>
       <category href="platform:/config/fr.tpt.mem4csd.rdalte.dssl.settings/default.settings#cat_requirement_System_Function"/>
     </ownedRequirements>
