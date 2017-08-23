@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/org.gyro.metamodel/src" modelPluginID="org.gyro.metamodel"
+    modelName="Gyro" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>gyro.ecore</foreignModel>
+  <genPackages prefix="Gyro" basePackage="org.gyro.metamodel" disposableProviderFactory="true"
+      ecorePackage="gyro.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gyro.ecore#//LightStatus">
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//LightStatus/On"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//LightStatus/Off"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gyro.ecore#//SuccessState">
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//SuccessState/Success"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//SuccessState/Failure"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//SuccessState/Running"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gyro.ecore#//FailureState">
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//FailureState/Failure"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//FailureState/Success"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//FailureState/Running"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gyro.ecore#//RunningState">
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//RunningState/Success"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//RunningState/Failure"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//RunningState/Running"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gyro.ecore#//BumperKind">
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//BumperKind/Left"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//BumperKind/Right"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gyro.ecore#//DistanceKind">
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//DistanceKind/Minor"/>
+      <genEnumLiterals ecoreEnumLiteral="gyro.ecore#//DistanceKind/Major"/>
+    </genEnums>
+    <genClasses ecoreClass="gyro.ecore#//GyroSpecification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//GyroSpecification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gyro.ecore#//GyroSpecification/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gyro.ecore#//GyroSpecification/child"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gyro.ecore#//GyroSpecification/next"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gyro.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Node/name"/>
+    </genClasses>
+    <genClasses ecoreClass="gyro.ecore#//Child">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gyro.ecore#//Child/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gyro.ecore#//Child/target"/>
+    </genClasses>
+    <genClasses ecoreClass="gyro.ecore#//Sibling">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gyro.ecore#//Sibling/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gyro.ecore#//Sibling/target"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gyro.ecore#//Behavior"/>
+    <genClasses ecoreClass="gyro.ecore#//Priority"/>
+    <genClasses ecoreClass="gyro.ecore#//Parallel"/>
+    <genClasses ecoreClass="gyro.ecore#//Sequential"/>
+    <genClasses ecoreClass="gyro.ecore#//StatusChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//StatusChange/changeSuccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//StatusChange/changeFailure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//StatusChange/changeRunning"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gyro.ecore#//Action"/>
+    <genClasses image="false" ecoreClass="gyro.ecore#//Condition"/>
+    <genClasses ecoreClass="gyro.ecore#//Distance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Distance/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Distance/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="gyro.ecore#//Bumpers">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Bumpers/bumperKind"/>
+    </genClasses>
+    <genClasses ecoreClass="gyro.ecore#//Waiting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Waiting/time"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gyro.ecore#//Actuate"/>
+    <genClasses ecoreClass="gyro.ecore#//Motor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Motor/leftMotor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Motor/rightMotor"/>
+    </genClasses>
+    <genClasses ecoreClass="gyro.ecore#//Servo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Servo/minimalPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Servo/maximalPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//Servo/step"/>
+    </genClasses>
+    <genClasses ecoreClass="gyro.ecore#//LED">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gyro.ecore#//LED/status"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

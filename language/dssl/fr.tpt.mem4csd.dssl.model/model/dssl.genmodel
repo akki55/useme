@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.tpt.mem4csd.dssl.model/src" modelPluginID="fr.tpt.mem4csd.dssl.model"
+    modelName="DSSL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/fr.tpt.mem4csd.dssl.model.tests/src" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" testsPluginID="fr.tpt.mem4csd.dssl.model.tests"
+    runtimeVersion="2.5" usedGenPackages="../../fr.labsticc.framework.constraints.model/model/constraints.genmodel#//constraints ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../fr.labsticc.framework.settings.model/model/settings.genmodel#//settings ../../org.eclipse.sirius/model/viewpoint.genmodel#//viewpoint"
+    importOrganizing="true">
+  <foreignModel>dssl.ecore</foreignModel>
+  <genPackages prefix="Dssl" basePackage="fr.tpt.mem4csd.dssl.model" disposableProviderFactory="true"
+      ecorePackage="dssl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dssl.ecore#//ColorScheme">
+      <genEnumLiterals ecoreEnumLiteral="dssl.ecore#//ColorScheme/ColorsTrue"/>
+      <genEnumLiterals ecoreEnumLiteral="dssl.ecore#//ColorScheme/Colors65536"/>
+      <genEnumLiterals ecoreEnumLiteral="dssl.ecore#//ColorScheme/MonoChrome"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="dssl.ecore#//IdentifiedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//IdentifiedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//IdentifiedElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//IdentifiedElement/description"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//DsslSpecification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//DsslSpecification/developedDsl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dssl.ecore#//DsslSpecification/ownedContexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dssl.ecore#//DsslSpecification/ownedEntityTypes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="dssl.ecore#//EntityType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//EntityType/category"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//EntityType/ownedInteractionFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//ContextSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dssl.ecore#//ContextSpecification/ownedEntityInstances"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//ContextSpecification/developedDsl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dssl.ecore#//ContextSpecification/ownedConnections"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//Dsl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/ownedSyntaxes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/concreteSyntaxes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/abstractsyntax"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/supportingTools"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/ownedSemantics"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/ownedFeatureDiagrams"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/ownedDocumentations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Dsl/maintenanceService"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="dssl.ecore#//Syntax"/>
+    <genClasses image="false" ecoreClass="dssl.ecore#//AbstractSyntax"/>
+    <genClasses image="false" ecoreClass="dssl.ecore#//ConcreteSyntax">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//ConcreteSyntax/language"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//ECoreAbstractSyntax">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//ECoreAbstractSyntax/packages"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//SiriusConcreteSyntax">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//SiriusConcreteSyntax/siriusSpecification"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="dssl.ecore#//Tool">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Tool/usedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Tool/controlledBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Tool/controls"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//Tool/version"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//User">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//User/uses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//User/ageMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//User/ageMax"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//User/perception"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//User/spokenLanguages"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//WorkPlace"/>
+    <genClasses ecoreClass="dssl.ecore#//Computer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Computer/executes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Computer/displays"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//Computer/mouses"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//SoftwareTool">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//SoftwareTool/supportedLanguages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//SoftwareTool/executedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//OperatingSystem"/>
+    <genClasses ecoreClass="dssl.ecore#//Semantics"/>
+    <genClasses ecoreClass="dssl.ecore#//FeatureDiagram"/>
+    <genClasses ecoreClass="dssl.ecore#//ModelChecker"/>
+    <genClasses ecoreClass="dssl.ecore#//ModelSimulator"/>
+    <genClasses ecoreClass="dssl.ecore#//Documentation"/>
+    <genClasses ecoreClass="dssl.ecore#//MaintenanceService"/>
+    <genClasses ecoreClass="dssl.ecore#//EntityInstance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//EntityInstance/entityType"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//EntityInstancesConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//EntityInstancesConnection/sourceFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//EntityInstancesConnection/destinationFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//EntityInstancesConnection/sourceEntityInstance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//EntityInstancesConnection/destinationEntityInstance"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//PhysicalSystem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//PhysicalSystem/inputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//PhysicalSystem/outputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//PhysicalSystem/visual"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//InteractionFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dssl.ecore#//InteractionFeature/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//Display">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//Display/resolutionX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//Display/resolutionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dssl.ecore#//Display/supportedColors"/>
+    </genClasses>
+    <genClasses ecoreClass="dssl.ecore#//Mouse"/>
+    <genClasses ecoreClass="dssl.ecore#//HardwareTool"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.tpt.mem4csd.dssl.model"
+      label="DSSL Metamodel and Tree Editor"
+      version="1.0.0.qualifier">
+
+   <description url="https://mem4csd.telecom-paristech.fr/blog/index.php/rdal/">
+      The DSL-based Systems Specification Language (DSSL) allows
+to model the design of a DSL being developed and the way it is
+used in its environment. Goals, requirements and environmental
+assumptions can then be assigned to elements of this representation
+of the DSL under development.
+   </description>
+
+   <copyright url="https://mem4csd.telecom-paristech.fr/blog/">
+      RDAL Copyright © 2017 TELECOM ParisTech / LTCI
+   </copyright>
+
+   <license url="http://www.eclipse.org/org/documents/epl-v10.ph">
+      This program is free software: you can redistribute it and/or modify  it under the terms of the Eclipse Public License as published by Eclipse, either version 1.0 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Eclipse Public License for more details.
+You should have received a copy of the Eclipse Public License along with this program. If not, see http://www.eclipse.org/org/documents/epl-v10.ph
+   </license>
+
+   <url>
+      <discovery label="RDAL Website" url="https://mem4csd.telecom-paristech.fr/blog/index.php/rdal/"/>
+   </url>
+
+   <plugin
+         id="fr.tpt.mem4csd.dssl.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.tpt.mem4csd.dssl.model.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="fr.tpt.mem4csd.dssl.model.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
