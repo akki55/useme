@@ -55,6 +55,10 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserProfileTemplates']"/>
         <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
       </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_-rm4gIfnEeeCgNQs1bKxAw" name="USE-ME Workflow 'DSL Usability Evaluation' Scenarios" representation="_-rnfkIfnEeeCgNQs1bKxAw">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']"/>
+        <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_GxepQG1WEeeWdKwQA6FRHw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='reportModeling']"/>
@@ -2686,7 +2690,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OmHDMm1WEeeWdKwQA6FRHw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_OlibcW1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Olibcm1WEeeWdKwQA6FRHw" x="180" y="9" width="51" height="51"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Olibcm1WEeeWdKwQA6FRHw" x="189" y="9" width="51" height="51"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_Ol8rIG1WEeeWdKwQA6FRHw" type="2001" element="_Ok7-gG1WEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_Ol8rI21WEeeWdKwQA6FRHw" type="5002">
@@ -2789,22 +2793,22 @@
         </children>
         <children xmi:type="notation:Node" xmi:id="_OmA8kG1WEeeWdKwQA6FRHw" type="2001" element="_OlCsMG1WEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_OmA8k21WEeeWdKwQA6FRHw" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_OmA8lG1WEeeWdKwQA6FRHw" x="-11" y="52"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_OmRbQG1WEeeWdKwQA6FRHw" type="3001" element="_OlKA8G1WEeeWdKwQA6FRHw">
-            <children xmi:type="notation:Node" xmi:id="_OmSCUG1WEeeWdKwQA6FRHw" type="5001">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_OmSCUW1WEeeWdKwQA6FRHw" x="11"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_OmSpYG1WEeeWdKwQA6FRHw" type="3003" element="_OlKA8W1WEeeWdKwQA6FRHw">
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_OmSpYW1WEeeWdKwQA6FRHw" fontName=".SF NS Text"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OmSpYm1WEeeWdKwQA6FRHw"/>
-            </children>
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_OmRbQW1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OmRbQm1WEeeWdKwQA6FRHw" x="43" y="32" width="10" height="10"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_OmA8lG1WEeeWdKwQA6FRHw" x="52" y="16"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OmSCUm1WEeeWdKwQA6FRHw" type="3005" element="_OlDTQG1WEeeWdKwQA6FRHw">
             <styles xmi:type="notation:ShapeStyle" xmi:id="_OmSCU21WEeeWdKwQA6FRHw" fontName=".SF NS Text"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OmSCVG1WEeeWdKwQA6FRHw"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0lPbwIgDEeeCgNQs1bKxAw" type="3001" element="_0lCAYIgDEeeCgNQs1bKxAw">
+            <children xmi:type="notation:Node" xmi:id="_0lQC0IgDEeeCgNQs1bKxAw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_0lQC0YgDEeeCgNQs1bKxAw" x="-61"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_0lQC0ogDEeeCgNQs1bKxAw" type="3003" element="_0lCncIgDEeeCgNQs1bKxAw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_0lQC04gDEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0lQC1IgDEeeCgNQs1bKxAw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0lPbwYgDEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0lPbwogDEeeCgNQs1bKxAw" x="-2" y="26" width="10" height="10"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_OmA8kW1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OmA8km1WEeeWdKwQA6FRHw" x="545" y="207" width="51" height="51"/>
@@ -2827,6 +2831,17 @@
           <children xmi:type="notation:Node" xmi:id="_OmTQc21WEeeWdKwQA6FRHw" type="3005" element="_OlFIcG1WEeeWdKwQA6FRHw">
             <styles xmi:type="notation:ShapeStyle" xmi:id="_OmTQdG1WEeeWdKwQA6FRHw" fontName=".SF NS Text"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OmTQdW1WEeeWdKwQA6FRHw"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_7EpvMIgDEeeCgNQs1bKxAw" type="3001" element="_7EeJAIgDEeeCgNQs1bKxAw">
+            <children xmi:type="notation:Node" xmi:id="_7EpvM4gDEeeCgNQs1bKxAw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_7EpvNIgDEeeCgNQs1bKxAw" x="11" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_7EqWQIgDEeeCgNQs1bKxAw" type="3003" element="_7EeJAYgDEeeCgNQs1bKxAw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_7EqWQYgDEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7EqWQogDEeeCgNQs1bKxAw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_7EpvMYgDEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7EpvMogDEeeCgNQs1bKxAw" x="-2" width="10" height="10"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_OmCKsW1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OmCKsm1WEeeWdKwQA6FRHw" x="396" y="225" width="51" height="51"/>
@@ -2856,49 +2871,49 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_OIzcIm1WEeeWdKwQA6FRHw"/>
         <edges xmi:type="notation:Edge" xmi:id="_OnKMEG1WEeeWdKwQA6FRHw" type="4001" element="_OlNEQG1WEeeWdKwQA6FRHw" source="_OlibcG1WEeeWdKwQA6FRHw" target="_Ol8rIG1WEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_OnNPYG1WEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnNPYW1WEeeWdKwQA6FRHw" x="-13" y="6"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnNPYW1WEeeWdKwQA6FRHw" x="-12" y="11"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnN2cG1WEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnN2cW1WEeeWdKwQA6FRHw" x="8" y="-1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnN2cW1WEeeWdKwQA6FRHw" x="5"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnOdgG1WEeeWdKwQA6FRHw" type="6003">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnOdgW1WEeeWdKwQA6FRHw" x="6" y="-3"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_OnKMEW1WEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_OnKMEm1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OnKME21WEeeWdKwQA6FRHw" points="[9, 50, 23, -91]$[-2, 90, 12, -51]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OnKME21WEeeWdKwQA6FRHw" points="[-9, 51, 14, -90]$[-15, 90, 8, -51]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Onm4AG1WEeeWdKwQA6FRHw" id="(0.49019607843137253,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Onm4AW1WEeeWdKwQA6FRHw" id="(0.49019607843137253,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_Onm4Am1WEeeWdKwQA6FRHw" type="4001" element="_OlQHkG1WEeeWdKwQA6FRHw" source="_OlibcG1WEeeWdKwQA6FRHw" target="_Ol9SMG1WEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_OnnfEG1WEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnnfEW1WEeeWdKwQA6FRHw" x="-81" y="5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnnfEW1WEeeWdKwQA6FRHw" x="-76" y="5"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnnfEm1WEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnnfE21WEeeWdKwQA6FRHw" x="41" y="-3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnnfE21WEeeWdKwQA6FRHw" x="36" y="-5"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnnfFG1WEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnnfFW1WEeeWdKwQA6FRHw" x="23" y="-3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnnfFW1WEeeWdKwQA6FRHw" x="22" y="-4"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Onm4A21WEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_Onm4BG1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Onm4BW1WEeeWdKwQA6FRHw" points="[25, 8, -268, -84]$[290, 90, -3, -2]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Onm4BW1WEeeWdKwQA6FRHw" points="[26, 8, -258, -84]$[281, 91, -3, -1]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OnoGIG1WEeeWdKwQA6FRHw" id="(0.49019607843137253,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OnoGIW1WEeeWdKwQA6FRHw" id="(0.058823529411764705,0.0392156862745098)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_OnoGIm1WEeeWdKwQA6FRHw" type="4001" element="_OlQuoG1WEeeWdKwQA6FRHw" source="_OlibcG1WEeeWdKwQA6FRHw" target="_Ol95Qm1WEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_OnoGJm1WEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnoGJ21WEeeWdKwQA6FRHw" x="-17" y="3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnoGJ21WEeeWdKwQA6FRHw" x="-17" y="5"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnoGKG1WEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnoGKW1WEeeWdKwQA6FRHw" y="-1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnoGKW1WEeeWdKwQA6FRHw" x="-4" y="-2"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnoGKm1WEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnoGK21WEeeWdKwQA6FRHw" x="9" y="-3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnoGK21WEeeWdKwQA6FRHw" x="5" y="-5"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_OnoGI21WEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_OnoGJG1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OnoGJW1WEeeWdKwQA6FRHw" points="[25, 27, -101, -123]$[101, 119, -25, -31]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OnoGJW1WEeeWdKwQA6FRHw" points="[26, 33, -91, -117]$[92, 120, -25, -30]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OnotMG1WEeeWdKwQA6FRHw" id="(0.49019607843137253,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OnotMW1WEeeWdKwQA6FRHw" id="(0.49019607843137253,1.0)"/>
         </edges>
@@ -2907,14 +2922,14 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnpUQG1WEeeWdKwQA6FRHw" x="4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnpUQW1WEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnpUQm1WEeeWdKwQA6FRHw" x="-7" y="7"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnpUQm1WEeeWdKwQA6FRHw" x="-8" y="9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_OnpUQ21WEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnpURG1WEeeWdKwQA6FRHw" x="-6" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OnpURG1WEeeWdKwQA6FRHw" x="-8" y="11"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_OnotM21WEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_OnotNG1WEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OnotNW1WEeeWdKwQA6FRHw" points="[-25, 20, 137, -121]$[-136, 118, 26, -23]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OnotNW1WEeeWdKwQA6FRHw" points="[-25, 20, 146, -121]$[-146, 120, 25, -21]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OnpURW1WEeeWdKwQA6FRHw" id="(0.49019607843137253,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OnpURm1WEeeWdKwQA6FRHw" id="(0.49019607843137253,1.0)"/>
         </edges>
@@ -3217,16 +3232,16 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserHierarchy']/@defaultLayer/@nodeMappings[name='UserProfilesChildNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_OlCsMG1WEeeWdKwQA6FRHw" name="MDD Engineer&#xA;Priority: High" outgoingEdges="_OlVAEm1WEeeWdKwQA6FRHw _OlVnIm1WEeeWdKwQA6FRHw" incomingEdges="_OlTK4G1WEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_OlCsMG1WEeeWdKwQA6FRHw" name="MDD Engineer&#xA;Priority: Medium" outgoingEdges="_OlVAEm1WEeeWdKwQA6FRHw _OlVnIm1WEeeWdKwQA6FRHw" incomingEdges="_OlTK4G1WEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
       <semanticElements xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_OlKA8G1WEeeWdKwQA6FRHw" name="DSL" width="1" height="1" resizeKind="NSEW">
-        <target xmi:type="useme.utility:LogicalExpression" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.10"/>
-        <semanticElements xmi:type="useme.utility:LogicalExpression" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.10"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_0lCAYIgDEeeCgNQs1bKxAw" name="modelling_med" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="useme.utility:LogicalExpression" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.15"/>
+        <semanticElements xmi:type="useme.utility:LogicalExpression" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.15"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:Square" xmi:id="_OlKA8W1WEeeWdKwQA6FRHw" showIcon="false" labelAlignment="RIGHT" color="0,0,0">
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_0lCncIgDEeeCgNQs1bKxAw" showIcon="false" labelAlignment="RIGHT" color="0,0,0">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserHierarchy']/@defaultLayer/@nodeMappings[name='UserProfilesChildNode']/@borderedNodeMappings[name='UserProfileClassifierNodeBorder']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserHierarchy']/@defaultLayer/@nodeMappings[name='UserProfilesChildNode']/@borderedNodeMappings[name='UserProfileClassifierNodeBorder']"/>
@@ -3250,9 +3265,17 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserHierarchy']/@defaultLayer/@nodeMappings[name='UserProfilesChildNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_OlEhYG1WEeeWdKwQA6FRHw" name="DSL Developer&#xA;Priority: Medium" outgoingEdges="_OlW1Qm1WEeeWdKwQA6FRHw _OlXcUm1WEeeWdKwQA6FRHw" incomingEdges="_OlUZAG1WEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_OlEhYG1WEeeWdKwQA6FRHw" name="DSL Developer&#xA;Priority: High" outgoingEdges="_OlW1Qm1WEeeWdKwQA6FRHw _OlXcUm1WEeeWdKwQA6FRHw" incomingEdges="_OlUZAG1WEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.8"/>
       <semanticElements xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.8"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_7EeJAIgDEeeCgNQs1bKxAw" name="DSL_med" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="useme.utility:LogicalExpression" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.20"/>
+        <semanticElements xmi:type="useme.utility:LogicalExpression" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.20"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_7EeJAYgDEeeCgNQs1bKxAw" showIcon="false" labelAlignment="RIGHT" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserHierarchy']/@defaultLayer/@nodeMappings[name='UserProfilesChildNode']/@borderedNodeMappings[name='UserProfileClassifierNodeBorder']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserHierarchy']/@defaultLayer/@nodeMappings[name='UserProfilesChildNode']/@borderedNodeMappings[name='UserProfileClassifierNodeBorder']"/>
+      </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -3272,7 +3295,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserHierarchy']/@defaultLayer/@nodeMappings[name='UserProfilesChildNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_OlGWkW1WEeeWdKwQA6FRHw" name="MDD but not DSL&#xA;Priority: Low" incomingEdges="_OlVnIm1WEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_OlGWkW1WEeeWdKwQA6FRHw" name="MDD but not DSL&#xA;Priority: Medium" incomingEdges="_OlVnIm1WEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.11"/>
       <semanticElements xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.11"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -3423,7 +3446,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhtFDG1YEeeWdKwQA6FRHw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bhaKEW1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhaKEm1YEeeWdKwQA6FRHw" x="189" y="162" width="55" height="47"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhaKEm1YEeeWdKwQA6FRHw" x="153" y="162" width="55" height="47"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_bhg3wG1YEeeWdKwQA6FRHw" type="2001" element="_bhKScG1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bhhe0G1YEeeWdKwQA6FRHw" type="5002">
@@ -3434,7 +3457,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhtsEm1YEeeWdKwQA6FRHw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bhg3wW1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhg3wm1YEeeWdKwQA6FRHw" x="441" y="162" width="51" height="51"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhg3wm1YEeeWdKwQA6FRHw" x="495" y="162" width="51" height="51"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_bhj7EG1YEeeWdKwQA6FRHw" type="2001" element="_bhK5gW1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bhkiIG1YEeeWdKwQA6FRHw" type="5002">
@@ -3456,7 +3479,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhuTIm1YEeeWdKwQA6FRHw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bhnlcW1YEeeWdKwQA6FRHw" fontColor="16777215" fontName=".SF NS Text" fontHeight="8" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhnlcm1YEeeWdKwQA6FRHw" x="342" y="279" width="30" height="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhnlcm1YEeeWdKwQA6FRHw" x="342" y="279" width="136" height="30"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_bhozkG1YEeeWdKwQA6FRHw" type="2003" element="_bhNVwG1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bhqBsG1YEeeWdKwQA6FRHw" type="5007"/>
@@ -3481,7 +3504,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_bhr24m1YEeeWdKwQA6FRHw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bhozkW1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhozkm1YEeeWdKwQA6FRHw" x="459"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhozkm1YEeeWdKwQA6FRHw" x="486"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_bhr2421YEeeWdKwQA6FRHw" type="2003" element="_bhN80G1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bhsd8G1YEeeWdKwQA6FRHw" type="5007"/>
@@ -3552,103 +3575,103 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_bhtFCW1YEeeWdKwQA6FRHw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bhtFBG1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhtFBW1YEeeWdKwQA6FRHw" x="319"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bhtFBW1YEeeWdKwQA6FRHw" x="342"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_bdTtMm1YEeeWdKwQA6FRHw"/>
         <edges xmi:type="notation:Edge" xmi:id="_bhzLoG1YEeeWdKwQA6FRHw" type="4001" element="_bhVRkG1YEeeWdKwQA6FRHw" source="_bhg3wG1YEeeWdKwQA6FRHw" target="_bhozkG1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bh0ZwG1YEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh0ZwW1YEeeWdKwQA6FRHw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh0ZwW1YEeeWdKwQA6FRHw" x="2" y="-16"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh1A0G1YEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh1A0W1YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh1A0W1YEeeWdKwQA6FRHw" x="1" y="7"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh1A0m1YEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh1A021YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh1A021YEeeWdKwQA6FRHw" x="5" y="5"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_bhzLoW1YEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_bhzLom1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bhzLo21YEeeWdKwQA6FRHw" points="[0, 0, -39, 60]$[39, -60, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bhzLo21YEeeWdKwQA6FRHw" points="[8, 8, -9, 83]$[17, -75, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh55UG1YEeeWdKwQA6FRHw" id="(0.49019607843137253,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh55UW1YEeeWdKwQA6FRHw" id="(0.4951456310679612,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_bh6gYG1YEeeWdKwQA6FRHw" type="4001" element="_bhV4oG1YEeeWdKwQA6FRHw" source="_bhaKEG1YEeeWdKwQA6FRHw" target="_bhr2421YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bh6gZG1YEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh6gZW1YEeeWdKwQA6FRHw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh6gZW1YEeeWdKwQA6FRHw" x="1" y="-8"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh6gZm1YEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh6gZ21YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh6gZ21YEeeWdKwQA6FRHw" x="3" y="12"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh7HcG1YEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7HcW1YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7HcW1YEeeWdKwQA6FRHw" x="4" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_bh6gYW1YEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_bh6gYm1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh6gY21YEeeWdKwQA6FRHw" points="[0, 0, 159, 60]$[-159, -60, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh6gY21YEeeWdKwQA6FRHw" points="[0, 0, 121, 59]$[-121, -59, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh7Hcm1YEeeWdKwQA6FRHw" id="(0.4909090909090909,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh7Hc21YEeeWdKwQA6FRHw" id="(0.5,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_bh7HdG1YEeeWdKwQA6FRHw" type="4001" element="_bhWfsG1YEeeWdKwQA6FRHw" source="_bhaKEG1YEeeWdKwQA6FRHw" target="_bhsd9G1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bh7HeG1YEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7HeW1YEeeWdKwQA6FRHw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7HeW1YEeeWdKwQA6FRHw" x="-4" y="-12"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh7ugG1YEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ugW1YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ugW1YEeeWdKwQA6FRHw" x="4" y="7"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh7ugm1YEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ug21YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ug21YEeeWdKwQA6FRHw" x="6" y="7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_bh7HdW1YEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_bh7Hdm1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh7Hd21YEeeWdKwQA6FRHw" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh7Hd21YEeeWdKwQA6FRHw" points="[0, 0, -37, 75]$[37, -75, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh7uhG1YEeeWdKwQA6FRHw" id="(0.4909090909090909,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh7uhW1YEeeWdKwQA6FRHw" id="(0.5,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_bh7uhm1YEeeWdKwQA6FRHw" type="4001" element="_bhWfs21YEeeWdKwQA6FRHw" source="_bhj7EG1YEeeWdKwQA6FRHw" target="_bhtFA21YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bh7uim1YEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ui21YEeeWdKwQA6FRHw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ui21YEeeWdKwQA6FRHw" x="-5" y="-13"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh7ujG1YEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ujW1YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7ujW1YEeeWdKwQA6FRHw" x="-1" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh7ujm1YEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7uj21YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh7uj21YEeeWdKwQA6FRHw" x="1" y="7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_bh7uh21YEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_bh7uiG1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh7uiW1YEeeWdKwQA6FRHw" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh7uiW1YEeeWdKwQA6FRHw" points="[0, 0, -21, 107]$[21, -107, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh8VkG1YEeeWdKwQA6FRHw" id="(0.5,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh8VkW1YEeeWdKwQA6FRHw" id="(0.5,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_bh8Vkm1YEeeWdKwQA6FRHw" type="4001" element="_bhXt0G1YEeeWdKwQA6FRHw" source="_bhnlcG1YEeeWdKwQA6FRHw" target="_bhg3wG1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bh8Vlm1YEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh8Vl21YEeeWdKwQA6FRHw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh8Vl21YEeeWdKwQA6FRHw" x="-4" y="-13"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh8VmG1YEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh8VmW1YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh8VmW1YEeeWdKwQA6FRHw" x="-2" y="4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh8Vmm1YEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh8Vm21YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh8Vm21YEeeWdKwQA6FRHw" x="1" y="6"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_bh8Vk21YEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_bh8VlG1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh8VlW1YEeeWdKwQA6FRHw" points="[0, 0, -111, 60]$[111, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh8VnG1YEeeWdKwQA6FRHw" id="(0.5,0.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh8VlW1YEeeWdKwQA6FRHw" points="[5, -2, -158, 66]$[163, -68, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh8VnG1YEeeWdKwQA6FRHw" id="(0.11029411764705882,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh8VnW1YEeeWdKwQA6FRHw" id="(0.49019607843137253,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_bh8Vnm1YEeeWdKwQA6FRHw" type="4001" element="_bhXt021YEeeWdKwQA6FRHw" source="_bhnlcG1YEeeWdKwQA6FRHw" target="_bhaKEG1YEeeWdKwQA6FRHw">
           <children xmi:type="notation:Node" xmi:id="_bh88oG1YEeeWdKwQA6FRHw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh88oW1YEeeWdKwQA6FRHw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh88oW1YEeeWdKwQA6FRHw" x="7" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh88om1YEeeWdKwQA6FRHw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh88o21YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh88o21YEeeWdKwQA6FRHw" x="1" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_bh88pG1YEeeWdKwQA6FRHw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh88pW1YEeeWdKwQA6FRHw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bh88pW1YEeeWdKwQA6FRHw" y="11"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_bh8Vn21YEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_bh8VoG1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh8VoW1YEeeWdKwQA6FRHw" points="[0, 0, 138, 60]$[-138, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh88pm1YEeeWdKwQA6FRHw" id="(0.5,0.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh8VoW1YEeeWdKwQA6FRHw" points="[-5, -2, 172, 70]$[-177, -72, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh88pm1YEeeWdKwQA6FRHw" id="(0.11029411764705882,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh88p21YEeeWdKwQA6FRHw" id="(0.4909090909090909,1.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_bh88qG1YEeeWdKwQA6FRHw" type="4001" element="_bhYU4G1YEeeWdKwQA6FRHw" source="_bhnlcG1YEeeWdKwQA6FRHw" target="_bhj7EG1YEeeWdKwQA6FRHw">
@@ -3664,7 +3687,7 @@
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_bh88qW1YEeeWdKwQA6FRHw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_bh88qm1YEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bh88q21YEeeWdKwQA6FRHw" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh9jsG1YEeeWdKwQA6FRHw" id="(0.5,0.0)"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh9jsG1YEeeWdKwQA6FRHw" id="(0.11029411764705882,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bh9jsW1YEeeWdKwQA6FRHw" id="(0.5,1.0)"/>
         </edges>
       </data>
@@ -3672,6 +3695,9 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_bhIdQG1YEeeWdKwQA6FRHw" name="Technical Environment: UseMe" outgoingEdges="_bhV4oG1YEeeWdKwQA6FRHw _bhWfsG1YEeeWdKwQA6FRHw" incomingEdges="_bhXt021YEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:TechnicalEnvironment" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0"/>
       <semanticElements xmi:type="useme.contextmodeling:TechnicalEnvironment" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_bhJrYG1YEeeWdKwQA6FRHw" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/technicalEnvironment.png">
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='EnvironmentContext']/@defaultLayer/@nodeMappings[name='TechnicalEnvironmentNode']/@style"/>
       </ownedStyle>
@@ -3680,12 +3706,15 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_bhKScG1YEeeWdKwQA6FRHw" name="Physical Environment: UseMe" outgoingEdges="_bhVRkG1YEeeWdKwQA6FRHw" incomingEdges="_bhXt0G1YEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:PhysicalEnvironment" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0"/>
       <semanticElements xmi:type="useme.contextmodeling:PhysicalEnvironment" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_bhK5gG1YEeeWdKwQA6FRHw" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/physicalEnvironment.png">
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='EnvironmentContext']/@defaultLayer/@nodeMappings[name='PhysicalEnvironmentNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='EnvironmentContext']/@defaultLayer/@nodeMappings[name='PhysicalEnvironmentNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_bhK5gW1YEeeWdKwQA6FRHw" name="Social Environment: se1.0" outgoingEdges="_bhWfs21YEeeWdKwQA6FRHw" incomingEdges="_bhYU4G1YEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_bhK5gW1YEeeWdKwQA6FRHw" name="Social Environment: se1" outgoingEdges="_bhWfs21YEeeWdKwQA6FRHw" incomingEdges="_bhYU4G1YEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:SocialEnvironment" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0"/>
       <semanticElements xmi:type="useme.contextmodeling:SocialEnvironment" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0"/>
       <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_bhLgkG1YEeeWdKwQA6FRHw" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/socialEnvironment.png">
@@ -3693,7 +3722,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='EnvironmentContext']/@defaultLayer/@nodeMappings[name='SocialEnvironmentNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_bhMHoG1YEeeWdKwQA6FRHw" name="Context Model: cm1.0" outgoingEdges="_bhXt0G1YEeeWdKwQA6FRHw _bhXt021YEeeWdKwQA6FRHw _bhYU4G1YEeeWdKwQA6FRHw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_bhMHoG1YEeeWdKwQA6FRHw" name="Context Model: cm1" outgoingEdges="_bhXt0G1YEeeWdKwQA6FRHw _bhXt021YEeeWdKwQA6FRHw _bhYU4G1YEeeWdKwQA6FRHw" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:ContextModel" href="UseMe.useme#//@contextSpecification.0/@contextModel.0"/>
       <semanticElements xmi:type="useme.contextmodeling:ContextModel" href="UseMe.useme#//@contextSpecification.0/@contextModel.0"/>
       <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_bhMusG1YEeeWdKwQA6FRHw" labelColor="255,255,255" borderColor="69,69,69" labelPosition="node" color="136,136,136">
@@ -3705,6 +3734,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_bhNVwG1YEeeWdKwQA6FRHw" name="Computer" incomingEdges="_bhVRkG1YEeeWdKwQA6FRHw">
       <target xmi:type="useme.utility:CEVariable" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.1"/>
       <semanticElements xmi:type="useme.utility:CEVariable" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_bhNVwW1YEeeWdKwQA6FRHw" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='EnvironmentContext']/@defaultLayer/@containerMappings[name='CEVariableContainer']/@style"/>
@@ -3842,6 +3874,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_bhOj4G1YEeeWdKwQA6FRHw" name="Language" incomingEdges="_bhWfs21YEeeWdKwQA6FRHw">
       <target xmi:type="useme.utility:CEVariable" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.3"/>
       <semanticElements xmi:type="useme.utility:CEVariable" href="UseMe.useme#//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_bhOj4W1YEeeWdKwQA6FRHw" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='EnvironmentContext']/@defaultLayer/@containerMappings[name='CEVariableContainer']/@style"/>
@@ -4271,14 +4306,14 @@
           </children>
           <children xmi:type="notation:Node" xmi:id="_oWootm1bEeeWdKwQA6FRHw" type="3001" element="_oWWU0W1bEeeWdKwQA6FRHw">
             <children xmi:type="notation:Node" xmi:id="_oWpPwG1bEeeWdKwQA6FRHw" type="5001">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_oWpPwW1bEeeWdKwQA6FRHw" x="-20" y="-9"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_oWpPwW1bEeeWdKwQA6FRHw" x="-67"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_oWpPxW1bEeeWdKwQA6FRHw" type="3003" element="_oWWU0m1bEeeWdKwQA6FRHw">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_oWpPxm1bEeeWdKwQA6FRHw" fontName=".SF NS Text"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oWpPx21bEeeWdKwQA6FRHw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_oWoot21bEeeWdKwQA6FRHw" fontName=".SF NS Text" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oWoouG1bEeeWdKwQA6FRHw" x="-2" width="10" height="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oWoouG1bEeeWdKwQA6FRHw" x="-2" y="41" width="10" height="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_oWpPwm1bEeeWdKwQA6FRHw" type="3005" element="_oWWU0G1bEeeWdKwQA6FRHw">
             <styles xmi:type="notation:ShapeStyle" xmi:id="_oWpPw21bEeeWdKwQA6FRHw" fontName=".SF NS Text"/>
@@ -4498,9 +4533,12 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_oWVtwm1bEeeWdKwQA6FRHw" name="MDD Engineer" outgoingEdges="_oWh7AG1bEeeWdKwQA6FRHw _oWiiEm1bEeeWdKwQA6FRHw _oWjwMG1bEeeWdKwQA6FRHw" incomingEdges="_oWgs4G1bEeeWdKwQA6FRHw" width="-1" height="-1" resizeKind="NSEW">
       <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
       <semanticElements xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_oWWU0W1bEeeWdKwQA6FRHw" name="Priority: High" width="1" height="1" resizeKind="NSEW">
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_oWWU0W1bEeeWdKwQA6FRHw" name="Priority: Medium" width="1" height="1" resizeKind="NSEW">
         <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
         <semanticElements xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_oWWU0m1bEeeWdKwQA6FRHw" showIcon="false" labelAlignment="RIGHT" color="0,0,0">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserProfileTemplates']/@defaultLayer/@nodeMappings[name='SelfNode']/@borderedNodeMappings[name='UserProfilePriorityBNode']/@style"/>
         </ownedStyle>
@@ -4669,7 +4707,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserProfileTemplates']/@defaultLayer/@edgeMappings[name='selfparentEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_oWh7AG1bEeeWdKwQA6FRHw" name="DSL=Low &lt;= ... >= High" sourceNode="_oWVtwm1bEeeWdKwQA6FRHw" targetNode="_oWW74G1bEeeWdKwQA6FRHw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_oWh7AG1bEeeWdKwQA6FRHw" name="Modelling=Medium&lt;= .. >=High" sourceNode="_oWVtwm1bEeeWdKwQA6FRHw" targetNode="_oWW74G1bEeeWdKwQA6FRHw">
       <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_oWiiEG1bEeeWdKwQA6FRHw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserProfileTemplates']/@defaultLayer/@edgeMappings[name='selfparentEdge']/@style"/>
@@ -4677,7 +4715,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserProfileTemplates']/@defaultLayer/@edgeMappings[name='selfparentEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_oWiiEm1bEeeWdKwQA6FRHw" name="DSL=Low &lt;= ... >= High" sourceNode="_oWVtwm1bEeeWdKwQA6FRHw" targetNode="_oWXi8W1bEeeWdKwQA6FRHw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_oWiiEm1bEeeWdKwQA6FRHw" name="Modelling=Medium&lt;= .. >=High" sourceNode="_oWVtwm1bEeeWdKwQA6FRHw" targetNode="_oWXi8W1bEeeWdKwQA6FRHw">
       <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_oWiiE21bEeeWdKwQA6FRHw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserProfileTemplates']/@defaultLayer/@edgeMappings[name='selfparentEdge']/@style"/>
@@ -4705,5 +4743,553 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_oSehdG1bEeeWdKwQA6FRHw"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='UserProfileTemplates']/@defaultLayer"/>
     <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_-rnfkIfnEeeCgNQs1bKxAw" name="USE-ME Workflow 'DSL Usability Evaluation' Scenarios">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_-rnfkYfnEeeCgNQs1bKxAw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_-rnfkofnEeeCgNQs1bKxAw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_-sNVcIfnEeeCgNQs1bKxAw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_-sNVcYfnEeeCgNQs1bKxAw" type="Sirius" element="_-rnfkIfnEeeCgNQs1bKxAw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_-sYUkIfnEeeCgNQs1bKxAw" type="2001" element="_-rnfk4fnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-sg3cIfnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-sg3cYfnEeeCgNQs1bKxAw" x="-28" y="42"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-s9jYIfnEeeCgNQs1bKxAw" type="3001" element="_-rnflIfnEeeCgNQs1bKxAw">
+            <children xmi:type="notation:Node" xmi:id="_-s_YkIfnEeeCgNQs1bKxAw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_-s_YkYfnEeeCgNQs1bKxAw" x="11"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-tGGQIfnEeeCgNQs1bKxAw" type="3003" element="_-rnflYfnEeeCgNQs1bKxAw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-tGGQYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tGGQofnEeeCgNQs1bKxAw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-s9jYYfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-s9jYofnEeeCgNQs1bKxAw" x="57" width="10" height="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tB00IfnEeeCgNQs1bKxAw" type="3001" element="_-rnflofnEeeCgNQs1bKxAw">
+            <children xmi:type="notation:Node" xmi:id="_-tDqAIfnEeeCgNQs1bKxAw" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_-tDqAYfnEeeCgNQs1bKxAw" x="11"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-tGtUIfnEeeCgNQs1bKxAw" type="3003" element="_-rnfl4fnEeeCgNQs1bKxAw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-tGtUYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tGtUofnEeeCgNQs1bKxAw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tB00YfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tB00ofnEeeCgNQs1bKxAw" x="57" y="14" width="10" height="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tE4IIfnEeeCgNQs1bKxAw" type="3005" element="_-rnfmIfnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tE4IYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tE4IofnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-sYUkYfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-sYUkofnEeeCgNQs1bKxAw" x="234" y="328" width="65" height="41"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-sxWIIfnEeeCgNQs1bKxAw" type="2001" element="_-rnfmYfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-sx9MofnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-sx9M4fnEeeCgNQs1bKxAw" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tGtU4fnEeeCgNQs1bKxAw" type="3005" element="_-rnfmofnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tGtVIfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tGtVYfnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-sx9MIfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-sx9MYfnEeeCgNQs1bKxAw" x="387" y="106" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-s2OoIfnEeeCgNQs1bKxAw" type="2001" element="_-rnfm4fnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-s3cwIfnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-s3cwYfnEeeCgNQs1bKxAw" x="51" y="18"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tHUYIfnEeeCgNQs1bKxAw" type="3005" element="_-rnfnIfnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tHUYYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tHUYofnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-s2OoYfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-s2OoofnEeeCgNQs1bKxAw" x="239" y="189" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-s4q4IfnEeeCgNQs1bKxAw" type="2001" element="_-rnfnYfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-s5R8IfnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-s5R8YfnEeeCgNQs1bKxAw" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tIigIfnEeeCgNQs1bKxAw" type="3005" element="_-rnfnofnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tIigYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tIigofnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-s4q4YfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-s4q4ofnEeeCgNQs1bKxAw" x="288" y="106" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-s5R8ofnEeeCgNQs1bKxAw" type="2001" element="_-rnfn4fnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-s55AIfnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-s55AYfnEeeCgNQs1bKxAw" x="51" y="17"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tJJkIfnEeeCgNQs1bKxAw" type="3005" element="_-rnfoIfnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tJJkYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tJJkofnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-s5R84fnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-s5R9IfnEeeCgNQs1bKxAw" x="117" y="106" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-s55AofnEeeCgNQs1bKxAw" type="2001" element="_-rnfoYfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-s7HIIfnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-s7HIYfnEeeCgNQs1bKxAw" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tJwoIfnEeeCgNQs1bKxAw" type="3005" element="_-rnfoofnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tJwoYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tJwoofnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-s6gEIfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-s6gEYfnEeeCgNQs1bKxAw" x="185" y="9" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-s7uMIfnEeeCgNQs1bKxAw" type="2001" element="_-rnfo4fnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-s7uM4fnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-s7uNIfnEeeCgNQs1bKxAw" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tKXsIfnEeeCgNQs1bKxAw" type="3005" element="_-rnfpIfnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tKXsYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tKXsofnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-s7uMYfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-s7uMofnEeeCgNQs1bKxAw" x="63" y="9" width="50" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-s8VQIfnEeeCgNQs1bKxAw" type="2001" element="_-rnfpYfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-s88UIfnEeeCgNQs1bKxAw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-s88UYfnEeeCgNQs1bKxAw" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tK-wIfnEeeCgNQs1bKxAw" type="3005" element="_-rnfpofnEeeCgNQs1bKxAw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-tK-wYfnEeeCgNQs1bKxAw" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tK-wofnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-s8VQYfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-s8VQofnEeeCgNQs1bKxAw" x="14" y="106" width="50" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_-sNVcofnEeeCgNQs1bKxAw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_-tQeUIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfp4fnEeeCgNQs1bKxAw" source="_-sYUkIfnEeeCgNQs1bKxAw" target="_-sxWIIfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tS6kIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tS6kYfnEeeCgNQs1bKxAw" x="25" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tThoIfnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tThoYfnEeeCgNQs1bKxAw" x="-13" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tUvwIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tUvwYfnEeeCgNQs1bKxAw" x="13" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tQeUYfnEeeCgNQs1bKxAw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tQeUofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tQeU4fnEeeCgNQs1bKxAw" points="[0, -20, -146, 197]$[0, -82, -146, 135]$[146, -82, 0, 135]$[146, -193, 0, 24]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tcrkIfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tdSoIfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tdSoYfnEeeCgNQs1bKxAw" type="4001" element="_-rnfqofnEeeCgNQs1bKxAw" source="_-sYUkIfnEeeCgNQs1bKxAw" target="_-s2OoIfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-td5sIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-td5sYfnEeeCgNQs1bKxAw" x="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-td5sofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-td5s4fnEeeCgNQs1bKxAw" x="-4" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-td5tIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-td5tYfnEeeCgNQs1bKxAw" x="-57" y="5"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tdSoofnEeeCgNQs1bKxAw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tdSo4fnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tdSpIfnEeeCgNQs1bKxAw" points="[0, -20, 2, 114]$[0, -110, 2, 24]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-td5tofnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-td5t4fnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-td5uIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfrYfnEeeCgNQs1bKxAw" source="_-sYUkIfnEeeCgNQs1bKxAw" target="_-s4q4IfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tegwIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tegwYfnEeeCgNQs1bKxAw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tegwofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tegw4fnEeeCgNQs1bKxAw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tegxIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tegxYfnEeeCgNQs1bKxAw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-td5uYfnEeeCgNQs1bKxAw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-td5uofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-td5u4fnEeeCgNQs1bKxAw" points="[0, -20, -47, 197]$[0, -82, -47, 135]$[47, -82, 0, 135]$[47, -192, 0, 25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tegxofnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tegx4fnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tegyIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfsIfnEeeCgNQs1bKxAw" source="_-sYUkIfnEeeCgNQs1bKxAw" target="_-s5R8ofnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tfu4IfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tfu4YfnEeeCgNQs1bKxAw" x="22" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tfu4ofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tfu44fnEeeCgNQs1bKxAw" x="6" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tgV8IfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tgV8YfnEeeCgNQs1bKxAw" x="-6" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tegyYfnEeeCgNQs1bKxAw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tegyofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tegy4fnEeeCgNQs1bKxAw" points="[0, -20, 124, 197]$[0, -82, 124, 135]$[-124, -82, 0, 135]$[-124, -193, 0, 24]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tg9AIfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tg9AYfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tg9AofnEeeCgNQs1bKxAw" type="4001" element="_-rnfs4fnEeeCgNQs1bKxAw" source="_-sYUkIfnEeeCgNQs1bKxAw" target="_-s55AofnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tg9BofnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tg9B4fnEeeCgNQs1bKxAw" x="-35" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tg9CIfnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tg9CYfnEeeCgNQs1bKxAw" x="3" y="-7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tg9CofnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tg9C4fnEeeCgNQs1bKxAw" x="-15" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tg9A4fnEeeCgNQs1bKxAw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tg9BIfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tg9BYfnEeeCgNQs1bKxAw" points="[0, -20, 56, 294]$[0, -82, 56, 232]$[-56, -82, 0, 232]$[-56, -290, 0, 24]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-thkEIfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-thkEYfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-thkEofnEeeCgNQs1bKxAw" type="4001" element="_-rnftofnEeeCgNQs1bKxAw" source="_-sYUkIfnEeeCgNQs1bKxAw" target="_-s7uMIfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-thkFofnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-thkF4fnEeeCgNQs1bKxAw" x="14" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-thkGIfnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-thkGYfnEeeCgNQs1bKxAw" x="12" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-thkGofnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-thkG4fnEeeCgNQs1bKxAw" x="1" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-thkE4fnEeeCgNQs1bKxAw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-thkFIfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-thkFYfnEeeCgNQs1bKxAw" points="[0, -20, 178, 294]$[0, -82, 178, 232]$[-178, -82, 0, 232]$[-178, -290, 0, 24]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tiLIIfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tiLIYfnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tiLIofnEeeCgNQs1bKxAw" type="4001" element="_-rnfuYfnEeeCgNQs1bKxAw" source="_-sYUkIfnEeeCgNQs1bKxAw" target="_-s8VQIfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tiLJofnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tiLJ4fnEeeCgNQs1bKxAw" x="-16" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tiLKIfnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tiLKYfnEeeCgNQs1bKxAw" x="-9" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tiyMIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tiyMYfnEeeCgNQs1bKxAw" x="9" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tiLI4fnEeeCgNQs1bKxAw" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tiLJIfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tiLJYfnEeeCgNQs1bKxAw" points="[0, -20, 227, 197]$[0, -82, 227, 135]$[-227, -82, 0, 135]$[-227, -193, 0, 24]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tiyMofnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tiyM4fnEeeCgNQs1bKxAw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tiyNIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfvIfnEeeCgNQs1bKxAw" source="_-s2OoIfnEeeCgNQs1bKxAw" target="_-sxWIIfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tiyOIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tiyOYfnEeeCgNQs1bKxAw" x="16" y="3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tiyOofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tiyO4fnEeeCgNQs1bKxAw" x="7" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tjZQIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tjZQYfnEeeCgNQs1bKxAw" x="5" y="-11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tiyNYfnEeeCgNQs1bKxAw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tiyNofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tiyN4fnEeeCgNQs1bKxAw" points="[0, 0, -148, 33]$[148, -34, 0, -1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tjZQofnEeeCgNQs1bKxAw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tjZQ4fnEeeCgNQs1bKxAw" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tjZRIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfv4fnEeeCgNQs1bKxAw" source="_-s2OoIfnEeeCgNQs1bKxAw" target="_-s5R8ofnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tjZSIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tjZSYfnEeeCgNQs1bKxAw" x="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tjZSofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tjZS4fnEeeCgNQs1bKxAw" x="14" y="14"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tjZTIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tjZTYfnEeeCgNQs1bKxAw" x="10" y="14"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tjZRYfnEeeCgNQs1bKxAw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tjZRofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tjZR4fnEeeCgNQs1bKxAw" points="[0, 0, 122, 33]$[-122, -34, 0, -1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tkAUIfnEeeCgNQs1bKxAw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tkAUYfnEeeCgNQs1bKxAw" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tkAUofnEeeCgNQs1bKxAw" type="4001" element="_-rnfwofnEeeCgNQs1bKxAw" source="_-s2OoIfnEeeCgNQs1bKxAw" target="_-s4q4IfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tkAVofnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tkAV4fnEeeCgNQs1bKxAw" x="-7" y="-16"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tkAWIfnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tkAWYfnEeeCgNQs1bKxAw" x="3" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tkAWofnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tkAW4fnEeeCgNQs1bKxAw" x="1" y="2"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tkAU4fnEeeCgNQs1bKxAw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tkAVIfnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tkAVYfnEeeCgNQs1bKxAw" points="[0, 0, -49, 33]$[49, -34, 0, -1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tkAXIfnEeeCgNQs1bKxAw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tkAXYfnEeeCgNQs1bKxAw" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tknYIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfxYfnEeeCgNQs1bKxAw" source="_-s2OoIfnEeeCgNQs1bKxAw" target="_-s8VQIfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tknZIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tknZYfnEeeCgNQs1bKxAw" x="-3" y="17"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tknZofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tknZ4fnEeeCgNQs1bKxAw" x="-3" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tknaIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tknaYfnEeeCgNQs1bKxAw"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tknYYfnEeeCgNQs1bKxAw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tknYofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tknY4fnEeeCgNQs1bKxAw" points="[0, 0, 225, 33]$[-225, -34, 0, -1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tknaofnEeeCgNQs1bKxAw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tkna4fnEeeCgNQs1bKxAw" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tknbIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfyIfnEeeCgNQs1bKxAw" source="_-s5R8ofnEeeCgNQs1bKxAw" target="_-s55AofnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tlOcIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tlOcYfnEeeCgNQs1bKxAw" x="1" y="-19"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tlOcofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tlOc4fnEeeCgNQs1bKxAw" x="-1" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tlOdIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tlOdYfnEeeCgNQs1bKxAw" x="-4" y="-6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tknbYfnEeeCgNQs1bKxAw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tknbofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tknb4fnEeeCgNQs1bKxAw" points="[0, 0, -68, 47]$[68, -47, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tlOdofnEeeCgNQs1bKxAw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tlOd4fnEeeCgNQs1bKxAw" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-tlOeIfnEeeCgNQs1bKxAw" type="4001" element="_-rnfy4fnEeeCgNQs1bKxAw" source="_-s5R8ofnEeeCgNQs1bKxAw" target="_-s7uMIfnEeeCgNQs1bKxAw">
+          <children xmi:type="notation:Node" xmi:id="_-tl1gIfnEeeCgNQs1bKxAw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tl1gYfnEeeCgNQs1bKxAw" x="15" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tl1gofnEeeCgNQs1bKxAw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tl1g4fnEeeCgNQs1bKxAw" x="8" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-tl1hIfnEeeCgNQs1bKxAw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-tl1hYfnEeeCgNQs1bKxAw" x="10" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-tlOeYfnEeeCgNQs1bKxAw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-tlOeofnEeeCgNQs1bKxAw" fontName=".SF NS Text" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-tlOe4fnEeeCgNQs1bKxAw" points="[0, 0, 54, 47]$[-54, -47, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tl1hofnEeeCgNQs1bKxAw" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-tl1h4fnEeeCgNQs1bKxAw" id="(0.5,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfk4fnEeeCgNQs1bKxAw" name="DSL Usability Evaluation" outgoingEdges="_-rnfp4fnEeeCgNQs1bKxAw _-rnfqofnEeeCgNQs1bKxAw _-rnfrYfnEeeCgNQs1bKxAw _-rnfsIfnEeeCgNQs1bKxAw _-rnfs4fnEeeCgNQs1bKxAw _-rnftofnEeeCgNQs1bKxAw _-rnfuYfnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <semanticElements xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_-rnflIfnEeeCgNQs1bKxAw" name="Priority: High" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+        <semanticElements xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_-rnflYfnEeeCgNQs1bKxAw" showIcon="false" labelAlignment="RIGHT" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='WorkflowNode']/@borderedNodeMappings[name='WorkflowPriorityBNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='WorkflowNode']/@borderedNodeMappings[name='WorkflowPriorityBNode']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_-rnflofnEeeCgNQs1bKxAw" name="Actor: End User" width="1" height="1" resizeKind="NSEW">
+        <target xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2"/>
+        <semanticElements xmi:type="useme.contextmodeling:UserProfile" href="UseMe.useme#//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_-rnfl4fnEeeCgNQs1bKxAw" showIcon="false" labelAlignment="RIGHT" color="0,0,0">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='WorkflowNode']/@borderedNodeMappings[name='WorkflowActorBNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='WorkflowNode']/@borderedNodeMappings[name='WorkflowActorBNode']"/>
+      </ownedBorderedNodes>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfmIfnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderSize="3" borderSizeComputationExpression="3" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/workflow.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='WorkflowNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='WorkflowNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfmYfnEeeCgNQs1bKxAw" name="Context modelling" incomingEdges="_-rnfp4fnEeeCgNQs1bKxAw _-rnfvIfnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0"/>
+      <semanticElements xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfmofnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfm4fnEeeCgNQs1bKxAw" name="USE-ME Modelling" outgoingEdges="_-rnfvIfnEeeCgNQs1bKxAw _-rnfv4fnEeeCgNQs1bKxAw _-rnfwofnEeeCgNQs1bKxAw _-rnfxYfnEeeCgNQs1bKxAw" incomingEdges="_-rnfqofnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
+      <semanticElements xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfnIfnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfnYfnEeeCgNQs1bKxAw" name="Goal modelling" incomingEdges="_-rnfrYfnEeeCgNQs1bKxAw _-rnfwofnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.2"/>
+      <semanticElements xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.2"/>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfnofnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfn4fnEeeCgNQs1bKxAw" name="Evaluation modelling" outgoingEdges="_-rnfyIfnEeeCgNQs1bKxAw _-rnfy4fnEeeCgNQs1bKxAw" incomingEdges="_-rnfsIfnEeeCgNQs1bKxAw _-rnfv4fnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3"/>
+      <semanticElements xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfoIfnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfoYfnEeeCgNQs1bKxAw" name="Interaction Modelling" incomingEdges="_-rnfs4fnEeeCgNQs1bKxAw _-rnfyIfnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.4"/>
+      <semanticElements xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfoofnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfo4fnEeeCgNQs1bKxAw" name="Survey modelling" incomingEdges="_-rnftofnEeeCgNQs1bKxAw _-rnfy4fnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.5"/>
+      <semanticElements xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.5"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfpIfnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_-rnfpYfnEeeCgNQs1bKxAw" name="Report modelling" incomingEdges="_-rnfuYfnEeeCgNQs1bKxAw _-rnfxYfnEeeCgNQs1bKxAw" width="-1" height="-1" resizeKind="NSEW">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.6"/>
+      <semanticElements xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.6"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-rnfpofnEeeCgNQs1bKxAw" labelAlignment="RIGHT" borderColor="136,136,136" workspacePath="/pt.fct.unl.novalincs.useme.sirius.design/icons/scenario.png">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@nodeMappings[name='ScenarioNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfp4fnEeeCgNQs1bKxAw" sourceNode="_-rnfk4fnEeeCgNQs1bKxAw" targetNode="_-rnfmYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfqIfnEeeCgNQs1bKxAw" size="2" routingStyle="manhattan" centered="Both" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfqYfnEeeCgNQs1bKxAw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfqofnEeeCgNQs1bKxAw" sourceNode="_-rnfk4fnEeeCgNQs1bKxAw" targetNode="_-rnfm4fnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfq4fnEeeCgNQs1bKxAw" size="2" routingStyle="manhattan" centered="Both" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfrIfnEeeCgNQs1bKxAw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfrYfnEeeCgNQs1bKxAw" sourceNode="_-rnfk4fnEeeCgNQs1bKxAw" targetNode="_-rnfnYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfrofnEeeCgNQs1bKxAw" size="2" routingStyle="manhattan" centered="Both" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfr4fnEeeCgNQs1bKxAw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfsIfnEeeCgNQs1bKxAw" sourceNode="_-rnfk4fnEeeCgNQs1bKxAw" targetNode="_-rnfn4fnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfsYfnEeeCgNQs1bKxAw" size="2" routingStyle="manhattan" centered="Both" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfsofnEeeCgNQs1bKxAw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfs4fnEeeCgNQs1bKxAw" sourceNode="_-rnfk4fnEeeCgNQs1bKxAw" targetNode="_-rnfoYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnftIfnEeeCgNQs1bKxAw" size="2" routingStyle="manhattan" centered="Both" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnftYfnEeeCgNQs1bKxAw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnftofnEeeCgNQs1bKxAw" sourceNode="_-rnfk4fnEeeCgNQs1bKxAw" targetNode="_-rnfo4fnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnft4fnEeeCgNQs1bKxAw" size="2" routingStyle="manhattan" centered="Both" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfuIfnEeeCgNQs1bKxAw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfuYfnEeeCgNQs1bKxAw" sourceNode="_-rnfk4fnEeeCgNQs1bKxAw" targetNode="_-rnfpYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfuofnEeeCgNQs1bKxAw" size="2" routingStyle="manhattan" centered="Both" strokeColor="69,69,69">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfu4fnEeeCgNQs1bKxAw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='WorkflowScenarioEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfvIfnEeeCgNQs1bKxAw" sourceNode="_-rnfm4fnEeeCgNQs1bKxAw" targetNode="_-rnfmYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfvYfnEeeCgNQs1bKxAw" sourceArrow="FillDiamond" strokeColor="239,41,41">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfvofnEeeCgNQs1bKxAw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfv4fnEeeCgNQs1bKxAw" sourceNode="_-rnfm4fnEeeCgNQs1bKxAw" targetNode="_-rnfn4fnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfwIfnEeeCgNQs1bKxAw" sourceArrow="FillDiamond" strokeColor="239,41,41">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfwYfnEeeCgNQs1bKxAw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfwofnEeeCgNQs1bKxAw" sourceNode="_-rnfm4fnEeeCgNQs1bKxAw" targetNode="_-rnfnYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfw4fnEeeCgNQs1bKxAw" sourceArrow="FillDiamond" strokeColor="239,41,41">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfxIfnEeeCgNQs1bKxAw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfxYfnEeeCgNQs1bKxAw" sourceNode="_-rnfm4fnEeeCgNQs1bKxAw" targetNode="_-rnfpYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfxofnEeeCgNQs1bKxAw" sourceArrow="FillDiamond" strokeColor="239,41,41">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfx4fnEeeCgNQs1bKxAw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfyIfnEeeCgNQs1bKxAw" sourceNode="_-rnfn4fnEeeCgNQs1bKxAw" targetNode="_-rnfoYfnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfyYfnEeeCgNQs1bKxAw" sourceArrow="FillDiamond" strokeColor="239,41,41">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfyofnEeeCgNQs1bKxAw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-rnfy4fnEeeCgNQs1bKxAw" sourceNode="_-rnfn4fnEeeCgNQs1bKxAw" targetNode="_-rnfo4fnEeeCgNQs1bKxAw">
+      <target xmi:type="useme.contextmodeling:Scenario" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_-rnfzIfnEeeCgNQs1bKxAw" sourceArrow="FillDiamond" strokeColor="239,41,41">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_-rnfzYfnEeeCgNQs1bKxAw" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer/@edgeMappings[name='ScenarioAggregationEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_-rnfzofnEeeCgNQs1bKxAw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/pt.fct.unl.novalincs.useme.sirius.design/description/UseMe.odesign#//@ownedViewpoints[name='contextModeling']/@ownedRepresentations[name='WorkflowScenarios']/@defaultLayer"/>
+    <target xmi:type="useme.contextmodeling:Workflow" href="UseMe.useme#//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

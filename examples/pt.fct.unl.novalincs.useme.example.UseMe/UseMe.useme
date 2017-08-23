@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <useme:UseMeSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:useme="http://nova-lincs.di.fct.unl.pt/useme">
-  <contextSpecification name="cs1.0">
-    <contextModel cmName="cm1.0" domain="Usability evaluation of DSLs" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0" language="//@utilitySpecification.0/@DSL.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.2">
+  <contextSpecification name="cs1">
+    <contextModel cmName="cm1" domain="Usability evaluation of DSLs" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0" language="//@utilitySpecification.0/@DSL.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.1 //@contextSpecification.0/@workflowSpecification.0/@workflow.2">
       <userHierarchy userProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" uhDescription="USE-ME hierarchy"/>
       <contextProvider>Ankica Barisic</contextProvider>
     </contextModel>
-    <userProfileSpecification name="up1.0">
+    <userProfileSpecification name="up1">
       <userProfile name="DSL Stakeholder" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.2 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.3 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.4" userHierarchy="//@contextSpecification.0/@contextModel.0/@userHierarchy" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.3" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.1"/>
       <userProfile name="Domain Expert" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.9 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.10"/>
       <userProfile name="End User" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.6 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.0" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.10 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.8 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.14"/>
       <userProfile name="Expert Evaluator" priority="Low" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.6"/>
       <userProfile name="Language Engineer" priority="Low" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.0"/>
-      <userProfile name="MDD Engineer" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.7 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.11" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.1" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.10"/>
+      <userProfile name="MDD Engineer" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.7 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.11" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.1" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.15"/>
       <userProfile name="Usability Engineer" priority="Low" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.3" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.10" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.4"/>
       <userProfile name="DSML Developer" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.2"/>
-      <userProfile name="DSL Developer" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.9 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.7" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.6"/>
+      <userProfile name="DSL Developer" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" subProfile="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.9 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.7" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.6" classifier="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.20"/>
       <userProfile name="DSL Expert" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.8"/>
       <userProfile name="Usability Expert" priority="Low" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.1 //@contextSpecification.0/@userProfileSpecification.0/@userProfile.6" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.7"/>
-      <userProfile name="MDD but not DSL" priority="Low" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.5"/>
+      <userProfile name="MDD but not DSL" priority="Medium" parent="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5" profileTemplate="//@contextSpecification.0/@userProfileSpecification.0/@profileTemplate.5"/>
       <profileTemplate name="kEndUser" category="Knowladge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.12 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.10 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.7 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.13 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.9 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.11 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.14 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.8"/>
       <profileTemplate name="kMDDEngineer" category="Knowladge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.17 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.15"/>
       <profileTemplate name="kDSMLDeveloper" category="Knowladge" classifiers="//@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.20 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.15 //@contextSpecification.0/@userProfileSpecification.0/@logicalExpression.17"/>
@@ -118,10 +118,10 @@
         <expression>= High</expression>
       </logicalExpression>
     </userProfileSpecification>
-    <enviromentSpecification name="es1.0">
+    <enviromentSpecification name="es1">
       <technicalEnvironment name="UseMe" contextModel="//@contextSpecification.0/@contextModel.0" ceElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.0 //@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.2"/>
       <physicalEnvironment name="UseMe" contextModel="//@contextSpecification.0/@contextModel.0" ceElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.1"/>
-      <socialEnvironment name="se1.0" contextModel="//@contextSpecification.0/@contextModel.0" ceElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.3"/>
+      <socialEnvironment name="se1" contextModel="//@contextSpecification.0/@contextModel.0" ceElement="//@contextSpecification.0/@enviromentSpecification.0/@enviromentalVariable.3"/>
       <enviromentalVariable name="Modelling environment" mandatory="true" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0">
         <composedElement name="Eclipse">
           <type>Neon</type>
@@ -156,9 +156,12 @@
         <type>English</type>
         <composedElement name="English"/>
       </enviromentalVariable>
+      <enviromentalVariable name="DSL" contextEnviroment="//@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0">
+        <composedElement name="Visualino"/>
+      </enviromentalVariable>
     </enviromentSpecification>
-    <workflowSpecification name="ws1.0">
-      <workflow name="DSL Usability Evaluation" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" processModel="//@utilitySpecification.0/@processModel.0" contextModel="//@contextSpecification.0/@contextModel.0">
+    <workflowSpecification name="ws1">
+      <workflow name="w1: DSL Usability Evaluation" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" processModel="//@utilitySpecification.0/@processModel.0" contextModel="//@contextSpecification.0/@contextModel.0">
         <scenario name="Context modelling" doc="//@utilitySpecification.0/@documentation.1"/>
         <scenario name="USE-ME Modelling" aggregates="//@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.0 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.3 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.2 //@contextSpecification.0/@workflowSpecification.0/@workflow.0/@scenario.6"/>
         <scenario name="Goal modelling"/>
@@ -167,17 +170,19 @@
         <scenario name="Survey modelling"/>
         <scenario name="Report modelling"/>
       </workflow>
-      <workflow name="Intergration with DSL domain analysis artefacts" priority="Medium" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5" contextModel="//@contextSpecification.0/@contextModel.0"/>
-      <workflow name="Integration with DSL arhitecture" priority="Medium" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" contextModel="//@contextSpecification.0/@contextModel.0"/>
+      <workflow name="w2: Intergration with DSL artefacts" priority="Medium" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.5" contextModel="//@contextSpecification.0/@contextModel.0"/>
+      <workflow name="w3: Integration with experimental analysis tools" priority="Medium" actor="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.8" contextModel="//@contextSpecification.0/@contextModel.0"/>
     </workflowSpecification>
   </contextSpecification>
   <goalSpecification name="gs1.0">
-    <goalModel name="gm1.0" language="//@utilitySpecification.0/@DSL.0">
-      <usabilityGoal priority="Low" subGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1"/>
-      <usabilityGoal name="Quality in Use of workflow1" parentGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0"/>
+    <actor/>
+    <scope name="w1Context" contextModel="//@contextSpecification.0/@contextModel.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1" userProfileSelection="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
+    <goalModel name="gm1" language="//@utilitySpecification.0/@DSL.0">
+      <usabilityGoal question="What is achived level of quality in use for Use-Me?" subGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1"/>
+      <usabilityGoal name="Quality in Use of w1" question="What is achived level of quality in use for w1?" scope="//@goalSpecification.0/@scope.0" parentGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.0"/>
     </goalModel>
   </goalSpecification>
-  <utilitySpecification name="us1.0">
+  <utilitySpecification name="us1">
     <DSL dslName="USE-ME" contextModel="//@contextSpecification.0/@contextModel.0" documentation="//@utilitySpecification.0/@documentation.0">
       <concreteSyntax name="use-me1.0.sirius"/>
       <abstractSyntax name="use-me1.0.emf"/>
