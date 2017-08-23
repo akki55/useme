@@ -175,7 +175,7 @@
     </workflowSpecification>
   </contextSpecification>
   <goalSpecification name="gs1.0">
-    <actor/>
+    <actor name="first" organization=""/>
     <scope name="w1Context" contextModel="//@contextSpecification.0/@contextModel.0" usabilityGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1" userProfileSelection="//@contextSpecification.0/@userProfileSpecification.0/@userProfile.2" contextEnvironment="//@contextSpecification.0/@enviromentSpecification.0/@socialEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@physicalEnvironment.0 //@contextSpecification.0/@enviromentSpecification.0/@technicalEnvironment.0" workflow="//@contextSpecification.0/@workflowSpecification.0/@workflow.0"/>
     <goalModel name="gm1" language="//@utilitySpecification.0/@DSL.0">
       <usabilityGoal question="What is achived level of quality in use for Use-Me?" subGoal="//@goalSpecification.0/@goalModel.0/@usabilityGoal.1"/>
